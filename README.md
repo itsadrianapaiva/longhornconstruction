@@ -16,10 +16,3 @@ Clean, credible, one-page website that tells CÉU’s story with speed, accessib
 ## Tech (planned)
 Next.js (App Router), TailwindCSS, shadcn/ui, Option A i18n with JSON dictionaries, Resend for email, Netlify hosting.
 
-## SDLC Notes
-- 3-step plans before coding.
-- Small functions, low complexity, low duplication.
-- One file at a time, with line-by-line explanations in PRs.
-
-## Getting Started
-Codespaces with Node 20. Package manager TBD (pnpm/npm/yarn).
