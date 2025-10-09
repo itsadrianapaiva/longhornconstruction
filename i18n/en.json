@@ -1,0 +1,185 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "sismo": "Sismo Method",
+        "projects": "Projects",
+        "stats": "Stats",
+        "testimonials": "Testimonials",
+        "services": "Services",
+        "faq": "FAQ",
+        "contact": "Contact"
+    },
+    "hero": {
+        "eyebrow": "CÉU Construction",
+        "title": "Stronger. Faster. Built Right.",
+        "subtitle": "Self-performing construction in the Algarve, from groundworks to finishes, with owned equipment and innovative methods.",
+        "primaryCta": "Request a consultation",
+        "secondaryCta": "See our work",
+        "videoAriaLabel": "CÉU build time-lapse video"
+    },
+    "about": {
+        "title": "A dependable, self-performing builder",
+        "body": "We deliver every stage in-house without subcontractors, combining North American rigor with Portuguese craftsmanship. Owning our equipment lets us control schedule, cost, and quality.",
+        "bullets": [
+            "Full in-house team from groundworks to finishes",
+            "Owned machinery for speed and control",
+            "Proven quality across the Algarve"
+        ]
+    },
+    "sismo": {
+        "title": "Why Sismo construction?",
+        "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance.",
+        "benefits": [
+            "Speed: panels install quickly, reducing schedule",
+            "Strength: monolithic concrete core with high resistance",
+            "Efficiency: fewer trades, cleaner jobsite",
+            "Comfort: thermal and acoustic performance"
+        ],
+        "cta": "Watch the time-lapse"
+    },
+    "projects": {
+        "title": "Featured projects",
+        "filters": {
+            "all": "All",
+            "residential": "Residential",
+            "commercial": "Commercial",
+            "renovation": "Renovation",
+            "sismo": "Sismo"
+        },
+        "viewGallery": "Open gallery",
+        "modal": {
+            "prev": "Previous",
+            "next": "Next",
+            "close": "Close"
+        }
+    },
+    "stats": {
+        "title": "Track record",
+        "labels": {
+            "yearsOperating": "Years operating",
+            "projectsDelivered": "Projects delivered",
+            "projectsInProgress": "Projects in progress",
+            "teamSize": "Team size",
+            "ownedMachines": "Owned machines",
+            "safetyRecord": "Safety record"
+        }
+    },
+    "testimonials": {
+        "title": "What clients say"
+    },
+    "services": {
+        "title": "Services",
+        "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
+        "items": [
+            {
+                "key": "designBuild",
+                "title": "Design-build support",
+                "desc": "Early constructability input, budget guidance, and coordination with your architect and engineer."
+            },
+            {
+                "key": "groundworks",
+                "title": "Groundworks and foundations",
+                "desc": "Earthworks, footings, drainage, and slab work with owned equipment for speed and precision."
+            },
+            {
+                "key": "sismoShell",
+                "title": "Sismo structural shell",
+                "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes."
+            },
+            {
+                "key": "masonryConcrete",
+                "title": "Masonry and concrete",
+                "desc": "Blockwork, reinforced concrete elements, retaining walls, and architectural finishes."
+            },
+            {
+                "key": "roofEnvelope",
+                "title": "Roofing and envelope",
+                "desc": "Framing, waterproofing, insulation, and exterior finishes for long-term performance."
+            },
+            {
+                "key": "mepCoordination",
+                "title": "MEP coordination",
+                "desc": "Mechanical, electrical, and plumbing coordination with clear routes and clean penetrations."
+            },
+            {
+                "key": "interiors",
+                "title": "Interior finishes",
+                "desc": "Plaster, tile, flooring, carpentry, and painting with consistent, supervised craftsmanship."
+            },
+            {
+                "key": "renovations",
+                "title": "Renovations and additions",
+                "desc": "Careful upgrades and extensions that respect structure, schedule, and budget."
+            },
+            {
+                "key": "siteLogistics",
+                "title": "Site logistics and equipment",
+                "desc": "Owned machinery, certified operators, and tidy sites that keep crews efficient and safe."
+            }
+        ],
+        "cta": "Discuss your scope"
+    },
+    "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+            {
+                "q": "Do you work only with Sismo?",
+                "a": "We build with Sismo where it adds value, and we also deliver traditional methods. We recommend the best approach for your budget, schedule, and performance goals."
+            },
+            {
+                "q": "What areas do you serve?",
+                "a": "We primarily serve the Algarve. For larger projects we consider work across Portugal."
+            },
+            {
+                "q": "How fast is Sismo compared to traditional builds?",
+                "a": "Sismo panels install rapidly and reduce coordination steps. Actual gains depend on design and site logistics, but schedules are typically shorter than traditional masonry."
+            },
+            {
+                "q": "Do you use subcontractors?",
+                "a": "No. We self-perform with our own team and equipment, which helps us control quality, safety, and timelines."
+            },
+            {
+                "q": "Can you help before I have a full project set?",
+                "a": "Yes. We offer early design-build support to validate assumptions, align budgets, and surface constructability issues before they become costly."
+            },
+            {
+                "q": "Are you licensed and insured?",
+                "a": "Yes. We maintain the appropriate registrations and insurance. We can share documentation during preconstruction."
+            },
+            {
+                "q": "How do we start?",
+                "a": "Send a short brief and any drawings you have. We will schedule a call or site visit and provide next steps with a clear plan."
+            },
+            {
+                "q": "Do you provide warranties?",
+                "a": "Yes. We stand behind our workmanship and the systems we install. Specific terms depend on the project scope and materials."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Let’s build",
+        "subtitle": "Tell us about your project. We will reply quickly with next steps.",
+        "form": {
+            "name": "Full name",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "Project details",
+            "honeypot": "Leave this field empty",
+            "submit": "Send message",
+            "success": "Thanks. Your message is on the way.",
+            "error": "Something went wrong. Please try again."
+        },
+        "serviceArea": "Serving the Algarve and beyond"
+    },
+    "footer": {
+        "rights": "All rights reserved.",
+        "companyLabel": "Company",
+        "privacy": "Privacy",
+        "language": "Language"
+    },
+    "common": {
+        "readMore": "Read more",
+        "learnMore": "Learn more"
+    }
+}
