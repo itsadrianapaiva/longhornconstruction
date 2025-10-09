@@ -2,24 +2,26 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { ReactNode } from "react";
 
-import { validateLocale, SUPPORTED_LOCALES, type Locale } from "@/lib/i18n/getDictionary";
+import {
+  getDictionary,
+  validateLocale,
+  SUPPORTED_LOCALES,
+  type Locale,
+} from "@/lib/i18n/getDictionary";
+import { I18nProvider } from "@/lib/i18n/I18nProvider";
 
 /**
  * getBaseUrl
- * Returns absolute site URL for canonical/hreflang.
- * Handles:
- * 1) NEXT_PUBLIC_SITE_URL (prod)
- * 2) Request Host (staging/preview)
+ * Absolute site URL for canonical and hreflang.
+ * 1) NEXT_PUBLIC_SITE_URL
+ * 2) Request Host
  * 3) http://localhost:3000 (dev)
- *
- * Note: treat headers() as async to satisfy environments
- * that type it as Promise<ReadonlyHeaders>.
  */
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
   if (envUrl) return envUrl;
 
-  const h = await headers(); // <-- await fixes TS2339
+  const h = await headers();
   const host = h.get("x-forwarded-host") ?? h.get("host");
   if (host) {
     const proto = h.get("x-forwarded-proto") ?? "https";
@@ -28,20 +30,16 @@ async function getBaseUrl(): Promise<string> {
   return "http://localhost:3000";
 }
 
-/** Small helper to keep locale-aware roots consistent */
 function localePath(locale: Locale): string {
   return `/${locale}`;
 }
 
-/**
- * generateMetadata
- * Builds canonical + hreflang alternates for all locales.
- */
+/** Canonical and hreflang per locale */
 export async function generateMetadata(
   { params }: { params: { locale?: string } }
 ): Promise<Metadata> {
   const locale = validateLocale(params?.locale);
-  const base = await getBaseUrl(); // now async-safe
+  const base = await getBaseUrl();
 
   const languages: Record<string, string> = {};
   for (const l of SUPPORTED_LOCALES) {
@@ -52,31 +50,35 @@ export async function generateMetadata(
     metadataBase: new URL(base),
     alternates: {
       canonical: `${base}${localePath(locale)}`,
-      languages
+      languages,
     },
     openGraph: {
       url: `${base}${localePath(locale)}`,
       siteName: "CÉU Construction",
       type: "website",
-      locale
+      locale,
     },
-    twitter: { card: "summary_large_image" }
+    twitter: { card: "summary_large_image" },
   };
 }
 
 /**
  * RootLayout
- * Sets <html lang> and renders children.
- * We will add an I18nProvider in the next step.
+ * Sets <html lang> and provides i18n to children.
  */
-export default function RootLayout(
+export default async function RootLayout(
   { children, params }: { children: ReactNode; params: { locale?: string } }
 ) {
   const locale = validateLocale(params?.locale);
+  const dict = await getDictionary(locale);
 
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body>
+        <I18nProvider locale={locale} dict={dict}>
+          {children}
+        </I18nProvider>
+      </body>
     </html>
   );
 }
