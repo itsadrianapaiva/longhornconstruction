@@ -1,3 +1,26 @@
+/* -------------------------------
+   STYLE SYSTEM NOTES
+   --------------------------------
+   Surface model:
+   - Global default surface is set on <body> in app/layout.tsx using
+     className="surface-light" or "surface-dark".
+   - No per-locale override is applied here to keep code minimal.
+
+   Hero mask:
+   - The Hero bottom fade uses .mask-fade-b to transition into hsl(var(--page-bg)),
+     which comes from the body surface in app/layout.tsx.
+
+   Buttons:
+   - <a class="btn btn-solid"> for the darker blue CTA (Bravera style).
+   - <a class="btn btn-glass"> for the glass secondary CTA.
+   - Internals live in globals.css; Tailwind adds a .btn skeleton.
+
+   Header / Nav / Language toggle:
+   - .header-shell for sticky, blurred glass header
+   - .nav-list for horizontal nav spacing
+   - .lang-toggle for the language switch visual shell
+   -------------------------------- */
+
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { ReactNode, Suspense } from "react";
@@ -30,10 +53,12 @@ function localePath(locale: Locale): string {
 }
 
 /** Canonical and hreflang per locale */
-export async function generateMetadata(
-  { params }: { params: Promise<{ locale?: string }> }
-): Promise<Metadata> {
-  const { locale: raw } = await params;            // ✅ await params
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const { locale: raw } = await params; // ✅ await params
   const locale = validateLocale(raw);
   const base = await getBaseUrl();
 
@@ -59,16 +84,26 @@ export async function generateMetadata(
 }
 
 /** Nested locale layout (no <html>/<body> here) */
-export default async function LocaleLayout(
-  { children, params }: { children: ReactNode; params: Promise<{ locale?: string }> }
-) {
-  const { locale: raw } = await params;            // ✅ await params
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale?: string }>;
+}) {
+  const { locale: raw } = await params;
   const locale = validateLocale(raw);
   const dict = await getDictionary(locale);
 
   type NavKey =
-    | "hero" | "about" | "stats" | "sismo"
-    | "projects" | "services" | "testimonials" | "contact";
+    | "hero"
+    | "about"
+    | "stats"
+    | "sismo"
+    | "projects"
+    | "services"
+    | "testimonials"
+    | "contact";
   type DictWithNav = { nav?: Partial<Record<NavKey, string>> };
 
   const d = dict as DictWithNav;
@@ -87,18 +122,24 @@ export default async function LocaleLayout(
 
   const HEADER_OFFSET = 64;
 
+
   return (
-    <>
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-          <a href={`/${locale}`} className="font-semibold tracking-tight">
+    <div>
+      {/* Glassy, sticky header */}
+      <header className="header-shell">
+        <div className="container flex h-16 items-center justify-between gap-3">
+          <a
+            href={`/${locale}`}
+            className="font-heading text-sm font-semibold tracking-tight"
+            aria-label="CÉU Construction home"
+          >
             CÉU Construction
           </a>
 
           <Suspense fallback={null}>
             <ScrollNav
               topOffset={HEADER_OFFSET}
-              className="hidden md:inline-flex"
+              className="nav-list hidden md:flex"
               items={[
                 { id: "hero", label: nav.hero },
                 { id: "about", label: nav.about },
@@ -112,21 +153,29 @@ export default async function LocaleLayout(
             />
           </Suspense>
 
-          <Suspense fallback={<div className="h-8 w-14 rounded-full bg-zinc-100" />}>
-            <LanguageSwitcher compact stripHashOnMount />
+          <Suspense
+            fallback={
+              <div className="h-8 w-14 rounded-full bg-[hsl(var(--glass-bg)/0.10)]" />
+            }
+          >
+            <div className="lang-toggle">
+              <LanguageSwitcher compact stripHashOnMount />
+            </div>
           </Suspense>
         </div>
       </header>
 
+      {/* Content area on the chosen surface */}
       <I18nProvider locale={locale} dict={dict}>
-        <main id="content" className="mx-auto max-w-6xl px-4">
+        <main id="content" className="container">
           {children}
         </main>
       </I18nProvider>
 
-      <footer className="mx-auto max-w-6xl px-4 py-12 text-sm text-zinc-500">
+      {/* Footer stays on the same surface; typography uses page ink */}
+      <footer className="container py-12 text-sm opacity-80">
         © {new Date().getFullYear()} CÉU Construction. All rights reserved.
       </footer>
-    </>
+    </div>
   );
 }
