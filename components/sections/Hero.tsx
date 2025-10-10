@@ -20,43 +20,40 @@ export default function Hero() {
     <section
       id="hero"
       aria-label={t<string>("hero.videoAriaLabel", "CÉU Construction hero")}
-      className="hero mask-fade-b relative w-full overflow-clip"
+      // Full-bleed, true viewport height, no container padding
+      className="hero mask-fade-b relative w-full overflow-clip min-h-svh"
     >
-      {/* Full-height band */}
-      <div className="min-h-[76svh] sm:min-h-[82svh] lg:min-h-[88svh]">
-        <BackgroundVideo height="h-full" opacity="opacity-30" />
+      {/* Background band fills the section; no breakpoint height juggling needed */}
+      <div className="absolute inset-0">
+        <BackgroundVideo height="h-full" opacity="opacity-100" zoom={1.00} focal="50% 40%" />
         <div className="hero__overlay" aria-hidden="true" />
+      </div>
 
-        {/* Centered content; no side padding on the section—just a small safe pad on the content */}
-        <div
-          className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center px-4 text-center"
-          style={{ minHeight: "inherit" }}
-        >
-          <Image
-            src="/media/logo-white.png"
-            alt="CÉU Construction"
-            width={256}
-            height={64}
-            priority
-            className="mx-auto"
-          />
+      {/* Centered content — removed px-4 to eliminate side padding */}
+      <div
+        className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center text-center"
+        style={{ minHeight: "inherit" }}
+      >
+        <Image
+          src="/media/logo-white.png"
+          alt="CÉU Construction"
+          width={256}
+          height={64}
+          priority
+          className="mx-auto"
+        />
 
-          <p className="mt-4 text-base sm:text-lg text-ink/90">
-            {t<string>("hero.subtitle")}
-          </p>
-
-          <div className="mt-8">
-            <ButtonLink
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("projects");
-              }}
-              data-testid="hero-cta-projects"
-            >
-              {t<string>("hero.secondaryCta")}
-            </ButtonLink>
-          </div>
+        <div className="mt-8">
+          <ButtonLink
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo("projects");
+            }}
+            data-testid="hero-cta-projects"
+          >
+            {t<string>("hero.secondaryCta")}
+          </ButtonLink>
         </div>
       </div>
     </section>
