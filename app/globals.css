@@ -1,70 +1,44 @@
 @import "tailwindcss";
 
-
-/* 1) CSS Variables — theme tokens */
+/* 1) Tokens — HEX/RGBA only */
 :root {
-  /* Surfaces & ink (HSL triplets) */
-  --background: 218 33% 6%;
-  --foreground: 220 14% 96%;
-  --muted: 220 12% 18%;
-  --muted-foreground: 220 10% 75%;
-  --border: 220 16% 22%;
-  --ring: 212 92% 59%;
+  /* Core surfaces */
+  --bg: #0a0e14;            /* background (dark) */
+  --fg: #f3f4f6;            /* foreground (light ink on dark) */
+  --page-bg: #f6f9fe;       /* default page surface (light) */
+  --page-ink: #1e2129;      /* ink on page surface */
 
-  /* Brand blue (darker, elegant) */
-  --brand: 214 72% 36%;
-  --brand-hover: 214 72% 42%;
-  --brand-border: 214 72% 45%;
-  --brand-foreground: 216 100% 98%;
-
-  /* Status */
-  --success: 142 48% 40%;
-  --warning: 38 92% 50%;
-  --danger: 0 72% 50%;
-
-  /* Sky band (used by HERO overlay only) */
-  --sky-50: 214 80% 98%;
-  --sky-100: 214 80% 92%;
-  --sky-300: 214 80% 74%;
-  --sky-500: 214 72% 56%;
-  --sky-700: 214 56% 36%;
-  --sky-900: 218 33% 10%;
-
-  /* Shadows & radii */
-  --shadow: 220 10% 10%;
-  --radius: 12px;
+  /* Brand (blue) */
+  --brand: #1a539e;
+  --brand-hover: #1e61b8;
+  --brand-border: #2068c5;
+  --brand-ink: #f5f9ff;     /* text on brand */
+  --ring: #3690f7;
 
   /* Glass layer */
-  --glass-bg: 0 0% 100%;
-  --glass-alpha: 0.08;
-  --glass-border-alpha: 0.15;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-hover: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-strong: rgba(255, 255, 255, 0.22);
   --glass-blur: 10px;
 
-  /* Typography (fonts bound in layout with next/font) */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  --font-heading: "Inter Tight", ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  /* Sky band (hero overlay only) */
+  --sky-900: rgba(17, 24, 34, 0.65);
+  --sky-700: rgba(40, 85, 143, 0.35);
+  --sky-500: rgba(53, 131, 233, 0.20);
 
-  /* Motion */
-  --easing-gentle: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --duration-fast: 150ms;
-  --duration-normal: 200ms;
+  /* Others */
+  --radius: 12px;
+  --ease-gentle: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 200ms;
 
-  /* Page background token (solid). Defaults to light; can be toggled. */
-  --page-bg: 214 80% 98%;        /* “ice white” by default */
-  --page-fg: 224 16% 14%;        /* dark ink for light surface */
+  /* Typography: DM Sans is bound in layout to --font-dm-sans */
 }
 
-/* Optional global surface toggles on body or a top wrapper */
-.surface-light {
-  --page-bg: 214 80% 98%;        /* ice white */
-  --page-fg: 224 16% 14%;
-}
-.surface-dark {
-  --page-bg: var(--background);  /* deep navy */
-  --page-fg: var(--foreground);
-}
+/* Optional surface toggles */
+.surface-light { --page-bg: #f6f9fe; --page-ink: #1e2129; }
+.surface-dark  { --page-bg: var(--bg); --page-ink: var(--fg); }
 
 /* 2) Base reset + typography */
 *,
@@ -72,150 +46,98 @@
 *::after { box-sizing: border-box; }
 
 html:focus-within { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within { scroll-behavior: auto; }
-}
+@media (prefers-reduced-motion: reduce) { html:focus-within { scroll-behavior: auto; } }
 
 html, body { height: 100%; }
 
 body {
   margin: 0;
-  color: hsl(var(--page-fg));               /* ink adapts to page surface */
-  background: hsl(var(--page-bg));          /* SOLID page background */
-  font-family: var(--font-sans);
+  color: var(--page-ink);
+  background: var(--page-bg);
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  letter-spacing: -0.02em;
-}
+h1, h2, h3 { letter-spacing: -0.02em; }
 h1 { font-weight: 700; }
-h2 { font-weight: 600; }
-h3 { font-weight: 600; }
-p, a, li, button { font-weight: 400; }
+h2, h3 { font-weight: 600; }
 
 /* 3) Focus & selection */
 :focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.85);
-  transition: box-shadow var(--duration-fast) var(--easing-gentle);
+  box-shadow: 0 0 0 3px var(--ring);
+  transition: box-shadow var(--dur-fast) var(--ease-gentle);
 }
-::selection { background: hsl(var(--brand) / 0.25); }
+::selection { background: color-mix(in srgb, var(--brand) 25%, transparent); }
 
-/* 4) Glass utilities */
-.glass {
-  background-color: hsl(var(--glass-bg) / var(--glass-alpha));
-  -webkit-backdrop-filter: saturate(160%) blur(var(--glass-blur));
-  backdrop-filter: saturate(160%) blur(var(--glass-blur));
-  border: 1px solid hsl(var(--glass-bg) / var(--glass-border-alpha));
-  border-radius: calc(var(--radius) + 8px);
-  box-shadow:
-    0 1px 2px hsl(var(--shadow) / 0.10),
-    0 12px 30px hsl(var(--shadow) / 0.18);
+/* 4) Tiny readable utilities (so you never write rgba() by hand) */
+.text-ink { color: var(--page-ink); }
+.text-brand { color: var(--brand); }
+.text-brand-ink { color: var(--brand-ink); }
+
+.bg-page { background-color: var(--page-bg); }
+.bg-brand { background-color: var(--brand); }
+.bg-brand-hover { background-color: var(--brand-hover); }
+.bg-glass { background-color: var(--glass-bg); -webkit-backdrop-filter: saturate(160%) blur(var(--glass-blur)); backdrop-filter: saturate(160%) blur(var(--glass-blur)); }
+
+.border-glass { border-color: var(--glass-border); }
+.border-glass-strong { border-color: var(--glass-border-strong); }
+.border-brand { border-color: var(--brand-border); }
+
+.ring-brand { box-shadow: 0 0 0 3px var(--ring); }
+
+/* 5) Glass container — exactly like your snippet */
+.glass-container { position: relative; }
+.glass-container::before {
+  content: "";
+  position: absolute; inset: -10px; z-index: -1;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(241,245,249,0.20); /* slate-100/20 */
+  background: rgba(241,245,249,0.10);       /* slate-100/10 */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
-/* 5) Buttons — Bravera-style rectangles, subtle lift */
+/* 6) Button presets (kept for non-pill usage) */
 .btn-glass,
 .btn-solid {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding-inline: 1.125rem;
-  padding-block: 0.625rem;
-  border-radius: 10px;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition:
-    transform var(--duration-normal) var(--easing-gentle),
-    box-shadow var(--duration-normal) var(--easing-gentle),
-    background-color var(--duration-normal) var(--easing-gentle),
-    border-color var(--duration-normal) var(--easing-gentle);
-  box-shadow:
-    0 1px 2px hsl(var(--shadow) / 0.12),
-    0 6px 20px hsl(var(--shadow) / 0.12);
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding-inline: 1.125rem; padding-block: 0.625rem; border-radius: 10px;
+  font-weight: 600; letter-spacing: 0.02em;
+  transition: transform var(--dur) var(--ease-gentle), box-shadow var(--dur) var(--ease-gentle), background-color var(--dur) var(--ease-gentle), border-color var(--dur) var(--ease-gentle);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 6px 20px rgba(0,0,0,0.12);
 }
 .btn-glass {
-  color: hsl(var(--page-fg)); /* respects current surface ink */
-  border: 1px solid hsl(var(--glass-bg) / var(--glass-border-alpha));
-  background-color: hsl(var(--glass-bg) / var(--glass-alpha));
+  color: var(--page-ink);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
   -webkit-backdrop-filter: saturate(160%) blur(var(--glass-blur));
   backdrop-filter: saturate(160%) blur(var(--glass-blur));
 }
-.btn-glass:hover {
-  transform: translateY(-1px);
-  background-color: hsl(var(--glass-bg) / 0.12);
-  border-color: hsl(var(--glass-bg) / 0.22);
-}
+.btn-glass:hover { transform: translateY(-1px); background: var(--glass-bg-hover); border-color: var(--glass-border-strong); }
 .btn-glass:active { transform: translateY(0); }
 
-.btn-solid {
-  color: hsl(var(--brand-foreground));
-  background-color: hsl(var(--brand));
-  border: 1px solid hsl(var(--brand-border));
-}
-.btn-solid:hover {
-  transform: translateY(-1px);
-  background-color: hsl(var(--brand-hover));
-  box-shadow:
-    0 1px 2px hsl(var(--shadow) / 0.10),
-    0 12px 30px hsl(var(--shadow) / 0.18);
-}
+.btn-solid { color: var(--brand-ink); background: var(--brand); border: 1px solid var(--brand-border); }
+.btn-solid:hover { transform: translateY(-1px); background: var(--brand-hover); box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 12px 30px rgba(0,0,0,0.18); }
 .btn-solid:active { transform: translateY(0); }
 
-/* 6) Hero — video, overlay, and mask into solid page background */
+/* 7) Hero helpers — full bleed, overlay, and bottom fade */
 .hero { position: relative; isolation: isolate; }
-.hero__video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero__overlay {
-  position: absolute; inset: 0;
-  /* Cool overlay that keeps the sky feel inside HERO only */
-  background:
-    linear-gradient(
-      to bottom,
-      hsl(var(--sky-900) / 0.65),
-      hsl(var(--sky-700) / 0.35) 40%,
-      hsl(var(--sky-500) / 0.20)
-    );
-  pointer-events: none;
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to bottom, var(--sky-700) 40%, var(--sky-500));
 }
-
-/* Mask that fades Hero bottom into the page’s SOLID background */
+/* Fade bottom into page background */
 .mask-fade-b { position: relative; }
 .mask-fade-b::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 160px;
-  /* Fade to the CURRENT page background token */
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 0%,
-    hsl(var(--page-bg)) 100%
-  );
-  pointer-events: none;
+  content: ""; position: absolute; inset: auto 0 0 0; height: 160px; pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--page-bg) 100%);
 }
 
-/* 7) Reduced motion */
+/* 8) Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .btn-solid, .btn-glass { transition: none; transform: none; }
-}
-
-/* 8) Accessibility */
-.skip-link {
-  position: absolute; left: -999px; top: auto; width: 1px; height: 1px; overflow: hidden;
-}
-.skip-link:focus {
-  left: 1rem; top: 1rem; width: auto; height: auto; padding: 0.5rem 0.75rem;
-  z-index: 50;
-  background: hsl(var(--brand));
-  color: hsl(var(--brand-foreground));
-  border-radius: 8px;
 }

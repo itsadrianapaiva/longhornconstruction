@@ -78,7 +78,7 @@ export default function LanguageSwitcher({
         type="button"
         onClick={() => navigate(target)}
         className={merge(
-          "inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm ring-1 ring-zinc-300/60 hover:bg-zinc-50",
+          "inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm ring-1 ring-bg-glass bg-glass hover:bg-zinc-50/5",
           "focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500",
           className
         )}

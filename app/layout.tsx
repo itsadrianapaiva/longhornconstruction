@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// If you’re using next/font, bind fonts here and expose CSS vars:
-// import { Inter, Inter_Tight } from "next/font/google";
-// const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-// const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-heading" });
+import { DM_Sans } from "next/font/google";
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+// then on <body className={`${dmSans.variable} surface-light`}>…
 
 export const metadata: Metadata = {
   title: "CÉU Construction",
@@ -31,11 +34,7 @@ export default function RootLayout({
     <html lang="en">
       {/* Add font variables here if using next/font:
           className={`${inter.variable} ${interTight.variable}`} */}
-      <body className={globalSurface}>
-        {/* Optional: accessible skip link */}
-        <a className="skip-link" href="#content">
-          Skip to content
-        </a>
+      <body className={`${dmSans.variable} ${globalSurface}`}>
         {children}
       </body>
     </html>
