@@ -12,9 +12,6 @@ import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import ScrollNav from "@/components/ScrollNav";
 
-// -----------------------------
-// SEO base URL helpers
-// -----------------------------
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
   if (envUrl) return envUrl;
@@ -34,9 +31,10 @@ function localePath(locale: Locale): string {
 
 /** Canonical and hreflang per locale */
 export async function generateMetadata(
-  { params }: { params: { locale?: string } }
+  { params }: { params: Promise<{ locale?: string }> }
 ): Promise<Metadata> {
-  const locale = validateLocale(params?.locale);
+  const { locale: raw } = await params;            // ✅ await params
+  const locale = validateLocale(raw);
   const base = await getBaseUrl();
 
   const languages: Record<string, string> = {};
@@ -60,24 +58,17 @@ export async function generateMetadata(
   };
 }
 
-// -----------------------------
-// Nested locale layout (NO <html>/<body> here)
-// -----------------------------
+/** Nested locale layout (no <html>/<body> here) */
 export default async function LocaleLayout(
-  { children, params }: { children: ReactNode; params: { locale?: string } }
+  { children, params }: { children: ReactNode; params: Promise<{ locale?: string }> }
 ) {
-  const locale = validateLocale(params?.locale);
+  const { locale: raw } = await params;            // ✅ await params
+  const locale = validateLocale(raw);
   const dict = await getDictionary(locale);
 
   type NavKey =
-    | "hero"
-    | "about"
-    | "stats"
-    | "sismo"
-    | "projects"
-    | "services"
-    | "testimonials"
-    | "contact";
+    | "hero" | "about" | "stats" | "sismo"
+    | "projects" | "services" | "testimonials" | "contact";
   type DictWithNav = { nav?: Partial<Record<NavKey, string>> };
 
   const d = dict as DictWithNav;
@@ -111,7 +102,7 @@ export default async function LocaleLayout(
               items={[
                 { id: "hero", label: nav.hero },
                 { id: "about", label: nav.about },
-                { id: "stats", label: nav.stats },   // Stats before Sismo
+                { id: "stats", label: nav.stats },
                 { id: "sismo", label: nav.sismo },
                 { id: "projects", label: nav.projects },
                 { id: "services", label: nav.services },
