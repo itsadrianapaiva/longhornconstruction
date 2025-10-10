@@ -21,7 +21,7 @@ export default function Hero() {
       id="hero"
       aria-label={t<string>("hero.videoAriaLabel", "CÉU Construction hero")}
       // Full-bleed, true viewport height, no container padding
-      className="hero mask-fade-b relative w-full overflow-clip min-h-svh"
+      className="hero relative w-full overflow-clip min-h-svh"
     >
       {/* Background band fills the section; no breakpoint height juggling needed */}
       <div className="absolute inset-0">

@@ -23,9 +23,9 @@
   --glass-blur: 10px;
 
   /* Sky band (hero overlay only) */
-  --sky-900: rgba(17, 24, 34, 0.65);
-  --sky-700: rgba(40, 85, 143, 0.35);
-  --sky-500: rgba(53, 131, 233, 0.20);
+  --sky-900: rgba(17, 24, 34, 0.44);
+  --sky-700: rgba(40, 85, 143, 0.22);
+  --sky-500: rgba(53, 131, 233, 0.10);
 
   /* Others */
   --radius: 12px;
@@ -126,15 +126,29 @@ h2, h3 { font-weight: 600; }
 /* 7) Hero helpers — full bleed, overlay, and bottom fade */
 .hero { position: relative; isolation: isolate; }
 .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* ↓ Gentler overlay: transparent start + softer ramp */
 .hero__overlay {
-  position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(to bottom, var(--sky-700) 40%, var(--sky-500));
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* bottom-only fade: start strong at bottom and fade upward to clear */
+  background: linear-gradient(
+    to top,
+    var(--sky-700) 0%,       /* deeper tone at the bottom */
+    var(--sky-500) 25%,      /* soft mid fade */
+    rgba(0,0,0,0) 60%        /* transparent by halfway up */
+  );
 }
-/* Fade bottom into page background */
-.mask-fade-b { position: relative; }
+/* ↓ Slightly shorter bottom fade so more video shows through */
 .mask-fade-b::after {
-  content: ""; position: absolute; inset: auto 0 0 0; height: 160px; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--page-bg) 100%);
+  /* was height: 160px; */
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    var(--page-bg) 100%
+  );
 }
 
 /* 8) Reduced motion */
