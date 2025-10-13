@@ -35,7 +35,7 @@ export default function Hero() {
         style={{ minHeight: "inherit" }}
       >
         <Image
-          src="/media/logo-white.png"
+          src="/media/logo-black.png"
           alt="CÉU Construction"
           width={256}
           height={64}
