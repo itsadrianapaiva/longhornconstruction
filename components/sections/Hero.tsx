@@ -20,16 +20,15 @@ export default function Hero() {
     <section
       id="hero"
       aria-label={t<string>("hero.videoAriaLabel", "CÉU Construction hero")}
-      // Full-bleed, true viewport height, no container padding
       className="hero relative w-full overflow-clip min-h-svh"
     >
-      {/* Background band fills the section; no breakpoint height juggling needed */}
+      {/* Background video fills the section */}
       <div className="absolute inset-0">
-        <BackgroundVideo height="h-full" opacity="opacity-100" zoom={1.00} focal="50% 40%" />
-        <div className="hero__overlay" aria-hidden="true" />
+        <BackgroundVideo height="h-full" opacity="opacity-100" zoom={1.0} focal="50% 40%" />
+        {/* Removed hero__overlay to ensure no top fade at all */}
       </div>
 
-      {/* Centered content — removed px-4 to eliminate side padding */}
+      {/* Centered content */}
       <div
         className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center text-center"
         style={{ minHeight: "inherit" }}
@@ -56,6 +55,17 @@ export default function Hero() {
           </ButtonLink>
         </div>
       </div>
+
+      {/* Bridge gradient: overlaps into the next section so the video edge is never visible */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -bottom-24 h-24 z-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--page-bg) 100%)",
+        }}
+      />
+      {/* If a seam is still visible, try -bottom-32 h-32 or -bottom-40 h-40 */}
     </section>
   );
 }
