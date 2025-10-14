@@ -16,6 +16,9 @@ export default function Hero() {
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
+  // Section to reveal when clicking the chevron
+  const arrowTargetId = "about";
+
   return (
     <section
       id="hero"
@@ -25,7 +28,6 @@ export default function Hero() {
       {/* Background video fills the section */}
       <div className="absolute inset-0">
         <BackgroundVideo height="h-full" opacity="opacity-100" zoom={1.0} focal="50% 40%" />
-        {/* Removed hero__overlay to ensure no top fade at all */}
       </div>
 
       {/* Centered content */}
@@ -42,6 +44,7 @@ export default function Hero() {
           className="mx-auto"
         />
 
+        {/* Primary CTA */}
         <div className="mt-8">
           <ButtonLink
             href="#"
@@ -56,7 +59,38 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bridge gradient: overlaps into the next section so the video edge is never visible */}
+      {/* Big chevron — absolute at ~75% of hero height, centered. No layout shift. */}
+      <button
+        type="button"
+        onClick={() => scrollTo(arrowTargetId)}
+        aria-label={t<string>("hero.scrollDownLabel", "Scroll to next section")}
+        className={[
+          "absolute left-1/2 -translate-x-1/2 top-[80%] z-20",
+          // Large hit target with no visible container
+          "p-4 md:p-5 rounded-full outline-none",
+          // Only opacity changes; very subtle at rest
+          "opacity-5",
+          // Focus ring for keyboard users
+          "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+        ].join(" ")}
+      >
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-24 w-24 md:h-32 md:w-32"
+        >
+          <path
+            d="M4 8l8 8 8-8"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {/* Bridge gradient into the next section */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -bottom-24 h-24 z-0"
@@ -65,7 +99,6 @@ export default function Hero() {
             "linear-gradient(to bottom, rgba(0,0,0,0) 0%, var(--page-bg) 100%)",
         }}
       />
-      {/* If a seam is still visible, try -bottom-32 h-32 or -bottom-40 h-40 */}
     </section>
   );
 }
