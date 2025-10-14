@@ -22,23 +22,34 @@ export default function ButtonLink({
       className={cn(
         // Structure
         "relative inline-flex h-fit w-fit items-center justify-center rounded-full outline-none",
-        // Sizing + typography
+        // Sizing + type
         "px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base font-semibold",
-        // Glass at rest: fully transparent bg, but with blur+saturation and a thin glass border
-        "bg-transparent border border-glass-border-strong/10 text-page-ink/60",
-        "backdrop-blur",
-        // Motion + transitions
-        "transition-[transform,box-shadow,background-color,border-color,color] duration-200 ease-gentle",
-        // Hover: subtle lift + stronger border + blue-tinted glass + blue text
-        "hover:translate-y-[-1px] hover:border-glass-bg-hover",
-        "hover:bg-[color-mix(in_srgb,var(--brand)_26%,transparent)]",
-        "hover:text-white/60",
-        // Focus-visible: accessible ring + a touch more glow
-        "focus-visible:shadow-[0_0_0_3px_var(--brand)]",
-        // Glow layer (pseudo-element) — blue halo on hover/focus only
-        "after:pointer-events-none after:absolute after:inset-0 after:-z-10 after:rounded-full",
-        "after:blur-md after:bg-[var(--brand)] after:opacity-0 after:transition-opacity after:duration-300",
-        "hover:after:opacity-20 focus-visible:after:opacity-30",
+
+        // REST — unchanged
+        "bg-transparent border border-glass-border-strong/10 text-page-ink/60 backdrop-blur",
+
+        // Motion (no color/border changes)
+        "transition-[transform,filter] duration-200 ease-gentle hover:-translate-y-[1px]",
+
+        // Accessible focus ring
+        "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+
+        // ::after — outer neon from the pill border outward
+        "after:content-[''] after:absolute after:inset-0 after:rounded-full after:pointer-events-none",
+
+        // GLOW COLOR via token:
+        //   Use var(--brand) so it stays on-brand and easy to tune in globals.css
+        // INTENSITY KNOBS:
+        //   - First pair numbers: near-border halo (radius, spread)
+        //   - Second pair numbers: secondary halo (slightly larger)
+        //   Increase spread for more bloom; reduce for tighter glow.
+        "after:shadow-[0_0_10px_4px_var(--brand),0_0_18px_8px_var(--brand-border)]",
+
+        // OPACITY KNOB:
+        //   Change these percentages to strengthen or soften without changing size.
+        "after:opacity-0 after:transition-opacity after:duration-800",
+        "hover:after:opacity-50 focus-visible:after:opacity-65",
+
         className
       )}
       {...rest}
