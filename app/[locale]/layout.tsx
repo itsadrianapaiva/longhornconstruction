@@ -1,16 +1,11 @@
 /* -------------------------------
-   STYLE SYSTEM NOTES
+   STYLE SYSTEM NOTES (unchanged)
    --------------------------------
    Surface model:
    - Global default surface is set on <body> in app/layout.tsx using
      className="surface-light" or "surface-dark".
-   - No per-locale override is applied here to keep code minimal.
 
-   Hero mask:
-   - The Hero bottom fade uses .mask-fade-b to transition into hsl(var(--page-bg)),
-     which comes from the body surface in app/layout.tsx.
-
-   -------------------------------- */
+-------------------------------- */
 
 import type { Metadata } from "next";
 import { headers } from "next/headers";
@@ -23,7 +18,8 @@ import {
   type Locale,
 } from "@/lib/i18n/getDictionary";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Header from "@/components/Header";
+import type { NavItem } from "@/components/NavMenu"; // type-only import is safe in an RSC
 
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -48,7 +44,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale?: string }>;
 }): Promise<Metadata> {
-  const { locale: raw } = await params; // ✅ await params
+  const { locale: raw } = await params;
   const locale = validateLocale(raw);
   const base = await getBaseUrl();
 
@@ -85,16 +81,23 @@ export default async function LocaleLayout({
   const locale = validateLocale(raw);
   const dict = await getDictionary(locale);
 
+  // Build drawer items from i18n dict → section ids
+  const items: NavItem[] = [
+    { id: "hero", label: dict.nav.home },
+    { id: "about", label: dict.nav.about },
+    { id: "sismo", label: dict.nav.sismo },
+    { id: "projects", label: dict.nav.projects },
+    { id: "stats", label: dict.nav.stats },
+    { id: "testimonials", label: dict.nav.testimonials },
+    { id: "services", label: dict.nav.services },
+    // faq is optional later; keep order consistent with IA
+    { id: "contact", label: dict.nav.contact },
+  ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
+
   return (
     <div>
-      <header className="absolute left-0 top-3 z-[9999] w-full bg-transparent">
-        <div className="container flex h-10 items-center justify-start ml-10">
-          {/* Bravera-style: only language toggle visible; no solid background */}
-          <div className="lang-toggle">
-            <LanguageSwitcher compact stripHashOnMount />
-          </div>
-        </div>
-      </header>
+      {/* Header: absolute over hero, localized items for the drawer */}
+      <Header items={items} className="top-3" />
 
       {/* Content area on the chosen surface */}
       <I18nProvider locale={locale} dict={dict}>

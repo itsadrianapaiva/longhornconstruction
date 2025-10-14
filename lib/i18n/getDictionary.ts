@@ -1,12 +1,15 @@
 // Keep the public locale type tiny and explicit for DX and safety.
 export type Locale = "en" | "pt";
 
+// Derive the dictionary shape from the canonical source (English JSON).
+// This gives us full key safety like dict.nav.home, dict.hero.title, etc.
+export type Dict = typeof import("@/i18n/en.json");
+
 // Central single source of truth for supported locales.
 export const SUPPORTED_LOCALES: readonly Locale[] = ["en", "pt"] as const;
 
 // Small, request-scoped cache to avoid repeated dynamic imports per locale.
-// Map key: locale -> dictionary object
-const cache = new Map<Locale, Record<string, unknown>>();
+const cache = new Map<Locale, Dict>();
 
 /**
  * validateLocale
@@ -23,40 +26,37 @@ export function validateLocale(input: string | null | undefined): Locale {
  * Dynamically imports the JSON dictionary for the given locale.
  * - Cached in-memory for the process lifetime (safe for RSC).
  * - Throws with a helpful message if the JSON is missing or malformed.
+ *
+ * NOTE: The return type is the strongly typed Dict (derived from en.json).
+ * If a locale JSON is missing a key, TS will still type-check against Dict,
+ * which helps catch drift during development.
  */
-export async function getDictionary(locale: Locale): Promise<Record<string, unknown>> {
+export async function getDictionary(locale: Locale): Promise<Dict> {
   if (cache.has(locale)) return cache.get(locale)!;
 
   try {
-    // Dynamic import lets us tree-shake and only load what's needed.
     const mod = await import(`@/i18n/${locale}.json`);
-    const dict = (mod.default ?? mod) as Record<string, unknown>;
-
-    // Store in the local cache to minimize I/O per request.
+    const dict = (mod.default ?? mod) as Dict;
     cache.set(locale, dict);
     return dict;
   } catch (err) {
-    // Fail safe: if specific locale file is missing, fall back to 'en' once.
     if (locale !== "en") {
       const fallback = await getDictionary("en");
       return fallback;
     }
-    // Surface a clear error during development for the default locale.
-    throw new Error(`Missing or invalid dictionary for locale "${locale}". Original error: ${(err as Error).message}`);
+    throw new Error(
+      `Missing or invalid dictionary for locale "${locale}". Original error: ${(err as Error).message}`
+    );
   }
 }
 
 /**
  * t(dict, path, fallback?)
  * Safe, tiny dot-path accessor for nested keys in the dictionary.
- * - Example: t(dict, "hero.title") -> string | unknown
+ * - Example: t(dict, "hero.title") -> string
  * - Returns fallback (or the path itself) if not found, keeping UI resilient.
  */
-export function t<T = unknown>(
-  dict: Record<string, unknown>,
-  path: string,
-  fallback?: T
-): T {
+export function t<T = unknown>(dict: Dict, path: string, fallback?: T): T {
   if (!path) return (fallback as T);
   const parts = path.split(".");
   let cur: unknown = dict;
