@@ -19,7 +19,7 @@ import {
 } from "@/lib/i18n/getDictionary";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import Header from "@/components/Header";
-import type { NavItem } from "@/components/NavMenu"; // type-only import is safe in an RSC
+import type { NavItem } from "@/components/NavMenu"; 
 
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -97,7 +97,14 @@ export default async function LocaleLayout({
   return (
     <div>
       {/* Header: absolute over hero, localized items for the drawer */}
-      <Header items={items} className="top-3" />
+      <Header
+        items={items}
+        className="top-3"
+        ctaLabel={dict.hero.primaryCta}
+        ctaTargetId="contact"
+        logoSrc="/media/logo-white.png"
+        logoAlt="CÉU Construction"
+      />
 
       {/* Content area on the chosen surface */}
       <I18nProvider locale={locale} dict={dict}>

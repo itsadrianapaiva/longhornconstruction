@@ -1,14 +1,24 @@
+// components/NavMenu.tsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
+import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
+import ButtonLink from "@/components/ButtonLink";
 
 export type NavItem = { id: string; label: string };
 
 type NavMenuProps = {
   items: NavItem[];
   className?: string;
+  /** Drawer logo controls */
+  logoSrc?: string; // defaults to /media/logo-white.png
+  logoAlt?: string; // defaults to "CÉU Construction"
+  /** Bottom CTA controls */
+  ctaLabel?: string; // e.g. dict.hero.primaryCta
+  ctaTargetId?: string; // defaults to "contact"
 };
 
 function cx(...xs: Array<string | false | null | undefined>) {
@@ -17,13 +27,20 @@ function cx(...xs: Array<string | false | null | undefined>) {
 
 /**
  * NavMenu
- * - Bravera-like: hamburger on the right that opens a right-side drawer
- * - Uses react-icons for the trigger/close icons
+ * - Bravera-like: hamburger (right) that opens a right-side drawer
+ * - Adds a top logo and a bottom CTA (mirrors Bravera’s model)
  * - Focus trap, ESC to close, backdrop click to close
- * - Smooth-scroll to section IDs without changing URL
+ * - Smooth-scroll to section IDs without changing the URL
  * - Background scroll lock while open
  */
-export default function NavMenu({ items, className }: NavMenuProps) {
+export default function NavMenu({
+  items,
+  className,
+  logoSrc = "/media/logo-white.png",
+  logoAlt = "CÉU Construction",
+  ctaLabel = "Request a consultation",
+  ctaTargetId = "contact",
+}: NavMenuProps) {
   const [open, setOpen] = useState(false);
   const backdropRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -83,7 +100,7 @@ export default function NavMenu({ items, className }: NavMenuProps) {
   };
 
   // Smooth-scroll to section, then close
-  const handleNavigate = (id: string) => {
+  const scrollToId = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     setOpen(false);
@@ -91,18 +108,18 @@ export default function NavMenu({ items, className }: NavMenuProps) {
 
   return (
     <>
-      {/* Trigger (hamburger on the right, hidden on lg and up) */}
+      {/* Trigger (hamburger on the right). Hide on lg+ in your Header layout if desired */}
       <button
         type="button"
         aria-label="Open navigation"
         aria-expanded={open}
         onClick={() => setOpen(true)}
         className={cx(
-          "inline-flex items-center justify-center",
+          "inline-flex items-center justify-center lg:hidden",
           className
         )}
       >
-        <IoMenu className="h-12 w-12" />
+        <IoMenu className="h-8 w-8" />
       </button>
 
       {/* Drawer portal */}
@@ -130,7 +147,8 @@ export default function NavMenu({ items, className }: NavMenuProps) {
                 "ring-1 ring-white/15",
                 "translate-x-0",
                 "transition-transform duration-700 ease-in-out motion-reduce:transition-none",
-                "pr-4 pt-28" // leave space for close button and top rhythm
+                // Layout: full-height column so we can push CTA to the bottom
+                "flex flex-col"
               )}
             >
               {/* Close button */}
@@ -140,28 +158,51 @@ export default function NavMenu({ items, className }: NavMenuProps) {
                 onClick={() => setOpen(false)}
                 className={cx(
                   "absolute right-6 top-6",
+                  "inline-flex items-center justify-center"
                 )}
               >
                 <IoClose className="h-8 w-8" />
               </button>
 
-              {/* SR title for dialog */}
+              {/* Visual/semantic title for dialog (screen readers) */}
               <h2 id="mobile-nav-title" className="sr-only">
                 Main menu
               </h2>
 
-              {/* Nav items */}
-              <nav className="grid gap-6 px-6">
+              {/* Top: logo (mirrors Bravera layout) */}
+              <div className="pl-6 pt-12 pb-4">
+                <Link
+                  href="#"
+                  aria-label="Go to top"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToId("hero");
+                  }}
+                  className="inline-block"
+                >
+                  <Image
+                    src={logoSrc}
+                    alt={logoAlt}
+                    width={208}
+                    height={56}
+                    priority={false}
+                    className="w-52 h-auto"
+                  />
+                </Link>
+              </div>
+
+              {/* Middle: nav items */}
+              <nav className="grid gap-4 pl-14">
                 {items.map((item) => (
                   <button
                     key={item.id}
                     type="button"
-                    onClick={() => handleNavigate(item.id)}
+                    onClick={() => scrollToId(item.id)}
                     className={cx(
                       "text-left text-lg font-light uppercase tracking-wide",
                       "text-white/90 hover:text-[color:var(--brand)]",
                       "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
-                      "px-2 py-1 rounded-md",
+                      "px-2 rounded-md",
                       "transition-[color,transform] duration-200 ease-[var(--ease-gentle)]",
                       "hover:-translate-y-[1px]"
                     )}
@@ -170,6 +211,23 @@ export default function NavMenu({ items, className }: NavMenuProps) {
                   </button>
                 ))}
               </nav>
+
+              {/* Spacer pushes CTA to bottom */}
+              <div className="flex-1" />
+
+              {/* Bottom: CTA (Bravera-style) */}
+              <div className="px-6 pb-8 pt-6">
+                <ButtonLink
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToId(ctaTargetId);
+                  }}
+                  className="w-full justify-center"
+                >
+                  {ctaLabel}
+                </ButtonLink>
+              </div>
             </div>
           </div>,
           document.body
