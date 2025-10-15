@@ -61,7 +61,7 @@ export default function HeroAnimatedContent({
       const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
       // 1) Logo: slower fade-in (more “grand”)
-      tl.to(logo, { opacity: 1, duration: 2.0, ease: "power1.out" });
+      tl.to(logo, { opacity: 1, duration: 2.2, ease: "power1.out" });
 
       // 2) Entire button wrapper: scale down + fade AFTER logo completes
       tl.to(btnWrap, { opacity: 1, scale: 1, duration: 1.2 });
