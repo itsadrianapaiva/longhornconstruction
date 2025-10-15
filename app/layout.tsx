@@ -7,7 +7,6 @@ const dmSans = DM_Sans({
   display: "swap",
   variable: "--font-dm-sans",
 });
-// then on <body className={`${dmSans.variable} surface-light`}>…
 
 export const metadata: Metadata = {
   title: "CÉU Construction",
@@ -32,8 +31,6 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      {/* Add font variables here if using next/font:
-          className={`${inter.variable} ${interTight.variable}`} */}
       <body className={`${dmSans.variable} ${globalSurface}`}>
         {children}
       </body>

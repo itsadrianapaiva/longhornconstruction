@@ -19,13 +19,23 @@
         "videoAriaLabel": "Vídeo time-lapse de obra CÉU"
     },
     "about": {
-        "title": "Imagine além do céu.",
-        "body": "Entregamos todas as etapas internamente, sem subempreiteiros, juntando rigor norte-americano com acabamento português. Com equipamentos próprios controlamos prazo, custo e qualidade.",
+        "title": "Pense além do céu.",
+        "subheading": "Construtora self performing com rigor norte-americano e artesanato português. Entregamos obras mais rápidas e sólidas, com controlo total de qualidade.",
+        "body": [
+            "A CÉU Construction executa todas as fases internamente, das fundações e estrutura aos acabamentos. Assim, os prazos ficam mais curtos, os custos mais claros e os padrões mantêm-se consistentes.",
+            "Com equipa própria e maquinaria própria, não dependemos de subempreiteiros. Assumimos a responsabilidade de ponta a ponta, o que explica por que clientes em todo o Algarve voltam a trabalhar connosco."
+        ],
         "bullets": [
-            "Equipa própria do início aos acabamentos",
-            "Máquinas próprias para velocidade e controlo",
-            "Qualidade comprovada em todo o Algarve"
-        ]
+            "Equipa completa, do terreno aos acabamentos",
+            "Maquinaria própria para velocidade e controlo",
+            "Qualidade comprovada no Algarve",
+            "Tecnologia Sismo para obras mais rápidas e robustas"
+        ],
+        "cta": {
+            "label": "Conheça os nossos projetos",
+            "href": "/#projects"
+        },
+        "imageAlt": "Equipa da CÉU Construction em obra"
     },
     "sismo": {
         "title": "Porque Sismo?",

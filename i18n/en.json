@@ -15,17 +15,27 @@
         "title": "logo.",
         "subtitle": "Think beyond the sky.",
         "primaryCta": "Get in touch",
-        "secondaryCta": "See our work",
+        "secondaryCta": "Explore our work",
         "videoAriaLabel": "CÉU build time-lapse video"
     },
     "about": {
         "title": "Think beyond the sky.",
-        "body": "We deliver every stage in-house without subcontractors, combining North American rigor with Portuguese craftsmanship. Owning our equipment lets us control schedule, cost, and quality.",
+        "subheading": "A self-performing builder with North American rigor and Portuguese craftsmanship delivering faster, stronger builds with full quality control.",
+        "body": [
+            "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
+            "Owning our equipment and coordinating a large, skilled team means you don’t wait on subcontractors. We’re accountable end to end, which is why clients across the Algarve keep coming back."
+        ],
         "bullets": [
             "Full in-house team from groundworks to finishes",
             "Owned machinery for speed and control",
-            "Proven quality across the Algarve"
-        ]
+            "Proven quality across the Algarve",
+            "Sismo technology for faster, robust builds"
+        ],
+        "cta": {
+            "label": "Explore our work",
+            "href": "/#projects"
+        },
+        "imageAlt": "CÉU Construction built house"
     },
     "sismo": {
         "title": "Why Sismo construction?",

@@ -1,4 +1,3 @@
-// components/sections/Hero.tsx
 "use client";
 
 import BackgroundVideo from "@/components/BackgroundVideo";

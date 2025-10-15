@@ -6,9 +6,9 @@ import Projects from "@/components/sections/Projects";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
-// import FAQ from "@/components/sections/FAQ";
 
-export default async function Page() {
+// No params needed here because each section handles its own i18n.
+export default function Page() {
   return (
     <>
       <Hero />
