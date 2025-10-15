@@ -30,7 +30,8 @@ export default function HeroAnimatedContent({
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const scrollTo = useCallback((id: string) => {
-    const el = typeof document !== "undefined" ? document.getElementById(id) : null;
+    const el =
+      typeof document !== "undefined" ? document.getElementById(id) : null;
     if (!el) return;
     el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
@@ -55,7 +56,7 @@ export default function HeroAnimatedContent({
       // Initial states — ensure nothing is visible at start
       gsap.set(logo, { opacity: 0 });
       gsap.set(btnWrap, { opacity: 0, scale: 1.2 });
-      gsap.set(chev, { opacity: 0, y: 50 });
+      gsap.set(chev, { opacity: 0, y: 48 });
 
       const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
@@ -66,6 +67,10 @@ export default function HeroAnimatedContent({
       tl.to(btnWrap, { opacity: 1, scale: 1, duration: 1.2 });
 
       // 3) Chevron: rise and settle faint opacity AFTER button completes
+      // Remove the hiding classes just before animating the chevron
+      tl.add(() => {
+        chev.classList.remove("opacity-0", "translate-y-12", "transition-none");
+      });
       tl.to(chev, { y: 0, opacity: 0.25, duration: 1.0 });
     },
     { scope: scopeRef, dependencies: [prefersReducedMotion] }
@@ -111,11 +116,16 @@ export default function HeroAnimatedContent({
         className={[
           "absolute left-1/2 -translate-x-1/2 top-[80%] z-20",
           "p-4 md:p-5 rounded-full outline-none",
-          // No opacity class — GSAP handles it; if JS fails, it remains visible
+          // ↓ ensure no flash before GSAP runs
+          "opacity-0 translate-y-12 transition-none",
           "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
         ].join(" ")}
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true" className="h-24 w-24 md:h-32 md:w-32">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className="h-24 w-24 md:h-32 md:w-32"
+        >
           <path
             d="M4 8l8 8 8-8"
             fill="none"

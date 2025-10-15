@@ -63,7 +63,7 @@ export default function About() {
       />
 
       {/* Bravera-sized heading with entrance animation */}
-      <AboutAnimatedContent>
+      <AboutAnimatedContent once>
         <h2 className="text-balance text-center text-5xl md:text-6xl font-semibold text-ink">
           {title}
         </h2>
