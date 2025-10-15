@@ -1,4 +1,3 @@
-// components/animations/HeroAnimatedContent.tsx
 "use client";
 
 import { useRef, useCallback } from "react";
