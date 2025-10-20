@@ -19,7 +19,7 @@ import {
 } from "@/lib/i18n/getDictionary";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import Header from "@/components/Header";
-import type { NavItem } from "@/components/NavMenu"; 
+import type { NavItem } from "@/components/NavMenu";
 
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -82,14 +82,14 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale);
 
   // Build drawer items from i18n dict → section ids
+  // Prod will have only the MVP sections for fast launch
   const items: NavItem[] = [
     { id: "hero", label: dict.nav.home },
     { id: "about", label: dict.nav.about },
     { id: "sismo", label: dict.nav.sismo },
     { id: "projects", label: dict.nav.projects },
-    { id: "stats", label: dict.nav.stats },
-    { id: "testimonials", label: dict.nav.testimonials },
-    { id: "services", label: dict.nav.services },
+    // { id: "testimonials", label: dict.nav.testimonials },
+    // { id: "services", label: dict.nav.services },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },
   ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
