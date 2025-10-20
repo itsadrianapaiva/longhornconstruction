@@ -1,39 +1,61 @@
 "use client";
 
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { SectionShell } from "@/components/sections/SectionShell";
 import ButtonLink from "@/components/ButtonLink";
 import AboutAnimatedContent from "@/components/animations/AboutAnimatedContent";
 
-// Import i18n files (copy lives in JSON, not here)
-import en from "@/i18n/en.json";
-import pt from "@/i18n/pt.json";
+/** i18n types */
+type Locale = "en" | "pt";
+type CTA = { label: string; href: string };
+type AboutBlock = {
+  title?: string;
+  subheading?: string;
+  body?: string | string[];
+  bullets?: string[];
+  cta?: CTA;
+  imageAlt?: string;
+};
+type Dict = { about?: AboutBlock; common?: { learnMore?: string } };
 
-// Infer locale from first path segment
-function useLocale(): "en" | "pt" {
-  const path = usePathname() || "/";
-  const seg = path.split("/").filter(Boolean)[0];
-  return seg === "pt" ? "pt" : "en";
+/** Import JSON as unknown then assert to Dict */
+import enRaw from "@/i18n/en.json";
+import ptRaw from "@/i18n/pt.json";
+const EN: Dict = enRaw as unknown as Dict;
+const PT: Dict = ptRaw as unknown as Dict;
+
+/** Robust locale detection without usePathname */
+function useLocale(): Locale {
+  let path = "/";
+  if (typeof window !== "undefined") {
+    const p = window.location?.pathname;
+    path = typeof p === "string" ? p : "/";
+  }
+  const first = path.split("/").filter(Boolean)[0] ?? "";
+  return first === "pt" ? "pt" : "en";
 }
 
-// Safely extract the about block from current locale dict
-function useAboutDict() {
-  const locale = useLocale();
-  const dict = locale === "pt" ? pt : en;
-  const about = dict?.about ?? {};
-  // Fallbacks to keep UI stable even if JSON is not yet upgraded
+/** Normalized shape for About copy */
+type AboutNormalized = {
+  title: string;
+  subheading: string;
+  body: string[];
+  bullets: string[];
+  cta: CTA;
+  imageAlt: string;
+};
+
+function useAboutDict(): AboutNormalized {
+  const dict: Dict = useLocale() === "pt" ? PT : EN;
+  const about: AboutBlock = dict.about ?? {};
   return {
     title: about.title ?? "",
     subheading: about.subheading ?? "",
     body: Array.isArray(about.body)
-      ? about.body
-      : [about.body ?? ""].filter(Boolean),
+      ? (about.body as string[])
+      : [about.body ?? ""].filter(Boolean) as string[],
     bullets: Array.isArray(about.bullets) ? about.bullets : [],
-    cta: about.cta ?? {
-      label: dict?.common?.learnMore ?? "Learn more",
-      href: "/#projects",
-    },
+    cta: about.cta ?? { label: dict.common?.learnMore ?? "Learn more", href: "/#projects" },
     imageAlt: about.imageAlt ?? "About CÉU Construction",
   };
 }
@@ -51,99 +73,91 @@ export default function About() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Brand glow behind heading (uses CEU tokens) */}
+      {/* Brand glow using CEU tokens */}
       <div
         aria-hidden
-        className="absolute -z-10 left-1/2 top-0 -translate-x-1/2 md:-translate-y-10 aspect-square w-[46rem] max-w-[90vw] rounded-full blur-3xl"
+        className="absolute -z-10 left-1/2 top-0 aspect-square w-full max-w-xl -translate-x-1/2 rounded-full blur-3xl"
         style={{
           background:
-            "radial-gradient(closest-side, color-mix(in srgb, var(--brand) 70%, transparent), transparent 70%)",
+            "radial-gradient(closest-side, color-mix(in srgb, var(--brand) 55%, transparent), transparent 70%)",
           opacity: 0.18,
         }}
       />
 
-      {/*  Title starts hidden via CSS, rises into place, and keeps inline final styles. */}
-
-      <AboutAnimatedContent
-        yFrom={64}
-        start="top 90%"
-        once
-        clearOnEnd={false}
-        removeClasses={["opacity-0", "translate-y-16", "transition-none"]} // ← array
-      >
-        <h2
-          className={[
-            "text-balance text-center text-5xl md:text-6xl font-semibold text-ink",
-            "opacity-0 translate-y-16 transition-none", // pre-hide
-            "relative z-0",
-          ].join(" ")}
-        >
-          {title}
-        </h2>
-      </AboutAnimatedContent>
-
-      {/* Glass container: wrapper adds a dedicated border layer, inner handles blur/gradient */}
-      <div className="mt-16 relative">
-        {/* Border layer — independent from blur/gradient, guarantees full rounded edge */}
-        <div
-          className="pointer-events-none absolute inset-0 rounded-2xl border"
-          style={{ borderColor: "var(--glass-border-strong)" }}
-        />
-
-        {/* Content layer — clipped to radius; subtle blue gradient + depth */}
-        <div
-          className="
-      relative rounded-2xl overflow-hidden bg-clip-padding
-      grid items-center gap-8 px-6 py-8 md:px-8 lg:grid-cols-3 lg:py-12
-      backdrop-blur-[12px] shadow-[0_8px_30px_rgba(0,0,0,0.25)]
-    "
-          style={{
-            background:
-              "linear-gradient(to bottom right, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
-          }}
-        >
-          {/* Text column */}
-          <div className="lg:col-span-1">
-            {subheading ? (
-              <div className="mt-2 text-2xl font-normal text-ink/95">
-                {subheading}
-              </div>
-            ) : null}
-
-            {body.length ? (
-              <div className="mt-4 space-y-4 text-ink/85 leading-relaxed">
-                {body.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-            ) : null}
-
-            {bullets.length ? (
-              <ul className="mt-4 list-disc pl-5 text-ink/85 space-y-1">
-                {bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-            ) : null}
-
-            <div className="mt-6 text-center sm:text-left">
-              <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
-            </div>
-          </div>
-
-          {/* Image column */}
-          <div className="lg:col-span-2 relative">
-            <Image
-              src="/media/about/about.jpg"
-              alt={imageAlt}
-              width={1920}
-              height={1280}
-              priority={false}
-              className="rounded-lg shadow-2xl opacity-95 lg:translate-x-[-12%]"
-            />
-          </div>
-        </div>
+      {/* Title: initially peeking from behind the glass */}
+      <div className="relative overflow-visible -mb-6">
+        <AboutAnimatedContent>
+          <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl translate-y-[16px]">
+            {title}
+          </h2>
+        </AboutAnimatedContent>
       </div>
+
+    {/* Glass card with top edge mask to sell the 'behind-glass' reveal */}
+<div
+  className="relative z-10 mt-16 grid items-center gap-8 rounded-2xl border border-glass-strong bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+  style={{
+    background:
+      "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
+  }}
+>
+  {/* Top edge mask */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute left-0 right-0 -top-5 h-5 rounded-t-2xl z-20"
+    style={{
+      background:
+        "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
+      WebkitBackdropFilter: "saturate(160%) blur(var(--glass-blur))",
+      backdropFilter: "saturate(160%) blur(var(--glass-blur))",
+    }}
+  />
+
+  {/* Image column (now on left for lg+) */}
+  <div className="relative order-2 md:order-2 lg:order-1 lg:col-span-1 lg:overflow-visible">
+    <div className="relative mx-auto max-w-[1100px] lg:max-w-none">
+      <Image
+        src="/media/about/about.jpg"
+        alt={imageAlt}
+        width={1920}
+        height={1280}
+        sizes="(min-width: 1280px) 900px, (min-width: 1024px) 66vw, 100vw"
+        priority={false}
+        className="rounded-lg opacity-95 shadow-2xl
+                   lg:-translate-x-[12%] lg:scale-[1.08]
+                   lg:max-h-[600px] lg:w-auto lg:h-auto object-cover"
+      />
+    </div>
+  </div>
+
+  {/* Text column */}
+  <div className="lg:col-span-2 order-1 md:order-1 lg:order-2">
+    {subheading ? (
+      <div className="mt-1 text-2xl font-normal text-ink/95">{subheading}</div>
+    ) : null}
+
+    {body.length ? (
+      <div className="mt-4 space-y-4 leading-relaxed text-ink/85">
+        {body.map((p: string, i: number) => (
+          <p key={i}>{p}</p>
+        ))}
+      </div>
+    ) : null}
+
+    {bullets.length ? (
+      <ul className="mt-4 list-disc space-y-1 pl-5 text-ink/85">
+        {bullets.map((b: string, i: number) => (
+          <li key={i}>{b}</li>
+        ))}
+      </ul>
+    ) : null}
+
+    <div className="mt-6 text-center sm:text-left">
+      <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
+    </div>
+  </div>
+</div>
+
     </SectionShell>
   );
 }
