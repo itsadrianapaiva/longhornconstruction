@@ -18,24 +18,24 @@ type AboutBlock = {
 };
 type Dict = { about?: AboutBlock; common?: { learnMore?: string } };
 
-/** Import JSON as unknown then assert to Dict (no any) */
+/** Import JSON as unknown then assert to Dict */
 import enRaw from "@/i18n/en.json";
 import ptRaw from "@/i18n/pt.json";
 const EN: Dict = enRaw as unknown as Dict;
 const PT: Dict = ptRaw as unknown as Dict;
 
-/** Crash-proof locale detection that never touches undefined */
+/** Robust locale detection without usePathname */
 function useLocale(): Locale {
   let path = "/";
   if (typeof window !== "undefined") {
-    const maybe = window.location?.pathname;
-    path = typeof maybe === "string" ? maybe : "/";
+    const p = window.location?.pathname;
+    path = typeof p === "string" ? p : "/";
   }
   const first = path.split("/").filter(Boolean)[0] ?? "";
   return first === "pt" ? "pt" : "en";
 }
 
-/** Normalized about dict shape */
+/** Normalized shape for About copy */
 type AboutNormalized = {
   title: string;
   subheading: string;
@@ -84,34 +84,35 @@ export default function About() {
         }}
       />
 
-      {/* Title viewport to clip the entrance so it appears from behind the glass */}
-      <div className="relative overflow-hidden pb-4">
-        <AboutAnimatedContent
-          yFrom={96}
-          start="top bottom-=40%"
-          once
-          clearOnEnd={true}
-          removeClasses={["opacity-0", "translate-y-16", "transition-none"]}
-        >
-          <h2
-            className={[
-              "text-balance text-center text-5xl md:text-6xl font-semibold text-ink",
-              "opacity-0 translate-y-16 transition-none",
-            ].join(" ")}
-          >
+      {/* Title: initially peeking from behind the glass */}
+      <div className="relative overflow-visible -mb-6">
+        <AboutAnimatedContent>
+          <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl translate-y-[16px]">
             {title}
           </h2>
         </AboutAnimatedContent>
       </div>
 
-      {/* Glass card with CEU tokens, Bravera-like structure */}
+      {/* Glass card with top edge mask to sell the 'behind-glass' reveal */}
       <div
-        className="mt-16 grid items-center gap-8 rounded-2xl border border-glass-strong bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+        className="relative z-10 mt-16 grid items-center gap-8 rounded-2xl border border-glass-strong bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         style={{
           background:
             "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
         }}
       >
+        {/* Top edge mask — adjust pair to fine-tune seam: (-top-5,h-5) or (-top-6,h-6) */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-0 right-0 -top-5 h-5 rounded-t-2xl z-20"
+          style={{
+            background:
+              "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
+            WebkitBackdropFilter: "saturate(160%) blur(var(--glass-blur))",
+            backdropFilter: "saturate(160%) blur(var(--glass-blur))",
+          }}
+        />
+
         {/* Text column */}
         <div className="lg:col-span-1">
           {subheading ? (
