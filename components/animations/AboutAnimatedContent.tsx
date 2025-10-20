@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef, type ReactNode } from "react";
@@ -36,7 +35,7 @@ export default function AboutAnimatedContent({
   removeClasses,
   clearOnEnd = true,
 }: Props) {
-  const el = useRef<HTMLDivElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
   const reduced = usePrefersReducedMotion();
 
   // Normalize removeClasses → always an array
@@ -50,16 +49,25 @@ export default function AboutAnimatedContent({
 
   useGSAP(
     () => {
-      const node = el.current;
-      if (!node) return;
+      const wrapper = wrapperRef.current;
+      if (!wrapper) return;
+
+      // ✅ Animate the first child if it exists; otherwise animate the wrapper.
+      // This matches your usage where the pre-hide classes live on the <h2>.
+      const target: HTMLElement =
+        (wrapper.firstElementChild as HTMLElement) || (wrapper as HTMLElement);
 
       if (reduced) {
-        gsap.set(node, { y: 0, opacity: 1, clearProps: "transform,opacity,willChange" });
+        gsap.set(target, {
+          y: 0,
+          opacity: 1,
+          clearProps: "transform,opacity,willChange",
+        });
         return;
       }
 
       const tween = gsap.fromTo(
-        node,
+        target,
         { y: yFrom, opacity: opacityFrom, willChange: "transform,opacity" },
         {
           y: 0,
@@ -71,10 +79,10 @@ export default function AboutAnimatedContent({
           overwrite: "auto",
           clearProps: once && clearOnEnd ? "transform,opacity,willChange" : undefined,
           onStart: () => {
-            if (classesToRemove.length) node.classList.remove(...classesToRemove);
+            if (classesToRemove.length) target.classList.remove(...classesToRemove);
           },
           scrollTrigger: {
-            trigger: node,
+            trigger: wrapper, // trigger on the wrapper for consistent viewport math
             start,
             toggleActions: once ? "play none none none" : "play pause resume reverse",
             markers: debug,
@@ -83,6 +91,7 @@ export default function AboutAnimatedContent({
         },
       );
 
+      // Nudge ST after mount/layout settles
       requestAnimationFrame(() => ScrollTrigger.refresh());
 
       return () => {
@@ -90,9 +99,24 @@ export default function AboutAnimatedContent({
         tween?.kill();
       };
     },
-    // Keep deps simple; no joins/splits here
-    { scope: el, dependencies: [reduced, yFrom, duration, ease, start, delay, once, debug, clearOnEnd] },
+    {
+      scope: wrapperRef,
+      // Keep deps tidy to avoid re-inits while still responding to prop changes.
+      dependencies: [
+        reduced,
+        yFrom,
+        opacityFrom,
+        duration,
+        ease,
+        start,
+        delay,
+        once,
+        debug,
+        clearOnEnd,
+        // Do not include removeClasses array itself to avoid re-runs on identity change.
+      ],
+    },
   );
 
-  return <div ref={el}>{children}</div>;
+  return <div ref={wrapperRef}>{children}</div>;
 }
