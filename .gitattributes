@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.md diff=markdown
+*.yml diff=yaml
+*.yaml diff=yaml
+*.ts diff=typescript
+*.tsx diff=typescript

@@ -1,0 +1,195 @@
+{
+    "nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "sismo": "Método Sismo",
+        "projects": "Projetos",
+        "stats": "Números",
+        "testimonials": "Testemunhos",
+        "services": "Serviços",
+        "faq": "Perguntas",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "eyebrow": "CÉU Construction",
+        "title": "logo.",
+        "subtitle": "Imagine além do céu.",
+        "primaryCta": "Fale conosco",
+        "secondaryCta": "Ver trabalhos",
+        "videoAriaLabel": "Vídeo time-lapse de obra CÉU"
+    },
+    "about": {
+        "title": "Pense além do céu.",
+        "subheading": "Construtora self performing com rigor norte-americano e artesanato português. Entregamos obras mais rápidas e sólidas, com controlo total de qualidade.",
+        "body": [
+            "A CÉU Construction executa todas as fases internamente, das fundações e estrutura aos acabamentos. Assim, os prazos ficam mais curtos, os custos mais claros e os padrões mantêm-se consistentes.",
+            "Com equipa própria e maquinaria própria, não dependemos de subempreiteiros. Assumimos a responsabilidade de ponta a ponta, o que explica por que clientes em todo o Algarve voltam a trabalhar connosco."
+        ],
+        "bullets": [
+            "Equipa completa, do terreno aos acabamentos",
+            "Maquinaria própria para velocidade e controlo",
+            "Qualidade comprovada no Algarve",
+            "Tecnologia Sismo para obras mais rápidas e robustas"
+        ],
+        "cta": {
+            "label": "Conheça os nossos projetos",
+            "href": "/#projects"
+        },
+        "imageAlt": "Equipa da CÉU Construction em obra"
+    },
+    "sismo": {
+        "title": "Porque Sismo?",
+        "intro": "Os painéis estruturais Sismo permitem construções rápidas e robustas, com excelente desempenho térmico e acústico.",
+        "benefits": [
+            "Velocidade: painéis de instalação rápida reduzem o prazo",
+            "Resistência: núcleo monolítico de betão com alta robustez",
+            "Eficiência: menos frentes de trabalho e estaleiro limpo",
+            "Conforto: desempenho térmico e acústico"
+        ],
+        "cta": "Ver time-lapse"
+    },
+    "projects": {
+        "title": "Projetos em destaque",
+        "filters": {
+            "all": "Todos",
+            "residential": "Habitacional",
+            "commercial": "Comercial",
+            "renovation": "Reabilitação",
+            "sismo": "Sismo"
+        },
+        "viewGallery": "Abrir galeria",
+        "modal": {
+            "prev": "Anterior",
+            "next": "Seguinte",
+            "close": "Fechar"
+        }
+    },
+    "stats": {
+        "title": "Histórico",
+        "labels": {
+            "yearsOperating": "Anos de atividade",
+            "projectsDelivered": "Projetos concluídos",
+            "projectsInProgress": "Projetos em execução",
+            "teamSize": "Tamanho da equipa",
+            "ownedMachines": "Máquinas próprias",
+            "safetyRecord": "Registo de segurança"
+        }
+    },
+    "testimonials": {
+        "title": "O que dizem os clientes"
+    },
+    "services": {
+        "title": "Serviços",
+        "intro": "Uma equipa de ponta a ponta. Executamos cada etapa para manter a qualidade alta e os prazos controlados.",
+        "items": [
+            {
+                "key": "designBuild",
+                "title": "Apoio design-build",
+                "desc": "Análise de construtibilidade, orientação orçamental e articulação com o seu arquiteto e engenheiro."
+            },
+            {
+                "key": "groundworks",
+                "title": "Movimento de terras e fundações",
+                "desc": "Terraplanagem, sapatas, drenagens e lajes com equipamentos próprios para precisão e velocidade."
+            },
+            {
+                "key": "sismoShell",
+                "title": "Estrutura Sismo",
+                "desc": "Fornecimento e montagem de painéis, betonagens e integração estrutural para invólucros rápidos e robustos."
+            },
+            {
+                "key": "masonryConcrete",
+                "title": "Alvenaria e betão",
+                "desc": "Alvenaria, elementos de betão armado, muros de suporte e acabamentos arquitetónicos."
+            },
+            {
+                "key": "roofEnvelope",
+                "title": "Coberturas e invólucro",
+                "desc": "Estruturas, impermeabilizações, isolamento e revestimentos exteriores para desempenho duradouro."
+            },
+            {
+                "key": "mepCoordination",
+                "title": "Coordenação MEP",
+                "desc": "Coordenação de AVAC, eletricidade e hidráulica, com passagens claras e limpas."
+            },
+            {
+                "key": "interiors",
+                "title": "Acabamentos interiores",
+                "desc": "Estuque, azulejo, pavimentos, carpintaria e pintura com supervisão consistente."
+            },
+            {
+                "key": "renovations",
+                "title": "Reabilitações e ampliações",
+                "desc": "Intervenções cuidadas que respeitam a estrutura, o prazo e o orçamento."
+            },
+            {
+                "key": "siteLogistics",
+                "title": "Logística e equipamentos",
+                "desc": "Máquinas próprias, operadores certificados e estaleiros organizados que mantêm as equipas eficientes e seguras."
+            }
+        ],
+        "cta": "Discutir o seu projeto"
+    },
+    "faq": {
+        "title": "Perguntas frequentes",
+        "items": [
+            {
+                "q": "Trabalham apenas com Sismo?",
+                "a": "Usamos Sismo quando acrescenta valor, e também construímos com métodos tradicionais. Recomendamos a melhor solução para o seu orçamento, prazo e objetivos de desempenho."
+            },
+            {
+                "q": "Que áreas cobrem?",
+                "a": "Atuamos principalmente no Algarve. Em projetos de maior dimensão avaliamos trabalho noutras regiões de Portugal."
+            },
+            {
+                "q": "Quão rápido é o Sismo face ao método tradicional?",
+                "a": "Os painéis Sismo montam rapidamente e reduzem etapas de coordenação. O ganho real depende do projeto e da logística, mas os prazos tendem a ser mais curtos do que na alvenaria tradicional."
+            },
+            {
+                "q": "Usam subempreiteiros?",
+                "a": "Não. Autoexecutamos com a nossa equipa e equipamentos, o que ajuda a controlar qualidade, segurança e prazos."
+            },
+            {
+                "q": "Podem ajudar antes de ter o projeto fechado?",
+                "a": "Sim. Prestamos apoio na fase inicial para validar pressupostos, alinhar orçamentos e antecipar questões de construtibilidade."
+            },
+            {
+                "q": "Estão licenciados e segurados?",
+                "a": "Sim. Mantemos as inscrições e seguros necessários. Podemos partilhar documentação na fase de pré-construção."
+            },
+            {
+                "q": "Como começamos?",
+                "a": "Envie um breve resumo e desenhos disponíveis. Agendamos chamada ou visita e indicamos próximos passos com um plano claro."
+            },
+            {
+                "q": "Fornecem garantias?",
+                "a": "Sim. Respondemos pela nossa mão de obra e pelos sistemas instalados. As condições específicas dependem do âmbito e dos materiais."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Vamos construir",
+        "subtitle": "Fale-nos do seu projeto. Respondemos rapidamente com os próximos passos.",
+        "form": {
+            "name": "Nome completo",
+            "email": "Email",
+            "phone": "Telefone",
+            "message": "Detalhes do projeto",
+            "honeypot": "Deixe este campo vazio",
+            "submit": "Enviar",
+            "success": "Obrigado. A sua mensagem foi enviada.",
+            "error": "Ocorreu um erro. Tente novamente."
+        },
+        "serviceArea": "Algarve e arredores"
+    },
+    "footer": {
+        "rights": "Todos os direitos reservados.",
+        "companyLabel": "Empresa",
+        "privacy": "Privacidade",
+        "language": "Idioma"
+    },
+    "common": {
+        "readMore": "Saber mais",
+        "learnMore": "Ver mais"
+    }
+}

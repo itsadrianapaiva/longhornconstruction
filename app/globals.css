@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+/* 1) Tokens — HEX/RGBA only */
+:root {
+  /* Core surfaces */
+  --bg: #0a0e14;            /* background (dark) */
+  --fg: #f3f4f6;            /* foreground (light ink on dark) */
+  --page-bg: #f6f9fe;       /* default page surface (light) */
+  --page-ink: #1e2129;      /* ink on page surface */
+
+  /* Brand (blue) */
+  --brand: #1a539e;
+  --brand-hover: #1e61b8;
+  --brand-border: #2068c5;
+  --brand-ink: #f5f9ff;     /* text on brand */
+  --ring: #3690f7;
+
+  /* Glass layer */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-hover: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-border-strong: rgba(255, 255, 255, 0.22);
+  --glass-blur: 10px;
+
+  /* Sky band (hero overlay only) */
+  --sky-900: rgba(17, 24, 34, 0.44);
+  --sky-700: rgba(40, 85, 143, 0.22);
+  --sky-500: rgba(53, 131, 233, 0.10);
+
+  /* Others */
+  --radius: 12px;
+  --ease-gentle: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 200ms;
+
+  /* Typography: DM Sans is bound in layout to --font-dm-sans */
+}
+
+/* Optional surface toggles */
+.surface-light { --page-bg: #f6f9fe; --page-ink: #1e2129; }
+.surface-dark  { --page-bg: var(--bg); --page-ink: var(--fg); }
+
+/* 2) Base reset + typography */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html:focus-within { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html:focus-within { scroll-behavior: auto; } }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--page-ink);
+  background: var(--page-bg);
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 { letter-spacing: -0.02em; }
+h1 { font-weight: 700; }
+h2, h3 { font-weight: 600; }
+
+/* 3) Focus & selection */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+  transition: box-shadow var(--dur-fast) var(--ease-gentle);
+}
+::selection { background: color-mix(in srgb, var(--brand) 25%, transparent); }
+
+/* 4) Tiny readable utilities (so you never write rgba() by hand) */
+.text-ink { color: var(--page-ink); }
+.text-brand { color: var(--brand); }
+.text-brand-ink { color: var(--brand-ink); }
+
+.bg-page { background-color: var(--page-bg); }
+.bg-brand { background-color: var(--brand); }
+.bg-brand-hover { background-color: var(--brand-hover); }
+.bg-glass { background-color: var(--glass-bg); -webkit-backdrop-filter: saturate(160%) blur(var(--glass-blur)); backdrop-filter: saturate(160%) blur(var(--glass-blur)); }
+
+.border-glass { border-color: var(--glass-border); }
+.border-glass-strong { border-color: var(--glass-border-strong); }
+.border-brand { border-color: var(--brand-border); }
+
+.ring-brand { box-shadow: 0 0 0 3px var(--ring); }
+
+/* 5) Glass container — exactly like your snippet */
+.glass-container { position: relative; }
+.glass-container::before {
+  content: "";
+  position: absolute; inset: -10px; z-index: -1;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(241,245,249,0.20); /* slate-100/20 */
+  background: rgba(241,245,249,0.10);       /* slate-100/10 */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* 6) Button presets (kept for non-pill usage) */
+.btn-glass,
+.btn-solid {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding-inline: 1.125rem; padding-block: 0.625rem; border-radius: 10px;
+  font-weight: 600; letter-spacing: 0.02em;
+  transition: transform var(--dur) var(--ease-gentle), box-shadow var(--dur) var(--ease-gentle), background-color var(--dur) var(--ease-gentle), border-color var(--dur) var(--ease-gentle);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 6px 20px rgba(0,0,0,0.12);
+}
+.btn-glass {
+  color: var(--page-ink);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: saturate(160%) blur(var(--glass-blur));
+  backdrop-filter: saturate(160%) blur(var(--glass-blur));
+}
+.btn-glass:hover { transform: translateY(-1px); background: var(--glass-bg-hover); border-color: var(--glass-border-strong); }
+.btn-glass:active { transform: translateY(0); }
+
+.btn-solid { color: var(--brand-ink); background: var(--brand); border: 1px solid var(--brand-border); }
+.btn-solid:hover { transform: translateY(-1px); background: var(--brand-hover); box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 12px 30px rgba(0,0,0,0.18); }
+.btn-solid:active { transform: translateY(0); }
+
+/* 7) Hero helpers — full bleed, overlay, and bottom fade */
+.hero { position: relative; isolation: isolate; }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* ↓ Gentler overlay: transparent start + softer ramp */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* bottom-only fade: start strong at bottom and fade upward to clear */
+  background: linear-gradient(
+    to top,
+    var(--sky-700) 0%,       /* deeper tone at the bottom */
+    var(--sky-500) 25%,      /* soft mid fade */
+    rgba(0,0,0,0) 60%        /* transparent by halfway up */
+  );
+}
+/* ↓ Slightly shorter bottom fade so more video shows through */
+.mask-fade-b::after {
+  /* was height: 160px; */
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    var(--page-bg) 100%
+  );
+}
+
+/* 8) Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn-solid, .btn-glass { transition: none; transform: none; }
+}
+
+/* globals.css — DEBUG ONLY */
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+  z-index: 2147483647 !important;
+}

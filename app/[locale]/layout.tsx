@@ -1,0 +1,120 @@
+/* -------------------------------
+   STYLE SYSTEM NOTES (unchanged)
+   --------------------------------
+   Surface model:
+   - Global default surface is set on <body> in app/layout.tsx using
+     className="surface-light" or "surface-dark".
+
+-------------------------------- */
+
+import type { Metadata } from "next";
+import { headers } from "next/headers";
+import { ReactNode } from "react";
+
+import {
+  getDictionary,
+  validateLocale,
+  SUPPORTED_LOCALES,
+  type Locale,
+} from "@/lib/i18n/getDictionary";
+import { I18nProvider } from "@/lib/i18n/I18nProvider";
+import Header from "@/components/Header";
+import type { NavItem } from "@/components/NavMenu"; 
+
+async function getBaseUrl(): Promise<string> {
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
+  if (envUrl) return envUrl;
+
+  const h = await headers();
+  const host = h.get("x-forwarded-host") ?? h.get("host");
+  if (host) {
+    const proto = h.get("x-forwarded-proto") ?? "https";
+    return `${proto}://${host}`;
+  }
+  return "http://localhost:3000";
+}
+
+function localePath(locale: Locale): string {
+  return `/${locale}`;
+}
+
+/** Canonical and hreflang per locale */
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale?: string }>;
+}): Promise<Metadata> {
+  const { locale: raw } = await params;
+  const locale = validateLocale(raw);
+  const base = await getBaseUrl();
+
+  const languages: Record<string, string> = {};
+  for (const l of SUPPORTED_LOCALES) {
+    languages[l] = `${base}${localePath(l)}`;
+  }
+
+  return {
+    metadataBase: new URL(base),
+    alternates: {
+      canonical: `${base}${localePath(locale)}`,
+      languages,
+    },
+    openGraph: {
+      url: `${base}${localePath(locale)}`,
+      siteName: "CÉU Construction",
+      type: "website",
+      locale,
+    },
+    twitter: { card: "summary_large_image" },
+  };
+}
+
+/** Nested locale layout (no <html>/<body> here) */
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale?: string }>;
+}) {
+  const { locale: raw } = await params;
+  const locale = validateLocale(raw);
+  const dict = await getDictionary(locale);
+
+  // Build drawer items from i18n dict → section ids
+  const items: NavItem[] = [
+    { id: "hero", label: dict.nav.home },
+    { id: "about", label: dict.nav.about },
+    { id: "sismo", label: dict.nav.sismo },
+    { id: "projects", label: dict.nav.projects },
+    { id: "stats", label: dict.nav.stats },
+    { id: "testimonials", label: dict.nav.testimonials },
+    { id: "services", label: dict.nav.services },
+    // faq is optional later; keep order consistent with IA
+    { id: "contact", label: dict.nav.contact },
+  ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
+
+  return (
+    <div>
+      {/* Header: absolute over hero, localized items for the drawer */}
+      <Header
+        items={items}
+        className="top-3"
+        ctaLabel={dict.hero.primaryCta}
+        ctaTargetId="contact"
+        logoSrc="/media/logo-white.png"
+        logoAlt="CÉU Construction"
+      />
+
+      {/* Content area on the chosen surface */}
+      <I18nProvider locale={locale} dict={dict}>
+        <main id="content">{children}</main>
+      </I18nProvider>
+
+      {/* Footer stays on the same surface; typography uses page ink */}
+      <footer className="container py-12 text-sm opacity-80">
+        © {new Date().getFullYear()} CÉU Construction. All rights reserved.
+      </footer>
+    </div>
+  );
+}

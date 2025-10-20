@@ -1,0 +1,46 @@
+# Minimal Next.js setup with production on main and a staging branch deploy.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Global environment for the build
+[build.environment]
+  NODE_VERSION = "20"
+
+# Production context (auto when deploying the main site)
+[context.production]
+  command = "npm run build"
+
+# Staging branch context (auto when deploying the 'staging' branch)
+[context.staging]
+  command = "npm run build"
+
+# Branch deploy defaults (applies to branches that are not production)
+[context.branch-deploy]
+  command = "npm run build"
+
+# Deploy previews (PR builds)
+[context.deploy-preview]
+  command = "npm run build"
+
+# Headers
+# Disallow indexing on non-production deploys to avoid duplicate content in search
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Add robots header to non-prod contexts
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+  [headers.conditions]
+    # Applies to deploy-previews and branch-deploys only
+    Tier = ["deploy-preview", "branch-deploy"]
