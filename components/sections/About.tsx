@@ -62,9 +62,22 @@ export default function About() {
         }}
       />
 
-      {/* Bravera-sized heading with entrance animation */}
-      <AboutAnimatedContent once>
-        <h2 className="text-balance text-center text-5xl md:text-6xl font-semibold text-ink">
+      {/*  Title starts hidden via CSS, rises into place, and keeps inline final styles. */}
+
+      <AboutAnimatedContent
+        yFrom={64}
+        start="top 90%"
+        once
+        clearOnEnd={false}
+        removeClasses={["opacity-0", "translate-y-16", "transition-none"]} // ← array
+      >
+        <h2
+          className={[
+            "text-balance text-center text-5xl md:text-6xl font-semibold text-ink",
+            "opacity-0 translate-y-16 transition-none", // pre-hide
+            "relative z-0",
+          ].join(" ")}
+        >
           {title}
         </h2>
       </AboutAnimatedContent>

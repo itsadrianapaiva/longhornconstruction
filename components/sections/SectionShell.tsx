@@ -1,4 +1,3 @@
-// components/sections/SectionShell.tsx
 // Minimal, flexible shell for non-hero sections.
 // - No HSL, no external deps.
 // - Pad presets: "none" | "sm" | "md" | "lg"

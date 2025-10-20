@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRef, type ReactNode } from "react";
@@ -8,14 +9,18 @@ import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 
 type Props = {
   children: ReactNode;
-  yFrom?: number; // default 100
-  opacityFrom?: number; // default 0
-  duration?: number; // default 1
-  ease?: string; // default "power2.inOut"
-  start?: string; // default "top 80%"
-  delay?: number; // default 0
-  once?: boolean; // default false
-  debug?: boolean; // default false
+  yFrom?: number;
+  opacityFrom?: number;
+  duration?: number;
+  ease?: string;
+  start?: string;
+  delay?: number;
+  once?: boolean;
+  debug?: boolean;
+  /** Remove these CSS classes exactly when the tween starts (e.g., ['opacity-0','translate-y-16']). */
+  removeClasses?: string[] | string | null | undefined;
+  /** If true, clear inline transform/opacity after the tween completes. */
+  clearOnEnd?: boolean;
 };
 
 export default function AboutAnimatedContent({
@@ -24,15 +29,23 @@ export default function AboutAnimatedContent({
   opacityFrom = 0,
   duration = 1,
   ease = "power2.inOut",
-  start = "top 80%", // more forgiving than "top bottom-=40%"
+  start = "top 80%",
   delay = 0,
   once = false,
   debug = false,
+  removeClasses,
+  clearOnEnd = true,
 }: Props) {
   const el = useRef<HTMLDivElement | null>(null);
   const reduced = usePrefersReducedMotion();
 
-  // ✅ Explicitly register BOTH plugins (matches your Hero pattern)
+  // Normalize removeClasses → always an array
+  const classesToRemove: string[] = Array.isArray(removeClasses)
+    ? removeClasses.filter(Boolean)
+    : typeof removeClasses === "string"
+    ? removeClasses.split(/\s+/).filter(Boolean)
+    : [];
+
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(
@@ -41,11 +54,7 @@ export default function AboutAnimatedContent({
       if (!node) return;
 
       if (reduced) {
-        gsap.set(node, {
-          y: 0,
-          opacity: 1,
-          clearProps: "transform,opacity,willChange",
-        });
+        gsap.set(node, { y: 0, opacity: 1, clearProps: "transform,opacity,willChange" });
         return;
       }
 
@@ -60,20 +69,20 @@ export default function AboutAnimatedContent({
           delay,
           force3D: true,
           overwrite: "auto",
-          clearProps: once ? "transform,opacity,willChange" : undefined,
+          clearProps: once && clearOnEnd ? "transform,opacity,willChange" : undefined,
+          onStart: () => {
+            if (classesToRemove.length) node.classList.remove(...classesToRemove);
+          },
           scrollTrigger: {
             trigger: node,
             start,
-            toggleActions: once
-              ? "play none none none"
-              : "play pause resume reverse",
+            toggleActions: once ? "play none none none" : "play pause resume reverse",
             markers: debug,
             invalidateOnRefresh: true,
           },
-        }
+        },
       );
 
-      // Recalculate after layout shifts (e.g., hero/video/fonts)
       requestAnimationFrame(() => ScrollTrigger.refresh());
 
       return () => {
@@ -81,10 +90,8 @@ export default function AboutAnimatedContent({
         tween?.kill();
       };
     },
-    {
-      scope: el,
-      dependencies: [reduced, yFrom, duration, ease, start, delay, once, debug],
-    }
+    // Keep deps simple; no joins/splits here
+    { scope: el, dependencies: [reduced, yFrom, duration, ease, start, delay, once, debug, clearOnEnd] },
   );
 
   return <div ref={el}>{children}</div>;
