@@ -38,15 +38,37 @@
         "imageAlt": "Equipa da CÉU Construction em obra"
     },
     "sismo": {
-        "title": "Porque Sismo?",
-        "intro": "Os painéis estruturais Sismo permitem construções rápidas e robustas, com excelente desempenho térmico e acústico.",
-        "benefits": [
-            "Velocidade: painéis de instalação rápida reduzem o prazo",
-            "Resistência: núcleo monolítico de betão com alta robustez",
-            "Eficiência: menos frentes de trabalho e estaleiro limpo",
-            "Conforto: desempenho térmico e acústico"
+        "kicker": "Sistema construtivo inovador",
+        "title": "Porque escolher Sismo?",
+        "intro": "Os painéis estruturais Sismo permitem obras rápidas e robustas, com excelente desempenho térmico e acústico.",
+        "items": [
+            {
+                "subtitle": "Velocidade sem atalhos",
+                "body": "Painéis fabricados em ambiente industrial instalam-se de forma rápida e precisa, reduzindo tempo em obra e aumentando a previsibilidade do calendário.",
+                "image": "/media/sismo/layers.jpg",
+                "alt": "Instalação de painéis Sismo a mostrar o avanço rápido da obra"
+            },
+            {
+                "subtitle": "Resistência monolítica",
+                "body": "Após a betonagem, os painéis formam um núcleo estrutural contínuo com elevada resistência e baixa necessidade de manutenção.",
+                "image": "/media/sismo/system.jpg",
+                "alt": "Detalhe do núcleo de betão armado numa parede Sismo"
+            },
+            {
+                "subtitle": "Conforto e eficiência",
+                "body": "Isolamento integrado e construção estanque melhoram o conforto térmico e acústico, reduzindo o consumo energético.",
+                "image": "/media/sismo/project.jpg",
+                "alt": "Interior a evidenciar benefícios de conforto térmico e acústico"
+            }
         ],
-        "cta": "Ver time-lapse"
+        "cta": {
+            "label": "Ver um projeto CÉU com Sismo",
+            "href": "/projects#sismo"
+        },
+        "external": {
+            "label": "Saiba mais no Sismo Portugal",
+            "href": "https://sismo-technology.com/pt-pt/"
+        }
     },
     "projects": {
         "title": "Projetos em destaque",

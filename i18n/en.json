@@ -38,16 +38,38 @@
         "imageAlt": "CÉU Construction built house"
     },
     "sismo": {
+        "kicker": "Innovative Building System",
         "title": "Why Sismo construction?",
         "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance.",
-        "benefits": [
-            "Speed: panels install quickly, reducing schedule",
-            "Strength: monolithic concrete core with high resistance",
-            "Efficiency: fewer trades, cleaner jobsite",
-            "Comfort: thermal and acoustic performance"
+        "items": [
+          {
+            "subtitle": "Speed without shortcuts",
+            "body": "Factory-made panels install fast and straight, cutting on-site time and keeping schedules predictable.",
+            "image": "/media/sismo/layers.jpg",
+            "alt": "Sismo panel installation showing rapid progress"
+          },
+          {
+            "subtitle": "Monolithic strength",
+            "body": "Once concreted, panels form a continuous structural core with high resistance and low maintenance.",
+            "image": "/media/sismo/system.jpg",
+            "alt": "Reinforced concrete core detail of a Sismo wall"
+          },
+          {
+            "subtitle": "Comfort & efficiency",
+            "body": "Integrated insulation plus airtight construction improve thermal and acoustic comfort while reducing energy use.",
+            "image": "/media/sismo/project.jpg",
+            "alt": "Interior view highlighting thermal and acoustic comfort benefits"
+          }
         ],
-        "cta": "Watch the time-lapse"
-    },
+        "cta": {
+          "label": "See a CÉU Sismo project",
+          "href": "/projects#sismo"
+        },
+        "external": {
+          "label": "Learn more at Sismo Portugal",
+          "href": "https://sismo-technology.com/pt-pt/"
+        }
+      },
     "projects": {
         "title": "Featured projects",
         "filters": {
