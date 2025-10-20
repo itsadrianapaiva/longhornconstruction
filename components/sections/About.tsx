@@ -93,66 +93,71 @@ export default function About() {
         </AboutAnimatedContent>
       </div>
 
-      {/* Glass card with top edge mask to sell the 'behind-glass' reveal */}
-      <div
-        className="relative z-10 mt-16 grid items-center gap-8 rounded-2xl border border-glass-strong bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
-        style={{
-          background:
-            "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
-        }}
-      >
-        {/* Top edge mask — adjust pair to fine-tune seam: (-top-5,h-5) or (-top-6,h-6) */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-0 right-0 -top-5 h-5 rounded-t-2xl z-20"
-          style={{
-            background:
-              "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
-            WebkitBackdropFilter: "saturate(160%) blur(var(--glass-blur))",
-            backdropFilter: "saturate(160%) blur(var(--glass-blur))",
-          }}
-        />
+    {/* Glass card with top edge mask to sell the 'behind-glass' reveal */}
+<div
+  className="relative z-10 mt-16 grid items-center gap-8 rounded-2xl border border-glass-strong bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+  style={{
+    background:
+      "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
+  }}
+>
+  {/* Top edge mask */}
+  <div
+    aria-hidden
+    className="pointer-events-none absolute left-0 right-0 -top-5 h-5 rounded-t-2xl z-20"
+    style={{
+      background:
+        "linear-gradient(to bottom, color-mix(in srgb, var(--ring) 16%, transparent), rgba(10,14,20,0.50))",
+      WebkitBackdropFilter: "saturate(160%) blur(var(--glass-blur))",
+      backdropFilter: "saturate(160%) blur(var(--glass-blur))",
+    }}
+  />
 
-        {/* Text column */}
-        <div className="lg:col-span-1">
-          {subheading ? (
-            <div className="mt-1 text-2xl font-normal text-ink/95">{subheading}</div>
-          ) : null}
+  {/* Image column (now on left for lg+) */}
+  <div className="relative order-2 md:order-2 lg:order-1 lg:col-span-1 lg:overflow-visible">
+    <div className="relative mx-auto max-w-[1100px] lg:max-w-none">
+      <Image
+        src="/media/about/about.jpg"
+        alt={imageAlt}
+        width={1920}
+        height={1280}
+        sizes="(min-width: 1280px) 900px, (min-width: 1024px) 66vw, 100vw"
+        priority={false}
+        className="rounded-lg opacity-95 shadow-2xl
+                   lg:-translate-x-[12%] lg:scale-[1.08]
+                   lg:max-h-[600px] lg:w-auto lg:h-auto object-cover"
+      />
+    </div>
+  </div>
 
-          {body.length ? (
-            <div className="mt-4 space-y-4 leading-relaxed text-ink/85">
-              {body.map((p: string, i: number) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          ) : null}
+  {/* Text column */}
+  <div className="lg:col-span-2 order-1 md:order-1 lg:order-2">
+    {subheading ? (
+      <div className="mt-1 text-2xl font-normal text-ink/95">{subheading}</div>
+    ) : null}
 
-          {bullets.length ? (
-            <ul className="mt-4 list-disc space-y-1 pl-5 text-ink/85">
-              {bullets.map((b: string, i: number) => (
-                <li key={i}>{b}</li>
-              ))}
-            </ul>
-          ) : null}
-
-          <div className="mt-6 text-center sm:text-left">
-            <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
-          </div>
-        </div>
-
-        {/* Image column */}
-        <div className="relative lg:col-span-2">
-          <Image
-            src="/media/about/about.jpg"
-            alt={imageAlt}
-            width={1920}
-            height={1280}
-            sizes="(min-width: 1024px) 66vw, 100vw"
-            priority={false}
-            className="rounded-lg opacity-95 shadow-2xl lg:-translate-x-[12%]"
-          />
-        </div>
+    {body.length ? (
+      <div className="mt-4 space-y-4 leading-relaxed text-ink/85">
+        {body.map((p: string, i: number) => (
+          <p key={i}>{p}</p>
+        ))}
       </div>
+    ) : null}
+
+    {bullets.length ? (
+      <ul className="mt-4 list-disc space-y-1 pl-5 text-ink/85">
+        {bullets.map((b: string, i: number) => (
+          <li key={i}>{b}</li>
+        ))}
+      </ul>
+    ) : null}
+
+    <div className="mt-6 text-center sm:text-left">
+      <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
+    </div>
+  </div>
+</div>
+
     </SectionShell>
   );
 }
