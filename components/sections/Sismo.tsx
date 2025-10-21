@@ -4,62 +4,43 @@ import Image from "next/image";
 import { SectionShell } from "@/components/sections/SectionShell";
 import ButtonLink from "@/components/ButtonLink";
 
-/** ---------- i18n types & helpers (same pattern as About.tsx) ---------- */
+/** ---------- i18n types (matching About.tsx style) ---------- */
 type Locale = "en" | "pt";
 type CTA = { label: string; href: string };
-
 type SismoItem = {
   subtitle?: string;
   body?: string;
   image?: string;
   alt?: string;
 };
-
 type SismoBlock = {
-  kicker?: string;
   title?: string;
   intro?: string;
   items?: SismoItem[];
   cta?: CTA;
   external?: CTA;
 };
-
 type Dict = { sismo?: SismoBlock };
 
-/** Import JSON as unknown then assert to Dict (matching About.tsx approach) */
+/** Import JSON then assert to Dict (same approach as About.tsx) */
 import enRaw from "@/i18n/en.json";
 import ptRaw from "@/i18n/pt.json";
 const EN: Dict = enRaw as unknown as Dict;
 const PT: Dict = ptRaw as unknown as Dict;
 
-/** Robust locale detection without usePathname (same as About.tsx) */
+/** Locale detection without usePathname */
 function useLocale(): Locale {
-  let path = "/";
-  if (typeof window !== "undefined") {
-    const p = window.location?.pathname;
-    path = typeof p === "string" ? p : "/";
-  }
-  const first = path.split("/").filter(Boolean)[0] ?? "";
+  if (typeof window === "undefined") return "en";
+  const first = window.location.pathname.split("/").filter(Boolean)[0] ?? "";
   return first === "pt" ? "pt" : "en";
 }
 
-/** Normalized shape for Sismo copy */
-type SismoNormalized = {
-  kicker: string;
-  title: string;
-  intro: string;
-  items: Required<Pick<SismoItem, "subtitle" | "body" | "image" | "alt">>[];
-  cta: CTA;
-  external: CTA;
-};
-
-function useSismoDict(): SismoNormalized {
+/** Normalize Sismo copy to a stable shape */
+function useSismoDict() {
   const dict: Dict = useLocale() === "pt" ? PT : EN;
   const s = dict.sismo ?? {};
   const items = Array.isArray(s.items) ? s.items : [];
-
   return {
-    kicker: s.kicker ?? "",
     title: s.title ?? "",
     intro: s.intro ?? "",
     items: items
@@ -69,11 +50,8 @@ function useSismoDict(): SismoNormalized {
         image: it.image ?? "",
         alt: it.alt ?? "",
       }))
-      .filter((x) => x.subtitle || x.body || x.image), // avoid empty rows
-    cta: s.cta ?? {
-      label: "See a CÉU Sismo project",
-      href: "/projects#sismo",
-    },
+      .filter((x) => x.subtitle || x.body || x.image),
+    cta: s.cta ?? { label: "See a CÉU Sismo project", href: "/projects#sismo" },
     external: s.external ?? {
       label: "Learn more at Sismo Portugal",
       href: "https://sismo-technology.com/pt-pt/",
@@ -95,7 +73,7 @@ export default function Sismo() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Header (Bravera sizes) */}
+      {/* Header (Bravera sizes, no kicker) */}
       <div className="mx-auto mb-16 max-w-2xl text-center">
         <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
           {title}
@@ -105,17 +83,43 @@ export default function Sismo() {
         ) : null}
       </div>
 
-      {/* Alternating content blocks */}
+      {/* Alternating content blocks (image first on mobile) */}
       <div className="flex flex-col gap-20">
-        {items.map((item, index) => (
+        {items.map((item, i) => (
           <div
-            key={index}
-            className={`grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 ${
-              index % 2 ? "md:[&>*:first-child]:order-2" : ""
-            }`}
+            key={i}
+            className="grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16"
           >
-            {/* Text */}
-            <div className="text-left md:pr-8 lg:pr-12">
+            {/* Image column — order 1 on mobile; alternates on md+ */}
+            <div
+              className={`
+          order-1
+          ${i % 2 ? "md:order-1" : "md:order-2"}
+          flex items-center
+        `}
+            >
+              {item.image ? (
+                <Image
+                  src={item.image}
+                  alt={item.alt || ""}
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto rounded-2xl shadow-[0_16px_48px_rgba(0,0,0,0.38)]"
+                  style={{ maxHeight: "520px", objectFit: "contain" }}
+                  priority={false}
+                />
+              ) : null}
+            </div>
+
+            {/* Text column — order 2 on mobile; alternates on md+ */}
+            <div
+              className={`
+          order-2
+          ${i % 2 ? "md:order-2" : "md:order-1"}
+          text-left md:pr-8 lg:pr-12
+        `}
+            >
               {item.subtitle ? (
                 <h3 className="mb-3 text-3xl font-semibold text-ink">
                   {item.subtitle}
@@ -127,32 +131,12 @@ export default function Sismo() {
                 </p>
               ) : null}
             </div>
-
-            {/* Image (rounded, subtle glass vibe) */}
-            <div
-              className="relative h-72 w-full overflow-hidden rounded-xl bg-clip-padding shadow-[0_8px_30px_rgba(0,0,0,0.35)] md:h-80 lg:h-96"
-              style={{
-                background:
-                  "linear-gradient(to bottom, color-mix(in srgb, var(--brand) 12%, transparent), rgba(10,14,20,0.16))",
-              }}
-            >
-              {item.image ? (
-                <Image
-                  src={item.image}
-                  alt={item.alt || ""}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority={false}
-                />
-              ) : null}
-            </div>
           </div>
         ))}
       </div>
 
       {/* CTA cluster */}
-      <div className="mt-24 flex flex-col items-center gap-4">
+      <div className="mt-18 flex flex-col items-center gap-4">
         <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
         <a
           href={external.href}
