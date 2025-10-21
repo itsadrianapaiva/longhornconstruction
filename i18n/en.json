@@ -191,17 +191,60 @@
     "contact": {
         "title": "Let’s build",
         "subtitle": "Tell us about your project. We will reply quickly with next steps.",
+        "backgroundAlt": "Subtle workshop photograph behind the contact card",
+        "what": {
+            "title": "What to expect",
+            "intro": "We self-perform every phase. In our first conversation, we’ll align on:",
+            "items": [
+                "Project goals and constraints",
+                "Timeline and permitting realities",
+                "Budget ranges and cost drivers",
+                "Method options (including Sismo) and trade-offs",
+                "Next steps and site visit scheduling"
+            ]
+        },
         "form": {
-            "name": "Full name",
-            "email": "Email",
-            "phone": "Phone",
-            "message": "Project details",
+            "name": {
+                "label": "Full name",
+                "placeholder": "Your full name"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "you@example.com"
+            },
+            "phone": {
+                "label": "Phone",
+                "placeholder": "+351 ___ ___ ___"
+            },
+            "message": {
+                "label": "Project details",
+                "placeholder": "Scope, location, timeline…"
+            },
             "honeypot": "Leave this field empty",
             "submit": "Send message",
-            "success": "Thanks. Your message is on the way.",
-            "error": "Something went wrong. Please try again."
+            "success": "Thanks. Your email client will open with a draft to send.",
+            "error": "Please fix the fields highlighted below."
         },
-        "serviceArea": "Serving the Algarve and beyond"
+        "validate": {
+            "name": "Please enter your name (2–80 characters).",
+            "email": "Please enter a valid email address.",
+            "phone": "Please enter a valid phone number.",
+            "message": "Please write a short message (min 20 characters)."
+        },
+        "direct": {
+            "title": "Or call us directly",
+            "people": [
+                {
+                    "name": "CÉU Construction",
+                    "phone": "+351 930 462 893",
+                    "email": "info@ceuconstruction.com"
+                }
+            ]
+        },
+        "map": {
+            "title": "Where we work",
+            "serviceArea": "Serving the Algarve and beyond"
+        }
     },
     "footer": {
         "rights": "All rights reserved.",

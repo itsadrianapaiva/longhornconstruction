@@ -190,18 +190,61 @@
     },
     "contact": {
         "title": "Vamos construir",
-        "subtitle": "Fale-nos do seu projeto. Respondemos rapidamente com os próximos passos.",
-        "form": {
-            "name": "Nome completo",
-            "email": "Email",
-            "phone": "Telefone",
-            "message": "Detalhes do projeto",
-            "honeypot": "Deixe este campo vazio",
-            "submit": "Enviar",
-            "success": "Obrigado. A sua mensagem foi enviada.",
-            "error": "Ocorreu um erro. Tente novamente."
+        "subtitle": "Fale-nos sobre o seu projeto. Respondemos rapidamente com os próximos passos.",
+        "backgroundAlt": "Fotografia subtil de oficina atrás do cartão de contacto",
+        "what": {
+            "title": "O que esperar",
+            "intro": "Executamos todas as fases. Na primeira conversa vamos alinhar:",
+            "items": [
+                "Objetivos e condicionantes do projeto",
+                "Prazos e licenciamento",
+                "Intervalos orçamentais e fatores de custo",
+                "Opções de método (incluindo Sismo) e compromissos",
+                "Próximos passos e agendamento de visita"
+            ]
         },
-        "serviceArea": "Algarve e arredores"
+        "form": {
+            "name": {
+                "label": "Nome completo",
+                "placeholder": "O seu nome"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "voce@exemplo.com"
+            },
+            "phone": {
+                "label": "Telemóvel",
+                "placeholder": "+351 ___ ___ ___"
+            },
+            "message": {
+                "label": "Detalhes do projeto",
+                "placeholder": "Âmbito, localização, prazos…"
+            },
+            "honeypot": "Deixe este campo vazio",
+            "submit": "Enviar mensagem",
+            "success": "Obrigado. O seu cliente de email vai abrir com um rascunho pronto a enviar.",
+            "error": "Corrija os campos assinalados."
+        },
+        "validate": {
+            "name": "Indique o seu nome (2–80 caracteres).",
+            "email": "Indique um email válido.",
+            "phone": "Indique um número válido.",
+            "message": "Escreva uma mensagem breve (mín. 20 caracteres)."
+        },
+        "direct": {
+            "title": "Ou ligue-nos diretamente",
+            "people": [
+                {
+                    "name": "CÉU Construction",
+                    "phone": "+351 930 462 893",
+                    "email": "info@ceuconstruction.com"
+                }
+            ]
+        },
+        "map": {
+            "title": "Onde trabalhamos",
+            "serviceArea": "Atendemos o Algarve e arredores"
+        }
     },
     "footer": {
         "rights": "Todos os direitos reservados.",
