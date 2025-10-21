@@ -137,7 +137,7 @@ export default function Sismo() {
 
       {/* CTA cluster */}
       <div className="mt-18 flex flex-col items-center gap-4">
-        <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
+        <ButtonLink href={cta.href} strongBorder>{cta.label}</ButtonLink>
         <a
           href={external.href}
           target="_blank"

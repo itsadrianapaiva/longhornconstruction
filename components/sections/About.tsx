@@ -88,10 +88,6 @@ export default function About() {
       {/* Glass card with top edge mask to sell the 'behind-glass' reveal */}
       <div
         className="relative z-10 mt-16 grid items-center gap-8 rounded-2xl bg-clip-padding px-6 py-8 backdrop-blur-[12px] md:grid-cols-2 md:px-8 lg:grid-cols-3 lg:py-12 shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
-        style={{
-          background:
-            "linear-gradient(to bottom, color-mix(in srgb, var(--brand) 16%, transparent), rgba(10,14,20,0.30))",
-        }}
       >
         {/* Image column (now on left for lg+) */}
         <div className="relative order-2 md:order-2 lg:order-1 lg:col-span-1 lg:overflow-visible">
@@ -135,7 +131,7 @@ export default function About() {
           ) : null}
 
           <div className="mt-6 text-center sm:text-left">
-            <ButtonLink href={cta.href}>{cta.label}</ButtonLink>
+            <ButtonLink href={cta.href} strongBorder>{cta.label}</ButtonLink>
           </div>
         </div>
       </div>
