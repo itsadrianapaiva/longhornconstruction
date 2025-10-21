@@ -189,7 +189,7 @@
         ]
     },
     "contact": {
-        "title": "Vamos construir",
+        "title": "Contacte-nos hoje",
         "subtitle": "Fale-nos sobre o seu projeto. Respondemos rapidamente com os próximos passos.",
         "backgroundAlt": "Fotografia subtil de oficina atrás do cartão de contacto",
         "what": {
@@ -232,7 +232,7 @@
             "message": "Escreva uma mensagem breve (mín. 20 caracteres)."
         },
         "direct": {
-            "title": "Ou ligue-nos diretamente",
+            "title": "Ligue-nos diretamente",
             "people": [
                 {
                     "name": "CÉU Construction",
@@ -247,10 +247,47 @@
         }
     },
     "footer": {
-        "rights": "Todos os direitos reservados.",
-        "companyLabel": "Empresa",
-        "privacy": "Privacidade",
-        "language": "Idioma"
+        "company": {
+            "legalName": "CÉU Construction",
+            "nif": "NIF 517367777",
+            "address": [
+                "8670-116 Aljezur, Algarve"
+            ],
+            "email": "info@ceuconstruction.com",
+            "phone": "+351 930 462 893"
+        },
+        "nav": [
+            {
+                "label": "Sobre",
+                "href": "#about"
+            },
+            {
+                "label": "Sismo",
+                "href": "#sismo"
+            },
+            {
+                "label": "Projetos",
+                "href": "#projects"
+            },
+            {
+                "label": "Contacto",
+                "href": "#contact"
+            }
+        ],
+        "social": {
+            "instagram": "",
+            "linkedin": "",
+            "youtube": "",
+            "facebook": "",
+            "tiktok": "",
+            "vimeo": ""
+        },
+        "copyright": "© {{year}} CÉU Construction. Todos os direitos reservados.",
+        "langToggle": {
+            "label": "Idioma",
+            "en": "English",
+            "pt": "Português"
+        }
     },
     "common": {
         "readMore": "Saber mais",

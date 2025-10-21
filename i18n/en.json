@@ -189,12 +189,12 @@
         ]
     },
     "contact": {
-        "title": "Let’s build",
-        "subtitle": "Tell us about your project. We will reply quickly with next steps.",
+        "title": "Contact us today",
+        "subtitle": "We would love to hear more about your project and how we can turn your vision into a reality.",
         "backgroundAlt": "Subtle workshop photograph behind the contact card",
         "what": {
             "title": "What to expect",
-            "intro": "We self-perform every phase. In our first conversation, we’ll align on:",
+            "intro": "We self-perform every phase. Here’s what we’ll discuss at your consultation:",
             "items": [
                 "Project goals and constraints",
                 "Timeline and permitting realities",
@@ -232,7 +232,7 @@
             "message": "Please write a short message (min 20 characters)."
         },
         "direct": {
-            "title": "Or call us directly",
+            "title": "You can call us directly",
             "people": [
                 {
                     "name": "CÉU Construction",
@@ -243,14 +243,51 @@
         },
         "map": {
             "title": "Where we work",
-            "serviceArea": "Serving the Algarve and beyond"
+            "serviceArea": "Serving the Algarve and beyond.."
         }
     },
     "footer": {
-        "rights": "All rights reserved.",
-        "companyLabel": "Company",
-        "privacy": "Privacy",
-        "language": "Language"
+        "company": {
+            "legalName": "CÉU Construction",
+            "nif": "NIF 517367777",
+            "address": [
+                "8670-116 Aljezur, Algarve"
+            ],
+            "email": "info@ceuconstruction.com",
+            "phone": "+351 930 462 893"
+        },
+        "nav": [
+            {
+                "label": "About",
+                "href": "#about"
+            },
+            {
+                "label": "Sismo",
+                "href": "#sismo"
+            },
+            {
+                "label": "Projects",
+                "href": "#projects"
+            },
+            {
+                "label": "Contact",
+                "href": "#contact"
+            }
+        ],
+        "social": {
+            "instagram": "",
+            "linkedin": "",
+            "youtube": "",
+            "facebook": "",
+            "tiktok": "",
+            "vimeo": ""
+        },
+        "copyright": "© {{year}} CÉU Construction. All rights reserved.",
+        "langToggle": {
+            "label": "Language",
+            "en": "English",
+            "pt": "Português"
+        }
     },
     "common": {
         "readMore": "Read more",
