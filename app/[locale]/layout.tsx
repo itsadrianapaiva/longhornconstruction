@@ -97,22 +97,18 @@ export default async function LocaleLayout({
 
   return (
     <div>
-      {/* Header: absolute over hero, localized items for the drawer */}
-      <Header
-        items={items}
-        className="top-3"
-        ctaLabel={dict.hero.primaryCta}
-        ctaTargetId="contact"
-        logoSrc="/media/logo-white.png"
-        logoAlt="CÉU Construction"
-      />
-
-      {/* Content area on the chosen surface */}
       <I18nProvider locale={locale} dict={dict}>
+        <Header
+          items={items}
+          className="top-3"
+          ctaLabel={dict.hero.primaryCta}
+          ctaTargetId="contact"
+          logoSrc="/media/logo-white.png"
+          logoAlt="CÉU Construction"
+        />
         <main id="content">{children}</main>
+        <Footer />
       </I18nProvider>
-
-      <Footer />
     </div>
   );
 }
