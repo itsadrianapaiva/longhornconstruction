@@ -41,6 +41,7 @@
     "sismo": {
         "title": "Trabalhamos com o sistema Sismo",
         "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
+        "highlightWord": "Sismo",
         "items": [
             {
                 "subtitle": "Velocidade sem atalhos",
@@ -63,7 +64,7 @@
         ],
         "cta": {
             "label": "Ver um projeto CÉU com Sismo",
-            "href": "/projects#sismo"
+            "href": "#projects"
         },
         "external": {
             "label": "Saiba mais no Sismo Portugal",

@@ -41,6 +41,7 @@
     "sismo": {
         "title": "We work with Sismo",
         "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
+        "highlightWord": "Sismo",
         "items": [
             {
                 "subtitle": "Speed without shortcuts",
@@ -63,7 +64,7 @@
         ],
         "cta": {
             "label": "See a CÉU Sismo project",
-            "href": "/projects#sismo"
+            "href": "#projects"
         },
         "external": {
             "label": "Learn more at Sismo Portugal",
