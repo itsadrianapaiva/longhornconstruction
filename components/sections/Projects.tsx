@@ -198,11 +198,11 @@ export default function Projects() {
                         </h3>
                         <span
                           className="
-                            shrink-0 rounded-md
+                            shrink-0 rounded-2xl
                             border border-[color:var(--brand-border)]
-                            bg-[color:var(--brand)]
+                            bg-black/40
                             px-2 py-0.5 text-xs font-semibold
-                            text-[color:var(--brand-ink)]
+                            text-white/80
                           "
                         >
                           {dict.viewGallery || "Open gallery"}

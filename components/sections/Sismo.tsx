@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { SectionShell } from "@/components/sections/SectionShell";
-import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
 /**
@@ -16,12 +16,10 @@ export default function Sismo() {
   // Pull top-level fields
   const title = t<string>("sismo.title", "");
   const intro = t<string>("sismo.intro", "");
-
-  // Which word to highlight is controlled by i18n (so PT/EN can differ if needed)
   const highlightTarget = t<string>("sismo.highlightWord", "Sismo");
 
-  // Decorative mesh used for the underline background (asset in /public)
-  const MESH_HL_SRC = "/media/gradients/mesh1.png";
+  // Mesh asset (used in underline + CTA border)
+  const MESH_SRC = "/media/gradients/mesh1.png";
 
   // Items array (normalize to array of objects with safe defaults)
   const rawItems = t<Array<Record<string, unknown>>>("sismo.items", []);
@@ -46,47 +44,29 @@ export default function Sismo() {
     href: "https://sismo-technology.com/pt-pt/",
   });
 
-  // --- helpers (small, low complexity) ---
+  // --- helpers ---
   function escapeRegExp(x: string) {
     return x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
-
-  /** Wrap the target word with a mesh-backed underline without hardcoding text */
   function renderWithMeshUnderline(text: string, target: string) {
     if (!text || !target) return text;
     const re = new RegExp(`(${escapeRegExp(target)})`, "i");
     const parts = text.split(re);
-
-    // If target not found, return as-is
     if (parts.length === 1) return text;
 
     return parts.map((chunk, i) => {
-      // Match case-insensitively to keep locale casing
       if (chunk.toLowerCase() === target.toLowerCase()) {
         return (
           <span key={`hl-${i}`} className="relative inline-block">
-            {/* decorative mesh underline */}
             <span
               aria-hidden="true"
               className="
-                absolute inset-x-0
-                -bottom-[0.1em]
-                h-[0.08em]
-                -z-10
-                rounded
-                opacity-80
-                dark:opacity-70
-                pointer-events-none
-                select-none
+                absolute inset-x-0 -bottom-[0.1em] h-[0.08em] -z-10 rounded
+                opacity-80 dark:opacity-70 pointer-events-none select-none
                 [background-image:url('/media/gradients/mesh1.png')]
-                bg-[length:200%_200%]
-                bg-center
-                mix-blend-multiply
+                bg-[length:200%_200%] bg-center mix-blend-multiply
               "
-              /* Fallback style in case Tailwind's arbitrary url is restricted by your config */
-              style={{
-                backgroundImage: `url(${MESH_HL_SRC})`,
-              }}
+              style={{ backgroundImage: `url(${MESH_SRC})` }}
             />
             <span className="relative">{chunk}</span>
           </span>
@@ -106,7 +86,7 @@ export default function Sismo() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Header (Bravera sizes, no kicker) */}
+      {/* Header */}
       <div className="mx-auto mb-16 max-w-2xl text-center">
         <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
           {renderWithMeshUnderline(title, highlightTarget)}
@@ -116,14 +96,13 @@ export default function Sismo() {
         ) : null}
       </div>
 
-      {/* Alternating content blocks (image first on mobile) */}
+      {/* Alternating content blocks */}
       <div className="flex flex-col gap-20">
         {items.map((item, i) => (
           <div
             key={i}
             className="grid items-center gap-8 md:grid-cols-2 md:gap-12 lg:gap-16"
           >
-            {/* Image column — order 1 on mobile; alternates on md+ */}
             <div
               className={[
                 "order-1 flex items-center",
@@ -144,7 +123,6 @@ export default function Sismo() {
               ) : null}
             </div>
 
-            {/* Text column — order 2 on mobile; alternates on md+ */}
             <div
               className={[
                 "order-2 text-left md:pr-8 lg:pr-12",
@@ -169,9 +147,55 @@ export default function Sismo() {
       {/* CTA cluster */}
       <div className="mt-18 flex flex-col items-center gap-4">
         {cta?.href && cta?.label ? (
-          <ButtonLink href={cta.href} strongBorder>
-            {cta.label}
-          </ButtonLink>
+          <Link
+            href={cta.href}
+            // Mesh BORDER via pseudo-elements:
+            // - ::before = mesh background, full size, becomes the visible ring
+            // - ::after  = inner fill inset by --ring (covers interior)
+            className="
+              relative isolate inline-flex items-center justify-center
+              rounded-full px-6 py-3 text-sm font-semibold
+              text-white/80
+              focus:outline-none focus-visible:ring-2
+              focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-0
+              transition-transform duration-200 hover:-translate-y-0.5
+              motion-reduce:transform-none motion-reduce:transition-none hover:text-white
+            "
+            style={
+              {
+                // Ring thickness (change to 1.5px or 3px to taste)
+
+                "--ring": "2px",
+                // Mesh src injected as a CSS var so Tailwind arbitrary can reference it
+
+                "--mesh-src": `url('/media/gradients/mesh2.png')`,
+              } as React.CSSProperties
+            }
+          >
+            {/* Mesh ring */}
+            <span
+              aria-hidden="true"
+              className="
+                pointer-events-none absolute inset-0 -z-10 rounded-full
+                before:content-[''] before:absolute before:inset-0 before:rounded-full
+                before:[background-image:var(--mesh-src)]
+              "
+            />
+            {/* Inner fill that creates the border effect */}
+            <span
+              aria-hidden="true"
+              className="
+                pointer-events-none absolute inset-0 -z-10 rounded-full
+                after:content-[''] after:absolute after:rounded-full
+                after:inset-[var(--ring)]
+                after:bg-[color:var(--btn-bg,rgba(255,255,255,0.06))]
+                after:backdrop-blur-lg
+               
+                after:dark:bg-[color:var(--btn-bg-dark,rgba(0,0,0,0.24))]
+              "
+            />
+            <span className="relative z-10">{cta.label}</span>
+          </Link>
         ) : null}
 
         {external?.href && external?.label ? (
