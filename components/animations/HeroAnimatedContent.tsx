@@ -11,20 +11,27 @@ import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
 type Props = {
   arrowTargetId: string;
   logoSrc?: string;
+  /** Optional i18n overrides passed from parent (we still default to t()) */
+  chevronAriaLabel?: string;
+  primaryCtaLabel?: string;
 };
+
+const CHEVRON_REST_OPACITY = 0.18; // ← adjust this to change the final opacity
 
 gsap.registerPlugin(useGSAP);
 
 export default function HeroAnimatedContent({
   arrowTargetId,
   logoSrc = "/media/logo-black.png",
+  chevronAriaLabel,
+  primaryCtaLabel,
 }: Props) {
   const { t } = useI18n();
 
   // Scope + element refs
   const scopeRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLImageElement | null>(null);
-  const btnWrapRef = useRef<HTMLDivElement | null>(null); // wrap the whole button
+  const btnWrapRef = useRef<HTMLDivElement | null>(null);
   const chevronRef = useRef<HTMLButtonElement | null>(null);
 
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -41,7 +48,6 @@ export default function HeroAnimatedContent({
       const logo = logoRef.current;
       const btnWrap = btnWrapRef.current;
       const chev = chevronRef.current;
-
       if (!logo || !btnWrap || !chev) return;
 
       if (prefersReducedMotion) {
@@ -49,32 +55,34 @@ export default function HeroAnimatedContent({
         gsap.set([logo, btnWrap, chev], { clearProps: "all" });
         gsap.set(logo, { opacity: 1 });
         gsap.set(btnWrap, { opacity: 1, scale: 1 });
-        gsap.set(chev, { opacity: 0.25, y: 0 });
+        gsap.set(chev, { opacity: CHEVRON_REST_OPACITY, y: 0 });
         return;
       }
 
-      // Initial states — ensure nothing is visible at start
+      // Initial states
       gsap.set(logo, { opacity: 0 });
       gsap.set(btnWrap, { opacity: 0, scale: 1.2 });
       gsap.set(chev, { opacity: 0, y: 48 });
 
       const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+      tl.to(logo, { opacity: 1, duration: 2.0, ease: "power1.out" });
+      tl.to(btnWrap, { opacity: 1, scale: 1, duration: 1.0 });
 
-      // 1) Logo: slower fade-in (more “grand”)
-      tl.to(logo, { opacity: 1, duration: 2.2, ease: "power1.out" });
-
-      // 2) Entire button wrapper: scale down + fade AFTER logo completes
-      tl.to(btnWrap, { opacity: 1, scale: 1, duration: 1.2 });
-
-      // 3) Chevron: rise and settle faint opacity AFTER button completes
-      // Remove the hiding classes just before animating the chevron
+      // Chevron: reveal and settle to a faint opacity
       tl.add(() => {
         chev.classList.remove("opacity-0", "translate-y-12", "transition-none");
       });
-      tl.to(chev, { y: 0, opacity: 0.25, duration: 1.0 });
+      tl.to(chev, { y: 0, opacity: CHEVRON_REST_OPACITY, duration: 0.9 });
     },
     { scope: scopeRef, dependencies: [prefersReducedMotion] }
   );
+
+  // Localized labels with prop overrides
+  const chevronLabel =
+    chevronAriaLabel ??
+    t<string>("hero.scrollDownLabel", "Scroll to next section");
+  const ctaLabel =
+    primaryCtaLabel ?? t<string>("hero.secondaryCta", "See projects");
 
   return (
     <div
@@ -82,7 +90,7 @@ export default function HeroAnimatedContent({
       className="relative z-10 mx-auto flex max-w-3xl flex-col items-center justify-center text-center"
       style={{ minHeight: "inherit" }}
     >
-      {/* Logo — starts hidden via GSAP set (also use class opacity-0 so it's empty pre-tick) */}
+      {/* Logo */}
       <Image
         ref={logoRef}
         src={logoSrc}
@@ -93,7 +101,7 @@ export default function HeroAnimatedContent({
         className="mx-auto opacity-0"
       />
 
-      {/* Button wrapper — we animate this container to affect the entire button */}
+      {/* Button wrapper */}
       <div ref={btnWrapRef} className="mt-8 opacity-0">
         <ButtonLink
           href="#"
@@ -103,22 +111,22 @@ export default function HeroAnimatedContent({
           }}
           data-testid="hero-cta-projects"
         >
-          {t<string>("hero.secondaryCta")}
+          {ctaLabel}
         </ButtonLink>
       </div>
 
-      {/* Chevron — positioned by parent, animated as a unit */}
+      {/* Chevron */}
       <button
         ref={chevronRef}
         type="button"
         onClick={() => scrollTo(arrowTargetId)}
-        aria-label={t<string>("hero.scrollDownLabel", "Scroll to next section")}
+        aria-label={chevronLabel}
         className={[
-          "absolute left-1/2 -translate-x-1/2 top-[80%] z-20",
-          "p-4 md:p-5 rounded-full outline-none",
-          // ↓ ensure no flash before GSAP runs
-          "opacity-0 translate-y-12 transition-none",
+          "absolute left-1/2 -translate-x-1/2 top-[80%] z-20 p-4 md:p-5 rounded-full outline-none",
+          "opacity-0 translate-y-12 transition-none", // hidden until GSAP animates
           "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+          // Nice affordances: slightly brighter on hover/focus to indicate interactivity
+          "hover:opacity-40 focus:opacity-40 transition-opacity duration-200 ease-[var(--ease-gentle)]",
         ].join(" ")}
       >
         <svg
