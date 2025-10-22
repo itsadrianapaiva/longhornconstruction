@@ -188,64 +188,72 @@
             }
         ]
     },
-    "contact": {
-        "title": "Contacte-nos hoje",
-        "subtitle": "Fale-nos sobre o seu projeto. Respondemos rapidamente com os próximos passos.",
-        "backgroundAlt": "Fotografia subtil de oficina atrás do cartão de contacto",
-        "what": {
-            "title": "O que esperar",
-            "intro": "Executamos todas as fases. Na primeira conversa vamos alinhar:",
-            "items": [
-                "Objetivos e condicionantes do projeto",
-                "Prazos e licenciamento",
-                "Intervalos orçamentais e fatores de custo",
-                "Opções de método (incluindo Sismo) e compromissos",
-                "Próximos passos e agendamento de visita"
-            ]
-        },
-        "form": {
-            "name": {
-                "label": "Nome completo",
-                "placeholder": "O seu nome"
-            },
-            "email": {
-                "label": "Email",
-                "placeholder": "voce@exemplo.com"
-            },
-            "phone": {
-                "label": "Telemóvel",
-                "placeholder": "+351 ___ ___ ___"
-            },
-            "message": {
-                "label": "Detalhes do projeto",
-                "placeholder": "Âmbito, localização, prazos…"
-            },
-            "honeypot": "Deixe este campo vazio",
-            "submit": "Enviar mensagem",
-            "success": "Obrigado. O seu cliente de email vai abrir com um rascunho pronto a enviar.",
-            "error": "Corrija os campos assinalados."
-        },
-        "validate": {
-            "name": "Indique o seu nome (2–80 caracteres).",
-            "email": "Indique um email válido.",
-            "phone": "Indique um número válido.",
-            "message": "Escreva uma mensagem breve (mín. 20 caracteres)."
-        },
-        "direct": {
-            "title": "Ligue-nos diretamente",
-            "people": [
-                {
-                    "name": "CÉU Construction",
-                    "phone": "+351 930 462 893",
-                    "email": "info@ceuconstruction.com"
-                }
-            ]
-        },
-        "map": {
-            "title": "Onde trabalhamos",
-            "serviceArea": "Atendemos o Algarve e arredores"
-        }
+   "contact": {
+    "title": "Contacte-nos hoje",
+    "subtitle": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
+    "backgroundAlt": "Fotografia subtil de oficina por trás do cartão de contacto",
+    "what": {
+      "title": "O que esperar",
+      "intro": "Executamos todas as fases internamente. Eis o que iremos abordar na sua consulta:",
+      "items": [
+        "Objetivos e restrições do projeto",
+        "Prazos e realidades do licenciamento",
+        "Intervalos de orçamento e principais fatores de custo",
+        "Opções de método (incluindo Sismo) e compromissos",
+        "Próximos passos e agendamento de visita à obra"
+      ]
     },
+    "form": {
+      "name": {
+        "label": "Nome completo",
+        "placeholder": "O seu nome completo"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "nome@exemplo.com"
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "+351 ___ ___ ___"
+      },
+      "message": {
+        "label": "Detalhes do projeto",
+        "placeholder": "Âmbito, localização, prazo…"
+      },
+      "honeypot": "Deixe este campo vazio",
+      "submit": "Enviar mensagem",
+      "success": "Obrigado. O seu cliente de email será aberto com um rascunho para enviar.",
+      "error": "Corrija os campos assinalados abaixo."
+    },
+    "validate": {
+      "name": "Introduza o seu nome (2–80 caracteres).",
+      "email": "Introduza um endereço de email válido.",
+      "phone": "Introduza um número de telefone válido.",
+      "message": "Escreva uma mensagem breve (mínimo 20 caracteres)."
+    },
+    "direct": {
+      "title": "Pode ligar-nos diretamente",
+      "labels": {
+        "phone": "Telefone",
+        "email": "Email",
+        "hours": "Horário",
+        "location": "Localização"
+      },
+      "hours": "Seg-Sex 09:00-18:00",
+      "location": "Algarve, Portugal",
+      "people": [
+        {
+          "name": "CÉU Construction",
+          "phone": "+351 930 462 893",
+          "email": "info@ceuconstruction.com"
+        }
+      ]
+    },
+    "map": {
+      "title": "Onde trabalhamos",
+      "serviceArea": "A servir o Algarve e além.."
+    }
+  },
     "footer": {
         "company": {
             "legalName": "CÉU Construction",

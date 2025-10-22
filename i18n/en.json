@@ -233,6 +233,14 @@
         },
         "direct": {
             "title": "You can call us directly",
+            "labels": {
+                "phone": "Phone",
+                "email": "Email",
+                "hours": "Hours",
+                "location": "Location"
+            },
+            "hours": "Mon–Fri 09:00–18:00",
+            "location": "Algarve, Portugal",
             "people": [
                 {
                     "name": "CÉU Construction",

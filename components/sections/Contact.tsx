@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { SectionShell } from "@/components/sections/SectionShell";
-import ButtonLink from "@/components/ButtonLink";
+// Removed ButtonLink fallback per your request
 import ContactFormClient from "@/components/sections/ContactForm.client";
+import { Mail, Phone } from "lucide-react";
 
 /** i18n types */
 type Locale = "en" | "pt";
@@ -98,7 +99,7 @@ function useContactDict() {
   };
 }
 
-/** Inline SVG tail, adapted from your reference */
+/** Inline SVG tail */
 function ChatBubbleWing({
   className = "",
   pathClassName = "",
@@ -124,7 +125,7 @@ function ChatBubbleWing({
 
 /** Solid chat bubble over the map image */
 function MapChatBubble({ message }: { message: string }) {
-  const SOLID = "#0E0F12"; // solid dark, no blur, no transparency
+  const SOLID = "#0E0F12"; // CEU dark surface
   return (
     <div
       className="absolute top-8 left-12 z-10 max-w-[17.5rem]
@@ -142,23 +143,95 @@ function MapChatBubble({ message }: { message: string }) {
   );
 }
 
-/** Minimal check icon */
-function CheckIcon({ className = "h-5 w-5" }: { className?: string }) {
+/** What to expect list (extracted) */
+function WhatToExpect({
+  title,
+  intro,
+  items,
+}: {
+  title: string;
+  intro: string;
+  items: string[];
+}) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 20 20"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M16.667 5.833L8.75 13.75 5 10"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <div className="relative mb-2">
+      <h3 className="text-3xl font-semibold text-ink">{title}</h3>
+      <p className="mt-4 max-w-md text-ink/80">{intro}</p>
+
+      <ul className="mt-8 space-y-8">
+        {items.map((item, i) => (
+          <li
+            key={i}
+            className="flex items-start gap-3 border-b pb-8 border-black/10"
+          >
+            <span className="mt-1 text-ink/70">
+              {/* simple check icon as before */}
+              <svg
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M16.667 5.833L8.75 13.75 5 10"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <p className="text-ink/85">{item}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/** Direct contact card with icons (extracted) */
+function DirectContact({
+  title,
+  people,
+}: {
+  title: string;
+  people: Person[];
+}) {
+  return (
+    <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
+      <h4 className="text-xl font-semibold text-ink">{title}</h4>
+      <div className="mt-4 grid gap-6 sm:grid-cols-2">
+        {people.map((p, i) => (
+          <div key={i} className="space-y-2">
+            <p className="font-medium text-ink">{p.name}</p>
+
+            {p.phone ? (
+              <p className="flex items-center gap-2 text-ink/80">
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                <a
+                  className="underline decoration-ink/20 underline-offset-2 hover:decoration-ink/50"
+                  href={`tel:${p.phone.replace(/\s+/g, "")}`}
+                >
+                  {p.phone}
+                </a>
+              </p>
+            ) : null}
+
+            {p.email ? (
+              <p className="flex items-center gap-2 text-ink/80">
+                <Mail className="h-4 w-4" aria-hidden="true" />
+                <a
+                  className="underline decoration-ink/20 underline-offset-2 hover:decoration-ink/50"
+                  href={`mailto:${p.email}`}
+                >
+                  {p.email}
+                </a>
+              </p>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -186,7 +259,7 @@ export default function Contact() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Title block (no motion) */}
+      {/* Title block */}
       <div className="relative overflow-visible -mb-6">
         <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl">
           {title}
@@ -214,39 +287,23 @@ export default function Contact() {
           <div className="absolute inset-0 bg-gradient-to-tr from-surface/70 via-transparent to-surface/70" />
         </div>
 
-        {/* Left: What to expect, with check icons and no outer border */}
-        <div className="relative mb-2">
-          <h3 className="text-3xl font-semibold text-ink">{whatTitle}</h3>
-          <p className="mt-4 max-w-md text-ink/80">{whatIntro}</p>
-
-          <ul className="mt-8 space-y-8">
-            {whatItems.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 border-b pb-8 border-black/10">
-                <span className="mt-1 text-ink/70">
-                  <CheckIcon className="h-5 w-5" />
-                </span>
-                <p className="text-ink/85">{item}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Left: What to expect */}
+        <WhatToExpect title={whatTitle} intro={whatIntro} items={whatItems} />
 
         {/* Right: the real form with mailto handoff */}
         <div className="relative flex flex-col">
           <ContactFormClient />
-          {/* Optional fallback mail link for JS-disabled scenarios */}
-          <div className="mt-3">
-            <ButtonLink href="mailto:info@ceuconstruction.com" strongBorder>
-              info@ceuconstruction.com
-            </ButtonLink>
-          </div>
+          {/* Removed the ButtonLink email fallback per your instruction */}
         </div>
       </div>
 
       {/* Lower grid: Map left, Direct contact right */}
       <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-2">
         {/* Map with solid chat bubble */}
-        <div className="relative hidden h-[22rem] overflow-hidden rounded-2xl border border-ink/10 md:block">
+        <div
+          className="relative hidden h-[22rem] overflow-hidden rounded-2xl border border-ink/10 md:block"
+          aria-label={mapTitle}
+        >
           <Image
             src="/media/contact/algarve.jpg"
             alt={mapTitle}
@@ -258,28 +315,8 @@ export default function Contact() {
           <MapChatBubble message={serviceArea} />
         </div>
 
-        {/* Direct contact card */}
-        <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
-          <h4 className="text-xl font-semibold text-ink">{directTitle}</h4>
-          <div className="mt-4 grid gap-6 sm:grid-cols-2">
-            {people.map((p, i) => (
-              <div key={i} className="space-y-1">
-                <p className="font-medium text-ink">{p.name}</p>
-                {p.phone ? <p className="text-ink/75">{p.phone}</p> : null}
-                {p.email ? (
-                  <p className="text-ink/75">
-                    <a
-                      className="underline decoration-ink/30 underline-offset-2 hover:decoration-ink/60"
-                      href={`mailto:${p.email}`}
-                    >
-                      {p.email}
-                    </a>
-                  </p>
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Direct contact card with icons */}
+        <DirectContact title={directTitle} people={people} />
       </div>
     </SectionShell>
   );
