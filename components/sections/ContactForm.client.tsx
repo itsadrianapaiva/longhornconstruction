@@ -54,31 +54,62 @@ function useContactCopy() {
   const dict = useLocale() === "pt" ? PT : EN;
   const f = dict.contact?.form ?? {};
   return {
-    name: { label: labelOf(f.name, "Full name"), placeholder: placeholderOf(f.name, "Your full name") },
-    email: { label: labelOf(f.email, "Email"), placeholder: placeholderOf(f.email, "you@example.com") },
-    phone: { label: labelOf(f.phone, "Phone"), placeholder: placeholderOf(f.phone, "+351 ___ ___ ___") },
-    message: { label: labelOf(f.message, "Project details"), placeholder: placeholderOf(f.message, "Scope, location, timeline…") },
+    name: {
+      label: labelOf(f.name, "Full name"),
+      placeholder: placeholderOf(f.name, "Your full name"),
+    },
+    email: {
+      label: labelOf(f.email, "Email"),
+      placeholder: placeholderOf(f.email, "you@example.com"),
+    },
+    phone: {
+      label: labelOf(f.phone, "Phone"),
+      placeholder: placeholderOf(f.phone, "+351 ___ ___ ___"),
+    },
+    message: {
+      label: labelOf(f.message, "Project details"),
+      placeholder: placeholderOf(f.message, "Scope, location, timeline…"),
+    },
     honeypotLabel: labelOf(f.honeypot, "Leave this field empty"),
     submit: f.submit ?? "Send message",
-    success: f.success ?? "Thanks. Your email client will open with a draft to send.",
+    success:
+      f.success ?? "Thanks. Your email client will open with a draft to send.",
     error: f.error ?? "Please fix the fields highlighted.",
   };
 }
 
 /** Soft validation (message has **no** validation per your request) */
-function validate(fields: { name: string; email: string; phone: string; message: string }) {
+function validate(fields: {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}) {
   const errs: Partial<Record<keyof typeof fields, boolean>> = {};
   if (fields.name.trim().length < 2) errs.name = true;
   if (!/^\S+@\S+\.\S+$/.test(fields.email.trim())) errs.email = true;
-  if (fields.phone.trim() && fields.phone.replace(/\D/g, "").length < 6) errs.phone = true;
+  if (fields.phone.trim() && fields.phone.replace(/\D/g, "").length < 6)
+    errs.phone = true;
   // no message validation
   return errs;
 }
 
 /** Mailto composer */
 function buildMailto({
-  to, name, email, phone, message, locale,
-}: { to: string; name: string; email: string; phone: string; message: string; locale: Locale }) {
+  to,
+  name,
+  email,
+  phone,
+  message,
+  locale,
+}: {
+  to: string;
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  locale: Locale;
+}) {
   const subject = `[CEU] Contact — ${name || "Prospect"}`;
   const lines = [
     `Name: ${name}`,
@@ -100,7 +131,11 @@ function buildMailto({
 }
 
 /** Contact form */
-export default function ContactFormClient({ to = "info@ceuconstruction.com" }: { to?: string }) {
+export default function ContactFormClient({
+  to = "info@ceuconstruction.com",
+}: {
+  to?: string;
+}) {
   const locale = useLocale();
   const copy = useContactCopy();
 
@@ -111,7 +146,24 @@ export default function ContactFormClient({ to = "info@ceuconstruction.com" }: {
   const [honey, setHoney] = React.useState(""); // hidden
   const [submitting, setSubmitting] = React.useState(false);
   const [status, setStatus] = React.useState<"idle" | "ok" | "err">("idle");
-  const [errors, setErrors] = React.useState<{ name?: boolean; email?: boolean; phone?: boolean }>({});
+  const [errors, setErrors] = React.useState<{
+    name?: boolean;
+    email?: boolean;
+    phone?: boolean;
+  }>({});
+
+  // NEW: one-place field styling (darker base, darker-on-focus)
+  const fieldClass = (hasError?: boolean) =>
+    [
+      "mt-1 w-full rounded-md px-3 py-2 text-ink outline-none transition",
+      // darker base using CEU token (adapts to light/dark)
+      "bg-[color-mix(in_srgb,var(--page-ink)_10%,transparent)]",
+      // border + focus behaviors
+      "border border-ink/20 focus:border-ink/30 focus:ring-1 focus:ring-ink/20",
+      // darker on focus for readability
+      "focus:bg-[color-mix(in_srgb,var(--page-ink)_14%,transparent)]",
+      hasError ? "!border-red-500" : "",
+    ].join(" ");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -167,9 +219,7 @@ export default function ContactFormClient({ to = "info@ceuconstruction.com" }: {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={copy.name.placeholder}
-          className={`mt-1 w-full rounded-md border bg-surface/80 px-3 py-2 text-ink outline-none transition
-            ${errors.name ? "border-red-500" : "border-ink/15 focus:border-ink/30 focus:ring-1 focus:ring-ink/20"}
-          `}
+          className={fieldClass(errors.name)}
         />
       </div>
 
@@ -182,9 +232,7 @@ export default function ContactFormClient({ to = "info@ceuconstruction.com" }: {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={copy.email.placeholder}
-          className={`mt-1 w-full rounded-md border bg-surface/80 px-3 py-2 text-ink outline-none transition
-            ${errors.email ? "border-red-500" : "border-ink/15 focus:border-ink/30 focus:ring-1 focus:ring-ink/20"}
-          `}
+          className={fieldClass(errors.email)}
         />
       </div>
 
@@ -197,21 +245,21 @@ export default function ContactFormClient({ to = "info@ceuconstruction.com" }: {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder={copy.phone.placeholder}
-          className={`mt-1 w-full rounded-md border bg-surface/80 px-3 py-2 text-ink outline-none transition
-            ${errors.phone ? "border-red-500" : "border-ink/15 focus:border-ink/30 focus:ring-1 focus:ring-ink/20"}
-          `}
+          className={fieldClass(errors.phone)}
         />
       </div>
 
       {/* Message (no validation) */}
       <div>
-        <label className="block text-sm text-ink/80">{copy.message.label}</label>
+        <label className="block text-sm text-ink/80">
+          {copy.message.label}
+        </label>
         <textarea
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={copy.message.placeholder}
-          className="mt-1 w-full resize-y rounded-md border border-ink/15 bg-surface/80 px-3 py-2 text-ink outline-none transition focus:border-ink/30 focus:ring-1 focus:ring-ink/20"
+          className={fieldClass()}
         />
       </div>
 
