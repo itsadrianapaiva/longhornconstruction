@@ -1,81 +1,19 @@
 "use client";
 
 import * as React from "react";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
-/** Locale + i18n (supports string or {label, placeholder}) */
-type Locale = "en" | "pt";
+/** i18n field types */
 type FieldDef = string | { label?: string; placeholder?: string };
-
-type ContactFormDict = {
-  contact?: {
-    form?: {
-      name?: FieldDef;
-      email?: FieldDef;
-      phone?: FieldDef;
-      message?: FieldDef;
-      honeypot?: FieldDef;
-      submit?: string;
-      success?: string;
-      error?: string;
-    };
-  };
-};
-
-import enRaw from "@/i18n/en.json";
-import ptRaw from "@/i18n/pt.json";
-const EN = enRaw as unknown as ContactFormDict;
-const PT = ptRaw as unknown as ContactFormDict;
-
-/** Locale from first path segment */
-function useLocale(): Locale {
-  let path = "/";
-  if (typeof window !== "undefined") {
-    const p = window.location?.pathname;
-    path = typeof p === "string" ? p : "/";
-  }
-  const first = path.split("/").filter(Boolean)[0] ?? "";
-  return first === "pt" ? "pt" : "en";
-}
 
 /** Helpers to read either string or {label, placeholder} */
 function labelOf(v: FieldDef | undefined, fallback: string) {
   if (!v) return fallback;
-  if (typeof v === "string") return v;
-  return v.label ?? fallback;
+  return typeof v === "string" ? v : v.label ?? fallback;
 }
 function placeholderOf(v: FieldDef | undefined, fallback: string) {
   if (!v) return fallback;
-  if (typeof v === "string") return fallback; // old schema had no placeholder
-  return v.placeholder ?? fallback;
-}
-
-/** Normalize i18n safely for both schemas */
-function useContactCopy() {
-  const dict = useLocale() === "pt" ? PT : EN;
-  const f = dict.contact?.form ?? {};
-  return {
-    name: {
-      label: labelOf(f.name, "Full name"),
-      placeholder: placeholderOf(f.name, "Your full name"),
-    },
-    email: {
-      label: labelOf(f.email, "Email"),
-      placeholder: placeholderOf(f.email, "you@example.com"),
-    },
-    phone: {
-      label: labelOf(f.phone, "Phone"),
-      placeholder: placeholderOf(f.phone, "+351 ___ ___ ___"),
-    },
-    message: {
-      label: labelOf(f.message, "Project details"),
-      placeholder: placeholderOf(f.message, "Scope, location, timeline…"),
-    },
-    honeypotLabel: labelOf(f.honeypot, "Leave this field empty"),
-    submit: f.submit ?? "Send message",
-    success:
-      f.success ?? "Thanks. Your email client will open with a draft to send.",
-    error: f.error ?? "Please fix the fields highlighted.",
-  };
+  return typeof v === "string" ? fallback : v.placeholder ?? fallback;
 }
 
 /** Soft validation (message has **no** validation per your request) */
@@ -108,7 +46,7 @@ function buildMailto({
   email: string;
   phone: string;
   message: string;
-  locale: Locale;
+  locale: "en" | "pt";
 }) {
   const subject = `[CEU] Contact — ${name || "Prospect"}`;
   const lines = [
@@ -136,8 +74,43 @@ export default function ContactFormClient({
 }: {
   to?: string;
 }) {
-  const locale = useLocale();
-  const copy = useContactCopy();
+  const { locale, t } = useI18n();
+
+  // Read i18n once (supports string or {label, placeholder})
+  const f = t<{
+    name?: FieldDef;
+    email?: FieldDef;
+    phone?: FieldDef;
+    message?: FieldDef;
+    honeypot?: FieldDef;
+    submit?: string;
+    success?: string;
+    error?: string;
+  }>("contact.form", {});
+
+  const copy = {
+    name: {
+      label: labelOf(f.name, "Full name"),
+      placeholder: placeholderOf(f.name, "Your full name"),
+    },
+    email: {
+      label: labelOf(f.email, "Email"),
+      placeholder: placeholderOf(f.email, "you@example.com"),
+    },
+    phone: {
+      label: labelOf(f.phone, "Phone"),
+      placeholder: placeholderOf(f.phone, "+351 ___ ___ ___"),
+    },
+    message: {
+      label: labelOf(f.message, "Project details"),
+      placeholder: placeholderOf(f.message, "Scope, location, timeline…"),
+    },
+    honeypotLabel: labelOf(f.honeypot, "Leave this field empty"),
+    submit: f.submit ?? "Send message",
+    success:
+      f.success ?? "Thanks. Your email client will open with a draft to send.",
+    error: f.error ?? "Please fix the fields highlighted.",
+  };
 
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -152,15 +125,12 @@ export default function ContactFormClient({
     phone?: boolean;
   }>({});
 
-  // NEW: one-place field styling (darker base, darker-on-focus)
+  // One-place field styling (darker base, darker-on-focus via CEU tokens)
   const fieldClass = (hasError?: boolean) =>
     [
       "mt-1 w-full rounded-md px-3 py-2 text-ink outline-none transition",
-      // darker base using CEU token (adapts to light/dark)
       "bg-[color-mix(in_srgb,var(--page-ink)_10%,transparent)]",
-      // border + focus behaviors
       "border border-ink/20 focus:border-ink/30 focus:ring-1 focus:ring-ink/20",
-      // darker on focus for readability
       "focus:bg-[color-mix(in_srgb,var(--page-ink)_14%,transparent)]",
       hasError ? "!border-red-500" : "",
     ].join(" ");

@@ -5,53 +5,11 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import ContactFormClient from "@/components/sections/ContactForm.client";
 import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
-/** i18n types (strict: no fallbacks) */
-type Locale = "en" | "pt";
+/** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
 
-type ContactDict = {
-  contact: {
-    title: string;
-    subtitle: string;
-    backgroundAlt: string;
-    what: { title: string; intro: string; items: string[] };
-    form: unknown; // handled by ContactFormClient
-    validate: unknown;
-    direct: {
-      title: string;
-      labels: { phone: string; email: string; hours: string; location: string };
-      hours: string;
-      location: string;
-      people: Person[];
-    };
-    map: { title: string; serviceArea: string };
-  };
-};
-
-import enRaw from "@/i18n/en.json";
-import ptRaw from "@/i18n/pt.json";
-const EN = enRaw as unknown as ContactDict;
-const PT = ptRaw as unknown as ContactDict;
-
-/** Locale from first path segment (client-safe) */
-function useLocale(): Locale {
-  let path = "/";
-  if (typeof window !== "undefined") {
-    const p = window.location?.pathname;
-    path = typeof p === "string" ? p : "/";
-  }
-  const first = path.split("/").filter(Boolean)[0] ?? "";
-  return first === "pt" ? "pt" : "en";
-}
-
-/** Read i18n — strict, no defaults/fallbacks */
-function useContactCopy() {
-  const dict = useLocale() === "pt" ? PT : EN;
-  return dict.contact;
-}
-
-/** What to expect list (presentational) */
 function WhatToExpect({
   title,
   intro,
@@ -70,7 +28,7 @@ function WhatToExpect({
         {items.map((item, i) => (
           <li
             key={i}
-            className="flex items-start gap-3 border-b pb-8 border-black/10"
+            className="flex items-start gap-3 border-b border-black/10 pb-8"
           >
             <span className="mt-1 text-ink/70" aria-hidden="true">
               {/* minimal check icon inline to avoid deps */}
@@ -92,7 +50,6 @@ function WhatToExpect({
   );
 }
 
-/** Direct contact (icons + global hours/location) */
 function DirectContact({
   title,
   labels,
@@ -165,7 +122,30 @@ function DirectContact({
 }
 
 export default function Contact() {
-  const copy = useContactCopy();
+  const { t } = useI18n();
+
+  // Strict reads — no fallbacks here to surface missing keys during dev
+  const title = t<string>("contact.title");
+  const subtitle = t<string>("contact.subtitle");
+  const backgroundAlt = t<string>("contact.backgroundAlt");
+
+  const whatTitle = t<string>("contact.what.title");
+  const whatIntro = t<string>("contact.what.intro");
+  const whatItems = t<string[]>("contact.what.items", []);
+
+  const directTitle = t<string>("contact.direct.title");
+  const labels = t<{
+    phone: string;
+    email: string;
+    hours: string;
+    location: string;
+  }>("contact.direct.labels");
+  const hours = t<string>("contact.direct.hours");
+  const location = t<string>("contact.direct.location");
+  const people = t<Person[]>("contact.direct.people", []);
+
+  const mapTitle = t<string>("contact.map.title");
+  const serviceArea = t<string>("contact.map.serviceArea");
 
   return (
     <SectionShell
@@ -178,14 +158,14 @@ export default function Contact() {
       innerClassName="relative"
     >
       {/* Title block */}
-      <div className="relative overflow-visible -mb-6">
+      <div className="relative -mb-6 overflow-visible">
         <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl">
-          {copy.title}
+          {title}
         </h2>
-        <p className="mt-4 text-center text-ink/80">{copy.subtitle}</p>
+        <p className="mt-4 text-center text-ink/80">{subtitle}</p>
       </div>
 
-           {/* Glass card with subtle contact background */}
+      {/* Glass card with subtle contact background */}
       <div
         className="relative z-10 mt-16 grid items-stretch gap-8 rounded-2xl bg-clip-padding px-6 py-8 backdrop-blur-[12px]
                    shadow-[0_8px_30px_rgba(0,0,0,0.35)] md:grid-cols-2 lg:px-10 lg:py-12"
@@ -194,7 +174,7 @@ export default function Contact() {
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl">
           <Image
             src="/media/contact/contact1.jpg"
-            alt={copy.backgroundAlt}
+            alt={backgroundAlt}
             fill
             sizes="100vw"
             priority={false}
@@ -206,7 +186,6 @@ export default function Contact() {
             <div
               className="absolute inset-0"
               style={{
-                // 135deg diagonal, stronger at bottom-left fading to clear
                 background:
                   "linear-gradient(135deg, var(--brand) 20%, transparent 60%)",
                 opacity: 0.28,
@@ -224,11 +203,7 @@ export default function Contact() {
         </div>
 
         {/* Left: What to expect */}
-        <WhatToExpect
-          title={copy.what.title}
-          intro={copy.what.intro}
-          items={copy.what.items}
-        />
+        <WhatToExpect title={whatTitle} intro={whatIntro} items={whatItems} />
 
         {/* Right: the real form with mailto handoff (no fallback button) */}
         <div className="relative flex flex-col">
@@ -240,29 +215,30 @@ export default function Contact() {
       <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-2">
         {/* Map with solid chat bubble */}
         <div
-          /* CHANGED: was `hidden md:block` — now visible on mobile with a tighter height */
           className="relative h-[16rem] overflow-hidden rounded-2xl border border-ink/10 md:h-[22rem]"
-          aria-label={copy.map.title}
+          aria-label={mapTitle}
         >
           <Image
             src="/media/contact/algarve.jpg"
-            alt={copy.map.title}
+            alt={mapTitle}
             fill
             sizes="100vw"
             priority={false}
             className="object-cover"
           />
-          {/* Slightly tighter position works on both mobile and desktop */}
-          <MapChatBubble message={copy.map.serviceArea} className="top-4 left-4 md:top-8 md:left-12" />
+          <MapChatBubble
+            message={serviceArea}
+            className="top-4 left-4 md:top-8 md:left-12"
+          />
         </div>
 
         {/* Direct contact card with icons + hours/location */}
         <DirectContact
-          title={copy.direct.title}
-          labels={copy.direct.labels}
-          hours={copy.direct.hours}
-          location={copy.direct.location}
-          people={copy.direct.people}
+          title={directTitle}
+          labels={labels}
+          hours={hours}
+          location={location}
+          people={people}
         />
       </div>
     </SectionShell>
