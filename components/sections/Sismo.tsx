@@ -17,6 +17,12 @@ export default function Sismo() {
   const title = t<string>("sismo.title", "");
   const intro = t<string>("sismo.intro", "");
 
+  // Which word to highlight is controlled by i18n (so PT/EN can differ if needed)
+  const highlightTarget = t<string>("sismo.highlightWord", "Sismo");
+
+  // Decorative mesh used for the underline background (asset in /public)
+  const MESH_HL_SRC = "/media/gradients/mesh1.png";
+
   // Items array (normalize to array of objects with safe defaults)
   const rawItems = t<Array<Record<string, unknown>>>("sismo.items", []);
   const items = Array.isArray(rawItems)
@@ -40,6 +46,56 @@ export default function Sismo() {
     href: "https://sismo-technology.com/pt-pt/",
   });
 
+  // --- helpers (small, low complexity) ---
+  function escapeRegExp(x: string) {
+    return x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  /** Wrap the target word with a mesh-backed underline without hardcoding text */
+  function renderWithMeshUnderline(text: string, target: string) {
+    if (!text || !target) return text;
+    const re = new RegExp(`(${escapeRegExp(target)})`, "i");
+    const parts = text.split(re);
+
+    // If target not found, return as-is
+    if (parts.length === 1) return text;
+
+    return parts.map((chunk, i) => {
+      // Match case-insensitively to keep locale casing
+      if (chunk.toLowerCase() === target.toLowerCase()) {
+        return (
+          <span key={`hl-${i}`} className="relative inline-block">
+            {/* decorative mesh underline */}
+            <span
+              aria-hidden="true"
+              className="
+                absolute inset-x-0
+                -bottom-[0.1em]
+                h-[0.08em]
+                -z-10
+                rounded
+                opacity-80
+                dark:opacity-70
+                pointer-events-none
+                select-none
+                [background-image:url('/media/gradients/mesh1.png')]
+                bg-[length:200%_200%]
+                bg-center
+                mix-blend-multiply
+              "
+              /* Fallback style in case Tailwind's arbitrary url is restricted by your config */
+              style={{
+                backgroundImage: `url(${MESH_HL_SRC})`,
+              }}
+            />
+            <span className="relative">{chunk}</span>
+          </span>
+        );
+      }
+      return <span key={`t-${i}`}>{chunk}</span>;
+    });
+  }
+
   return (
     <SectionShell
       id="sismo"
@@ -53,7 +109,7 @@ export default function Sismo() {
       {/* Header (Bravera sizes, no kicker) */}
       <div className="mx-auto mb-16 max-w-2xl text-center">
         <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
-          {title}
+          {renderWithMeshUnderline(title, highlightTarget)}
         </h2>
         {intro ? (
           <p className="mx-auto mt-6 text-lg text-ink/85">{intro}</p>
