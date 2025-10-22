@@ -47,7 +47,7 @@ export default function Projects() {
   });
 
   // Toggle later to hide items with no images
-  const SHOW_ONLY_WITH_MEDIA = false;
+  const SHOW_ONLY_WITH_MEDIA = true;
 
   // Visible list (stable deps)
   const visibleItems = React.useMemo(() => {
