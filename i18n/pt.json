@@ -72,19 +72,518 @@
     },
     "projects": {
         "title": "Projetos em destaque",
+        "intro": "Amamos construir e amamos compartilhar. Aqui alguns dos nossos projetos favoritos.",
         "filters": {
             "all": "Todos",
-            "residential": "Habitacional",
+            "residential": "Residencial",
             "commercial": "Comercial",
-            "renovation": "Reabilitação",
+            "renovation": "Renovação",
             "sismo": "Sismo"
         },
         "viewGallery": "Abrir galeria",
+        "empty": "Nenhum projeto disponível.",
         "modal": {
             "prev": "Anterior",
             "next": "Seguinte",
             "close": "Fechar"
-        }
+        },
+        "items": [
+            {
+                "id": "aljezur-i",
+                "title": "Aljezur I",
+                "category": "residential",
+                "technology": [
+                    "Sismo"
+                ],
+                "media": [
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/1.jpg",
+                        "alt": "Aljezur I — imagem 1",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/2.jpg",
+                        "alt": "Aljezur I — imagem 2",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/3.jpg",
+                        "alt": "Aljezur I — imagem 3",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/4.jpg",
+                        "alt": "Aljezur I — imagem 4",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/5.jpg",
+                        "alt": "Aljezur I — imagem 5",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/6.jpg",
+                        "alt": "Aljezur I — imagem 6",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/7.jpg",
+                        "alt": "Aljezur I — imagem 7",
+                        "width": 1600,
+                        "height": 1000
+                    }
+                ]
+            },
+            {
+                "id": "loule",
+                "title": "Loulé",
+                "category": "residential",
+                "technology": [
+                    "Traditional"
+                ],
+                "media": [
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/1.jpg",
+                        "alt": "Loulé — imagem 1",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/2.jpg",
+                        "alt": "Loulé — imagem 2",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/3.jpg",
+                        "alt": "Loulé — imagem 3",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/4.jpg",
+                        "alt": "Loulé — imagem 4",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/5.jpg",
+                        "alt": "Loulé — imagem 5",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/6.jpg",
+                        "alt": "Loulé — imagem 6",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/7.jpg",
+                        "alt": "Loulé — imagem 7",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/loule/8.jpg",
+                        "alt": "Loulé — imagem 8",
+                        "width": 1600,
+                        "height": 1000
+                    }
+                ]
+            },
+            {
+                "id": "casa-no-alto",
+                "title": "Casa no Alto",
+                "category": "residential",
+                "technology": [
+                    "Sismo"
+                ],
+                "media": [
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/1.jpg",
+                        "alt": "Casa no Alto — imagem 1",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/2.jpg",
+                        "alt": "Casa no Alto — imagem 2",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/3.jpg",
+                        "alt": "Casa no Alto — imagem 3",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/4.jpg",
+                        "alt": "Casa no Alto — imagem 4",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/5.jpg",
+                        "alt": "Casa no Alto — imagem 5",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/6.jpg",
+                        "alt": "Casa no Alto — imagem 6",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/7.jpg",
+                        "alt": "Casa no Alto — imagem 7",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/8.jpg",
+                        "alt": "Casa no Alto — imagem 8",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/9.jpg",
+                        "alt": "Casa no Alto — imagem 9",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/10.jpg",
+                        "alt": "Casa no Alto — imagem 10",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/11.jpg",
+                        "alt": "Casa no Alto — imagem 11",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/12.jpg",
+                        "alt": "Casa no Alto — imagem 12",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/13.jpg",
+                        "alt": "Casa no Alto — imagem 13",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/14.jpg",
+                        "alt": "Casa no Alto — imagem 14",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/15.jpg",
+                        "alt": "Casa no Alto — imagem 15",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/16.jpg",
+                        "alt": "Casa no Alto — imagem 16",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/17.jpg",
+                        "alt": "Casa no Alto — imagem 17",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/18.jpg",
+                        "alt": "Casa no Alto — imagem 18",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/19.jpg",
+                        "alt": "Casa no Alto — imagem 19",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/20.jpg",
+                        "alt": "Casa no Alto — imagem 20",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/21.jpg",
+                        "alt": "Casa no Alto — imagem 21",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/22.jpg",
+                        "alt": "Casa no Alto — imagem 22",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/23.jpg",
+                        "alt": "Casa no Alto — imagem 23",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/24.jpg",
+                        "alt": "Casa no Alto — imagem 24",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/25.jpg",
+                        "alt": "Casa no Alto — imagem 25",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/26.jpg",
+                        "alt": "Casa no Alto — imagem 26",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/27.jpg",
+                        "alt": "Casa no Alto — imagem 27",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/28.jpg",
+                        "alt": "Casa no Alto — imagem 28",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-no-alto/29.jpg",
+                        "alt": "Casa no Alto — imagem 29",
+                        "width": 1600,
+                        "height": 1000
+                    }
+                ]
+            },
+            {
+                "id": "casa-ta-top",
+                "title": "Casa Ta Top",
+                "category": "residential",
+                "technology": [
+                    "Traditional"
+                ],
+                "media": [
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/1.jpg",
+                        "alt": "Casa Ta Top — imagem 1",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/2.jpg",
+                        "alt": "Casa Ta Top — imagem 2",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/3.jpg",
+                        "alt": "Casa Ta Top — imagem 3",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/4.jpg",
+                        "alt": "Casa Ta Top — imagem 4",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/5.jpg",
+                        "alt": "Casa Ta Top — imagem 5",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/6.jpg",
+                        "alt": "Casa Ta Top — imagem 6",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/7.jpg",
+                        "alt": "Casa Ta Top — imagem 7",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/8.jpg",
+                        "alt": "Casa Ta Top — imagem 8",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/9.jpg",
+                        "alt": "Casa Ta Top — imagem 9",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/10.jpg",
+                        "alt": "Casa Ta Top — imagem 10",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/11.jpg",
+                        "alt": "Casa Ta Top — imagem 11",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/12.jpg",
+                        "alt": "Casa Ta Top — imagem 12",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/13.jpg",
+                        "alt": "Casa Ta Top — imagem 13",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/14.jpg",
+                        "alt": "Casa Ta Top — imagem 14",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/15.jpg",
+                        "alt": "Casa Ta Top — imagem 15",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/16.jpg",
+                        "alt": "Casa Ta Top — imagem 16",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/17.jpg",
+                        "alt": "Casa Ta Top — imagem 17",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/18.jpg",
+                        "alt": "Casa Ta Top — imagem 18",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/19.jpg",
+                        "alt": "Casa Ta Top — imagem 19",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/20.jpg",
+                        "alt": "Casa Ta Top — imagem 20",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/casa-ta-top/21.jpg",
+                        "alt": "Casa Ta Top — imagem 21",
+                        "width": 1600,
+                        "height": 1000
+                    }
+                ]
+            }
+        ]
     },
     "stats": {
         "title": "Histórico",
