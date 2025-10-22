@@ -72,6 +72,7 @@
     },
     "projects": {
         "title": "Featured projects",
+        "intro": "We love to build and we love to share. Here are some of our favorite projects.",
         "filters": {
             "all": "All",
             "residential": "Residential",
@@ -80,11 +81,83 @@
             "sismo": "Sismo"
         },
         "viewGallery": "Open gallery",
+        "empty": "No projects available.",
         "modal": {
             "prev": "Previous",
             "next": "Next",
             "close": "Close"
-        }
+        },
+        "items": [
+            {
+                "id": "aljezur-i",
+                "title": "Aljezur I",
+                "category": "residential",
+                "technology": [
+                    "Sismo"
+                ],
+                "media": [
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/1.jpg",
+                        "alt": "Aljezur I — exterior",
+                        "width": 1600,
+                        "height": 1000
+                    },
+                    {
+                        "type": "image",
+                        "src": "/media/projects/aljezur-i/2.jpg",
+                        "alt": "Aljezur I — interior",
+                        "width": 1600,
+                        "height": 1000
+                    }
+                ]
+            },
+            {
+                "id": "aljezur-ii",
+                "title": "Aljezur II",
+                "category": "residential",
+                "technology": [
+                    "Sismo"
+                ],
+                "media": []
+            },
+            {
+                "id": "budens",
+                "title": "Budens",
+                "category": "residential",
+                "technology": [
+                    "Traditional"
+                ],
+                "media": []
+            },
+            {
+                "id": "casa-ta-top",
+                "title": "Casa Ta Top",
+                "category": "residential",
+                "technology": [
+                    "Traditional"
+                ],
+                "media": []
+            },
+            {
+                "id": "casa-no-alto",
+                "title": "Casa no Alto",
+                "category": "residential",
+                "technology": [
+                    "Sismo"
+                ],
+                "media": []
+            },
+            {
+                "id": "loule",
+                "title": "Loulé",
+                "category": "residential",
+                "technology": [
+                    "Traditional"
+                ],
+                "media": []
+            }
+        ]
     },
     "stats": {
         "title": "Track record",
