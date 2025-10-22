@@ -185,7 +185,7 @@ export default function Contact() {
         <p className="mt-4 text-center text-ink/80">{copy.subtitle}</p>
       </div>
 
-      {/* Glass card with subtle contact background */}
+           {/* Glass card with subtle contact background */}
       <div
         className="relative z-10 mt-16 grid items-stretch gap-8 rounded-2xl bg-clip-padding px-6 py-8 backdrop-blur-[12px]
                    shadow-[0_8px_30px_rgba(0,0,0,0.35)] md:grid-cols-2 lg:px-10 lg:py-12"
@@ -200,7 +200,27 @@ export default function Contact() {
             priority={false}
             className="object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-surface/70 via-transparent to-surface/70" />
+          {/* brand-tinted gradient mask (image → gradients → content) */}
+          <div className="absolute inset-0">
+            {/* soft brand diagonal tint */}
+            <div
+              className="absolute inset-0"
+              style={{
+                // 135deg diagonal, stronger at bottom-left fading to clear
+                background:
+                  "linear-gradient(135deg, var(--brand) 20%, transparent 60%)",
+                opacity: 0.28,
+              }}
+            />
+            {/* subtle vertical sky fade using CEU sky tokens */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(to top, var(--sky-700) 0%, var(--sky-500) 35%, transparent 75%)",
+              }}
+            />
+          </div>
         </div>
 
         {/* Left: What to expect */}
@@ -220,21 +240,20 @@ export default function Contact() {
       <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-2">
         {/* Map with solid chat bubble */}
         <div
-          className="relative hidden h-[22rem] overflow-hidden rounded-2xl border border-ink/10 md:block"
+          /* CHANGED: was `hidden md:block` — now visible on mobile with a tighter height */
+          className="relative h-[16rem] overflow-hidden rounded-2xl border border-ink/10 md:h-[22rem]"
           aria-label={copy.map.title}
         >
           <Image
             src="/media/contact/algarve.jpg"
             alt={copy.map.title}
             fill
-            sizes="(min-width:1024px) 50vw, 100vw"
+            sizes="100vw"
             priority={false}
             className="object-cover"
           />
-          <MapChatBubble
-            message={copy.map.serviceArea}
-            className="top-8 left-12"
-          />
+          {/* Slightly tighter position works on both mobile and desktop */}
+          <MapChatBubble message={copy.map.serviceArea} className="top-4 left-4 md:top-8 md:left-12" />
         </div>
 
         {/* Direct contact card with icons + hours/location */}
