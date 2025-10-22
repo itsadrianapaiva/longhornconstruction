@@ -20,6 +20,7 @@ import {
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import Header from "@/components/Header";
 import type { NavItem } from "@/components/NavMenu";
+import Footer from "@/components/sections/Footer";
 
 async function getBaseUrl(): Promise<string> {
   const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
@@ -111,10 +112,7 @@ export default async function LocaleLayout({
         <main id="content">{children}</main>
       </I18nProvider>
 
-      {/* Footer stays on the same surface; typography uses page ink */}
-      <footer className="container py-12 text-sm opacity-80">
-        © {new Date().getFullYear()} CÉU Construction. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }

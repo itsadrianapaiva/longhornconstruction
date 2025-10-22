@@ -38,15 +38,36 @@
         "imageAlt": "Equipa da CÉU Construction em obra"
     },
     "sismo": {
-        "title": "Porque Sismo?",
-        "intro": "Os painéis estruturais Sismo permitem construções rápidas e robustas, com excelente desempenho térmico e acústico.",
-        "benefits": [
-            "Velocidade: painéis de instalação rápida reduzem o prazo",
-            "Resistência: núcleo monolítico de betão com alta robustez",
-            "Eficiência: menos frentes de trabalho e estaleiro limpo",
-            "Conforto: desempenho térmico e acústico"
+        "title": "Trabalhamos com o sistema Sismo",
+        "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
+        "items": [
+            {
+                "subtitle": "Velocidade sem atalhos",
+                "body": "Cada painel Sismo é fabricado em ambiente controlado, com medidas exatas, chegando à obra pronto para montagem. Esta pré-fabricação reduz drasticamente o tempo de construção sem comprometer a qualidade. Depois de posicionados, os painéis são betonados, formando uma estrutura contínua que permite às equipas da CÉU concluir edifícios completos em muito menos tempo que o método tradicional.",
+                "image": "/media/sismo/system.jpg",
+                "alt": "Instalação de painéis Sismo a mostrar o avanço rápido da obra"
+            },
+            {
+                "subtitle": "Resistência monolítica",
+                "body": "Após a betonagem, os painéis transformam-se numa única parede monolítica — uma estrutura contínua e reforçada que resiste a fissuras, deformações e humidade. O núcleo de betão garante estabilidade a longo prazo, baixa manutenção e excelente desempenho sísmico e ao vento. Cada construção Sismo da CÉU é projetada para cumprir ou superar as normas estruturais europeias.",
+                "image": "/media/sismo/layers.jpg",
+                "alt": "Detalhe do núcleo de betão armado numa parede Sismo"
+            },
+            {
+                "subtitle": "Conforto e eficiência",
+                "body": "O design isolado do sistema Sismo melhora naturalmente o conforto térmico e reduz o consumo energético. Os painéis integram o isolamento diretamente na estrutura, eliminando pontes térmicas e mantendo a temperatura interior constante. O sistema estanque também melhora o isolamento acústico, tornando os interiores mais silenciosos e confortáveis — ideal para edifícios residenciais e comerciais no clima exigente do Algarve.",
+                "image": "/media/sismo/project.jpg",
+                "alt": "Interior a evidenciar benefícios de conforto térmico e acústico"
+            }
         ],
-        "cta": "Ver time-lapse"
+        "cta": {
+            "label": "Ver um projeto CÉU com Sismo",
+            "href": "/projects#sismo"
+        },
+        "external": {
+            "label": "Saiba mais no Sismo Portugal",
+            "href": "https://sismo-technology.com/pt-pt/"
+        }
     },
     "projects": {
         "title": "Projetos em destaque",
@@ -168,25 +189,173 @@
         ]
     },
     "contact": {
-        "title": "Vamos construir",
-        "subtitle": "Fale-nos do seu projeto. Respondemos rapidamente com os próximos passos.",
-        "form": {
-            "name": "Nome completo",
-            "email": "Email",
-            "phone": "Telefone",
-            "message": "Detalhes do projeto",
-            "honeypot": "Deixe este campo vazio",
-            "submit": "Enviar",
-            "success": "Obrigado. A sua mensagem foi enviada.",
-            "error": "Ocorreu um erro. Tente novamente."
+        "title": "Contacte-nos hoje",
+        "subtitle": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
+        "backgroundAlt": "Fotografia subtil de oficina por trás do cartão de contacto",
+        "what": {
+            "title": "O que esperar",
+            "intro": "Executamos todas as fases internamente. Eis o que iremos abordar na sua consulta:",
+            "items": [
+                "Objetivos e restrições do projeto",
+                "Prazos e realidades do licenciamento",
+                "Intervalos de orçamento e principais fatores de custo",
+                "Opções de método (incluindo Sismo) e compromissos",
+                "Próximos passos e agendamento de visita à obra"
+            ]
         },
-        "serviceArea": "Algarve e arredores"
+        "form": {
+            "name": {
+                "label": "Nome completo",
+                "placeholder": "O seu nome completo"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "nome@exemplo.com"
+            },
+            "phone": {
+                "label": "Telefone",
+                "placeholder": "+351 ___ ___ ___"
+            },
+            "message": {
+                "label": "Detalhes do projeto",
+                "placeholder": "Âmbito, localização, prazo…"
+            },
+            "honeypot": "Deixe este campo vazio",
+            "submit": "Enviar mensagem",
+            "success": "Obrigado. O seu cliente de email será aberto com um rascunho para enviar.",
+            "error": "Corrija os campos assinalados abaixo."
+        },
+        "validate": {
+            "name": "Introduza o seu nome (2–80 caracteres).",
+            "email": "Introduza um endereço de email válido.",
+            "phone": "Introduza um número de telefone válido.",
+            "message": "Escreva uma mensagem breve (mínimo 20 caracteres)."
+        },
+        "direct": {
+            "title": "Pode ligar-nos diretamente",
+            "labels": {
+                "phone": "Telefone",
+                "email": "Email",
+                "hours": "Horário",
+                "location": "Localização"
+            },
+            "hours": "Seg-Sex 09:00-18:00",
+            "location": "Algarve, Portugal",
+            "people": [
+                {
+                    "name": "CÉU Construction",
+                    "phone": "+351 930 462 893",
+                    "email": "info@ceuconstruction.com"
+                }
+            ]
+        },
+        "map": {
+            "title": "Onde trabalhamos",
+            "serviceArea": "A servir o Algarve e além.."
+        }
     },
     "footer": {
-        "rights": "Todos os direitos reservados.",
-        "companyLabel": "Empresa",
-        "privacy": "Privacidade",
-        "language": "Idioma"
+        "company": {
+            "legalName": "CÉU Construction",
+            "nif": "NIF 517367777",
+            "address": [
+                "8670-116 Aljezur, Algarve"
+            ],
+            "email": "info@ceuconstruction.com",
+            "phone": "+351 930 462 893",
+            "logoAlt": "CÉU Construction"
+        },
+        "columns": {
+            "services": {
+                "title": "Serviços",
+                "items": [
+                    "Construção Sismo",
+                    "Betão estrutural",
+                    "Alvenaria e acabamentos",
+                    "Fundações e lajes",
+                    "Preparação de obra",
+                    "Gestão de projeto"
+                ]
+            },
+            "nav": {
+                "title": "Navegar",
+                "items": [
+                    {
+                        "label": "Sobre",
+                        "href": "#about"
+                    },
+                    {
+                        "label": "Sismo",
+                        "href": "#sismo"
+                    },
+                    {
+                        "label": "Projetos",
+                        "href": "#projects"
+                    },
+                    {
+                        "label": "Contacto",
+                        "href": "#contact"
+                    }
+                ]
+            },
+            "social": {
+                "title": "Redes",
+                "items": [
+                    {
+                        "id": "instagram",
+                        "label": "Instagram",
+                        "href": ""
+                    },
+                    {
+                        "id": "linkedin",
+                        "label": "LinkedIn",
+                        "href": ""
+                    },
+                    {
+                        "id": "youtube",
+                        "label": "YouTube",
+                        "href": ""
+                    },
+                    {
+                        "id": "facebook",
+                        "label": "Facebook",
+                        "href": ""
+                    },
+                    {
+                        "id": "tiktok",
+                        "label": "TikTok",
+                        "href": ""
+                    },
+                    {
+                        "id": "vimeo",
+                        "label": "Vimeo",
+                        "href": ""
+                    }
+                ]
+            },
+            "contact": {
+                "title": "Fale connosco",
+                "addressLabel": "Morada",
+                "phoneLabel": "Telefone",
+                "emailLabel": "Email"
+            }
+        },
+        "cta": {
+            "label": "Falar com a equipa",
+            "href": "#contact"
+        },
+        "legalBar": {
+            "privacy": "Privacidade",
+            "terms": "Termos",
+            "sitemap": "Mapa do site",
+            "backToTop": "Voltar ao topo"
+        },
+        "copyright": "© {{year}} CÉU Construction. Todos os direitos reservados.",
+        "langToggle": {
+            "label": "Idioma",
+            "en": "English",
+            "pt": "Português"
+        }
     },
     "common": {
         "readMore": "Saber mais",

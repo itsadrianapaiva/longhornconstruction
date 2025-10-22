@@ -38,15 +38,36 @@
         "imageAlt": "CÉU Construction built house"
     },
     "sismo": {
-        "title": "Why Sismo construction?",
-        "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance.",
-        "benefits": [
-            "Speed: panels install quickly, reducing schedule",
-            "Strength: monolithic concrete core with high resistance",
-            "Efficiency: fewer trades, cleaner jobsite",
-            "Comfort: thermal and acoustic performance"
+        "title": "We work with Sismo",
+        "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
+        "items": [
+            {
+                "subtitle": "Speed without shortcuts",
+                "body": "Each Sismo panel is factory-produced to exact dimensions, arriving on-site ready to assemble like a modular shell. This prefabrication drastically reduces construction time while maintaining accuracy and quality. Once panels are positioned, concrete is poured to form a continuous structure, allowing CÉU teams to build complete homes and structures in a fraction of the usual schedule.",
+                "image": "/media/sismo/system.jpg",
+                "alt": "Sismo panel installation showing rapid progress"
+            },
+            {
+                "subtitle": "Monolithic strength",
+                "body": "After concrete is poured, the panels become a single monolithic wall system, a reinforced, continuous structure that resists cracking, deformation, and moisture. This solid concrete core ensures long-term stability, low maintenance, and excellent seismic and wind performance. Every Sismo build by CÉU is designed to meet or exceed European structural standards.",
+                "image": "/media/sismo/layers.jpg",
+                "alt": "Reinforced concrete core detail of a Sismo wall"
+            },
+            {
+                "subtitle": "Comfort & efficiency",
+                "body": "Sismo’s insulated design naturally improves thermal comfort and reduces energy use. The panels integrate insulation materials directly into the structure, minimizing thermal bridges and ensuring a constant indoor temperature. The airtight system also improves acoustic insulation, making interiors quieter and more comfortable, ideal for both residential and commercial buildings in the Algarve’s demanding climate.",
+                "image": "/media/sismo/project.jpg",
+                "alt": "Interior view highlighting thermal and acoustic comfort benefits"
+            }
         ],
-        "cta": "Watch the time-lapse"
+        "cta": {
+            "label": "See a CÉU Sismo project",
+            "href": "/projects#sismo"
+        },
+        "external": {
+            "label": "Learn more at Sismo Portugal",
+            "href": "https://sismo-technology.com/pt-pt/"
+        }
     },
     "projects": {
         "title": "Featured projects",
@@ -168,25 +189,173 @@
         ]
     },
     "contact": {
-        "title": "Let’s build",
-        "subtitle": "Tell us about your project. We will reply quickly with next steps.",
+        "title": "Contact us today",
+        "subtitle": "We would love to hear more about your project and how we can turn your vision into a reality.",
+        "backgroundAlt": "Subtle workshop photograph behind the contact card",
+        "what": {
+            "title": "What to expect",
+            "intro": "We self-perform every phase. Here’s what we’ll discuss at your consultation:",
+            "items": [
+                "Project goals and constraints",
+                "Timeline and permitting realities",
+                "Budget ranges and cost drivers",
+                "Method options (including Sismo) and trade-offs",
+                "Next steps and site visit scheduling"
+            ]
+        },
         "form": {
-            "name": "Full name",
-            "email": "Email",
-            "phone": "Phone",
-            "message": "Project details",
+            "name": {
+                "label": "Full name",
+                "placeholder": "Your full name"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "you@example.com"
+            },
+            "phone": {
+                "label": "Phone",
+                "placeholder": "+351 ___ ___ ___"
+            },
+            "message": {
+                "label": "Project details",
+                "placeholder": "Scope, location, timeline…"
+            },
             "honeypot": "Leave this field empty",
             "submit": "Send message",
-            "success": "Thanks. Your message is on the way.",
-            "error": "Something went wrong. Please try again."
+            "success": "Thanks. Your email client will open with a draft to send.",
+            "error": "Please fix the fields highlighted below."
         },
-        "serviceArea": "Serving the Algarve and beyond"
+        "validate": {
+            "name": "Please enter your name (2–80 characters).",
+            "email": "Please enter a valid email address.",
+            "phone": "Please enter a valid phone number.",
+            "message": "Please write a short message (min 20 characters)."
+        },
+        "direct": {
+            "title": "You can call us directly",
+            "labels": {
+                "phone": "Phone",
+                "email": "Email",
+                "hours": "Hours",
+                "location": "Location"
+            },
+            "hours": "Mon–Fri 09:00–18:00",
+            "location": "Algarve, Portugal",
+            "people": [
+                {
+                    "name": "CÉU Construction",
+                    "phone": "+351 930 462 893",
+                    "email": "info@ceuconstruction.com"
+                }
+            ]
+        },
+        "map": {
+            "title": "Where we work",
+            "serviceArea": "Serving the Algarve and beyond.."
+        }
     },
     "footer": {
-        "rights": "All rights reserved.",
-        "companyLabel": "Company",
-        "privacy": "Privacy",
-        "language": "Language"
+        "company": {
+            "legalName": "CÉU Construction",
+            "nif": "NIF 517367777",
+            "address": [
+                "8670-116 Aljezur, Algarve"
+            ],
+            "email": "info@ceuconstruction.com",
+            "phone": "+351 930 462 893",
+            "logoAlt": "CÉU Construction"
+        },
+        "columns": {
+            "services": {
+                "title": "Services",
+                "items": [
+                    "Sismo construction",
+                    "Structural concrete",
+                    "Masonry & finishes",
+                    "Foundations & slabs",
+                    "Site preparation",
+                    "Project management"
+                ]
+            },
+            "nav": {
+                "title": "Navigate",
+                "items": [
+                    {
+                        "label": "About",
+                        "href": "#about"
+                    },
+                    {
+                        "label": "Sismo",
+                        "href": "#sismo"
+                    },
+                    {
+                        "label": "Projects",
+                        "href": "#projects"
+                    },
+                    {
+                        "label": "Contact",
+                        "href": "#contact"
+                    }
+                ]
+            },
+            "social": {
+                "title": "Socials",
+                "items": [
+                    {
+                        "id": "instagram",
+                        "label": "Instagram",
+                        "href": ""
+                    },
+                    {
+                        "id": "linkedin",
+                        "label": "LinkedIn",
+                        "href": ""
+                    },
+                    {
+                        "id": "youtube",
+                        "label": "YouTube",
+                        "href": ""
+                    },
+                    {
+                        "id": "facebook",
+                        "label": "Facebook",
+                        "href": ""
+                    },
+                    {
+                        "id": "tiktok",
+                        "label": "TikTok",
+                        "href": ""
+                    },
+                    {
+                        "id": "vimeo",
+                        "label": "Vimeo",
+                        "href": ""
+                    }
+                ]
+            },
+            "contact": {
+                "title": "Get in touch",
+                "addressLabel": "Address",
+                "phoneLabel": "Phone",
+                "emailLabel": "Email"
+            }
+        },
+        "cta": {
+            "label": "Contact us",
+            "href": "#contact"
+        },
+        "legalBar": {
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "sitemap": "Sitemap",
+            "backToTop": "Back to top"
+        },
+        "copyright": "© {{year}} CÉU Construction. All rights reserved.",
+        "langToggle": {
+            "label": "Language",
+            "en": "English",
+            "pt": "Português"
+        }
     },
     "common": {
         "readMore": "Read more",
