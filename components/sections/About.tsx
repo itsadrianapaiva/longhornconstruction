@@ -1,85 +1,31 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/sections/SectionShell";
 import ButtonLink from "@/components/ButtonLink";
 import AboutAnimatedContent from "@/components/animations/AboutAnimatedContent";
-
-/** i18n types */
-type CTA = { label: string; href: string };
-type AboutBlock = {
-  title?: string;
-  subheading?: string;
-  body?: string | string[];
-  bullets?: string[];
-  cta?: CTA;
-  imageAlt?: string;
-};
-type Dict = { about?: AboutBlock; common?: { learnMore?: string } };
-
-/** Import JSON once (static), choose after mount */
-import enRaw from "@/i18n/en.json";
-import ptRaw from "@/i18n/pt.json";
-const EN: Dict = enRaw as unknown as Dict;
-const PT: Dict = ptRaw as unknown as Dict;
-
-/** Safe client-only locale reader */
-function getClientLocale(): "en" | "pt" {
-  const path = window.location?.pathname ?? "/";
-  const first = path.split("/").filter(Boolean)[0] ?? "";
-  return first === "pt" ? "pt" : "en";
-}
-
-/** Normalize About copy */
-function normalize(dict: Dict): {
-  title: string;
-  subheading: string;
-  body: string[];
-  bullets: string[];
-  cta: CTA;
-  imageAlt: string;
-} {
-  const about = dict.about ?? {};
-  return {
-    title: about.title ?? "",
-    subheading: about.subheading ?? "",
-    body: Array.isArray(about.body)
-      ? (about.body as string[])
-      : ([about.body ?? ""].filter(Boolean) as string[]),
-    bullets: Array.isArray(about.bullets) ? about.bullets : [],
-    cta:
-      about.cta ??
-      ({
-        label: dict.common?.learnMore ?? "Learn more",
-        href: "/#projects",
-      } as CTA),
-    imageAlt: about.imageAlt ?? "About CÉU Construction",
-  };
-}
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 /**
- * About v2 — Hydration-safe
- * - Server & first client render: stable placeholders (no mismatch)
- * - After mount: swap in locale-specific copy
- * - No props needed, keeps your minimal page.tsx
+ * About v2
+ * - Reads locale + dict from I18nProvider (SSR-stable)
+ * - Removes window-based locale detection and JSON imports
+ * - Hydration-safe because server and client see the same dict
  */
 export default function About() {
-  // 1) mounted flag to defer locale selection to the client
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  const { t } = useI18n();
 
-  // 2) pick dict only after mount; before that, render EN as empty placeholders
-  const dict = useMemo<Dict>(() => {
-    if (!mounted) return { about: { title: "", body: [] } } as Dict;
-    return getClientLocale() === "pt" ? PT : EN;
-  }, [mounted]);
-
-  // 3) normalize content
-  const { title, subheading, body, bullets, cta, imageAlt } = useMemo(
-    () => normalize(dict),
-    [dict]
-  );
+  // Pull strongly-typed values via t(); fall back to safe defaults
+  const title = t<string>("about.title", "");
+  const subheading = t<string>("about.subheading", "");
+  const bodyRaw = t<string | string[]>("about.body", []);
+  const body = Array.isArray(bodyRaw) ? bodyRaw : [bodyRaw].filter(Boolean);
+  const bullets = t<string[]>("about.bullets", []);
+  const cta = t<{ label?: string; href?: string }>("about.cta", {
+    label: t<string>("common.learnMore", "Learn more"),
+    href: "/#projects",
+  });
+  const imageAlt = t<string>("about.imageAlt", "About CÉU Construction");
 
   return (
     <SectionShell
@@ -91,15 +37,10 @@ export default function About() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Title: initially peeking from behind the glass */}
+      {/* Title: peeks from behind glass, animated on scroll */}
       <div className="relative overflow-visible -mb-6">
         <AboutAnimatedContent>
-          {/* suppressHydrationWarning avoids warnings on the text node swap */}
-          <h2
-            className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl translate-y-[16px]"
-            suppressHydrationWarning
-            aria-busy={!mounted}
-          >
+          <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl translate-y-[16px]">
             {title}
           </h2>
         </AboutAnimatedContent>
@@ -125,38 +66,30 @@ export default function About() {
         {/* Text column */}
         <div className="lg:col-span-2 order-1 md:order-1 lg:order-2">
           {subheading ? (
-            <div
-              className="mt-1 text-2xl font-normal text-ink/95"
-              suppressHydrationWarning
-              aria-busy={!mounted}
-            >
+            <div className="mt-1 text-2xl font-normal text-ink/95">
               {subheading}
             </div>
           ) : null}
 
           {body.length ? (
             <div className="mt-4 space-y-4 leading-relaxed text-ink/85">
-              {body.map((p: string, i: number) => (
-                <p key={i} suppressHydrationWarning aria-busy={!mounted}>
-                  {p}
-                </p>
+              {body.map((p, i) => (
+                <p key={i}>{p}</p>
               ))}
             </div>
           ) : null}
 
           {bullets.length ? (
             <ul className="mt-4 list-disc space-y-1 pl-5 text-ink/85">
-              {bullets.map((b: string, i: number) => (
-                <li key={i} suppressHydrationWarning aria-busy={!mounted}>
-                  {b}
-                </li>
+              {bullets.map((b, i) => (
+                <li key={i}>{b}</li>
               ))}
             </ul>
           ) : null}
 
           <div className="mt-6 text-center sm:text-left">
-            <ButtonLink href={cta.href} strongBorder>
-              {cta.label}
+            <ButtonLink href={cta.href ?? "/#projects"} strongBorder>
+              {cta.label ?? t("common.learnMore", "Learn more")}
             </ButtonLink>
           </div>
         </div>
