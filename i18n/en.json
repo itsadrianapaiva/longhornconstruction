@@ -262,33 +262,93 @@
                 "8670-116 Aljezur, Algarve"
             ],
             "email": "info@ceuconstruction.com",
-            "phone": "+351 930 462 893"
+            "phone": "+351 930 462 893",
+            "logoAlt": "CÉU Construction"
         },
-        "nav": [
-            {
-                "label": "About",
-                "href": "#about"
+        "columns": {
+            "services": {
+                "title": "Services",
+                "items": [
+                    "Sismo construction",
+                    "Structural concrete",
+                    "Masonry & finishes",
+                    "Foundations & slabs",
+                    "Site preparation",
+                    "Project management"
+                ]
             },
-            {
-                "label": "Sismo",
-                "href": "#sismo"
+            "nav": {
+                "title": "Navigate",
+                "items": [
+                    {
+                        "label": "About",
+                        "href": "#about"
+                    },
+                    {
+                        "label": "Sismo",
+                        "href": "#sismo"
+                    },
+                    {
+                        "label": "Projects",
+                        "href": "#projects"
+                    },
+                    {
+                        "label": "Contact",
+                        "href": "#contact"
+                    }
+                ]
             },
-            {
-                "label": "Projects",
-                "href": "#projects"
+            "social": {
+                "title": "Socials",
+                "items": [
+                    {
+                        "id": "instagram",
+                        "label": "Instagram",
+                        "href": ""
+                    },
+                    {
+                        "id": "linkedin",
+                        "label": "LinkedIn",
+                        "href": ""
+                    },
+                    {
+                        "id": "youtube",
+                        "label": "YouTube",
+                        "href": ""
+                    },
+                    {
+                        "id": "facebook",
+                        "label": "Facebook",
+                        "href": ""
+                    },
+                    {
+                        "id": "tiktok",
+                        "label": "TikTok",
+                        "href": ""
+                    },
+                    {
+                        "id": "vimeo",
+                        "label": "Vimeo",
+                        "href": ""
+                    }
+                ]
             },
-            {
-                "label": "Contact",
-                "href": "#contact"
+            "contact": {
+                "title": "Get in touch",
+                "addressLabel": "Address",
+                "phoneLabel": "Phone",
+                "emailLabel": "Email"
             }
-        ],
-        "social": {
-            "instagram": "",
-            "linkedin": "",
-            "youtube": "",
-            "facebook": "",
-            "tiktok": "",
-            "vimeo": ""
+        },
+        "cta": {
+            "label": "Contact us",
+            "href": "#contact"
+        },
+        "legalBar": {
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "sitemap": "Sitemap",
+            "backToTop": "Back to top"
         },
         "copyright": "© {{year}} CÉU Construction. All rights reserved.",
         "langToggle": {

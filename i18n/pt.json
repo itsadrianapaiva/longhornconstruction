@@ -188,72 +188,72 @@
             }
         ]
     },
-   "contact": {
-    "title": "Contacte-nos hoje",
-    "subtitle": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
-    "backgroundAlt": "Fotografia subtil de oficina por trás do cartão de contacto",
-    "what": {
-      "title": "O que esperar",
-      "intro": "Executamos todas as fases internamente. Eis o que iremos abordar na sua consulta:",
-      "items": [
-        "Objetivos e restrições do projeto",
-        "Prazos e realidades do licenciamento",
-        "Intervalos de orçamento e principais fatores de custo",
-        "Opções de método (incluindo Sismo) e compromissos",
-        "Próximos passos e agendamento de visita à obra"
-      ]
-    },
-    "form": {
-      "name": {
-        "label": "Nome completo",
-        "placeholder": "O seu nome completo"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "nome@exemplo.com"
-      },
-      "phone": {
-        "label": "Telefone",
-        "placeholder": "+351 ___ ___ ___"
-      },
-      "message": {
-        "label": "Detalhes do projeto",
-        "placeholder": "Âmbito, localização, prazo…"
-      },
-      "honeypot": "Deixe este campo vazio",
-      "submit": "Enviar mensagem",
-      "success": "Obrigado. O seu cliente de email será aberto com um rascunho para enviar.",
-      "error": "Corrija os campos assinalados abaixo."
-    },
-    "validate": {
-      "name": "Introduza o seu nome (2–80 caracteres).",
-      "email": "Introduza um endereço de email válido.",
-      "phone": "Introduza um número de telefone válido.",
-      "message": "Escreva uma mensagem breve (mínimo 20 caracteres)."
-    },
-    "direct": {
-      "title": "Pode ligar-nos diretamente",
-      "labels": {
-        "phone": "Telefone",
-        "email": "Email",
-        "hours": "Horário",
-        "location": "Localização"
-      },
-      "hours": "Seg-Sex 09:00-18:00",
-      "location": "Algarve, Portugal",
-      "people": [
-        {
-          "name": "CÉU Construction",
-          "phone": "+351 930 462 893",
-          "email": "info@ceuconstruction.com"
+    "contact": {
+        "title": "Contacte-nos hoje",
+        "subtitle": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
+        "backgroundAlt": "Fotografia subtil de oficina por trás do cartão de contacto",
+        "what": {
+            "title": "O que esperar",
+            "intro": "Executamos todas as fases internamente. Eis o que iremos abordar na sua consulta:",
+            "items": [
+                "Objetivos e restrições do projeto",
+                "Prazos e realidades do licenciamento",
+                "Intervalos de orçamento e principais fatores de custo",
+                "Opções de método (incluindo Sismo) e compromissos",
+                "Próximos passos e agendamento de visita à obra"
+            ]
+        },
+        "form": {
+            "name": {
+                "label": "Nome completo",
+                "placeholder": "O seu nome completo"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "nome@exemplo.com"
+            },
+            "phone": {
+                "label": "Telefone",
+                "placeholder": "+351 ___ ___ ___"
+            },
+            "message": {
+                "label": "Detalhes do projeto",
+                "placeholder": "Âmbito, localização, prazo…"
+            },
+            "honeypot": "Deixe este campo vazio",
+            "submit": "Enviar mensagem",
+            "success": "Obrigado. O seu cliente de email será aberto com um rascunho para enviar.",
+            "error": "Corrija os campos assinalados abaixo."
+        },
+        "validate": {
+            "name": "Introduza o seu nome (2–80 caracteres).",
+            "email": "Introduza um endereço de email válido.",
+            "phone": "Introduza um número de telefone válido.",
+            "message": "Escreva uma mensagem breve (mínimo 20 caracteres)."
+        },
+        "direct": {
+            "title": "Pode ligar-nos diretamente",
+            "labels": {
+                "phone": "Telefone",
+                "email": "Email",
+                "hours": "Horário",
+                "location": "Localização"
+            },
+            "hours": "Seg-Sex 09:00-18:00",
+            "location": "Algarve, Portugal",
+            "people": [
+                {
+                    "name": "CÉU Construction",
+                    "phone": "+351 930 462 893",
+                    "email": "info@ceuconstruction.com"
+                }
+            ]
+        },
+        "map": {
+            "title": "Onde trabalhamos",
+            "serviceArea": "A servir o Algarve e além.."
         }
-      ]
     },
-    "map": {
-      "title": "Onde trabalhamos",
-      "serviceArea": "A servir o Algarve e além.."
-    }
-  },
     "footer": {
         "company": {
             "legalName": "CÉU Construction",
@@ -262,33 +262,93 @@
                 "8670-116 Aljezur, Algarve"
             ],
             "email": "info@ceuconstruction.com",
-            "phone": "+351 930 462 893"
+            "phone": "+351 930 462 893",
+            "logoAlt": "CÉU Construction"
         },
-        "nav": [
-            {
-                "label": "Sobre",
-                "href": "#about"
+        "columns": {
+            "services": {
+                "title": "Serviços",
+                "items": [
+                    "Construção Sismo",
+                    "Betão estrutural",
+                    "Alvenaria e acabamentos",
+                    "Fundações e lajes",
+                    "Preparação de obra",
+                    "Gestão de projeto"
+                ]
             },
-            {
-                "label": "Sismo",
-                "href": "#sismo"
+            "nav": {
+                "title": "Navegar",
+                "items": [
+                    {
+                        "label": "Sobre",
+                        "href": "#about"
+                    },
+                    {
+                        "label": "Sismo",
+                        "href": "#sismo"
+                    },
+                    {
+                        "label": "Projetos",
+                        "href": "#projects"
+                    },
+                    {
+                        "label": "Contacto",
+                        "href": "#contact"
+                    }
+                ]
             },
-            {
-                "label": "Projetos",
-                "href": "#projects"
+            "social": {
+                "title": "Redes",
+                "items": [
+                    {
+                        "id": "instagram",
+                        "label": "Instagram",
+                        "href": ""
+                    },
+                    {
+                        "id": "linkedin",
+                        "label": "LinkedIn",
+                        "href": ""
+                    },
+                    {
+                        "id": "youtube",
+                        "label": "YouTube",
+                        "href": ""
+                    },
+                    {
+                        "id": "facebook",
+                        "label": "Facebook",
+                        "href": ""
+                    },
+                    {
+                        "id": "tiktok",
+                        "label": "TikTok",
+                        "href": ""
+                    },
+                    {
+                        "id": "vimeo",
+                        "label": "Vimeo",
+                        "href": ""
+                    }
+                ]
             },
-            {
-                "label": "Contacto",
-                "href": "#contact"
+            "contact": {
+                "title": "Fale connosco",
+                "addressLabel": "Morada",
+                "phoneLabel": "Telefone",
+                "emailLabel": "Email"
             }
-        ],
-        "social": {
-            "instagram": "",
-            "linkedin": "",
-            "youtube": "",
-            "facebook": "",
-            "tiktok": "",
-            "vimeo": ""
+        },
+        "cta": {
+            "label": "Falar com a equipa",
+            "href": "#contact"
+        },
+        "legalBar": {
+            "privacy": "Privacidade",
+            "terms": "Termos",
+            "sitemap": "Mapa do site",
+            "backToTop": "Voltar ao topo"
         },
         "copyright": "© {{year}} CÉU Construction. Todos os direitos reservados.",
         "langToggle": {
