@@ -13,14 +13,14 @@
     "hero": {
         "eyebrow": "CÉU Construction",
         "title": "logo.",
-        "subtitle": "Think beyond the sky.",
+        "subtitle": "Think beyond the sky",
         "primaryCta": "Get in touch",
         "secondaryCta": "Explore our work",
         "videoAriaLabel": "CÉU construction hero",
         "scrollDown": "Scroll to About"
     },
     "about": {
-        "title": "Think beyond the sky.",
+        "title": "Think beyond the sky",
         "subheading": "A self-performing builder with North American rigor and Portuguese craftsmanship delivering faster, stronger builds with full quality control.",
         "body": [
             "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
@@ -89,8 +89,8 @@
         },
         "items": [
             {
-                "id": "aljezur-i",
-                "title": "Aljezur I",
+                "id": "espartal-i",
+                "title": "Espartal I",
                 "category": "residential",
                 "technology": [
                     "Sismo"

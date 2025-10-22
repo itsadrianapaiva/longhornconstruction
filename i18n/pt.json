@@ -13,7 +13,7 @@
     "hero": {
         "eyebrow": "CÉU Construction",
         "title": "logo.",
-        "subtitle": "Imagine além do céu.",
+        "subtitle": "Imagine além do céu",
         "primaryCta": "Fale conosco",
         "secondaryCta": "Ver trabalhos",
         "videoAriaLabel": "Céu construction hero",
@@ -89,8 +89,8 @@
         },
         "items": [
             {
-                "id": "aljezur-i",
-                "title": "Aljezur I",
+                "id": "espartal-i",
+                "title": "Espartal I",
                 "category": "residential",
                 "technology": [
                     "Sismo"
