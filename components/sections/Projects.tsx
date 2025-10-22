@@ -36,7 +36,7 @@ type ProjectsDict = {
 export default function Projects() {
   const { t } = useI18n();
 
-  // Localized dict (no hardcoded strings)
+  // Localized dict (no hardcoded UI strings)
   const dict = t<ProjectsDict>("projects", {
     title: "",
     intro: "",
@@ -65,6 +65,9 @@ export default function Projects() {
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
 
+  // Your gradient mesh asset in /public
+  const MESH_SRC = "/media/gradients/mesh3.png";
+
   return (
     <SectionShell
       id="projects"
@@ -73,9 +76,45 @@ export default function Projects() {
       maxWidth="7xl"
       innerPx
       className="relative"
-      innerClassName="relative"
+      innerClassName="relative pt-16 md:pt-28"
     >
-      {/* Header (keep your title + optional intro) */}
+      {/* Gradient mesh background (subtle) */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none absolute inset-0 -z-10 overflow-hidden
+          [mask-image:radial-gradient(90%_70%_at_50%_20%,#000_60%,transparent_100%)]
+        "
+      >
+        <div className="absolute inset-0">
+          <Image
+            src={MESH_SRC}
+            alt=""
+            fill
+            priority={false}
+            sizes="100vw"
+            className="
+              object-cover
+              opacity-60
+              dark:opacity-40
+              mix-blend-normal
+              will-change-transform
+              motion-reduce:transform-none motion-reduce:transition-none
+            "
+          />
+        </div>
+
+        {/* Soft overlay to unify colors and improve contrast */}
+        <div
+          className="
+            absolute inset-0
+            bg-[color:var(--surface-tint,rgba(255,255,255,0.0))]
+            dark:bg-[color:var(--surface-tint-dark,rgba(0,0,0,0.1))]
+          "
+        />
+      </div>
+
+      {/* Header */}
       <div className="mx-auto mb-16 max-w-2xl text-center">
         <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
           {dict.title}
@@ -85,7 +124,7 @@ export default function Projects() {
         ) : null}
       </div>
 
-      {/* GRID — minimal, no dead space */}
+      {/* GRID */}
       {!visibleItems.length ? (
         <p className="text-neutral-600 dark:text-neutral-300">{dict.empty}</p>
       ) : (
@@ -101,7 +140,21 @@ export default function Projects() {
               <article
                 key={p.id}
                 role="listitem"
-                className="overflow-hidden rounded-xl border bg-white"
+                className="
+                  group relative overflow-hidden rounded-2xl
+                  border border-[color:var(--card-border,rgba(255,255,255,0.22))]
+                  bg-[color:var(--card-bg,rgba(255,255,255,0.06))]
+                  dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]
+                  backdrop-blur-md
+                  shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+                  transition-transform transition-shadow
+                  duration-300
+                  will-change-transform
+                  hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
+                  hover:-translate-y-0.5
+                  motion-reduce:transform-none motion-reduce:transition-none
+                  focus-within:ring-2 focus-within:ring-[color:var(--brand)] focus-within:ring-offset-0
+                "
               >
                 <button
                   type="button"
@@ -110,10 +163,10 @@ export default function Projects() {
                   aria-label={
                     (dict.viewGallery || "Open gallery") + " — " + p.title
                   }
-                  className="block w-full text-left focus:outline-none focus-visible:ring cursor-pointer"
+                  className="block w-full text-left focus:outline-none cursor-pointer"
                 >
                   {/* Media keeps the entire card height tidy */}
-                  <div className="relative aspect-[16/10] w-full">
+                  <div className="relative aspect-[4/3] w-full">
                     {img ? (
                       <Image
                         src={img.src}
@@ -124,25 +177,33 @@ export default function Projects() {
                         className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="h-full w-full bg-neutral-200" />
+                      <div className="h-full w-full bg-neutral-200 dark:bg-neutral-800" />
                     )}
 
-                    {/* Title + click hint (no gradient, no extra height) */}
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 p-3">
-                      <div className="flex items-center justify-between gap-3">
-                        <h3
-                          className="rounded px-1.5 py-0.5 text-sm font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
-                          style={{ background: "rgba(0,0,0,0.55)" }}
-                        >
+                    {/* Frosted glass label bar */}
+                    <div className="pointer-events-none absolute inset-x-3 bottom-3">
+                      <div
+                        className="
+                          flex items-center justify-between gap-3
+                          rounded-lg
+                          border border-[color:var(--chip-border,rgba(255,255,255,0.25))]
+                          bg-[color:var(--chip-bg,rgba(0,0,0,0.35))]
+                          backdrop-blur-sm
+                          px-2.5 py-1.5
+                          shadow-[0_2px_6px_rgba(0,0,0,0.25)]
+                        "
+                      >
+                        <h3 className="text-sm font-medium text-white">
                           {p.title}
                         </h3>
                         <span
-                          className="shrink-0 rounded-md border px-2 py-0.5 text-xs font-medium"
-                          style={{
-                            background: "var(--brand)",
-                            borderColor: "var(--brand-border)",
-                            color: "var(--brand-ink)",
-                          }}
+                          className="
+                            shrink-0 rounded-2xl
+                            border border-[color:var(--brand-border)]
+                            bg-black/40
+                            px-2 py-0.5 text-xs font-semibold
+                            text-white/80
+                          "
                         >
                           {dict.viewGallery || "Open gallery"}
                         </span>

@@ -13,7 +13,7 @@
     "hero": {
         "eyebrow": "CÉU Construction",
         "title": "logo.",
-        "subtitle": "Imagine além do céu.",
+        "subtitle": "Imagine além do céu",
         "primaryCta": "Fale conosco",
         "secondaryCta": "Ver trabalhos",
         "videoAriaLabel": "Céu construction hero",
@@ -41,6 +41,7 @@
     "sismo": {
         "title": "Trabalhamos com o sistema Sismo",
         "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
+        "highlightWord": "Sismo",
         "items": [
             {
                 "subtitle": "Velocidade sem atalhos",
@@ -63,7 +64,7 @@
         ],
         "cta": {
             "label": "Ver um projeto CÉU com Sismo",
-            "href": "/projects#sismo"
+            "href": "/#projects"
         },
         "external": {
             "label": "Saiba mais no Sismo Portugal",
@@ -89,8 +90,8 @@
         },
         "items": [
             {
-                "id": "aljezur-i",
-                "title": "Aljezur I",
+                "id": "espartal-i",
+                "title": "Espartal I",
                 "category": "residential",
                 "technology": [
                     "Sismo"
@@ -478,13 +479,6 @@
                     },
                     {
                         "type": "image",
-                        "src": "/media/projects/casa-ta-top/7.jpg",
-                        "alt": "Casa Ta Top — imagem 7",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
                         "src": "/media/projects/casa-ta-top/8.jpg",
                         "alt": "Casa Ta Top — imagem 8",
                         "width": 1600,
@@ -562,14 +556,14 @@
                     },
                     {
                         "type": "image",
-                        "src": "/media/projects/casa-ta-top/19.jpg",
+                        "src": "/media/projects/casa-ta-top/19.png",
                         "alt": "Casa Ta Top — imagem 19",
                         "width": 1600,
                         "height": 1000
                     },
                     {
                         "type": "image",
-                        "src": "/media/projects/casa-ta-top/20.jpg",
+                        "src": "/media/projects/casa-ta-top/20.png",
                         "alt": "Casa Ta Top — imagem 20",
                         "width": 1600,
                         "height": 1000

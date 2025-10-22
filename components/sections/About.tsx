@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { SectionShell } from "@/components/sections/SectionShell";
-import ButtonLink from "@/components/ButtonLink";
+// Removed ButtonLink here to custom-style the mesh pill
 import AboutAnimatedContent from "@/components/animations/AboutAnimatedContent";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
 /**
  * About v2
  * - Reads locale + dict from I18nProvider (SSR-stable)
- * - Removes window-based locale detection and JSON imports
  * - Hydration-safe because server and client see the same dict
  */
 export default function About() {
@@ -26,6 +26,9 @@ export default function About() {
     href: "/#projects",
   });
   const imageAlt = t<string>("about.imageAlt", "About CÉU Construction");
+
+  // Mesh asset (decorative, not a UI string)
+  const MESH_SRC = "/media/gradients/mesh6.png";
 
   return (
     <SectionShell
@@ -87,10 +90,48 @@ export default function About() {
             </ul>
           ) : null}
 
+          {/* CTA pill with mesh background */}
           <div className="mt-6 text-center sm:text-left">
-            <ButtonLink href={cta.href ?? "/#projects"} strongBorder>
-              {cta.label ?? t("common.learnMore", "Learn more")}
-            </ButtonLink>
+            {cta?.href && cta?.label ? (
+              <Link
+                href={cta.href}
+                className="
+                  relative inline-flex items-center justify-center
+                  rounded-full px-6 py-3 text-sm font-semibold
+                  text-white/80
+                  shadow-[0_6px_20px_rgba(0,0,0,0.18)]
+                  border border-[color:var(--brand-border)]
+                  focus:outline-none focus-visible:ring-2
+                  focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-0
+                  transition-transform duration-200
+                  hover:-translate-y-0.5 hover:text-white
+                  motion-reduce:transform-none motion-reduce:transition-none
+                  overflow-hidden
+                  [background-image:url('/media/gradients/mesh1.png')]
+                  bg-center bg-cover
+                "
+                style={{ backgroundImage: `url(${MESH_SRC})` }}
+              >
+                {/* Contrast veil to ensure legibility on bright mesh areas */}
+                <span
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none absolute inset-0 rounded-full
+                    bg-white/14 dark:bg-black/18
+                    mix-blend-normal
+                  "
+                />
+                {/* subtle inner highlight for glassy feel */}
+                <span
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none absolute inset-0 rounded-full
+                    shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]
+                  "
+                />
+                <span className="relative">{cta.label}</span>
+              </Link>
+            ) : null}
           </div>
         </div>
       </div>
