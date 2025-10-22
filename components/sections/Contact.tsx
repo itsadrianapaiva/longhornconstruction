@@ -2,38 +2,30 @@
 
 import Image from "next/image";
 import { SectionShell } from "@/components/sections/SectionShell";
-// Removed ButtonLink fallback per your request
 import ContactFormClient from "@/components/sections/ContactForm.client";
-import { Mail, Phone } from "lucide-react";
+import { MapChatBubble } from "@/components/sections/ContactChatBubble";
+import { Mail, Phone, Clock, MapPin } from "lucide-react";
 
-/** i18n types */
+/** i18n types (strict: no fallbacks) */
 type Locale = "en" | "pt";
 type Person = { name: string; phone?: string; email?: string };
 
 type ContactDict = {
-  contact?: {
-    title?: string;
-    subtitle?: string;
-    backgroundAlt?: string;
-    what?: { title?: string; intro?: string; items?: string[] };
-    form?: {
-      name?: { label?: string; placeholder?: string };
-      email?: { label?: string; placeholder?: string };
-      phone?: { label?: string; placeholder?: string };
-      message?: { label?: string; placeholder?: string };
-      submit?: string;
-      success?: string;
-      error?: string;
-      honeypot?: string;
+  contact: {
+    title: string;
+    subtitle: string;
+    backgroundAlt: string;
+    what: { title: string; intro: string; items: string[] };
+    form: unknown; // handled by ContactFormClient
+    validate: unknown;
+    direct: {
+      title: string;
+      labels: { phone: string; email: string; hours: string; location: string };
+      hours: string;
+      location: string;
+      people: Person[];
     };
-    validate?: {
-      name?: string;
-      email?: string;
-      phone?: string;
-      message?: string;
-    };
-    direct?: { title?: string; people?: Person[] };
-    map?: { title?: string; serviceArea?: string };
+    map: { title: string; serviceArea: string };
   };
 };
 
@@ -42,7 +34,7 @@ import ptRaw from "@/i18n/pt.json";
 const EN = enRaw as unknown as ContactDict;
 const PT = ptRaw as unknown as ContactDict;
 
-/** Locale from path segment (client safe) */
+/** Locale from first path segment (client-safe) */
 function useLocale(): Locale {
   let path = "/";
   if (typeof window !== "undefined") {
@@ -53,97 +45,13 @@ function useLocale(): Locale {
   return first === "pt" ? "pt" : "en";
 }
 
-/** Read i18n with fallbacks so UI never breaks if keys are missing */
-function useContactDict() {
+/** Read i18n — strict, no defaults/fallbacks */
+function useContactCopy() {
   const dict = useLocale() === "pt" ? PT : EN;
-  const c = dict.contact ?? {};
-
-  const whatItems =
-    c.what?.items && c.what.items.length
-      ? c.what.items
-      : [
-          "Project goals and constraints",
-          "Timeline and permitting realities",
-          "Budget ranges and cost drivers",
-          "Method options (incl. Sismo) and trade-offs",
-          "Next steps and site visit scheduling",
-        ];
-
-  const people =
-    c.direct?.people && c.direct.people.length
-      ? c.direct.people
-      : [
-          {
-            name: "CÉU Construction",
-            phone: "+351 000 000 000",
-            email: "info@ceuconstruction.com",
-          },
-        ];
-
-  return {
-    title: c.title ?? "Let’s build",
-    subtitle:
-      c.subtitle ??
-      "Tell us about your project. We will reply quickly with next steps.",
-    backgroundAlt:
-      c.backgroundAlt ?? "Subtle workshop photograph behind the contact card",
-    whatTitle: c.what?.title ?? "What to expect",
-    whatIntro:
-      c.what?.intro ??
-      "We self-perform every phase. In our first conversation, we’ll align on:",
-    whatItems,
-    directTitle: c.direct?.title ?? "Or call us directly",
-    people,
-    mapTitle: c.map?.title ?? "Where we work",
-    serviceArea: c.map?.serviceArea ?? "Serving the Algarve and beyond",
-  };
+  return dict.contact;
 }
 
-/** Inline SVG tail */
-function ChatBubbleWing({
-  className = "",
-  pathClassName = "",
-}: {
-  className?: string;
-  pathClassName?: string;
-}) {
-  return (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      width="26"
-      height="27"
-      aria-hidden="true"
-    >
-      <path
-        className={pathClassName}
-        d="M21.843 37.001c3.564 0 5.348-4.309 2.829-6.828L3.515 9.015A12 12 0 0 1 0 .53v36.471h21.843z"
-      />
-    </svg>
-  );
-}
-
-/** Solid chat bubble over the map image */
-function MapChatBubble({ message }: { message: string }) {
-  const SOLID = "#0E0F12"; // CEU dark surface
-  return (
-    <div
-      className="absolute top-8 left-12 z-10 max-w-[17.5rem]
-                 pt-2.5 pr-2.5 pb-7 pl-5
-                 rounded-t-xl rounded-br-xl
-                 text-white shadow-lg"
-      style={{ backgroundColor: SOLID }}
-    >
-      <p className="text-sm pr-2 pt-2">{message}</p>
-      <ChatBubbleWing
-        className="absolute right-full bottom-0 -scale-x-100"
-        pathClassName="fill-[#0E0F12]"
-      />
-    </div>
-  );
-}
-
-/** What to expect list (extracted) */
+/** What to expect list (presentational) */
 function WhatToExpect({
   title,
   intro,
@@ -164,14 +72,9 @@ function WhatToExpect({
             key={i}
             className="flex items-start gap-3 border-b pb-8 border-black/10"
           >
-            <span className="mt-1 text-ink/70">
-              {/* simple check icon as before */}
-              <svg
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="none"
-                aria-hidden="true"
-              >
+            <span className="mt-1 text-ink/70" aria-hidden="true">
+              {/* minimal check icon inline to avoid deps */}
+              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none">
                 <path
                   d="M16.667 5.833L8.75 13.75 5 10"
                   stroke="currentColor"
@@ -189,18 +92,40 @@ function WhatToExpect({
   );
 }
 
-/** Direct contact card with icons (extracted) */
+/** Direct contact (icons + global hours/location) */
 function DirectContact({
   title,
+  labels,
+  hours,
+  location,
   people,
 }: {
   title: string;
+  labels: { phone: string; email: string; hours: string; location: string };
+  hours: string;
+  location: string;
   people: Person[];
 }) {
   return (
     <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
       <h4 className="text-xl font-semibold text-ink">{title}</h4>
-      <div className="mt-4 grid gap-6 sm:grid-cols-2">
+
+      {/* Company-level info */}
+      <div className="mt-4 space-y-2">
+        <p className="flex items-center gap-2 text-ink/80">
+          <Clock className="h-4 w-4" aria-hidden="true" />
+          <span className="sr-only">{labels.hours}: </span>
+          <span aria-label={labels.hours}>{hours}</span>
+        </p>
+        <p className="flex items-center gap-2 text-ink/80">
+          <MapPin className="h-4 w-4" aria-hidden="true" />
+          <span className="sr-only">{labels.location}: </span>
+          <span aria-label={labels.location}>{location}</span>
+        </p>
+      </div>
+
+      {/* People grid */}
+      <div className="mt-6 grid gap-6 sm:grid-cols-2">
         {people.map((p, i) => (
           <div key={i} className="space-y-2">
             <p className="font-medium text-ink">{p.name}</p>
@@ -208,9 +133,11 @@ function DirectContact({
             {p.phone ? (
               <p className="flex items-center gap-2 text-ink/80">
                 <Phone className="h-4 w-4" aria-hidden="true" />
+                <span className="sr-only">{labels.phone}: </span>
                 <a
                   className="underline decoration-ink/20 underline-offset-2 hover:decoration-ink/50"
                   href={`tel:${p.phone.replace(/\s+/g, "")}`}
+                  aria-label={`${labels.phone}: ${p.phone}`}
                 >
                   {p.phone}
                 </a>
@@ -220,9 +147,11 @@ function DirectContact({
             {p.email ? (
               <p className="flex items-center gap-2 text-ink/80">
                 <Mail className="h-4 w-4" aria-hidden="true" />
+                <span className="sr-only">{labels.email}: </span>
                 <a
                   className="underline decoration-ink/20 underline-offset-2 hover:decoration-ink/50"
                   href={`mailto:${p.email}`}
+                  aria-label={`${labels.email}: ${p.email}`}
                 >
                   {p.email}
                 </a>
@@ -236,18 +165,7 @@ function DirectContact({
 }
 
 export default function Contact() {
-  const {
-    title,
-    subtitle,
-    backgroundAlt,
-    whatTitle,
-    whatIntro,
-    whatItems,
-    directTitle,
-    people,
-    mapTitle,
-    serviceArea,
-  } = useContactDict();
+  const copy = useContactCopy();
 
   return (
     <SectionShell
@@ -262,11 +180,9 @@ export default function Contact() {
       {/* Title block */}
       <div className="relative overflow-visible -mb-6">
         <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl">
-          {title}
+          {copy.title}
         </h2>
-        {subtitle ? (
-          <p className="mt-4 text-center text-ink/80">{subtitle}</p>
-        ) : null}
+        <p className="mt-4 text-center text-ink/80">{copy.subtitle}</p>
       </div>
 
       {/* Glass card with subtle contact background */}
@@ -278,7 +194,7 @@ export default function Contact() {
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl">
           <Image
             src="/media/contact/contact1.jpg"
-            alt={backgroundAlt}
+            alt={copy.backgroundAlt}
             fill
             sizes="100vw"
             priority={false}
@@ -288,12 +204,15 @@ export default function Contact() {
         </div>
 
         {/* Left: What to expect */}
-        <WhatToExpect title={whatTitle} intro={whatIntro} items={whatItems} />
+        <WhatToExpect
+          title={copy.what.title}
+          intro={copy.what.intro}
+          items={copy.what.items}
+        />
 
-        {/* Right: the real form with mailto handoff */}
+        {/* Right: the real form with mailto handoff (no fallback button) */}
         <div className="relative flex flex-col">
           <ContactFormClient />
-          {/* Removed the ButtonLink email fallback per your instruction */}
         </div>
       </div>
 
@@ -302,21 +221,30 @@ export default function Contact() {
         {/* Map with solid chat bubble */}
         <div
           className="relative hidden h-[22rem] overflow-hidden rounded-2xl border border-ink/10 md:block"
-          aria-label={mapTitle}
+          aria-label={copy.map.title}
         >
           <Image
             src="/media/contact/algarve.jpg"
-            alt={mapTitle}
+            alt={copy.map.title}
             fill
             sizes="(min-width:1024px) 50vw, 100vw"
             priority={false}
             className="object-cover"
           />
-          <MapChatBubble message={serviceArea} />
+          <MapChatBubble
+            message={copy.map.serviceArea}
+            className="top-8 left-12"
+          />
         </div>
 
-        {/* Direct contact card with icons */}
-        <DirectContact title={directTitle} people={people} />
+        {/* Direct contact card with icons + hours/location */}
+        <DirectContact
+          title={copy.direct.title}
+          labels={copy.direct.labels}
+          hours={copy.direct.hours}
+          location={copy.direct.location}
+          people={copy.direct.people}
+        />
       </div>
     </SectionShell>
   );
