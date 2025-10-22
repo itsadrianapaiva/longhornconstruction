@@ -110,9 +110,8 @@ export default async function LocaleLayout({
       {/* Content area on the chosen surface */}
       <I18nProvider locale={locale} dict={dict}>
         <main id="content">{children}</main>
+        <Footer />
       </I18nProvider>
-
-      <Footer />
     </div>
   );
 }
