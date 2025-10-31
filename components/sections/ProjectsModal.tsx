@@ -1,5 +1,13 @@
 "use client";
 
+/*
+  IMAGE SIZE EXPECTATION FOR MODAL:
+  Each media entry in project.media should point to a mid-sized "-lg" asset
+  (~2560px wide, ~400-600KB) instead of the original multi-megabyte photo.
+  The true full-res originals should NOT be referenced at runtime anymore.
+  Adriana will generate these "-lg" assets and update i18n accordingly.
+*/
+
 import * as React from "react";
 import Image from "next/image";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
@@ -108,6 +116,11 @@ export default function ProjectsModal({ open, project, labels, onClose }: Props)
         {/* Media stage */}
         <div className="relative overflow-hidden rounded-xl bg-black">
           {current?.type === "image" ? (
+            // Note: The modal should use a mid-sized "-lg" asset from 'current.src'
+            // (~2560px wide, ~400-600KB target) instead of the raw multi-MB original.
+            // Thumbnails in the grid use OptimizedImage with downsized '-sm' assets (~1600px, <200KB).
+            // The modal only renders on demand and shows one image at a time,
+            // so moderately large files are acceptable here for quality.
             <Image
               src={current.src}
               alt={current.alt}
