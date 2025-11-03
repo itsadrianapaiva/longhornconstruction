@@ -36,21 +36,22 @@ import ProjectsModal from "@/components/sections/ProjectsModal";
 import OptimizedImage from "@/components/OptimizedImage";
 
 /** Types aligned to i18n shape (minimal by design) */
-type ProjectMediaImage = {
-  type: "image";
-  src: string;
+type GallerySource = { src: string; format: "jpg" | "webp" };
+type GalleryItem = {
   alt: string;
   width: number;
   height: number;
-  priority?: boolean;
+  sources: GallerySource[];
 };
+type Thumbnail = { src: string; alt: string; width: number; height: number };
 
 type ProjectItem = {
   id: string;
   title: string;
   category?: string;
   technology?: string[];
-  media: ProjectMediaImage[];
+  thumbnail?: Thumbnail;
+  gallery?: GalleryItem[];
 };
 
 type ProjectsDict = {
@@ -81,9 +82,15 @@ export default function Projects() {
   // Visible list (stable deps)
   const visibleItems = React.useMemo(() => {
     const base: ProjectItem[] = Array.isArray(dict.items) ? dict.items : [];
-    return SHOW_ONLY_WITH_MEDIA
-      ? base.filter((p) => p.media?.length > 0)
+    const visible = SHOW_ONLY_WITH_MEDIA
+      ? base.filter((p) => Boolean(p.thumbnail?.src || (p.gallery && p.gallery.length > 0)))
       : base;
+
+    if (process.env.NODE_ENV === "development") {
+      console.debug("projects.visible", visible.map(p => ({ id: p.id, hasThumb: !!p.thumbnail?.src, slides: p.gallery?.length || 0 })));
+    }
+
+    return visible;
   }, [dict.items, SHOW_ONLY_WITH_MEDIA]);
 
   // Modal state
@@ -163,7 +170,22 @@ export default function Projects() {
           aria-label={dict.title}
         >
           {visibleItems.map((p) => {
-            const img = p.media?.find((m) => m.type === "image");
+            // Use thumbnail if available, fallback to first gallery jpg, then any source
+            let imgSrc = p.thumbnail?.src;
+            let imgAlt = p.thumbnail?.alt || p.title;
+            let imgWidth = p.thumbnail?.width || 1600;
+            let imgHeight = p.thumbnail?.height || 1000;
+
+            if (!imgSrc && p.gallery && p.gallery.length > 0) {
+              const firstGallery = p.gallery[0];
+              const jpgSrc = firstGallery.sources?.find(s => s.format === "jpg")?.src;
+              imgSrc = jpgSrc || firstGallery.sources?.[0]?.src;
+              imgAlt = firstGallery.alt || p.title;
+              imgWidth = firstGallery.width || 1600;
+              imgHeight = firstGallery.height || 1000;
+            }
+
+            const hasGallery = (p.gallery?.length ?? 0) > 0;
 
             return (
               <article
@@ -187,22 +209,23 @@ export default function Projects() {
               >
                 <button
                   type="button"
-                  onClick={() => setSelectedProjectId(p.id)}
+                  onClick={() => hasGallery && setSelectedProjectId(p.id)}
                   data-project-id={p.id}
                   aria-label={
                     (dict.viewGallery || "Open gallery") + " — " + p.title
                   }
-                  className="block w-full text-left focus:outline-none cursor-pointer"
+                  disabled={!hasGallery}
+                  className="block w-full text-left focus:outline-none cursor-pointer disabled:cursor-default"
                 >
                   {/* Media keeps the entire card height tidy */}
                   <div className="relative aspect-[4/3] w-full">
-                    {img ? (
+                    {imgSrc ? (
                       <OptimizedImage
-                        src={img.src}
-                        alt={img.alt}
-                        width={img.width}
-                        height={img.height}
-                        priority={img.priority ?? false}
+                        src={imgSrc}
+                        alt={imgAlt}
+                        width={imgWidth}
+                        height={imgHeight}
+                        priority={false}
                         className="h-full w-full object-cover"
                       />
                     ) : (

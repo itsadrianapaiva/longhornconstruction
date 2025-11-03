@@ -1,858 +1,3860 @@
 {
-    "nav": {
-        "home": "Home",
-        "about": "About",
-        "sismo": "Sismo Method",
-        "projects": "Projects",
-        "stats": "Stats",
-        "testimonials": "Testimonials",
-        "services": "Services",
-        "faq": "FAQ",
-        "contact": "Contact"
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "sismo": "Sismo Method",
+    "projects": "Projects",
+    "stats": "Stats",
+    "testimonials": "Testimonials",
+    "services": "Services",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "CÉU Construction",
+    "title": "logo.",
+    "subtitle": "Think beyond the sky",
+    "primaryCta": "Get in touch",
+    "secondaryCta": "Explore our work",
+    "videoAriaLabel": "CÉU construction hero",
+    "scrollDown": "Scroll to About"
+  },
+  "about": {
+    "title": "Think beyond the sky",
+    "subheading": "Born from North American standards and refined by Portuguese artisans, we build with speed, strength, and complete control.",
+    "body": [
+      "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
+      "Owning our equipment and coordinating a large, skilled team means you don’t wait on subcontractors. We’re accountable end to end, which is why clients across the Algarve keep coming back."
+    ],
+    "bullets": [
+      "Full in-house team from groundworks to finishes",
+      "Owned machinery for speed and control",
+      "Proven quality across the Algarve",
+      "Sismo technology for faster, robust builds"
+    ],
+    "cta": {
+      "label": "Explore our work",
+      "href": "/#projects"
     },
-    "hero": {
-        "eyebrow": "CÉU Construction",
-        "title": "logo.",
-        "subtitle": "Think beyond the sky",
-        "primaryCta": "Get in touch",
-        "secondaryCta": "Explore our work",
-        "videoAriaLabel": "CÉU construction hero",
-        "scrollDown": "Scroll to About"
+    "imageAlt": "CÉU Construction built house"
+  },
+  "sismo": {
+    "title": "We work with Sismo",
+    "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
+    "highlightWord": "Sismo",
+    "items": [
+      {
+        "subtitle": "Speed without shortcuts",
+        "body": "Each Sismo panel is factory-produced to exact dimensions, arriving on-site ready to assemble like a modular shell. This prefabrication drastically reduces construction time while maintaining accuracy and quality. Once panels are positioned, concrete is poured to form a continuous structure, allowing CÉU teams to build complete homes and structures in a fraction of the usual schedule.",
+        "image": "/media/sismo/system.jpg",
+        "alt": "Sismo panel installation showing rapid progress"
+      },
+      {
+        "subtitle": "Monolithic strength",
+        "body": "After concrete is poured, the panels become a single monolithic wall system, a reinforced, continuous structure that resists cracking, deformation, and moisture. This solid concrete core ensures long-term stability, low maintenance, and excellent seismic and wind performance. Every Sismo build by CÉU is designed to meet or exceed European structural standards.",
+        "image": "/media/sismo/layers.jpg",
+        "alt": "Reinforced concrete core detail of a Sismo wall"
+      },
+      {
+        "subtitle": "Comfort & efficiency",
+        "body": "Sismo’s insulated design naturally improves thermal comfort and reduces energy use. The panels integrate insulation materials directly into the structure, minimizing thermal bridges and ensuring a constant indoor temperature. The airtight system also improves acoustic insulation, making interiors quieter and more comfortable, ideal for both residential and commercial buildings in the Algarve’s demanding climate.",
+        "image": "/media/sismo/project.jpg",
+        "alt": "Interior view highlighting thermal and acoustic comfort benefits"
+      }
+    ],
+    "cta": {
+      "label": "See a CÉU Sismo project",
+      "href": "/#projects"
     },
-    "about": {
-        "title": "Think beyond the sky",
-        "subheading": "Born from North American standards and refined by Portuguese artisans, we build with speed, strength, and complete control.",
-        "body": [
-            "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
-            "Owning our equipment and coordinating a large, skilled team means you don’t wait on subcontractors. We’re accountable end to end, which is why clients across the Algarve keep coming back."
-        ],
-        "bullets": [
-            "Full in-house team from groundworks to finishes",
-            "Owned machinery for speed and control",
-            "Proven quality across the Algarve",
-            "Sismo technology for faster, robust builds"
-        ],
-        "cta": {
-            "label": "Explore our work",
-            "href": "/#projects"
-        },
-        "imageAlt": "CÉU Construction built house"
-    },
-    "sismo": {
-        "title": "We work with Sismo",
-        "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
-        "highlightWord": "Sismo",
-        "items": [
-            {
-                "subtitle": "Speed without shortcuts",
-                "body": "Each Sismo panel is factory-produced to exact dimensions, arriving on-site ready to assemble like a modular shell. This prefabrication drastically reduces construction time while maintaining accuracy and quality. Once panels are positioned, concrete is poured to form a continuous structure, allowing CÉU teams to build complete homes and structures in a fraction of the usual schedule.",
-                "image": "/media/sismo/system.jpg",
-                "alt": "Sismo panel installation showing rapid progress"
-            },
-            {
-                "subtitle": "Monolithic strength",
-                "body": "After concrete is poured, the panels become a single monolithic wall system, a reinforced, continuous structure that resists cracking, deformation, and moisture. This solid concrete core ensures long-term stability, low maintenance, and excellent seismic and wind performance. Every Sismo build by CÉU is designed to meet or exceed European structural standards.",
-                "image": "/media/sismo/layers.jpg",
-                "alt": "Reinforced concrete core detail of a Sismo wall"
-            },
-            {
-                "subtitle": "Comfort & efficiency",
-                "body": "Sismo’s insulated design naturally improves thermal comfort and reduces energy use. The panels integrate insulation materials directly into the structure, minimizing thermal bridges and ensuring a constant indoor temperature. The airtight system also improves acoustic insulation, making interiors quieter and more comfortable, ideal for both residential and commercial buildings in the Algarve’s demanding climate.",
-                "image": "/media/sismo/project.jpg",
-                "alt": "Interior view highlighting thermal and acoustic comfort benefits"
-            }
-        ],
-        "cta": {
-            "label": "See a CÉU Sismo project",
-            "href": "/#projects"
-        },
-        "external": {
-            "label": "Learn more at Sismo Portugal",
-            "href": "https://sismo-technology.com/pt-pt/"
-        }
-    },
-    "projects": {
-        "title": "Featured projects",
-        "intro": "We love to build and we love to share. Here are some of our favorite projects.",
-        "filters": {
-            "all": "All",
-            "residential": "Residential",
-            "commercial": "Commercial",
-            "renovation": "Renovation",
-            "sismo": "Sismo"
-        },
-        "viewGallery": "Open gallery",
-        "empty": "No projects available.",
-        "modal": {
-            "prev": "Previous",
-            "next": "Next",
-            "close": "Close"
-        },
-        "items": [
-            {
-                "id": "espartal-i",
-                "title": "Espartal I",
-                "category": "residential",
-                "technology": [
-                    "Sismo"
-                ],
-                "media": [
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/1.jpg",
-                        "alt": "Aljezur I — image 1",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/2.jpg",
-                        "alt": "Aljezur I — image 2",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/3.jpg",
-                        "alt": "Aljezur I — image 3",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/4.jpg",
-                        "alt": "Aljezur I — image 4",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/5.jpg",
-                        "alt": "Aljezur I — image 5",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/6.jpg",
-                        "alt": "Aljezur I — image 6",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/aljezur-i/7.jpg",
-                        "alt": "Aljezur I — image 7",
-                        "width": 1600,
-                        "height": 1000
-                    }
-                ]
-            },
-            {
-                "id": "loule",
-                "title": "Loulé",
-                "category": "residential",
-                "technology": [
-                    "Traditional"
-                ],
-                "media": [
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/1.jpg",
-                        "alt": "Loulé — image 1",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/2.jpg",
-                        "alt": "Loulé — image 2",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/3.jpg",
-                        "alt": "Loulé — image 3",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/4.jpg",
-                        "alt": "Loulé — image 4",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/5.jpg",
-                        "alt": "Loulé — image 5",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/6.jpg",
-                        "alt": "Loulé — image 6",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/7.jpg",
-                        "alt": "Loulé — image 7",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/loule/8.jpg",
-                        "alt": "Loulé — image 8",
-                        "width": 1600,
-                        "height": 1000
-                    }
-                ]
-            },
-            {
-                "id": "casa-no-alto",
-                "title": "Casa no Alto",
-                "category": "residential",
-                "technology": [
-                    "Sismo"
-                ],
-                "media": [
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/1-sm.jpg",
-                        "alt": "Casa no Alto exterior view",
-                        "width": 1600,
-                        "height": 2399
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/2-lg.jpg",
-                        "alt": "Casa no Alto — imagem 2",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/3-lg.jpg",
-                        "alt": "Casa no Alto — imagem 3",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/4-lg.jpg",
-                        "alt": "Casa no Alto — imagem 4",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/5-lg.jpg",
-                        "alt": "Casa no Alto — imagem 5",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/6-lg.jpg",
-                        "alt": "Casa no Alto — imagem 6",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/7-lg.jpg",
-                        "alt": "Casa no Alto — imagem 7",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/8-lg.jpg",
-                        "alt": "Casa no Alto — imagem 8",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/9-lg.jpg",
-                        "alt": "Casa no Alto — imagem 9",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/10-lg.jpg",
-                        "alt": "Casa no Alto — imagem 10",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/11-lg.jpg",
-                        "alt": "Casa no Alto — imagem 11",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/12-lg.jpg",
-                        "alt": "Casa no Alto — imagem 12",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/13-lg.jpg",
-                        "alt": "Casa no Alto — imagem 13",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/14-lg.jpg",
-                        "alt": "Casa no Alto — imagem 14",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/15-lg.jpg",
-                        "alt": "Casa no Alto — imagem 15",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/16-lg.jpg",
-                        "alt": "Casa no Alto — imagem 16",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/17-lg.jpg",
-                        "alt": "Casa no Alto — imagem 17",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/18-lg.jpg",
-                        "alt": "Casa no Alto — imagem 18",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/19-lg.jpg",
-                        "alt": "Casa no Alto — imagem 19",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/20-lg.jpg",
-                        "alt": "Casa no Alto — imagem 20",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/21-lg.jpg",
-                        "alt": "Casa no Alto — imagem 21",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/22-lg.jpg",
-                        "alt": "Casa no Alto — imagem 22",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/23-lg.jpg",
-                        "alt": "Casa no Alto — imagem 23",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/24-lg.jpg",
-                        "alt": "Casa no Alto — imagem 24",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/25-lg.jpg",
-                        "alt": "Casa no Alto — imagem 25",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/26-lg.jpg",
-                        "alt": "Casa no Alto — imagem 26",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/27-lg.jpg",
-                        "alt": "Casa no Alto — imagem 27",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/28-lg.jpg",
-                        "alt": "Casa no Alto — imagem 28",
-                        "width": 2560,
-                        "height": 3839
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-no-alto/29-lg.jpg",
-                        "alt": "Casa no Alto — imagem 29",
-                        "width": 2560,
-                        "height": 3839
-                    }
-                ]
-            },
-            {
-                "id": "casa-ta-top",
-                "title": "Casa Ta Top",
-                "category": "residential",
-                "technology": [
-                    "Traditional"
-                ],
-                "media": [
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/1.jpg",
-                        "alt": "Casa Ta Top — image 1",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/2.jpg",
-                        "alt": "Casa Ta Top — image 2",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/3.jpg",
-                        "alt": "Casa Ta Top — image 3",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/4.jpg",
-                        "alt": "Casa Ta Top — image 4",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/5.jpg",
-                        "alt": "Casa Ta Top — image 5",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/6.jpg",
-                        "alt": "Casa Ta Top — image 6",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/8.jpg",
-                        "alt": "Casa Ta Top — image 8",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/9.jpg",
-                        "alt": "Casa Ta Top — image 9",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/10.jpg",
-                        "alt": "Casa Ta Top — image 10",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/11.jpg",
-                        "alt": "Casa Ta Top — image 11",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/12.jpg",
-                        "alt": "Casa Ta Top — image 12",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/13.jpg",
-                        "alt": "Casa Ta Top — image 13",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/14.jpg",
-                        "alt": "Casa Ta Top — image 14",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/15.jpg",
-                        "alt": "Casa Ta Top — image 15",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/16.jpg",
-                        "alt": "Casa Ta Top — image 16",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/17.jpg",
-                        "alt": "Casa Ta Top — image 17",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/18.jpg",
-                        "alt": "Casa Ta Top — image 18",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/19.png",
-                        "alt": "Casa Ta Top — image 19",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/20.png",
-                        "alt": "Casa Ta Top — image 20",
-                        "width": 1600,
-                        "height": 1000
-                    },
-                    {
-                        "type": "image",
-                        "src": "/media/projects/casa-ta-top/21.jpg",
-                        "alt": "Casa Ta Top — image 21",
-                        "width": 1600,
-                        "height": 1000
-                    }
-                ]
-            }
-        ]
-    },
-    "stats": {
-        "title": "Track record",
-        "labels": {
-            "yearsOperating": "Years operating",
-            "projectsDelivered": "Projects delivered",
-            "projectsInProgress": "Projects in progress",
-            "teamSize": "Team size",
-            "ownedMachines": "Owned machines",
-            "safetyRecord": "Safety record"
-        }
-    },
-    "testimonials": {
-        "title": "What clients say"
-    },
-    "services": {
-        "title": "Services",
-        "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
-        "items": [
-            {
-                "key": "designBuild",
-                "title": "Design-build support",
-                "desc": "Early constructability input, budget guidance, and coordination with your architect and engineer."
-            },
-            {
-                "key": "groundworks",
-                "title": "Groundworks and foundations",
-                "desc": "Earthworks, footings, drainage, and slab work with owned equipment for speed and precision."
-            },
-            {
-                "key": "sismoShell",
-                "title": "Sismo structural shell",
-                "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes."
-            },
-            {
-                "key": "masonryConcrete",
-                "title": "Masonry and concrete",
-                "desc": "Blockwork, reinforced concrete elements, retaining walls, and architectural finishes."
-            },
-            {
-                "key": "roofEnvelope",
-                "title": "Roofing and envelope",
-                "desc": "Framing, waterproofing, insulation, and exterior finishes for long-term performance."
-            },
-            {
-                "key": "mepCoordination",
-                "title": "MEP coordination",
-                "desc": "Mechanical, electrical, and plumbing coordination with clear routes and clean penetrations."
-            },
-            {
-                "key": "interiors",
-                "title": "Interior finishes",
-                "desc": "Plaster, tile, flooring, carpentry, and painting with consistent, supervised craftsmanship."
-            },
-            {
-                "key": "renovations",
-                "title": "Renovations and additions",
-                "desc": "Careful upgrades and extensions that respect structure, schedule, and budget."
-            },
-            {
-                "key": "siteLogistics",
-                "title": "Site logistics and equipment",
-                "desc": "Owned machinery, certified operators, and tidy sites that keep crews efficient and safe."
-            }
-        ],
-        "cta": "Discuss your scope"
-    },
-    "faq": {
-        "title": "Frequently asked questions",
-        "items": [
-            {
-                "q": "Do you work only with Sismo?",
-                "a": "We build with Sismo where it adds value, and we also deliver traditional methods. We recommend the best approach for your budget, schedule, and performance goals."
-            },
-            {
-                "q": "What areas do you serve?",
-                "a": "We primarily serve the Algarve. For larger projects we consider work across Portugal."
-            },
-            {
-                "q": "How fast is Sismo compared to traditional builds?",
-                "a": "Sismo panels install rapidly and reduce coordination steps. Actual gains depend on design and site logistics, but schedules are typically shorter than traditional masonry."
-            },
-            {
-                "q": "Do you use subcontractors?",
-                "a": "No. We self-perform with our own team and equipment, which helps us control quality, safety, and timelines."
-            },
-            {
-                "q": "Can you help before I have a full project set?",
-                "a": "Yes. We offer early design-build support to validate assumptions, align budgets, and surface constructability issues before they become costly."
-            },
-            {
-                "q": "Are you licensed and insured?",
-                "a": "Yes. We maintain the appropriate registrations and insurance. We can share documentation during preconstruction."
-            },
-            {
-                "q": "How do we start?",
-                "a": "Send a short brief and any drawings you have. We will schedule a call or site visit and provide next steps with a clear plan."
-            },
-            {
-                "q": "Do you provide warranties?",
-                "a": "Yes. We stand behind our workmanship and the systems we install. Specific terms depend on the project scope and materials."
-            }
-        ]
-    },
-    "contact": {
-        "title": "Contact us today",
-        "subtitle": "We would love to hear more about your project and how we can turn your vision into a reality.",
-        "backgroundAlt": "Subtle workshop photograph behind the contact card",
-        "what": {
-            "title": "What to expect",
-            "intro": "We self-perform every phase. Here’s what we’ll discuss at your consultation:",
-            "items": [
-                "Project goals and constraints",
-                "Timeline and permitting realities",
-                "Budget ranges and cost drivers",
-                "Method options (including Sismo) and trade-offs",
-                "Next steps and site visit scheduling"
-            ]
-        },
-        "form": {
-            "name": {
-                "label": "Full name",
-                "placeholder": "Your full name"
-            },
-            "email": {
-                "label": "Email",
-                "placeholder": "you@example.com"
-            },
-            "phone": {
-                "label": "Phone",
-                "placeholder": "+351 ___ ___ ___"
-            },
-            "message": {
-                "label": "Project details",
-                "placeholder": "Scope, location, timeline…"
-            },
-            "honeypot": "Leave this field empty",
-            "submit": "Send message",
-            "success": "Thanks. Your email client will open with a draft to send.",
-            "error": "Please fix the fields highlighted below."
-        },
-        "validate": {
-            "name": "Please enter your name (2–80 characters).",
-            "email": "Please enter a valid email address.",
-            "phone": "Please enter a valid phone number.",
-            "message": "Please write a short message (min 20 characters)."
-        },
-        "direct": {
-            "title": "You can call us directly",
-            "labels": {
-                "phone": "Phone",
-                "email": "Email",
-                "hours": "Hours",
-                "location": "Location"
-            },
-            "hours": "Mon–Fri 09:00–18:00",
-            "location": "Algarve, Portugal",
-            "people": [
-                {
-                    "name": "CÉU Construction",
-                    "phone": "+351 930 462 893",
-                    "email": "info@ceuconstruction.com"
-                }
-            ]
-        },
-        "map": {
-            "title": "Where we work",
-            "serviceArea": "Serving the Algarve and beyond.."
-        }
-    },
-    "footer": {
-        "company": {
-            "legalName": "CÉU Construction",
-            "nif": "NIF 517367777",
-            "address": [
-                "8670-116 Aljezur, Algarve"
-            ],
-            "email": "info@ceuconstruction.com",
-            "phone": "+351 930 462 893",
-            "logoAlt": "CÉU Construction"
-        },
-        "columns": {
-            "services": {
-                "title": "Services",
-                "items": [
-                    "Sismo construction",
-                    "Structural concrete",
-                    "Masonry & finishes",
-                    "Foundations & slabs",
-                    "Site preparation",
-                    "Project management"
-                ]
-            },
-            "nav": {
-                "title": "Navigate",
-                "items": [
-                    {
-                        "label": "About",
-                        "href": "#about"
-                    },
-                    {
-                        "label": "Sismo",
-                        "href": "#sismo"
-                    },
-                    {
-                        "label": "Projects",
-                        "href": "#projects"
-                    },
-                    {
-                        "label": "Contact",
-                        "href": "#contact"
-                    }
-                ]
-            },
-            "social": {
-                "title": "Socials",
-                "items": [
-                    {
-                        "id": "instagram",
-                        "label": "Instagram",
-                        "href": ""
-                    },
-                    {
-                        "id": "linkedin",
-                        "label": "LinkedIn",
-                        "href": ""
-                    },
-                    {
-                        "id": "youtube",
-                        "label": "YouTube",
-                        "href": ""
-                    },
-                    {
-                        "id": "facebook",
-                        "label": "Facebook",
-                        "href": ""
-                    },
-                    {
-                        "id": "tiktok",
-                        "label": "TikTok",
-                        "href": ""
-                    },
-                    {
-                        "id": "vimeo",
-                        "label": "Vimeo",
-                        "href": ""
-                    }
-                ]
-            },
-            "contact": {
-                "title": "Get in touch",
-                "addressLabel": "Address",
-                "phoneLabel": "Phone",
-                "emailLabel": "Email"
-            }
-        },
-        "cta": {
-            "label": "Contact us",
-            "href": "#contact"
-        },
-        "legalBar": {
-            "privacy": "Privacy",
-            "terms": "Terms",
-            "sitemap": "Sitemap",
-            "backToTop": "Back to top"
-        },
-        "copyright": "© {{year}} CÉU Construction. All rights reserved.",
-        "langToggle": {
-            "label": "Language",
-            "en": "English",
-            "pt": "Português"
-        }
-    },
-    "common": {
-        "readMore": "Read more",
-        "learnMore": "Learn more"
+    "external": {
+      "label": "Learn more at Sismo Portugal",
+      "href": "https://sismo-technology.com/pt-pt/"
     }
+  },
+  "projects": {
+    "title": "Featured projects",
+    "intro": "We love to build and we love to share. Here are some of our favorite projects.",
+    "filters": {
+      "all": "All",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "renovation": "Renovation",
+      "sismo": "Sismo"
+    },
+    "viewGallery": "Open gallery",
+    "empty": "No projects available.",
+    "modal": {
+      "prev": "Previous",
+      "next": "Next",
+      "close": "Close"
+    },
+    "items": [
+      {
+        "id": "espartal-i",
+        "title": "Espartal I",
+        "category": "residential",
+        "technology": [
+          "Sismo"
+        ],
+        "thumbnail": {
+          "src": "/media/projects/espartal-i/1-sm.jpg",
+          "alt": "espartal-i — 1",
+          "width": 1600,
+          "height": 1000
+        },
+        "gallery": [
+          {
+            "alt": "espartal-i — 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "loule",
+        "title": "Loulé",
+        "category": "residential",
+        "technology": [
+          "Traditional"
+        ],
+        "thumbnail": {
+          "src": "/media/projects/loule/1-sm.jpg",
+          "alt": "loule — 1",
+          "width": 1600,
+          "height": 1000
+        },
+        "gallery": [
+          {
+            "alt": "loule — 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "casa-no-alto",
+        "title": "Casa no Alto",
+        "category": "residential",
+        "technology": [
+          "Sismo"
+        ],
+        "thumbnail": {
+          "src": "/media/projects/casa-no-alto/1-sm.jpg",
+          "alt": "casa-no-alto — 1",
+          "width": 1600,
+          "height": 1000
+        },
+        "gallery": [
+          {
+            "alt": "casa-no-alto — 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/9-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 10",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/10-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/10-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 11",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/11-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 12",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/12-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/12-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 13",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/13-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/13-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 14",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/14-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/14-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 15",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/15-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/15-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 16",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/16-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/16-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 17",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/17-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/17-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 18",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/18-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/18-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 19",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/19-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/19-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 20",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/20-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/20-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 21",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/21-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/21-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 22",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/22-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/22-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 23",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/23-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/23-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 24",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/24-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/24-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 25",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/25-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/25-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 26",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/26-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/26-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 27",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/27-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/27-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 28",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/28-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/28-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-no-alto — 29",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-no-alto/29-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-no-alto/29-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "casa-ta-top",
+        "title": "Casa Ta Top",
+        "category": "residential",
+        "technology": [
+          "Traditional"
+        ],
+        "thumbnail": {
+          "src": "/media/projects/casa-ta-top/1-sm.jpg",
+          "alt": "casa-ta-top — 1",
+          "width": 1600,
+          "height": 1000
+        },
+        "gallery": [
+          {
+            "alt": "casa-ta-top — 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/9-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 10",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/10-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/10-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 11",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/11-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 12",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/12-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/12-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 13",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/13-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/13-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 14",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/14-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/14-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 15",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/15-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/15-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 16",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/16-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/16-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 17",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/17-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/17-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 18",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/18-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/18-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "casa-ta-top — 21",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/casa-ta-top/21-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/casa-ta-top/21-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "espartal-i": {
+      "media": [
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/1-lg.jpg",
+          "alt": "espartal-i image 1-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/1-lg.webp",
+          "alt": "espartal-i image 1-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/1-sm.jpg",
+          "alt": "espartal-i image 1-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/1-sm.webp",
+          "alt": "espartal-i image 1-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/1.jpg",
+          "alt": "espartal-i image 1.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/2-lg.jpg",
+          "alt": "espartal-i image 2-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/2-lg.webp",
+          "alt": "espartal-i image 2-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/2-sm.jpg",
+          "alt": "espartal-i image 2-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/2-sm.webp",
+          "alt": "espartal-i image 2-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/2.jpg",
+          "alt": "espartal-i image 2.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/3-lg.jpg",
+          "alt": "espartal-i image 3-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/3-lg.webp",
+          "alt": "espartal-i image 3-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/3-sm.jpg",
+          "alt": "espartal-i image 3-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/3-sm.webp",
+          "alt": "espartal-i image 3-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/3.jpg",
+          "alt": "espartal-i image 3.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/4-lg.jpg",
+          "alt": "espartal-i image 4-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/4-lg.webp",
+          "alt": "espartal-i image 4-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/4-sm.jpg",
+          "alt": "espartal-i image 4-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/4-sm.webp",
+          "alt": "espartal-i image 4-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/4.jpg",
+          "alt": "espartal-i image 4.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/5-lg.jpg",
+          "alt": "espartal-i image 5-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/5-lg.webp",
+          "alt": "espartal-i image 5-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/5-sm.jpg",
+          "alt": "espartal-i image 5-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/5-sm.webp",
+          "alt": "espartal-i image 5-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/5.jpg",
+          "alt": "espartal-i image 5.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/6-lg.jpg",
+          "alt": "espartal-i image 6-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/6-lg.webp",
+          "alt": "espartal-i image 6-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/6-sm.jpg",
+          "alt": "espartal-i image 6-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/6-sm.webp",
+          "alt": "espartal-i image 6-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/6.jpg",
+          "alt": "espartal-i image 6.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/7-lg.jpg",
+          "alt": "espartal-i image 7-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/7-lg.webp",
+          "alt": "espartal-i image 7-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/7-sm.jpg",
+          "alt": "espartal-i image 7-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/7-sm.webp",
+          "alt": "espartal-i image 7-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/espartal-i/7.jpg",
+          "alt": "espartal-i image 7.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        }
+      ]
+    },
+    "casa-no-alto": {
+      "media": [
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/1-lg.jpg",
+          "alt": "casa-no-alto image 1-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/1-lg.webp",
+          "alt": "casa-no-alto image 1-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/1-sm.jpg",
+          "alt": "casa-no-alto image 1-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/1-sm.webp",
+          "alt": "casa-no-alto image 1-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/1.jpg",
+          "alt": "casa-no-alto image 1.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/2-lg.jpg",
+          "alt": "casa-no-alto image 2-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/2-lg.webp",
+          "alt": "casa-no-alto image 2-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/2-sm.jpg",
+          "alt": "casa-no-alto image 2-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/2-sm.webp",
+          "alt": "casa-no-alto image 2-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/2.jpg",
+          "alt": "casa-no-alto image 2.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/3-lg.jpg",
+          "alt": "casa-no-alto image 3-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/3-lg.webp",
+          "alt": "casa-no-alto image 3-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/3-sm.jpg",
+          "alt": "casa-no-alto image 3-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/3-sm.webp",
+          "alt": "casa-no-alto image 3-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/3.jpg",
+          "alt": "casa-no-alto image 3.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/4-lg.jpg",
+          "alt": "casa-no-alto image 4-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/4-lg.webp",
+          "alt": "casa-no-alto image 4-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/4-sm.jpg",
+          "alt": "casa-no-alto image 4-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/4-sm.webp",
+          "alt": "casa-no-alto image 4-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/4.jpg",
+          "alt": "casa-no-alto image 4.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/5-lg.jpg",
+          "alt": "casa-no-alto image 5-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/5-lg.webp",
+          "alt": "casa-no-alto image 5-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/5-sm.jpg",
+          "alt": "casa-no-alto image 5-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/5-sm.webp",
+          "alt": "casa-no-alto image 5-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/5.jpg",
+          "alt": "casa-no-alto image 5.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/6-lg.jpg",
+          "alt": "casa-no-alto image 6-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/6-lg.webp",
+          "alt": "casa-no-alto image 6-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/6-sm.jpg",
+          "alt": "casa-no-alto image 6-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/6-sm.webp",
+          "alt": "casa-no-alto image 6-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/6.jpg",
+          "alt": "casa-no-alto image 6.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/7-lg.jpg",
+          "alt": "casa-no-alto image 7-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/7-lg.webp",
+          "alt": "casa-no-alto image 7-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/7-sm.jpg",
+          "alt": "casa-no-alto image 7-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/7-sm.webp",
+          "alt": "casa-no-alto image 7-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/7.jpg",
+          "alt": "casa-no-alto image 7.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/8-lg.jpg",
+          "alt": "casa-no-alto image 8-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/8-lg.webp",
+          "alt": "casa-no-alto image 8-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/8-sm.jpg",
+          "alt": "casa-no-alto image 8-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/8-sm.webp",
+          "alt": "casa-no-alto image 8-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/8.jpg",
+          "alt": "casa-no-alto image 8.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/9-lg.jpg",
+          "alt": "casa-no-alto image 9-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/9-lg.webp",
+          "alt": "casa-no-alto image 9-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/9-sm.jpg",
+          "alt": "casa-no-alto image 9-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/9-sm.webp",
+          "alt": "casa-no-alto image 9-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/9.jpg",
+          "alt": "casa-no-alto image 9.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/10-lg.jpg",
+          "alt": "casa-no-alto image 10-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/10-lg.webp",
+          "alt": "casa-no-alto image 10-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/10-sm.jpg",
+          "alt": "casa-no-alto image 10-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/10-sm.webp",
+          "alt": "casa-no-alto image 10-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/10.jpg",
+          "alt": "casa-no-alto image 10.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/11-lg.jpg",
+          "alt": "casa-no-alto image 11-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/11-lg.webp",
+          "alt": "casa-no-alto image 11-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/11-sm.jpg",
+          "alt": "casa-no-alto image 11-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/11-sm.webp",
+          "alt": "casa-no-alto image 11-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/11.jpg",
+          "alt": "casa-no-alto image 11.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/12-lg.jpg",
+          "alt": "casa-no-alto image 12-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/12-lg.webp",
+          "alt": "casa-no-alto image 12-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/12-sm.jpg",
+          "alt": "casa-no-alto image 12-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/12-sm.webp",
+          "alt": "casa-no-alto image 12-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/12.jpg",
+          "alt": "casa-no-alto image 12.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/13-lg.jpg",
+          "alt": "casa-no-alto image 13-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/13-lg.webp",
+          "alt": "casa-no-alto image 13-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/13-sm.jpg",
+          "alt": "casa-no-alto image 13-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/13-sm.webp",
+          "alt": "casa-no-alto image 13-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/13.jpg",
+          "alt": "casa-no-alto image 13.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/14-lg.jpg",
+          "alt": "casa-no-alto image 14-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/14-lg.webp",
+          "alt": "casa-no-alto image 14-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/14-sm.jpg",
+          "alt": "casa-no-alto image 14-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/14-sm.webp",
+          "alt": "casa-no-alto image 14-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/14.jpg",
+          "alt": "casa-no-alto image 14.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/15-lg.jpg",
+          "alt": "casa-no-alto image 15-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/15-lg.webp",
+          "alt": "casa-no-alto image 15-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/15-sm.jpg",
+          "alt": "casa-no-alto image 15-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/15-sm.webp",
+          "alt": "casa-no-alto image 15-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/15.jpg",
+          "alt": "casa-no-alto image 15.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/16-lg.jpg",
+          "alt": "casa-no-alto image 16-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/16-lg.webp",
+          "alt": "casa-no-alto image 16-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/16-sm.jpg",
+          "alt": "casa-no-alto image 16-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/16-sm.webp",
+          "alt": "casa-no-alto image 16-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/16.jpg",
+          "alt": "casa-no-alto image 16.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/17-lg.jpg",
+          "alt": "casa-no-alto image 17-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/17-lg.webp",
+          "alt": "casa-no-alto image 17-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/17-sm.jpg",
+          "alt": "casa-no-alto image 17-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/17-sm.webp",
+          "alt": "casa-no-alto image 17-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/17.jpg",
+          "alt": "casa-no-alto image 17.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/18-lg.jpg",
+          "alt": "casa-no-alto image 18-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/18-lg.webp",
+          "alt": "casa-no-alto image 18-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/18-sm.jpg",
+          "alt": "casa-no-alto image 18-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/18-sm.webp",
+          "alt": "casa-no-alto image 18-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/18.jpg",
+          "alt": "casa-no-alto image 18.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/19-lg.jpg",
+          "alt": "casa-no-alto image 19-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/19-lg.webp",
+          "alt": "casa-no-alto image 19-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/19-sm.jpg",
+          "alt": "casa-no-alto image 19-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/19-sm.webp",
+          "alt": "casa-no-alto image 19-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/19.jpg",
+          "alt": "casa-no-alto image 19.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/20-lg.jpg",
+          "alt": "casa-no-alto image 20-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/20-lg.webp",
+          "alt": "casa-no-alto image 20-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/20-sm.jpg",
+          "alt": "casa-no-alto image 20-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/20-sm.webp",
+          "alt": "casa-no-alto image 20-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/20.jpg",
+          "alt": "casa-no-alto image 20.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/21-lg.jpg",
+          "alt": "casa-no-alto image 21-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/21-lg.webp",
+          "alt": "casa-no-alto image 21-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/21-sm.jpg",
+          "alt": "casa-no-alto image 21-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/21-sm.webp",
+          "alt": "casa-no-alto image 21-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/21.jpg",
+          "alt": "casa-no-alto image 21.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/22-lg.jpg",
+          "alt": "casa-no-alto image 22-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/22-lg.webp",
+          "alt": "casa-no-alto image 22-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/22-sm.jpg",
+          "alt": "casa-no-alto image 22-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/22-sm.webp",
+          "alt": "casa-no-alto image 22-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/22.jpg",
+          "alt": "casa-no-alto image 22.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/23-lg.jpg",
+          "alt": "casa-no-alto image 23-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/23-lg.webp",
+          "alt": "casa-no-alto image 23-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/23-sm.jpg",
+          "alt": "casa-no-alto image 23-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/23-sm.webp",
+          "alt": "casa-no-alto image 23-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/23.jpg",
+          "alt": "casa-no-alto image 23.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/24-lg.jpg",
+          "alt": "casa-no-alto image 24-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/24-lg.webp",
+          "alt": "casa-no-alto image 24-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/24-sm.jpg",
+          "alt": "casa-no-alto image 24-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/24-sm.webp",
+          "alt": "casa-no-alto image 24-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/24.jpg",
+          "alt": "casa-no-alto image 24.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/25-lg.jpg",
+          "alt": "casa-no-alto image 25-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/25-lg.webp",
+          "alt": "casa-no-alto image 25-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/25-sm.jpg",
+          "alt": "casa-no-alto image 25-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/25-sm.webp",
+          "alt": "casa-no-alto image 25-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/25.jpg",
+          "alt": "casa-no-alto image 25.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/26-lg.jpg",
+          "alt": "casa-no-alto image 26-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/26-lg.webp",
+          "alt": "casa-no-alto image 26-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/26-sm.jpg",
+          "alt": "casa-no-alto image 26-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/26-sm.webp",
+          "alt": "casa-no-alto image 26-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/26.jpg",
+          "alt": "casa-no-alto image 26.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/27-lg.jpg",
+          "alt": "casa-no-alto image 27-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/27-lg.webp",
+          "alt": "casa-no-alto image 27-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/27-sm.jpg",
+          "alt": "casa-no-alto image 27-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/27-sm.webp",
+          "alt": "casa-no-alto image 27-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/27.jpg",
+          "alt": "casa-no-alto image 27.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/28-lg.jpg",
+          "alt": "casa-no-alto image 28-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/28-lg.webp",
+          "alt": "casa-no-alto image 28-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/28-sm.jpg",
+          "alt": "casa-no-alto image 28-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/28-sm.webp",
+          "alt": "casa-no-alto image 28-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/28.jpg",
+          "alt": "casa-no-alto image 28.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/29-lg.jpg",
+          "alt": "casa-no-alto image 29-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/29-lg.webp",
+          "alt": "casa-no-alto image 29-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/29-sm.jpg",
+          "alt": "casa-no-alto image 29-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/29-sm.webp",
+          "alt": "casa-no-alto image 29-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-no-alto/29.jpg",
+          "alt": "casa-no-alto image 29.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        }
+      ]
+    },
+    "casa-ta-top": {
+      "media": [
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/1-lg.jpg",
+          "alt": "casa-ta-top image 1-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/1-lg.webp",
+          "alt": "casa-ta-top image 1-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/1-sm.jpg",
+          "alt": "casa-ta-top image 1-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/1-sm.webp",
+          "alt": "casa-ta-top image 1-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/1.jpg",
+          "alt": "casa-ta-top image 1.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/2-lg.jpg",
+          "alt": "casa-ta-top image 2-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/2-lg.webp",
+          "alt": "casa-ta-top image 2-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/2-sm.jpg",
+          "alt": "casa-ta-top image 2-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/2-sm.webp",
+          "alt": "casa-ta-top image 2-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/2.jpg",
+          "alt": "casa-ta-top image 2.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/3-lg.jpg",
+          "alt": "casa-ta-top image 3-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/3-lg.webp",
+          "alt": "casa-ta-top image 3-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/3-sm.jpg",
+          "alt": "casa-ta-top image 3-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/3-sm.webp",
+          "alt": "casa-ta-top image 3-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/3.jpg",
+          "alt": "casa-ta-top image 3.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/4-lg.jpg",
+          "alt": "casa-ta-top image 4-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/4-lg.webp",
+          "alt": "casa-ta-top image 4-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/4-sm.jpg",
+          "alt": "casa-ta-top image 4-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/4-sm.webp",
+          "alt": "casa-ta-top image 4-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/4.jpg",
+          "alt": "casa-ta-top image 4.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/5-lg.jpg",
+          "alt": "casa-ta-top image 5-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/5-lg.webp",
+          "alt": "casa-ta-top image 5-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/5-sm.jpg",
+          "alt": "casa-ta-top image 5-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/5-sm.webp",
+          "alt": "casa-ta-top image 5-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/5.jpg",
+          "alt": "casa-ta-top image 5.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/6-lg.jpg",
+          "alt": "casa-ta-top image 6-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/6-lg.webp",
+          "alt": "casa-ta-top image 6-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/6-sm.jpg",
+          "alt": "casa-ta-top image 6-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/6-sm.webp",
+          "alt": "casa-ta-top image 6-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/6.jpg",
+          "alt": "casa-ta-top image 6.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/8-lg.jpg",
+          "alt": "casa-ta-top image 8-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/8-lg.webp",
+          "alt": "casa-ta-top image 8-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/8-sm.jpg",
+          "alt": "casa-ta-top image 8-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/8-sm.webp",
+          "alt": "casa-ta-top image 8-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/8.jpg",
+          "alt": "casa-ta-top image 8.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/9-lg.jpg",
+          "alt": "casa-ta-top image 9-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/9-lg.webp",
+          "alt": "casa-ta-top image 9-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/9-sm.jpg",
+          "alt": "casa-ta-top image 9-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/9-sm.webp",
+          "alt": "casa-ta-top image 9-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/9.jpg",
+          "alt": "casa-ta-top image 9.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/10-lg.jpg",
+          "alt": "casa-ta-top image 10-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/10-lg.webp",
+          "alt": "casa-ta-top image 10-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/10-sm.jpg",
+          "alt": "casa-ta-top image 10-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/10-sm.webp",
+          "alt": "casa-ta-top image 10-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/10.jpg",
+          "alt": "casa-ta-top image 10.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/11-lg.jpg",
+          "alt": "casa-ta-top image 11-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/11-lg.webp",
+          "alt": "casa-ta-top image 11-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/11-sm.jpg",
+          "alt": "casa-ta-top image 11-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/11-sm.webp",
+          "alt": "casa-ta-top image 11-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/11.jpg",
+          "alt": "casa-ta-top image 11.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/12-lg.jpg",
+          "alt": "casa-ta-top image 12-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/12-lg.webp",
+          "alt": "casa-ta-top image 12-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/12-sm.jpg",
+          "alt": "casa-ta-top image 12-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/12-sm.webp",
+          "alt": "casa-ta-top image 12-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/12.jpg",
+          "alt": "casa-ta-top image 12.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/13-lg.jpg",
+          "alt": "casa-ta-top image 13-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/13-lg.webp",
+          "alt": "casa-ta-top image 13-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/13-sm.jpg",
+          "alt": "casa-ta-top image 13-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/13-sm.webp",
+          "alt": "casa-ta-top image 13-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/13.jpg",
+          "alt": "casa-ta-top image 13.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/14-lg.jpg",
+          "alt": "casa-ta-top image 14-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/14-lg.webp",
+          "alt": "casa-ta-top image 14-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/14-sm.jpg",
+          "alt": "casa-ta-top image 14-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/14-sm.webp",
+          "alt": "casa-ta-top image 14-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/14.jpg",
+          "alt": "casa-ta-top image 14.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/15-lg.jpg",
+          "alt": "casa-ta-top image 15-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/15-lg.webp",
+          "alt": "casa-ta-top image 15-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/15-sm.jpg",
+          "alt": "casa-ta-top image 15-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/15-sm.webp",
+          "alt": "casa-ta-top image 15-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/15.jpg",
+          "alt": "casa-ta-top image 15.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/16-lg.jpg",
+          "alt": "casa-ta-top image 16-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/16-lg.webp",
+          "alt": "casa-ta-top image 16-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/16-sm.jpg",
+          "alt": "casa-ta-top image 16-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/16-sm.webp",
+          "alt": "casa-ta-top image 16-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/16.jpg",
+          "alt": "casa-ta-top image 16.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/17-lg.jpg",
+          "alt": "casa-ta-top image 17-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/17-lg.webp",
+          "alt": "casa-ta-top image 17-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/17-sm.jpg",
+          "alt": "casa-ta-top image 17-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/17-sm.webp",
+          "alt": "casa-ta-top image 17-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/17.jpg",
+          "alt": "casa-ta-top image 17.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/18-lg.jpg",
+          "alt": "casa-ta-top image 18-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/18-lg.webp",
+          "alt": "casa-ta-top image 18-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/18-sm.jpg",
+          "alt": "casa-ta-top image 18-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/18-sm.webp",
+          "alt": "casa-ta-top image 18-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/18.jpg",
+          "alt": "casa-ta-top image 18.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/21-lg.jpg",
+          "alt": "casa-ta-top image 21-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/21-lg.webp",
+          "alt": "casa-ta-top image 21-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/21-sm.jpg",
+          "alt": "casa-ta-top image 21-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/21-sm.webp",
+          "alt": "casa-ta-top image 21-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/casa-ta-top/21.jpg",
+          "alt": "casa-ta-top image 21.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        }
+      ]
+    },
+    "loule": {
+      "media": [
+        {
+          "type": "image",
+          "src": "/media/projects/loule/1-lg.jpg",
+          "alt": "loule image 1-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/1-lg.webp",
+          "alt": "loule image 1-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/1-sm.jpg",
+          "alt": "loule image 1-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/1-sm.webp",
+          "alt": "loule image 1-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/1.jpg",
+          "alt": "loule image 1.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/2-lg.jpg",
+          "alt": "loule image 2-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/2-lg.webp",
+          "alt": "loule image 2-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/2-sm.jpg",
+          "alt": "loule image 2-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/2-sm.webp",
+          "alt": "loule image 2-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/2.jpg",
+          "alt": "loule image 2.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/3-lg.jpg",
+          "alt": "loule image 3-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/3-lg.webp",
+          "alt": "loule image 3-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/3-sm.jpg",
+          "alt": "loule image 3-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/3-sm.webp",
+          "alt": "loule image 3-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/3.jpg",
+          "alt": "loule image 3.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/4-lg.jpg",
+          "alt": "loule image 4-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/4-lg.webp",
+          "alt": "loule image 4-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/4-sm.jpg",
+          "alt": "loule image 4-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/4-sm.webp",
+          "alt": "loule image 4-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/4.jpg",
+          "alt": "loule image 4.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/5-lg.jpg",
+          "alt": "loule image 5-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/5-lg.webp",
+          "alt": "loule image 5-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/5-sm.jpg",
+          "alt": "loule image 5-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/5-sm.webp",
+          "alt": "loule image 5-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/5.jpg",
+          "alt": "loule image 5.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/6-lg.jpg",
+          "alt": "loule image 6-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/6-lg.webp",
+          "alt": "loule image 6-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/6-sm.jpg",
+          "alt": "loule image 6-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/6-sm.webp",
+          "alt": "loule image 6-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/6.jpg",
+          "alt": "loule image 6.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/7-lg.jpg",
+          "alt": "loule image 7-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/7-lg.webp",
+          "alt": "loule image 7-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/7-sm.jpg",
+          "alt": "loule image 7-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/7-sm.webp",
+          "alt": "loule image 7-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/7.jpg",
+          "alt": "loule image 7.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/8-lg.jpg",
+          "alt": "loule image 8-lg.jpg",
+          "width": 2560,
+          "height": 1600,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/8-lg.webp",
+          "alt": "loule image 8-lg.webp",
+          "width": 2560,
+          "height": 1600,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/8-sm.jpg",
+          "alt": "loule image 8-sm.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/8-sm.webp",
+          "alt": "loule image 8-sm.webp",
+          "width": 1600,
+          "height": 1000,
+          "format": "webp"
+        },
+        {
+          "type": "image",
+          "src": "/media/projects/loule/8.jpg",
+          "alt": "loule image 8.jpg",
+          "width": 1600,
+          "height": 1000,
+          "format": "jpg"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "title": "Track record",
+    "labels": {
+      "yearsOperating": "Years operating",
+      "projectsDelivered": "Projects delivered",
+      "projectsInProgress": "Projects in progress",
+      "teamSize": "Team size",
+      "ownedMachines": "Owned machines",
+      "safetyRecord": "Safety record"
+    }
+  },
+  "testimonials": {
+    "title": "What clients say"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
+    "items": [
+      {
+        "key": "designBuild",
+        "title": "Design-build support",
+        "desc": "Early constructability input, budget guidance, and coordination with your architect and engineer."
+      },
+      {
+        "key": "groundworks",
+        "title": "Groundworks and foundations",
+        "desc": "Earthworks, footings, drainage, and slab work with owned equipment for speed and precision."
+      },
+      {
+        "key": "sismoShell",
+        "title": "Sismo structural shell",
+        "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes."
+      },
+      {
+        "key": "masonryConcrete",
+        "title": "Masonry and concrete",
+        "desc": "Blockwork, reinforced concrete elements, retaining walls, and architectural finishes."
+      },
+      {
+        "key": "roofEnvelope",
+        "title": "Roofing and envelope",
+        "desc": "Framing, waterproofing, insulation, and exterior finishes for long-term performance."
+      },
+      {
+        "key": "mepCoordination",
+        "title": "MEP coordination",
+        "desc": "Mechanical, electrical, and plumbing coordination with clear routes and clean penetrations."
+      },
+      {
+        "key": "interiors",
+        "title": "Interior finishes",
+        "desc": "Plaster, tile, flooring, carpentry, and painting with consistent, supervised craftsmanship."
+      },
+      {
+        "key": "renovations",
+        "title": "Renovations and additions",
+        "desc": "Careful upgrades and extensions that respect structure, schedule, and budget."
+      },
+      {
+        "key": "siteLogistics",
+        "title": "Site logistics and equipment",
+        "desc": "Owned machinery, certified operators, and tidy sites that keep crews efficient and safe."
+      }
+    ],
+    "cta": "Discuss your scope"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Do you work only with Sismo?",
+        "a": "We build with Sismo where it adds value, and we also deliver traditional methods. We recommend the best approach for your budget, schedule, and performance goals."
+      },
+      {
+        "q": "What areas do you serve?",
+        "a": "We primarily serve the Algarve. For larger projects we consider work across Portugal."
+      },
+      {
+        "q": "How fast is Sismo compared to traditional builds?",
+        "a": "Sismo panels install rapidly and reduce coordination steps. Actual gains depend on design and site logistics, but schedules are typically shorter than traditional masonry."
+      },
+      {
+        "q": "Do you use subcontractors?",
+        "a": "No. We self-perform with our own team and equipment, which helps us control quality, safety, and timelines."
+      },
+      {
+        "q": "Can you help before I have a full project set?",
+        "a": "Yes. We offer early design-build support to validate assumptions, align budgets, and surface constructability issues before they become costly."
+      },
+      {
+        "q": "Are you licensed and insured?",
+        "a": "Yes. We maintain the appropriate registrations and insurance. We can share documentation during preconstruction."
+      },
+      {
+        "q": "How do we start?",
+        "a": "Send a short brief and any drawings you have. We will schedule a call or site visit and provide next steps with a clear plan."
+      },
+      {
+        "q": "Do you provide warranties?",
+        "a": "Yes. We stand behind our workmanship and the systems we install. Specific terms depend on the project scope and materials."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact us today",
+    "subtitle": "We would love to hear more about your project and how we can turn your vision into a reality.",
+    "backgroundAlt": "Subtle workshop photograph behind the contact card",
+    "what": {
+      "title": "What to expect",
+      "intro": "We self-perform every phase. Here’s what we’ll discuss at your consultation:",
+      "items": [
+        "Project goals and constraints",
+        "Timeline and permitting realities",
+        "Budget ranges and cost drivers",
+        "Method options (including Sismo) and trade-offs",
+        "Next steps and site visit scheduling"
+      ]
+    },
+    "form": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Your full name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+351 ___ ___ ___"
+      },
+      "message": {
+        "label": "Project details",
+        "placeholder": "Scope, location, timeline…"
+      },
+      "honeypot": "Leave this field empty",
+      "submit": "Send message",
+      "success": "Thanks. Your email client will open with a draft to send.",
+      "error": "Please fix the fields highlighted below."
+    },
+    "validate": {
+      "name": "Please enter your name (2–80 characters).",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number.",
+      "message": "Please write a short message (min 20 characters)."
+    },
+    "direct": {
+      "title": "You can call us directly",
+      "labels": {
+        "phone": "Phone",
+        "email": "Email",
+        "hours": "Hours",
+        "location": "Location"
+      },
+      "hours": "Mon–Fri 09:00–18:00",
+      "location": "Algarve, Portugal",
+      "people": [
+        {
+          "name": "CÉU Construction",
+          "phone": "+351 930 462 893",
+          "email": "info@ceuconstruction.com"
+        }
+      ]
+    },
+    "map": {
+      "title": "Where we work",
+      "serviceArea": "Serving the Algarve and beyond.."
+    }
+  },
+  "footer": {
+    "company": {
+      "legalName": "CÉU Construction",
+      "nif": "NIF 517367777",
+      "address": [
+        "8670-116 espartal, Algarve"
+      ],
+      "email": "info@ceuconstruction.com",
+      "phone": "+351 930 462 893",
+      "logoAlt": "CÉU Construction"
+    },
+    "columns": {
+      "services": {
+        "title": "Services",
+        "items": [
+          "Sismo construction",
+          "Structural concrete",
+          "Masonry & finishes",
+          "Foundations & slabs",
+          "Site preparation",
+          "Project management"
+        ]
+      },
+      "nav": {
+        "title": "Navigate",
+        "items": [
+          {
+            "label": "About",
+            "href": "#about"
+          },
+          {
+            "label": "Sismo",
+            "href": "#sismo"
+          },
+          {
+            "label": "Projects",
+            "href": "#projects"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact"
+          }
+        ]
+      },
+      "social": {
+        "title": "Socials",
+        "items": [
+          {
+            "id": "instagram",
+            "label": "Instagram",
+            "href": ""
+          },
+          {
+            "id": "linkedin",
+            "label": "LinkedIn",
+            "href": ""
+          },
+          {
+            "id": "youtube",
+            "label": "YouTube",
+            "href": ""
+          },
+          {
+            "id": "facebook",
+            "label": "Facebook",
+            "href": ""
+          },
+          {
+            "id": "tiktok",
+            "label": "TikTok",
+            "href": ""
+          },
+          {
+            "id": "vimeo",
+            "label": "Vimeo",
+            "href": ""
+          }
+        ]
+      },
+      "contact": {
+        "title": "Get in touch",
+        "addressLabel": "Address",
+        "phoneLabel": "Phone",
+        "emailLabel": "Email"
+      }
+    },
+    "cta": {
+      "label": "Contact us",
+      "href": "#contact"
+    },
+    "legalBar": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "sitemap": "Sitemap",
+      "backToTop": "Back to top"
+    },
+    "copyright": "© {{year}} CÉU Construction. All rights reserved.",
+    "langToggle": {
+      "label": "Language",
+      "en": "English",
+      "pt": "Português"
+    }
+  },
+  "common": {
+    "readMore": "Read more",
+    "learnMore": "Learn more"
+  }
 }
