@@ -1,27 +1,57 @@
 "use client";
 
+/**
+ * Projects Section – Downsized Thumbnail Workflow
+ * ────────────────────────────────────────────────
+ *
+ * Grid cards now expect each project's first media item to reference a DOWNSIZED
+ * asset ending in "-sm.jpg" (or WebP equivalent). These optimized thumbnails live
+ * next to the originals in /public/media/projects/...
+ *
+ * Example:
+ *   Original (full-res):   /public/media/projects/casa-no-alto/1.jpg
+ *   Downsized (thumbnail): /public/media/projects/casa-no-alto/1-sm.jpg
+ *
+ * Target specs for downsized assets:
+ *   - Max width: ~1600px
+ *   - Quality: ~75% JPG or WebP
+ *   - File size: under ~200KB each
+ *
+ * The i18n dictionary (projects.items[*].media) should be updated so that the
+ * first media entry (the one displayed in the grid card) uses the "-sm" path.
+ *
+ * The modal (ProjectsModal) can still reference high-res entries later in the
+ * same media array, because it loads on demand and shows one image at a time.
+ *
+ * After adding the "-sm" files and updating the i18n paths, test in:
+ *   DevTools → Network → Img (with cache disabled)
+ * to confirm that thumbnails are not multi-megabyte originals.
+ */
+
 import Image from "next/image";
 import * as React from "react";
 import { SectionShell } from "@/components/sections/SectionShell";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import ProjectsModal from "@/components/sections/ProjectsModal";
+import OptimizedImage from "@/components/OptimizedImage";
 
 /** Types aligned to i18n shape (minimal by design) */
-type ProjectMediaImage = {
-  type: "image";
-  src: string;
+type GallerySource = { src: string; format: "jpg" | "webp" };
+type GalleryItem = {
   alt: string;
   width: number;
   height: number;
-  priority?: boolean;
+  sources: GallerySource[];
 };
+type Thumbnail = { src: string; alt: string; width: number; height: number };
 
 type ProjectItem = {
   id: string;
   title: string;
   category?: string;
   technology?: string[];
-  media: ProjectMediaImage[];
+  thumbnail?: Thumbnail;
+  gallery?: GalleryItem[];
 };
 
 type ProjectsDict = {
@@ -35,8 +65,6 @@ type ProjectsDict = {
 
 export default function Projects() {
   const { t } = useI18n();
-
-  // Localized dict (no hardcoded UI strings)
   const dict = t<ProjectsDict>("projects", {
     title: "",
     intro: "",
@@ -46,18 +74,29 @@ export default function Projects() {
     items: [],
   });
 
-  // Toggle later to hide items with no images
   const SHOW_ONLY_WITH_MEDIA = true;
 
-  // Visible list (stable deps)
   const visibleItems = React.useMemo(() => {
     const base: ProjectItem[] = Array.isArray(dict.items) ? dict.items : [];
-    return SHOW_ONLY_WITH_MEDIA
-      ? base.filter((p) => p.media?.length > 0)
+    const visible = SHOW_ONLY_WITH_MEDIA
+      ? base.filter((p) =>
+          Boolean(p.thumbnail?.src || (p.gallery && p.gallery.length > 0))
+        )
       : base;
+
+    if (process.env.NODE_ENV === "development") {
+      console.debug(
+        "projects.visible",
+        visible.map((p) => ({
+          id: p.id,
+          hasThumb: !!p.thumbnail?.src,
+          slides: p.gallery?.length || 0,
+        }))
+      );
+    }
+    return visible;
   }, [dict.items, SHOW_ONLY_WITH_MEDIA]);
 
-  // Modal state
   const [selectedProjectId, setSelectedProjectId] = React.useState<
     string | null
   >(null);
@@ -65,7 +104,6 @@ export default function Projects() {
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
 
-  // Your gradient mesh asset in /public
   const MESH_SRC = "/media/gradients/mesh3.png";
 
   return (
@@ -75,14 +113,17 @@ export default function Projects() {
       container
       maxWidth="7xl"
       innerPx
-      className="relative"
+      /* CHANGED: add isolate so our full-bleed bg can sit behind safely */
+      className="relative isolate"
       innerClassName="relative pt-16 md:pt-28"
     >
-      {/* Gradient mesh background (subtle) */}
+      {/* FULL-BLEED mesh background (no margins) */}
       <div
         aria-hidden="true"
+        /* CHANGED: make it full viewport width, centered, spanning only this section’s vertical space */
         className="
-          pointer-events-none absolute inset-0 -z-10 overflow-hidden
+          pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10
+          overflow-hidden
           [mask-image:radial-gradient(90%_70%_at_50%_20%,#000_60%,transparent_100%)]
         "
       >
@@ -95,16 +136,16 @@ export default function Projects() {
             sizes="100vw"
             className="
               object-cover
-              opacity-60
-              dark:opacity-40
+              opacity-60 dark:opacity-40
               mix-blend-normal
-              will-change-transform
+              /* keep animation safe without subpixel crawl */
+              will-change-transform transform-gpu
               motion-reduce:transform-none motion-reduce:transition-none
             "
           />
         </div>
 
-        {/* Soft overlay to unify colors and improve contrast */}
+        {/* Soft overlay stays, now truly edge-to-edge */}
         <div
           className="
             absolute inset-0
@@ -134,53 +175,72 @@ export default function Projects() {
           aria-label={dict.title}
         >
           {visibleItems.map((p) => {
-            const img = p.media?.find((m) => m.type === "image");
+            let imgSrc = p.thumbnail?.src;
+            let imgAlt = p.thumbnail?.alt || p.title;
+            let imgWidth = p.thumbnail?.width || 1600;
+            let imgHeight = p.thumbnail?.height || 1000;
+
+            if (!imgSrc && p.gallery && p.gallery.length > 0) {
+              const firstGallery = p.gallery[0];
+              const jpgSrc = firstGallery.sources?.find(
+                (s) => s.format === "jpg"
+              )?.src;
+              imgSrc = jpgSrc || firstGallery.sources?.[0]?.src;
+              imgAlt = firstGallery.alt || p.title;
+              imgWidth = firstGallery.width || 1600;
+              imgHeight = firstGallery.height || 1000;
+            }
+
+            const hasGallery = (p.gallery?.length ?? 0) > 0;
 
             return (
               <article
                 key={p.id}
                 role="listitem"
+                /* CHANGED:
+                   1) Removed backdrop-blur-md (can read as softness).
+                   2) Removed hover:translate to avoid subpixel resampling blur on hover.
+                   3) Keep lift via shadow only.
+                */
                 className="
                   group relative overflow-hidden rounded-2xl
                   border border-[color:var(--card-border,rgba(255,255,255,0.22))]
                   bg-[color:var(--card-bg,rgba(255,255,255,0.06))]
                   dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]
-                  backdrop-blur-md
                   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
-                  transition-transform transition-shadow
-                  duration-300
-                  will-change-transform
+                  transition-shadow duration-300
+                  will-change-transform transform-gpu
                   hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
-                  hover:-translate-y-0.5
                   motion-reduce:transform-none motion-reduce:transition-none
                   focus-within:ring-2 focus-within:ring-[color:var(--brand)] focus-within:ring-offset-0
                 "
               >
                 <button
                   type="button"
-                  onClick={() => setSelectedProjectId(p.id)}
+                  onClick={() => hasGallery && setSelectedProjectId(p.id)}
                   data-project-id={p.id}
                   aria-label={
                     (dict.viewGallery || "Open gallery") + " — " + p.title
                   }
-                  className="block w-full text-left focus:outline-none cursor-pointer"
+                  disabled={!hasGallery}
+                  className="block w-full text-left focus:outline-none cursor-pointer disabled:cursor-default"
                 >
-                  {/* Media keeps the entire card height tidy */}
                   <div className="relative aspect-[4/3] w-full">
-                    {img ? (
-                      <Image
-                        src={img.src}
-                        alt={img.alt}
-                        width={img.width}
-                        height={img.height}
-                        priority={img.priority ?? false}
-                        className="h-full w-full object-cover"
+                    {imgSrc ? (
+                      <OptimizedImage
+                        src={imgSrc}
+                        alt={imgAlt}
+                        width={imgWidth}
+                        height={imgHeight}
+                        priority={false}
+                        /* CHANGED: ensure crispness during any state change */
+                        className="h-full w-full object-cover will-change-transform transform-gpu [backface-visibility:hidden]"
                       />
                     ) : (
                       <div className="h-full w-full bg-neutral-200 dark:bg-neutral-800" />
                     )}
 
-                    {/* Frosted glass label bar */}
+                    {/* Label bar (unchanged visual) */}
                     <div className="pointer-events-none absolute inset-x-3 bottom-3">
                       <div
                         className="
@@ -217,7 +277,6 @@ export default function Projects() {
         </div>
       )}
 
-      {/* Modal viewer */}
       <ProjectsModal
         open={Boolean(selectedProject)}
         onClose={() => setSelectedProjectId(null)}
