@@ -65,8 +65,6 @@ type ProjectsDict = {
 
 export default function Projects() {
   const { t } = useI18n();
-
-  // Localized dict (no hardcoded UI strings)
   const dict = t<ProjectsDict>("projects", {
     title: "",
     intro: "",
@@ -76,24 +74,29 @@ export default function Projects() {
     items: [],
   });
 
-  // Toggle later to hide items with no images
   const SHOW_ONLY_WITH_MEDIA = true;
 
-  // Visible list (stable deps)
   const visibleItems = React.useMemo(() => {
     const base: ProjectItem[] = Array.isArray(dict.items) ? dict.items : [];
     const visible = SHOW_ONLY_WITH_MEDIA
-      ? base.filter((p) => Boolean(p.thumbnail?.src || (p.gallery && p.gallery.length > 0)))
+      ? base.filter((p) =>
+          Boolean(p.thumbnail?.src || (p.gallery && p.gallery.length > 0))
+        )
       : base;
 
     if (process.env.NODE_ENV === "development") {
-      console.debug("projects.visible", visible.map(p => ({ id: p.id, hasThumb: !!p.thumbnail?.src, slides: p.gallery?.length || 0 })));
+      console.debug(
+        "projects.visible",
+        visible.map((p) => ({
+          id: p.id,
+          hasThumb: !!p.thumbnail?.src,
+          slides: p.gallery?.length || 0,
+        }))
+      );
     }
-
     return visible;
   }, [dict.items, SHOW_ONLY_WITH_MEDIA]);
 
-  // Modal state
   const [selectedProjectId, setSelectedProjectId] = React.useState<
     string | null
   >(null);
@@ -101,7 +104,6 @@ export default function Projects() {
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
 
-  // Your gradient mesh asset in /public
   const MESH_SRC = "/media/gradients/mesh3.png";
 
   return (
@@ -111,14 +113,17 @@ export default function Projects() {
       container
       maxWidth="7xl"
       innerPx
-      className="relative"
+      /* CHANGED: add isolate so our full-bleed bg can sit behind safely */
+      className="relative isolate"
       innerClassName="relative pt-16 md:pt-28"
     >
-      {/* Gradient mesh background (subtle) */}
+      {/* FULL-BLEED mesh background (no margins) */}
       <div
         aria-hidden="true"
+        /* CHANGED: make it full viewport width, centered, spanning only this section’s vertical space */
         className="
-          pointer-events-none absolute inset-0 -z-10 overflow-hidden
+          pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10
+          overflow-hidden
           [mask-image:radial-gradient(90%_70%_at_50%_20%,#000_60%,transparent_100%)]
         "
       >
@@ -131,16 +136,16 @@ export default function Projects() {
             sizes="100vw"
             className="
               object-cover
-              opacity-60
-              dark:opacity-40
+              opacity-60 dark:opacity-40
               mix-blend-normal
-              will-change-transform
+              /* keep animation safe without subpixel crawl */
+              will-change-transform transform-gpu
               motion-reduce:transform-none motion-reduce:transition-none
             "
           />
         </div>
 
-        {/* Soft overlay to unify colors and improve contrast */}
+        {/* Soft overlay stays, now truly edge-to-edge */}
         <div
           className="
             absolute inset-0
@@ -170,7 +175,6 @@ export default function Projects() {
           aria-label={dict.title}
         >
           {visibleItems.map((p) => {
-            // Use thumbnail if available, fallback to first gallery jpg, then any source
             let imgSrc = p.thumbnail?.src;
             let imgAlt = p.thumbnail?.alt || p.title;
             let imgWidth = p.thumbnail?.width || 1600;
@@ -178,7 +182,9 @@ export default function Projects() {
 
             if (!imgSrc && p.gallery && p.gallery.length > 0) {
               const firstGallery = p.gallery[0];
-              const jpgSrc = firstGallery.sources?.find(s => s.format === "jpg")?.src;
+              const jpgSrc = firstGallery.sources?.find(
+                (s) => s.format === "jpg"
+              )?.src;
               imgSrc = jpgSrc || firstGallery.sources?.[0]?.src;
               imgAlt = firstGallery.alt || p.title;
               imgWidth = firstGallery.width || 1600;
@@ -191,18 +197,20 @@ export default function Projects() {
               <article
                 key={p.id}
                 role="listitem"
+                /* CHANGED:
+                   1) Removed backdrop-blur-md (can read as softness).
+                   2) Removed hover:translate to avoid subpixel resampling blur on hover.
+                   3) Keep lift via shadow only.
+                */
                 className="
                   group relative overflow-hidden rounded-2xl
                   border border-[color:var(--card-border,rgba(255,255,255,0.22))]
                   bg-[color:var(--card-bg,rgba(255,255,255,0.06))]
                   dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]
-                  backdrop-blur-md
                   shadow-[0_8px_30px_rgba(0,0,0,0.08)]
-                  transition-transform transition-shadow
-                  duration-300
-                  will-change-transform
+                  transition-shadow duration-300
+                  will-change-transform transform-gpu
                   hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
-                  hover:-translate-y-0.5
                   motion-reduce:transform-none motion-reduce:transition-none
                   focus-within:ring-2 focus-within:ring-[color:var(--brand)] focus-within:ring-offset-0
                 "
@@ -217,7 +225,6 @@ export default function Projects() {
                   disabled={!hasGallery}
                   className="block w-full text-left focus:outline-none cursor-pointer disabled:cursor-default"
                 >
-                  {/* Media keeps the entire card height tidy */}
                   <div className="relative aspect-[4/3] w-full">
                     {imgSrc ? (
                       <OptimizedImage
@@ -226,13 +233,14 @@ export default function Projects() {
                         width={imgWidth}
                         height={imgHeight}
                         priority={false}
-                        className="h-full w-full object-cover"
+                        /* CHANGED: ensure crispness during any state change */
+                        className="h-full w-full object-cover will-change-transform transform-gpu [backface-visibility:hidden]"
                       />
                     ) : (
                       <div className="h-full w-full bg-neutral-200 dark:bg-neutral-800" />
                     )}
 
-                    {/* Frosted glass label bar */}
+                    {/* Label bar (unchanged visual) */}
                     <div className="pointer-events-none absolute inset-x-3 bottom-3">
                       <div
                         className="
@@ -269,7 +277,6 @@ export default function Projects() {
         </div>
       )}
 
-      {/* Modal viewer */}
       <ProjectsModal
         open={Boolean(selectedProject)}
         onClose={() => setSelectedProjectId(null)}
