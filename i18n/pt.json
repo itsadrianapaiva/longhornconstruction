@@ -38,6 +38,57 @@
     },
     "imageAlt": "Equipa da CÉU Construction em obra"
   },
+  "stats": {
+    "id": "stats",
+    "pretitle": "Em números",
+    "title": "Histórico",
+    "intro": "Veja o impacto que temos gerado ao longo dos anos.",
+    "items": [
+      {
+        "id": "yearsOperating",
+        "label": "Anos de atividade",
+        "value": 5,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsDelivered",
+        "label": "Casas entregues",
+        "value": 10,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsInProgress",
+        "label": "Projetos em execução",
+        "value": 5,
+        "decimals": 0
+      },
+      {
+        "id": "teamSize",
+        "label": "Tamanho da equipa",
+        "value": 48,
+        "decimals": 0
+      },
+      {
+        "id": "ownedMachines",
+        "label": "Equipamentos próprios",
+        "value": 9,
+        "decimals": 0
+      },
+      {
+        "id": "safetyRecord",
+        "label": "Índice de segurança",
+        "value": 100,
+        "suffix": "%",
+        "decimals": 0,
+        "note": "Sem acidentes registados"
+      }
+    ],
+    "a11y": {
+      "sectionLabel": "Estatísticas e conquistas da empresa"
+    }
+  },
   "sismo": {
     "title": "Trabalhamos com o sistema Sismo",
     "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
@@ -3581,17 +3632,6 @@
       ]
     }
   },
-  "stats": {
-    "title": "Histórico",
-    "labels": {
-      "yearsOperating": "Anos de atividade",
-      "projectsDelivered": "Projetos concluídos",
-      "projectsInProgress": "Projetos em execução",
-      "teamSize": "Tamanho da equipa",
-      "ownedMachines": "Máquinas próprias",
-      "safetyRecord": "Registo de segurança"
-    }
-  },
   "testimonials": {
     "title": "O que dizem os clientes"
   },
@@ -3779,6 +3819,10 @@
           {
             "label": "Sobre",
             "href": "#about"
+          },
+          {
+            "label": "Estatísticas",
+            "href": "#stats"
           },
           {
             "label": "Sismo",

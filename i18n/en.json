@@ -38,6 +38,57 @@
     },
     "imageAlt": "CÉU Construction built house"
   },
+  "stats": {
+    "id": "stats",
+    "pretitle": "By the numbers",
+    "title": "Track record",
+    "intro": "See how we've made an impact over the years.",
+    "items": [
+      {
+        "id": "yearsOperating",
+        "label": "Years operating",
+        "value": 5,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsDelivered",
+        "label": "Custom homes delivered",
+        "value": 10,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsInProgress",
+        "label": "Projects in progress",
+        "value": 5,
+        "decimals": 0
+      },
+      {
+        "id": "teamSize",
+        "label": "Team size",
+        "value": 48,
+        "decimals": 0
+      },
+      {
+        "id": "ownedMachines",
+        "label": "Owned heavy equipment",
+        "value": 9,
+        "decimals": 0
+      },
+      {
+        "id": "safetyRecord",
+        "label": "Safety record",
+        "value": 100,
+        "suffix": "%",
+        "decimals": 0,
+        "note": "Flawless — no accidents"
+      }
+    ],
+    "a11y": {
+      "sectionLabel": "Company statistics and achievements"
+    }
+  },
   "sismo": {
     "title": "We work with Sismo",
     "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
@@ -3581,17 +3632,6 @@
       ]
     }
   },
-  "stats": {
-    "title": "Track record",
-    "labels": {
-      "yearsOperating": "Years operating",
-      "projectsDelivered": "Projects delivered",
-      "projectsInProgress": "Projects in progress",
-      "teamSize": "Team size",
-      "ownedMachines": "Owned machines",
-      "safetyRecord": "Safety record"
-    }
-  },
   "testimonials": {
     "title": "What clients say"
   },
@@ -3779,6 +3819,10 @@
           {
             "label": "About",
             "href": "#about"
+          },
+          {
+            "label": "Stats",
+            "href": "#stats"
           },
           {
             "label": "Sismo",
