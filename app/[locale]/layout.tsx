@@ -87,6 +87,7 @@ export default async function LocaleLayout({
   const items: NavItem[] = [
     { id: "hero", label: dict.nav.home },
     { id: "about", label: dict.nav.about },
+    { id: "stats", label: dict.nav.stats },
     { id: "sismo", label: dict.nav.sismo },
     { id: "projects", label: dict.nav.projects },
     // { id: "testimonials", label: dict.nav.testimonials },
