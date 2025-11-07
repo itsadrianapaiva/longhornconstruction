@@ -3636,53 +3636,107 @@
     "title": "What clients say"
   },
   "services": {
-    "title": "Services",
+    "title": "Our Services",
     "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
     "items": [
       {
         "key": "designBuild",
         "title": "Design-build support",
-        "desc": "Early constructability input, budget guidance, and coordination with your architect and engineer."
+        "desc": "Early constructability input, budget guidance, and coordination with your architect and engineer.",
+        "image": {
+          "src": "/media/services/design.webp",
+          "alt": "Design-build support in progress",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "groundworks",
         "title": "Groundworks and foundations",
-        "desc": "Earthworks, footings, drainage, and slab work with owned equipment for speed and precision."
+        "desc": "Earthworks, footings, drainage, and slab work with owned equipment for speed and precision.",
+        "image": {
+          "src": "/media/services/groundwork.webp",
+          "alt": "Groundworks and foundation preparation",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "sismoShell",
         "title": "Sismo structural shell",
-        "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes."
+        "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes.",
+        "image": {
+          "src": "/media/services/sismo.webp",
+          "alt": "Sismo structural shell installation",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "masonryConcrete",
         "title": "Masonry and concrete",
-        "desc": "Blockwork, reinforced concrete elements, retaining walls, and architectural finishes."
+        "desc": "Blockwork, reinforced concrete elements, retaining walls, and architectural finishes.",
+        "image": {
+          "src": "/media/services/exterior.webp",
+          "alt": "Masonry and concrete work",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "roofEnvelope",
         "title": "Roofing and envelope",
-        "desc": "Framing, waterproofing, insulation, and exterior finishes for long-term performance."
+        "desc": "Framing, waterproofing, insulation, and exterior finishes for long-term performance.",
+        "image": {
+          "src": "/media/services/roof.webp",
+          "alt": "Roofing and envelope construction",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "mepCoordination",
         "title": "MEP coordination",
-        "desc": "Mechanical, electrical, and plumbing coordination with clear routes and clean penetrations."
+        "desc": "Mechanical, electrical, and plumbing coordination with clear routes and clean penetrations.",
+        "image": {
+          "src": "/media/services/plumbing.webp",
+          "alt": "MEP systems coordination",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "interiors",
         "title": "Interior finishes",
-        "desc": "Plaster, tile, flooring, carpentry, and painting with consistent, supervised craftsmanship."
+        "desc": "Plaster, tile, flooring, carpentry, and painting with consistent, supervised craftsmanship.",
+        "image": {
+          "src": "/media/services/interior.webp",
+          "alt": "Interior finishing work",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "renovations",
         "title": "Renovations and additions",
-        "desc": "Careful upgrades and extensions that respect structure, schedule, and budget."
+        "desc": "Careful upgrades and extensions that respect structure, schedule, and budget.",
+        "image": {
+          "src": "/media/services/renovation.webp",
+          "alt": "Renovation and addition work",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "siteLogistics",
         "title": "Site logistics and equipment",
-        "desc": "Owned machinery, certified operators, and tidy sites that keep crews efficient and safe."
+        "desc": "Owned machinery, certified operators, and tidy sites that keep crews efficient and safe.",
+        "image": {
+          "src": "/media/services/site-logistics.jpg",
+          "alt": "Site logistics and heavy equipment",
+          "width": 1920,
+          "height": 1280
+        }
       }
     ],
     "cta": "Discuss your scope"
@@ -3823,6 +3877,10 @@
           {
             "label": "Stats",
             "href": "#stats"
+          },
+          {
+            "label": "Services",
+            "href": "#services"
           },
           {
             "label": "Sismo",
