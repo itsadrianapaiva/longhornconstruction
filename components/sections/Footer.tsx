@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { complaintBookUrl, cimaalUrl } from "@/lib/legalLinks";
 
 /** Helper: replace {{year}} in i18n template safely */
 function withYear(template: string | undefined): string {
@@ -27,17 +28,15 @@ function FooterList({
 }) {
   return (
     <ul className="flex flex-col gap-3 text-left font-light text-white/70">
-      {items
-        .filter(Boolean)
-        .map((it, i) => (
-          <li key={i}>{it as React.ReactNode}</li>
-        ))}
+      {items.filter(Boolean).map((it, i) => (
+        <li key={i}>{it as React.ReactNode}</li>
+      ))}
     </ul>
   );
 }
 
 export default function Footer() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   // Pull everything from the provider (SSR-stable)
   const company = t<{
@@ -53,10 +52,10 @@ export default function Footer() {
     "footer.columns.services",
     {}
   );
-  const nav = t<{ title?: string; items?: { label?: string; href?: string }[] }>(
-    "footer.columns.nav",
-    {}
-  );
+  const nav = t<{
+    title?: string;
+    items?: { label?: string; href?: string }[];
+  }>("footer.columns.nav", {});
   const contact = t<{
     title?: string;
     addressLabel?: string;
@@ -68,7 +67,9 @@ export default function Footer() {
   const legal = t<{
     privacy?: string;
     terms?: string;
-    sitemap?: string;
+    complaintBook?: string;
+    cimaal?: string;
+    ral?: string;
     backToTop?: string;
   }>("footer.legalBar", {});
   const copyright = withYear(t<string>("footer.copyright", ""));
@@ -127,13 +128,17 @@ export default function Footer() {
 
           {/* Services — plain text, no links */}
           <div className="mb-8 text-left">
-            {services.title ? <SectionHeading>{services.title}</SectionHeading> : null}
+            {services.title ? (
+              <SectionHeading>{services.title}</SectionHeading>
+            ) : null}
             <FooterList items={(services.items ?? []) as string[]} />
           </div>
 
           {/* Get in touch — phone, email, ADDRESS LAST */}
           <div className="mb-8 text-left">
-            {contact.title ? <SectionHeading>{contact.title}</SectionHeading> : null}
+            {contact.title ? (
+              <SectionHeading>{contact.title}</SectionHeading>
+            ) : null}
             <FooterList
               items={[
                 company.phone ? (
@@ -152,17 +157,15 @@ export default function Footer() {
                     {company.email}
                   </a>
                 ) : undefined,
-                Array.isArray(company.address) && company.address.length > 0
-                  ? (
-                    <div className="text-white/70">
-                      {company.address.map((line, i) => (
-                        <span key={i} className="block">
-                          {line}
-                        </span>
-                      ))}
-                    </div>
-                    )
-                  : undefined,
+                Array.isArray(company.address) && company.address.length > 0 ? (
+                  <div className="text-white/70">
+                    {company.address.map((line, i) => (
+                      <span key={i} className="block">
+                        {line}
+                      </span>
+                    ))}
+                  </div>
+                ) : undefined,
               ]}
             />
 
@@ -182,12 +185,37 @@ export default function Footer() {
           <p className="text-white/30">{copyright}</p>
 
           <div className="flex flex-row items-start justify-evenly gap-4 md:items-center md:gap-4">
-            {/* Placeholders for now; routes later */}
-            <span className="text-white/30">{legal.privacy ?? "Privacy Policy"}</span>
+            <Link
+              href={`/${locale}/privacy`}
+              className="text-white/30 hover:text-[color:var(--brand)] transition-colors"
+            >
+              {legal.privacy ?? "Privacy Policy"}
+            </Link>
             <span className="text-white/30">|</span>
-            <span className="text-white/30">{legal.terms ?? "Terms of Service"}</span>
+            <Link
+              href={`/${locale}/terms`}
+              className="text-white/30 hover:text-[color:var(--brand)] transition-colors"
+            >
+              {legal.terms ?? "Terms of Service"}
+            </Link>
             <span className="text-white/30">|</span>
-            <span className="text-white/30">{legal.sitemap ?? "Sitemap"}</span>
+            <a
+              href={complaintBookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/30 hover:text-[color:var(--brand)] transition-colors"
+            >
+              {legal.complaintBook ?? "Complaint book"}
+            </a>
+            <span className="text-white/30">|</span>
+            <a
+              href={cimaalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/30 hover:text-[color:var(--brand)] transition-colors"
+            >
+              {legal.cimaal ?? "CIMAAL"}
+            </a>
           </div>
 
           {legal.backToTop ? (

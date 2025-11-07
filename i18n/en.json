@@ -41,7 +41,7 @@
   "stats": {
     "id": "stats",
     "pretitle": "By the numbers",
-    "title": "Track record",
+    "title": "We came to revolutionize the construction sector",
     "intro": "See how we've made an impact over the years.",
     "items": [
       {
@@ -3849,7 +3849,7 @@
       "legalName": "CÉU Construction",
       "nif": "NIF 517367777",
       "address": [
-        "8670-116 espartal, Algarve"
+        "8670-116 Aljezur, Algarve"
       ],
       "email": "info@ceuconstruction.com",
       "phone": "+351 930 462 893",
@@ -3945,7 +3945,9 @@
     "legalBar": {
       "privacy": "Privacy",
       "terms": "Terms",
-      "sitemap": "Sitemap",
+      "complaintBook": "Complaints Book",
+      "cimaal": "Algarve Arbitration and Conflict Center (CIMAAL)",
+      "ral": "CIMAAL (ADR/Consumer Disputes)",
       "backToTop": "Back to top"
     },
     "copyright": "© {{year}} CÉU Construction. All rights reserved.",

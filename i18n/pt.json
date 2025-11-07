@@ -41,7 +41,7 @@
   "stats": {
     "id": "stats",
     "pretitle": "Em números",
-    "title": "Histórico",
+    "title": "Nascemos para revolucionar o setor da construção",
     "intro": "Veja o impacto que temos gerado ao longo dos anos.",
     "items": [
       {
@@ -3636,7 +3636,7 @@
     "title": "O que dizem os clientes"
   },
   "services": {
-    "title": "Serviços",
+    "title": "Nossos Serviços",
     "intro": "Uma equipa de ponta a ponta. Executamos cada etapa para manter a qualidade alta e os prazos controlados.",
     "items": [
       {
@@ -3945,7 +3945,9 @@
     "legalBar": {
       "privacy": "Privacidade",
       "terms": "Termos",
-      "sitemap": "Mapa do site",
+      "complaintBook": "Livro de reclamações",
+      "cimaal": "Centos de Arbitragem de Conflitos de Consumo do Algarve (CIMAAL)",
+      "ral": "CIMAAL (RAL/Consumo)",
       "backToTop": "Voltar ao topo"
     },
     "copyright": "© {{year}} CÉU Construction. Todos os direitos reservados.",
