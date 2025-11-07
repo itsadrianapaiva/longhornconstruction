@@ -33,11 +33,11 @@ export default function Services() {
     >
       {/* Header */}
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-semibold text-ink">
+        <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
           {title}
         </h2>
         {intro && (
-          <p className="mt-3 text-lg text-ink/70 max-w-2xl mx-auto">
+          <p className="mx-auto mt-6 text-lg text-ink/85">
             {intro}
           </p>
         )}
