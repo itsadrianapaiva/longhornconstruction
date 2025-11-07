@@ -3632,9 +3632,6 @@
       ]
     }
   },
-  "testimonials": {
-    "title": "O que dizem os clientes"
-  },
   "services": {
     "title": "Nossos Serviços",
     "intro": "Uma equipa de ponta a ponta. Executamos cada etapa para manter a qualidade alta e os prazos controlados.",
@@ -3891,6 +3888,10 @@
             "href": "#projects"
           },
           {
+            "label": "Testemunhos",
+            "href": "#testimonials"
+          },
+          {
             "label": "Contacto",
             "href": "#contact"
           }
@@ -3955,6 +3956,50 @@
       "label": "Idioma",
       "en": "English",
       "pt": "Português"
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "They are very professional and made everything to exceed my expectations. The communication was clear and the team was very responsive.",
+        "highlights": [
+          "professional",
+          "communication was clear"
+        ],
+        "author": {
+          "name": "Erik B."
+        },
+        "avatarHint": "person-1"
+      },
+      {
+        "quote": "I have nothing to complain about the team. We were able to work out all the challenges and we are very happy with the results.",
+        "highlights": [
+          "work out all the challenges",
+          "happy"
+        ],
+        "author": {
+          "name": "C. B."
+        },
+        "avatarHint": "person-2"
+      },
+      {
+        "quote": "CÉU delivered faster than expected and the finishes were incredibly well done. We had the pleasure to work with them twice and we will definitely work with them again.",
+        "highlights": [
+          "faster than expected",
+          "solid"
+        ],
+        "author": {
+          "name": "Melissa B."
+        },
+        "avatarHint": "person-3"
+      }
+    ],
+    "aria": {
+      "regionLabel": "Testemunhos de clientes",
+      "pause": "Pausar deslocamento automático",
+      "play": "Retomar deslocamento automático",
+      "next": "Mostrar próximo testemunho",
+      "prev": "Mostrar testemunho anterior"
     }
   },
   "common": {

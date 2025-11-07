@@ -3632,9 +3632,6 @@
       ]
     }
   },
-  "testimonials": {
-    "title": "What clients say"
-  },
   "services": {
     "title": "Our Services",
     "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
@@ -3891,6 +3888,10 @@
             "href": "#projects"
           },
           {
+            "label": "Testimonials",
+            "href": "#testimonials"
+          },
+          {
             "label": "Contact",
             "href": "#contact"
           }
@@ -3955,6 +3956,35 @@
       "label": "Language",
       "en": "English",
       "pt": "Português"
+    }
+  },
+  "testimonials": {
+    "items": [
+      {
+        "quote": "They are very professional and made everything to exceed my expectations. The communication was clear and the team was very responsive.",
+        "highlights": ["professional", "communication was clear"],
+        "author": { "name": "Erik B." },
+        "avatarHint": "person-1"
+      },
+       {
+        "quote": "I have nothing to complain about the team. We were able to work out all the challenges and we are very happy with the results.",
+        "highlights": ["work out all the challenges", "happy"],
+        "author": { "name": "C. B." },
+        "avatarHint": "person-2"
+      },
+      {
+        "quote": "CÉU delivered faster than expected and the finishes were incredibly well done. We had the pleasure to work with them twice and we will definitely work with them again.",
+        "highlights": ["faster than expected", "solid"],
+        "author": { "name": "Melissa B." },
+        "avatarHint": "person-3"
+      }
+    ],
+    "aria": {
+      "regionLabel": "Client testimonials",
+      "pause": "Pause auto-scroll",
+      "play": "Resume auto-scroll",
+      "next": "Show next testimonial",
+      "prev": "Show previous testimonial"
     }
   },
   "common": {
