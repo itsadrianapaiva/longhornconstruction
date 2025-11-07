@@ -1,4 +1,3 @@
-// components/interactive/TestimonialsScroller.tsx
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -8,7 +7,6 @@ type Testimonial = {
   quote: string;
   highlights?: string[];
   author: { name: string };
-  // avatarHint is ignored now; we strictly map by index to /media/testimonials/avatar{N}.svg
   avatarHint?: string;
 };
 
@@ -35,7 +33,6 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
   const [reduced, setReduced] = useState(false);
   const [slideW, setSlideW] = useState(0);
 
-  // prefers-reduced-motion
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     setReduced(mq.matches);
@@ -44,7 +41,6 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
-  // measure viewport width
   useEffect(() => {
     const measure = () => {
       if (!regionRef.current) return;
@@ -56,24 +52,27 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
     return () => ro.disconnect();
   }, []);
 
-  // apply transform
   useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
     el.style.transform = `translateX(${-index * slideW}px)`;
   }, [index, slideW]);
 
-  // auto-advance
   useEffect(() => {
     if (reduced || paused) return;
-    const id = setInterval(() => setIndex((n) => (n + 1) % items.length), AUTO_MS);
+    const id = setInterval(
+      () => setIndex((n) => (n + 1) % items.length),
+      AUTO_MS
+    );
     return () => clearInterval(id);
   }, [reduced, paused, items.length]);
 
-  // pause/focus handlers
   const onEnter = () => setPaused(true);
   const onLeave = () => setPaused(false);
-  const onFocus = () => { setPaused(true); setFocused(true); };
+  const onFocus = () => {
+    setPaused(true);
+    setFocused(true);
+  };
   const onBlur = (e: React.FocusEvent<HTMLDivElement>) => {
     if (!e.currentTarget.contains(e.relatedTarget as Node)) {
       setPaused(false);
@@ -81,24 +80,35 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
     }
   };
 
-  // keyboard + buttons
-  const goNext = useCallback(() => setIndex((n) => (n + 1) % items.length), [items.length]);
-  const goPrev = useCallback(() => setIndex((n) => (n - 1 + items.length) % items.length), [items.length]);
-  const toggle  = () => setPaused((p) => !p);
+  const goNext = useCallback(
+    () => setIndex((n) => (n + 1) % items.length),
+    [items.length]
+  );
+  const goPrev = useCallback(
+    () => setIndex((n) => (n - 1 + items.length) % items.length),
+    [items.length]
+  );
+  const toggle = () => setPaused((p) => !p);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
-    else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
-    else if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goPrev();
+    } else if (e.key === " " || e.key === "Enter") {
+      e.preventDefault();
+      toggle();
+    }
   };
 
-  // strict avatar mapping: /media/testimonials/avatar{index+1}.svg
   const avatarSrcs = useMemo(
     () => items.map((_, i) => `/media/testimonials/avatar${i + 1}.svg`),
     [items]
   );
 
-  // color-only highlights
+  // Color-only highlight
   const highlightText = (text: string, highlights?: string[]) => {
     if (!highlights?.length) return text;
     const parts: Array<{ txt: string; on: boolean }> = [];
@@ -138,7 +148,7 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
       onFocus={onFocus}
       onBlur={onBlur}
       onKeyDown={onKeyDown}
-      className="relative focus:outline-none focus:ring-2 focus:ring-brand-accent/40 rounded-lg"
+      className="relative focus:outline-none focus:ring-2 focus:ring-brand-accent/40 rounded-2xl"
     >
       {/* Viewport */}
       <div className="overflow-hidden">
@@ -149,16 +159,18 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
         >
           {items.map((item, i) => (
             <div key={i} className="min-w-full shrink-0">
-              <blockquote className="mx-auto max-w-5xl text-center text-balance leading-tight tracking-[-0.01em] px-2 md:px-4">
-                <p className="text-[clamp(24px,6.8vw,56px)] font-medium mb-6">
-                  {highlightText(item.quote, item.highlights)}
-                </p>
-                <footer>
-                  <cite className="not-italic text-base md:text-lg text-ink/80">
-                    {item.author.name}
-                  </cite>
-                </footer>
-              </blockquote>
+              <div className="relative">
+                <blockquote className="mx-auto max-w-5xl text-center text-balance leading-tight tracking-[-0.01em] px-4">
+                  <p className="text-[clamp(24px,6.8vw,56px)] font-medium mb-6">
+                    {highlightText(item.quote, item.highlights)}
+                  </p>
+                  <footer>
+                    <cite className="not-italic text-base md:text-lg text-ink/80">
+                      {item.author.name}
+                    </cite>
+                  </footer>
+                </blockquote>
+              </div>
             </div>
           ))}
         </div>
@@ -167,7 +179,7 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
       {/* Centered avatar rail */}
       <AvatarRail avatars={avatarSrcs} activeIndex={index} />
 
-      {/* Controls: visible on PRM or focus */}
+      {/* Controls on PRM or focus */}
       {(reduced || focused) && (
         <div className="mt-6 flex items-center justify-center gap-2">
           <button

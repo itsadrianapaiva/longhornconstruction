@@ -1,4 +1,3 @@
-// components/sections/Testimonials.tsx
 "use client";
 
 import Image from "next/image";
@@ -40,24 +39,23 @@ export default function Testimonials() {
       container
       maxWidth="6xl"
       innerPx
-      className="relative overflow-hidden"
+      className="relative"
     >
-      {/* Decorative quotes SVG (optional; won’t crash if missing) */}
-      <div
-        className="absolute top-8 right-8 w-48 h-48 opacity-[0.06] pointer-events-none"
-        aria-hidden="true"
-      >
-        <Image
-          src="/media/testimonials/aspas.svg"
-          alt=""
-          width={192}
-          height={192}
-          className="w-full h-full object-contain"
-          priority={false}
-        />
-      </div>
+      {/* Card-like container with thick border and subtle glassy background */}
+      <div className="
+        relative rounded-[28px]
+        border-[6px] border-brand/25
+        bg-white/5 backdrop-blur-sm
+        shadow-[0_12px_60px_rgba(0,0,0,0.08)]
+        px-5 py-10 md:px-10 md:py-16
+      ">
+        {/* Optional outer decorative quote in the far corner (very faint) */}
+        <div className="pointer-events-none absolute right-6 top-6 opacity-[0.06] hidden md:block" aria-hidden="true">
+          <Image src="/media/testimonials/quotation2.svg" alt="" width={140} height={140} />
+        </div>
 
-      <TestimonialsScroller items={items} ariaLabels={aria} />
+        <TestimonialsScroller items={items} ariaLabels={aria} />
+      </div>
     </SectionShell>
   );
 }

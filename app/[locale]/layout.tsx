@@ -91,7 +91,7 @@ export default async function LocaleLayout({
     { id: "services", label: dict.nav.services },
     { id: "sismo", label: dict.nav.sismo },
     { id: "projects", label: dict.nav.projects },
-    // { id: "testimonials", label: dict.nav.testimonials },
+    { id: "testimonials", label: dict.nav.testimonials },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },
   ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
