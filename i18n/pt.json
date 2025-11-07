@@ -38,6 +38,57 @@
     },
     "imageAlt": "Equipa da CÉU Construction em obra"
   },
+  "stats": {
+    "id": "stats",
+    "pretitle": "Em números",
+    "title": "Nascemos para revolucionar o setor da construção",
+    "intro": "Veja o impacto que temos gerado ao longo dos anos.",
+    "items": [
+      {
+        "id": "yearsOperating",
+        "label": "Anos de atividade",
+        "value": 5,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsDelivered",
+        "label": "Casas entregues",
+        "value": 10,
+        "suffix": "+",
+        "decimals": 0
+      },
+      {
+        "id": "projectsInProgress",
+        "label": "Projetos em execução",
+        "value": 5,
+        "decimals": 0
+      },
+      {
+        "id": "teamSize",
+        "label": "Tamanho da equipa",
+        "value": 48,
+        "decimals": 0
+      },
+      {
+        "id": "ownedMachines",
+        "label": "Equipamentos próprios",
+        "value": 9,
+        "decimals": 0
+      },
+      {
+        "id": "safetyRecord",
+        "label": "Índice de segurança",
+        "value": 100,
+        "suffix": "%",
+        "decimals": 0,
+        "note": "Sem acidentes registados"
+      }
+    ],
+    "a11y": {
+      "sectionLabel": "Estatísticas e conquistas da empresa"
+    }
+  },
   "sismo": {
     "title": "Trabalhamos com o sistema Sismo",
     "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
@@ -3581,68 +3632,111 @@
       ]
     }
   },
-  "stats": {
-    "title": "Histórico",
-    "labels": {
-      "yearsOperating": "Anos de atividade",
-      "projectsDelivered": "Projetos concluídos",
-      "projectsInProgress": "Projetos em execução",
-      "teamSize": "Tamanho da equipa",
-      "ownedMachines": "Máquinas próprias",
-      "safetyRecord": "Registo de segurança"
-    }
-  },
   "testimonials": {
     "title": "O que dizem os clientes"
   },
   "services": {
-    "title": "Serviços",
+    "title": "Nossos Serviços",
     "intro": "Uma equipa de ponta a ponta. Executamos cada etapa para manter a qualidade alta e os prazos controlados.",
     "items": [
       {
         "key": "designBuild",
         "title": "Apoio design-build",
-        "desc": "Análise de construtibilidade, orientação orçamental e articulação com o seu arquiteto e engenheiro."
+        "desc": "Análise de construtibilidade, orientação orçamental e articulação com o seu arquiteto e engenheiro.",
+        "image": {
+          "src": "/media/services/design.webp",
+          "alt": "Apoio design-build em progresso",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "groundworks",
         "title": "Movimento de terras e fundações",
-        "desc": "Terraplanagem, sapatas, drenagens e lajes com equipamentos próprios para precisão e velocidade."
+        "desc": "Terraplanagem, sapatas, drenagens e lajes com equipamentos próprios para precisão e velocidade.",
+        "image": {
+          "src": "/media/services/groundwork.webp",
+          "alt": "Movimento de terras e preparação de fundações",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "sismoShell",
         "title": "Estrutura Sismo",
-        "desc": "Fornecimento e montagem de painéis, betonagens e integração estrutural para invólucros rápidos e robustos."
+        "desc": "Fornecimento e montagem de painéis, betonagens e integração estrutural para invólucros rápidos e robustos.",
+        "image": {
+          "src": "/media/services/sismo.webp",
+          "alt": "Instalação de estrutura Sismo",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "masonryConcrete",
         "title": "Alvenaria e betão",
-        "desc": "Alvenaria, elementos de betão armado, muros de suporte e acabamentos arquitetónicos."
+        "desc": "Alvenaria, elementos de betão armado, muros de suporte e acabamentos arquitetónicos.",
+        "image": {
+          "src": "/media/services/exterior.webp",
+          "alt": "Trabalhos de alvenaria e betão",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "roofEnvelope",
         "title": "Coberturas e invólucro",
-        "desc": "Estruturas, impermeabilizações, isolamento e revestimentos exteriores para desempenho duradouro."
+        "desc": "Estruturas, impermeabilizações, isolamento e revestimentos exteriores para desempenho duradouro.",
+        "image": {
+          "src": "/media/services/roof.webp",
+          "alt": "Construção de coberturas e invólucro",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "mepCoordination",
         "title": "Coordenação MEP",
-        "desc": "Coordenação de AVAC, eletricidade e hidráulica, com passagens claras e limpas."
+        "desc": "Coordenação de AVAC, eletricidade e hidráulica, com passagens claras e limpas.",
+        "image": {
+          "src": "/media/services/plumbing.webp",
+          "alt": "Coordenação de sistemas MEP",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "interiors",
         "title": "Acabamentos interiores",
-        "desc": "Estuque, azulejo, pavimentos, carpintaria e pintura com supervisão consistente."
+        "desc": "Estuque, azulejo, pavimentos, carpintaria e pintura com supervisão consistente.",
+        "image": {
+          "src": "/media/services/interior.webp",
+          "alt": "Trabalhos de acabamento interior",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "renovations",
         "title": "Reabilitações e ampliações",
-        "desc": "Intervenções cuidadas que respeitam a estrutura, o prazo e o orçamento."
+        "desc": "Intervenções cuidadas que respeitam a estrutura, o prazo e o orçamento.",
+        "image": {
+          "src": "/media/services/renovation.webp",
+          "alt": "Trabalhos de reabilitação e ampliação",
+          "width": 1920,
+          "height": 1280
+        }
       },
       {
         "key": "siteLogistics",
         "title": "Logística e equipamentos",
-        "desc": "Máquinas próprias, operadores certificados e estaleiros organizados que mantêm as equipas eficientes e seguras."
+        "desc": "Máquinas próprias, operadores certificados e estaleiros organizados que mantêm as equipas eficientes e seguras.",
+        "image": {
+          "src": "/media/services/site-logistics.jpg",
+          "alt": "Logística de obra e equipamentos pesados",
+          "width": 1920,
+          "height": 1280
+        }
       }
     ],
     "cta": "Discutir o seu projeto"
@@ -3781,6 +3875,14 @@
             "href": "#about"
           },
           {
+            "label": "Estatísticas",
+            "href": "#stats"
+          },
+          {
+            "label": "Serviços",
+            "href": "#services"
+          },
+          {
             "label": "Sismo",
             "href": "#sismo"
           },
@@ -3843,7 +3945,9 @@
     "legalBar": {
       "privacy": "Privacidade",
       "terms": "Termos",
-      "sitemap": "Mapa do site",
+      "complaintBook": "Livro de reclamações",
+      "cimaal": "Centos de Arbitragem de Conflitos de Consumo do Algarve (CIMAAL)",
+      "ral": "CIMAAL (RAL/Consumo)",
       "backToTop": "Voltar ao topo"
     },
     "copyright": "© {{year}} CÉU Construction. Todos os direitos reservados.",

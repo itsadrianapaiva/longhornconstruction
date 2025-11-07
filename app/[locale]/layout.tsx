@@ -87,10 +87,11 @@ export default async function LocaleLayout({
   const items: NavItem[] = [
     { id: "hero", label: dict.nav.home },
     { id: "about", label: dict.nav.about },
+    { id: "stats", label: dict.nav.stats },
+    { id: "services", label: dict.nav.services },
     { id: "sismo", label: dict.nav.sismo },
     { id: "projects", label: dict.nav.projects },
     // { id: "testimonials", label: dict.nav.testimonials },
-    // { id: "services", label: dict.nav.services },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },
   ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
