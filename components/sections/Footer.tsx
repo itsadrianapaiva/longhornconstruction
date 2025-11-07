@@ -6,6 +6,40 @@ import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { complaintBookUrl, cimaalUrl } from "@/lib/legalLinks";
 
+// Helper: detect and normalize internal hash hrefs like "#id", "/#id", "/en/#id", or same-origin absolute URLs with hash.
+// Keeps functions tiny and testable.
+function getInternalTargetId(href?: string): string | null {
+  if (!href) return null;
+
+  try {
+    // If it starts with "#", treat as same-page anchor
+    if (href.startsWith("#")) {
+      return href.slice(1);
+    }
+
+    // Normalize "/#id" or "/locale/#id"
+    const hashFromPath = href.match(/\/#([\w\-\:]+)/)?.[1] || href.match(/\/[a-zA-Z\-]+\/#([\w\-\:]+)/)?.[1];
+    if (hashFromPath) return hashFromPath;
+
+    // Same-origin absolute URLs with a hash
+    const url = new URL(href, typeof window !== "undefined" ? window.location.href : "http://localhost");
+    if (typeof window !== "undefined" && url.origin === window.location.origin && url.pathname === window.location.pathname && url.hash) {
+      return url.hash.replace(/^#/, "");
+    }
+  } catch {
+    // Ignore malformed hrefs gracefully
+  }
+  return null;
+}
+
+// Helper: smooth scroll with reduced-motion fallback.
+function scrollToIdNoHash(id: string) {
+  const el = typeof document !== "undefined" ? document.getElementById(id) : null;
+  if (!el) return;
+  const prefersReduced = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+}
+
 /** Helper: replace {{year}} in i18n template safely */
 function withYear(template: string | undefined): string {
   const y = String(new Date().getFullYear());
@@ -91,7 +125,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
           {/* Logo column — spans 2 on lg, centered on small */}
           <div className="col-span-1 lg:col-span-2 mb-4 flex justify-center lg:items-center lg:justify-start">
-            <Link href="#" aria-label="CÉU Construction Home">
+            <Link
+              href="#"
+              aria-label="CÉU Construction Home"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToIdNoHash("hero"); // keep consistent with NavMenu
+              }}
+            >
               <Image
                 src={logoSrc}
                 alt={logoAlt}
@@ -115,6 +156,13 @@ export default function Footer() {
                     <li key={i}>
                       <Link
                         href={href}
+                        onClick={(e) => {
+                          const targetId = getInternalTargetId(href);
+                          if (targetId) {
+                            e.preventDefault();
+                            scrollToIdNoHash(targetId);
+                          }
+                        }}
                         className="inline-flex min-h-8 items-center text-white/70 transition-colors duration-200 ease-[var(--ease-gentle)] hover:text-[color:var(--brand)]"
                       >
                         {label}
@@ -172,7 +220,17 @@ export default function Footer() {
             {/* CTA */}
             {cta?.label && cta?.href ? (
               <div className="mt-4">
-                <ButtonLink href={cta.href} className="justify-center">
+                <ButtonLink
+                  href={cta.href}
+                  onClick={(e) => {
+                    const targetId = getInternalTargetId(cta.href);
+                    if (targetId) {
+                      e.preventDefault();
+                      scrollToIdNoHash(targetId);
+                    }
+                  }}
+                  className="justify-center"
+                >
                   {cta.label}
                 </ButtonLink>
               </div>
