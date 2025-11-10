@@ -8,12 +8,7 @@ type ServiceItem = {
   key: string;
   title: string;
   desc: string;
-  image: {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  };
+  image: { src: string; alt: string; width: number; height: number };
 };
 
 export default function Services() {
@@ -30,21 +25,21 @@ export default function Services() {
       container
       maxWidth="7xl"
       innerPx
+      // Guard this section from any sideways overflow coming from the carousel
+      className="relative isolate overflow-x-hidden"
     >
       {/* Header */}
       <div className="text-center">
         <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
           {title}
         </h2>
-        {intro && (
-          <p className="mx-auto mt-6 text-lg text-ink/85">
-            {intro}
-          </p>
-        )}
+        {intro && <p className="mx-auto mt-6 text-lg text-ink/85">{intro}</p>}
       </div>
 
-      {/* Carousel */}
-      <ServicesCarousel items={items} />
+      {/* Carousel wrapper: clamp width growth and hide x-overflow */}
+      <div className="mt-10 min-w-0 max-w-full overflow-x-hidden">
+        <ServicesCarousel items={items} />
+      </div>
     </SectionShell>
   );
 }

@@ -120,9 +120,13 @@ export default function Projects() {
       {/* FULL-BLEED mesh background (no margins) */}
       <div
         aria-hidden="true"
-        /* CHANGED: make it full viewport width, centered, spanning only this section’s vertical space */
+        /* FIXED: anchor to the viewport, not the container.
+           - left:[calc(50%-50svw)] puts the left edge at the viewport's left.
+           - w-[100svw] spans the small viewport width (respects mobile UI + scrollbars).
+           - No translate, no w-screen. This removes the subtle horizontal scroll. */
         className="
-          pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10
+          pointer-events-none absolute inset-y-0 -z-10
+          left-[calc(50%-50svw)] w-[100svw]
           overflow-hidden
           [mask-image:radial-gradient(90%_70%_at_50%_20%,#000_60%,transparent_100%)]
         "
@@ -137,15 +141,13 @@ export default function Projects() {
             className="
               object-cover
               opacity-60 dark:opacity-40
-              mix-blend-normal
-              /* keep animation safe without subpixel crawl */
               will-change-transform transform-gpu
               motion-reduce:transform-none motion-reduce:transition-none
+              select-none
             "
           />
         </div>
 
-        {/* Soft overlay stays, now truly edge-to-edge */}
         <div
           className="
             absolute inset-0

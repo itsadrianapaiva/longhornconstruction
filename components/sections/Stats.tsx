@@ -55,8 +55,7 @@ function Counter({
       const t = Math.min(1, (ts - startRef.current) / duration);
       const eased = easeOutCubic(t);
       const next =
-        Math.round(eased * target * Math.pow(10, decimals)) /
-        Math.pow(10, decimals);
+        Math.round(eased * target * Math.pow(10, decimals)) / Math.pow(10, decimals);
       setVal(next);
       if (t < 1) raf = requestAnimationFrame(tick);
       else setVal(target);
@@ -118,7 +117,8 @@ export default function Stats() {
     <section
       id={id}
       aria-label={sectionLabel || undefined}
-      className="bg-black text-white py-16 md:py-24"
+      // Guard: never allow x-overflow from this section
+      className="bg-black text-white py-16 md:py-24 overflow-x-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header: title + intro (no pretitle) */}
@@ -128,9 +128,7 @@ export default function Stats() {
               <h2 className="text-4xl md:text-5xl font-semibold">{title}</h2>
             ) : null}
             {intro ? (
-              <p className="mx-auto mt-3 max-w-2xl text-lg text-white/70">
-                {intro}
-              </p>
+              <p className="mx-auto mt-3 max-w-2xl text-lg text-white/70">{intro}</p>
             ) : null}
           </div>
         )}
@@ -138,7 +136,8 @@ export default function Stats() {
         {/* Grid */}
         <div
           ref={gridRef}
-          className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6"
+          // min-w-0 prevents grid content from forcing columns wider than container
+          className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6 min-w-0"
         >
           {items.map((it) => {
             const decimals = it.decimals ?? 0;
@@ -147,7 +146,8 @@ export default function Stats() {
             return (
               <div
                 key={it.id}
-                className="flex min-h-[160px] flex-col items-center rounded-xl border border-white/20 bg-white/5 px-4 py-6 text-center shadow"
+                // min-w-0 ensures long labels/notes wrap inside the card and never push the grid
+                className="min-w-0 flex min-h-[160px] flex-col items-center rounded-xl border border-white/20 bg-white/5 px-4 py-6 text-center shadow"
               >
                 {/* Big, centered number */}
                 <div className="text-5xl md:text-6xl font-semibold leading-tight">
@@ -163,13 +163,11 @@ export default function Stats() {
 
                 {/* Optional note sits above the bottom label */}
                 {it.note ? (
-                  <p className="mt-2 max-w-[12rem] text-xs text-white/60">
-                    {it.note}
-                  </p>
+                  <p className="mt-2 max-w-[12rem] text-xs text-white/60">{it.note}</p>
                 ) : null}
 
                 {/* Bottom-pinned label */}
-                <p className="mt-auto pt-3 text-xs font-semibold uppercase tracking-wide text-white/80">
+                <p className="mt-auto pt-3 text-xs font-semibold uppercase tracking-wide text-white/80 break-words">
                   {it.label}
                 </p>
               </div>

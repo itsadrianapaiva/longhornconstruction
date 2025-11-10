@@ -97,7 +97,8 @@ export default async function LocaleLayout({
   ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
 
   return (
-    <div>
+    // Guard: never allow children to widen the viewport
+    <div className="relative min-h-dvh w-full overflow-x-clip">
       <I18nProvider locale={locale} dict={dict}>
         <Header
           items={items}
@@ -107,7 +108,9 @@ export default async function LocaleLayout({
           logoSrc="/media/logo-white.png"
           logoAlt="CÉU Construction"
         />
-        <main id="content">{children}</main>
+        <main id="content" className="w-full overflow-x-clip">
+          {children}
+        </main>
         <Footer />
       </I18nProvider>
     </div>
