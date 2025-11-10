@@ -91,13 +91,14 @@ export default async function LocaleLayout({
     { id: "services", label: dict.nav.services },
     { id: "sismo", label: dict.nav.sismo },
     { id: "projects", label: dict.nav.projects },
-    // { id: "testimonials", label: dict.nav.testimonials },
+    { id: "testimonials", label: dict.nav.testimonials },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },
   ].filter(Boolean) as NavItem[]; // defensively narrow in case some keys are missing
 
   return (
-    <div>
+    // Guard: never allow children to widen the viewport
+    <div className="relative min-h-dvh w-full overflow-x-clip">
       <I18nProvider locale={locale} dict={dict}>
         <Header
           items={items}
@@ -107,7 +108,9 @@ export default async function LocaleLayout({
           logoSrc="/media/logo-white.png"
           logoAlt="CÉU Construction"
         />
-        <main id="content">{children}</main>
+        <main id="content" className="w-full overflow-x-clip">
+          {children}
+        </main>
         <Footer />
       </I18nProvider>
     </div>

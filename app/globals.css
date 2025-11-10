@@ -163,3 +163,30 @@ h2, h3 { font-weight: 600; }
 .gsap-marker-scroller-end {
   z-index: 2147483647 !important;
 }
+
+/* Prevent horizontal scrolling globally.
+   Use clip when supported to avoid layout reflow, fall back to hidden. */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+@supports not (overflow-x: clip) {
+  html, body { overflow-x: hidden; }
+}
+
+/* Common overflow sources hardening */
+main, #__next, #root {
+  overflow-x: clip;
+}
+
+/* Make sure images, videos, and canvases cannot exceed the inline size */
+img, video, canvas, svg {
+  max-inline-size: 100%;
+}
+
+/* Avoid 1–2px overflow from transforms on GPU layers */
+.transform-gpu {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}

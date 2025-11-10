@@ -4,6 +4,7 @@ import Stats from "@/components/sections/Stats";
 import Services from "@/components/sections/Services";
 import Sismo from "@/components/sections/Sismo";
 import Projects from "@/components/sections/Projects";
+import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 
 // No params needed here because each section handles its own i18n.
@@ -17,6 +18,7 @@ export default function Page() {
       <Services />
       <Sismo />
       <Projects />
+      <Testimonials />
       <Contact />
     </>
   );
