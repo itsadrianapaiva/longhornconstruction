@@ -1,7 +1,9 @@
+// components/sections/Stats.tsx
 "use client";
 
 import * as React from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import SectionHeader from "@/components/SectionHeader";
 
 type StatItem = {
   id: string;
@@ -117,26 +119,21 @@ export default function Stats() {
     <section
       id={id}
       aria-label={sectionLabel || undefined}
-      // Guard: never allow x-overflow from this section
       className="bg-black text-white py-16 md:py-24 overflow-x-hidden"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header: title + intro (no pretitle) */}
-        {(title || intro) && (
-          <div className="mb-12 text-center">
-            {title ? (
-              <h2 className="text-4xl md:text-5xl font-semibold">{title}</h2>
-            ) : null}
-            {intro ? (
-              <p className="mx-auto mt-3 max-w-2xl text-lg text-white/70">{intro}</p>
-            ) : null}
-          </div>
-        )}
+        {/* Standardized header on dark background */}
+        <SectionHeader
+          title={title}
+          intro={intro}
+          className="mb-12"
+          titleClassName="text-white"
+          introClassName="text-white/70"
+        />
 
         {/* Grid */}
         <div
           ref={gridRef}
-          // min-w-0 prevents grid content from forcing columns wider than container
           className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6 min-w-0"
         >
           {items.map((it) => {
@@ -146,10 +143,9 @@ export default function Stats() {
             return (
               <div
                 key={it.id}
-                // min-w-0 ensures long labels/notes wrap inside the card and never push the grid
-                className="min-w-0 flex min-h-[160px] flex-col items-center rounded-xl border border-white/20 bg-white/5 px-4 py-6 text-center shadow"
+                className="min-w-0 flex min-h[160px] md:min-h-[160px] flex-col items-center rounded-xl border border-white/20 bg-white/5 px-4 py-6 text-center shadow"
               >
-                {/* Big, centered number */}
+                {/* Big number */}
                 <div className="text-5xl md:text-6xl font-semibold leading-tight">
                   <Counter
                     target={Number(it.value) || 0}
@@ -161,12 +157,12 @@ export default function Stats() {
                   />
                 </div>
 
-                {/* Optional note sits above the bottom label */}
+                {/* Optional note */}
                 {it.note ? (
                   <p className="mt-2 max-w-[12rem] text-xs text-white/60">{it.note}</p>
                 ) : null}
 
-                {/* Bottom-pinned label */}
+                {/* Label */}
                 <p className="mt-auto pt-3 text-xs font-semibold uppercase tracking-wide text-white/80 break-words">
                   {it.label}
                 </p>

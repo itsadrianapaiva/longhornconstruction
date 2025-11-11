@@ -1,3 +1,4 @@
+// components/SectionHeader.tsx  (PATCH)
 "use client";
 
 import * as React from "react";
@@ -11,13 +12,9 @@ type SectionHeaderProps = {
   title: string;
   intro?: string | null;
   className?: string;
-  titleClassName?: string;
-  introClassName?: string;
-
-  // Optional mesh underline variant
+  titleClassName?: string; // section decides the color
+  introClassName?: string; // section decides the color
   underline?: UnderlineConfig | null;
-
-  // Advanced escape hatch to wrap the final <h2> (e.g., animated About header)
   renderTitle?: (baseH2ClassName: string, content: React.ReactNode) => React.ReactNode;
 };
 
@@ -32,29 +29,28 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   const containerCls = ["text-center", className].filter(Boolean).join(" ");
 
+  // Removed hardcoded "text-ink"
   const baseH2Cls = [
     "text-balance",
     "text-5xl",
     "font-semibold",
-    "text-ink",
     "md:text-6xl",
     "uppercase",
-    titleClassName,
+    titleClassName, // color comes from caller
   ]
     .filter(Boolean)
     .join(" ");
 
+  // Removed hardcoded "text-ink/85"
   const baseIntroCls = [
     "mx-auto",
     "mt-6",
     "text-lg",
-    "text-ink/85",
-    introClassName,
+    introClassName, // color comes from caller
   ]
     .filter(Boolean)
     .join(" ");
 
-  // Always normalize to uppercase for consistent look
   const normalizedTitle = React.useMemo(() => title.toUpperCase(), [title]);
 
   const titleContent: React.ReactNode = underline

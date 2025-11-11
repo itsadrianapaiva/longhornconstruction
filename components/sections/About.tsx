@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionShell } from "@/components/sections/SectionShell";
-// Removed ButtonLink here to custom-style the mesh pill
 import AboutAnimatedContent from "@/components/animations/AboutAnimatedContent";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
