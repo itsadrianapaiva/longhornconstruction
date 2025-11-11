@@ -6,6 +6,7 @@ import ContactFormClient from "@/components/sections/ContactForm.client";
 import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import SectionHeader from "@/components/SectionHeader";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
@@ -21,7 +22,9 @@ function WhatToExpect({
 }) {
   return (
     <div className="relative mb-2">
-      <h3 className="text-3xl font-semibold text-ink">{title}</h3>
+      <h3 className="text-3xl font-semibold text-ink uppercase text-balance">
+        {title}
+      </h3>
       <p className="mt-4 max-w-md text-ink/80">{intro}</p>
 
       <ul className="mt-8 space-y-8">
@@ -65,7 +68,7 @@ function DirectContact({
 }) {
   return (
     <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
-      <h4 className="text-xl font-semibold text-ink">{title}</h4>
+      <h4 className="text-xl font-semibold text-ink uppercase">{title}</h4>
 
       {/* Company-level info */}
       <div className="mt-4 space-y-2">
@@ -124,9 +127,10 @@ function DirectContact({
 export default function Contact() {
   const { t } = useI18n();
 
-  // Strict reads — no fallbacks here to surface missing keys during dev
+  // Strict reads to surface missing keys during dev
   const title = t<string>("contact.title");
-  const subtitle = t<string>("contact.subtitle");
+  const intro = t<string>("contact.intro", ""); // standardized key
+
   const backgroundAlt = t<string>("contact.backgroundAlt");
 
   const whatTitle = t<string>("contact.what.title");
@@ -157,13 +161,12 @@ export default function Contact() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Title block */}
-      <div className="relative -mb-6 overflow-visible">
-        <h2 className="text-balance text-center text-5xl font-semibold text-ink md:text-6xl">
-          {title}
-        </h2>
-        <p className="mt-4 text-center text-ink/80">{subtitle}</p>
-      </div>
+      {/* Standardized section header */}
+      <SectionHeader
+        title={title}
+        intro={intro}
+        className="relative -mb-6 overflow-visible"
+      />
 
       {/* Glass card with subtle contact background */}
       <div
@@ -173,12 +176,12 @@ export default function Contact() {
         {/* Background image behind the glass */}
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl">
           <Image
-            src="/media/contact/contact1.jpg"
+            src="/media/contact/contact2.JPEG"
             alt={backgroundAlt}
             fill
             sizes="100vw"
             priority={false}
-            className="object-cover opacity-15"
+            className="object-cover opacity-10"
           />
           {/* brand-tinted gradient mask (image → gradients → content) */}
           <div className="absolute inset-0">
@@ -205,7 +208,7 @@ export default function Contact() {
         {/* Left: What to expect */}
         <WhatToExpect title={whatTitle} intro={whatIntro} items={whatItems} />
 
-        {/* Right: the real form with mailto handoff (no fallback button) */}
+        {/* Right: the real form with mailto handoff */}
         <div className="relative flex flex-col">
           <ContactFormClient />
         </div>
