@@ -1,4 +1,3 @@
-// components/sections/Testimonials.tsx
 "use client";
 
 import { SectionShell } from "./SectionShell";
@@ -25,7 +24,6 @@ export default function Testimonials() {
   const { t } = useI18n();
 
   const title = t<string>("testimonials.title", "");
-  const intro = t<string>("testimonials.intro", "");
   const items = t<Testimonial[]>("testimonials.items", []);
   const aria = t<AriaLabels>("testimonials.aria", {
     regionLabel: "Client testimonials",
@@ -46,7 +44,6 @@ export default function Testimonials() {
     >
       <SectionHeader
         title={title}
-        intro={intro}
         className="mb-16"
         titleClassName="text-ink"
         introClassName="text-ink/85"
