@@ -1,8 +1,10 @@
+// components/sections/Services.tsx
 "use client";
 
 import { SectionShell } from "./SectionShell";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import ServicesCarousel from "./ServicesCarousel";
+import SectionHeader from "@/components/SectionHeader";
 
 type ServiceItem = {
   key: string;
@@ -25,18 +27,15 @@ export default function Services() {
       container
       maxWidth="7xl"
       innerPx
-      // Guard this section from any sideways overflow coming from the carousel
       className="relative isolate overflow-x-hidden"
     >
-      {/* Header */}
-      <div className="text-center">
-        <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
-          {title}
-        </h2>
-        {intro && <p className="mx-auto mt-6 text-lg text-ink/85">{intro}</p>}
-      </div>
+      <SectionHeader
+        title={title}
+        intro={intro}
+        titleClassName="text-ink"
+        introClassName="text-ink/85"
+      />
 
-      {/* Carousel wrapper: clamp width growth and hide x-overflow */}
       <div className="mt-10 min-w-0 max-w-full overflow-x-hidden">
         <ServicesCarousel items={items} />
       </div>

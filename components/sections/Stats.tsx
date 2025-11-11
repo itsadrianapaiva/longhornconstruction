@@ -127,7 +127,7 @@ export default function Stats() {
           title={title}
           intro={intro}
           className="mb-12"
-          titleClassName="text-white"
+          titleClassName="text-white/90"
           introClassName="text-white/70"
         />
 
