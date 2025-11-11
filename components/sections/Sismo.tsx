@@ -1,27 +1,24 @@
+// components/sections/Sismo.tsx
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { SectionShell } from "@/components/sections/SectionShell";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import SectionHeader from "@/components/SectionHeader";
 
-/**
- * Sismo section (i18n via provider)
- * - Reads all strings from `t()`; no window/location access.
- * - Hydration-safe and mirrors the previous layout/spacing.
- */
 export default function Sismo() {
   const { t } = useI18n();
 
-  // Pull top-level fields
+  // Top-level fields
   const title = t<string>("sismo.title", "");
   const intro = t<string>("sismo.intro", "");
   const highlightTarget = t<string>("sismo.highlightWord", "Sismo");
 
-  // Mesh asset (used in underline + CTA border)
+  // Mesh asset used by underline + CTA
   const MESH_SRC = "/media/gradients/mesh1.png";
 
-  // Items array (normalize to array of objects with safe defaults)
+  // Items
   const rawItems = t<Array<Record<string, unknown>>>("sismo.items", []);
   const items = Array.isArray(rawItems)
     ? rawItems
@@ -34,7 +31,7 @@ export default function Sismo() {
         .filter((x) => x.subtitle || x.body || x.image)
     : [];
 
-  // CTA cluster (internal + external)
+  // CTAs
   const cta = t<{ label?: string; href?: string }>("sismo.cta", {
     label: "See a CÉU Sismo project",
     href: "/projects#sismo",
@@ -44,7 +41,7 @@ export default function Sismo() {
     href: "https://sismo-technology.com/pt-pt/",
   });
 
-  // --- helpers ---
+  // --- underline helpers (unchanged behavior) ---
   function escapeRegExp(x: string) {
     return x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
@@ -86,15 +83,18 @@ export default function Sismo() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Header */}
-      <div className="mx-auto mb-16 max-w-2xl text-center">
-        <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
-          {renderWithMeshUnderline(title, highlightTarget)}
-        </h2>
-        {intro ? (
-          <p className="mx-auto mt-6 text-lg text-ink/85">{intro}</p>
-        ) : null}
-      </div>
+      {/* Standardized header with underline variant */}
+      <SectionHeader
+        title={title}
+        intro={intro}
+        className="mx-auto mb-16 max-w-2xl"
+        titleClassName="text-ink"
+        introClassName="text-ink/85"
+        underline={{
+          highlightTarget,
+          renderEffect: renderWithMeshUnderline,
+        }}
+      />
 
       {/* Alternating content blocks */}
       <div className="flex flex-col gap-20">
@@ -149,9 +149,6 @@ export default function Sismo() {
         {cta?.href && cta?.label ? (
           <Link
             href={cta.href}
-            // Mesh BORDER via pseudo-elements:
-            // - ::before = mesh background, full size, becomes the visible ring
-            // - ::after  = inner fill inset by --ring (covers interior)
             className="
               relative isolate inline-flex items-center justify-center
               rounded-full px-6 py-3 text-sm font-semibold
@@ -163,16 +160,11 @@ export default function Sismo() {
             "
             style={
               {
-                // Ring thickness (change to 1.5px or 3px to taste)
-
                 "--ring": "2px",
-                // Mesh src injected as a CSS var so Tailwind arbitrary can reference it
-
                 "--mesh-src": `url('/media/gradients/mesh2.png')`,
               } as React.CSSProperties
             }
           >
-            {/* Mesh ring */}
             <span
               aria-hidden="true"
               className="
@@ -181,7 +173,6 @@ export default function Sismo() {
                 before:[background-image:var(--mesh-src)]
               "
             />
-            {/* Inner fill that creates the border effect */}
             <span
               aria-hidden="true"
               className="
@@ -190,7 +181,6 @@ export default function Sismo() {
                 after:inset-[var(--ring)]
                 after:bg-[color:var(--btn-bg,rgba(255,255,255,0.06))]
                 after:backdrop-blur-lg
-               
                 after:dark:bg-[color:var(--btn-bg-dark,rgba(0,0,0,0.24))]
               "
             />
