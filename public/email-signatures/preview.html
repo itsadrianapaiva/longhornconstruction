@@ -1,65 +1,37 @@
-<!-- CÉU Construction — Email Signatures Preview v3.3.1 -->
+<!-- CÉU Construction — Email Signatures Preview -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>CÉU Signatures Preview</title>
     <style>
-      :root {
-        --brand: #1a539e;
-        --ink: #1e2129;
-        --bg: #f6f8fb;
-        --card: #ffffff;
-        --border: #ccd2da;
-      }
-      html, body { height: 100%; }
       body {
         font-family: Arial, sans-serif;
-        background: var(--bg);
-        color: var(--ink);
+        background: #f6f8fb;
+        color: #1e2129;
         margin: 40px;
       }
       h1 {
-        color: var(--brand);
+        color: #1a539e;
         font-size: 20px;
-        border-bottom: 2px solid var(--brand);
+        border-bottom: 2px solid #1a539e;
         padding-bottom: 8px;
         margin-bottom: 24px;
       }
       .grid {
         display: grid;
-        /* Ensure each card is wide enough for the signature so no inner scrollbars appear */
-        grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
-        gap: 32px;
-      }
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        padding: 16px;
-        /* Prevent any accidental inner scrolling */
-        overflow: hidden;
-      }
-      .frameWrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* Extra padding so the signature breathes */
-        padding: 4px;
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+        gap: 40px;
       }
       iframe {
-        border: 0;
-        display: block;
-        /* Make absolutely sure no iframe scrollbars show */
-        overflow: hidden;
+        background: white;
+        width: 100%;
+        height: 240px;
+        border: 1px solid #ccd2da;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       }
-      h3 {
-        font-size: 15px;
-        color: var(--brand);
-        margin: 0 0 10px 4px;
-      }
-      .note {
+      p.note {
         font-size: 13px;
         color: #6b7280;
         margin-top: 24px;
@@ -70,106 +42,33 @@
     <h1>CÉU Construction — Email Signatures Preview</h1>
 
     <div class="grid">
-      <div class="card">
+      <div>
         <h3>Justin Atta Rastegar</h3>
-        <div class="frameWrap">
-          <iframe src="justin-atta-rastegar.html" scrolling="no"></iframe>
-        </div>
+        <iframe src="justin-atta-rastegar.html"></iframe>
       </div>
-      <div class="card">
+      <div>
         <h3>Paula Filipe</h3>
-        <div class="frameWrap">
-          <iframe src="paula-filipe.html" scrolling="no"></iframe>
-        </div>
+        <iframe src="paula-filipe.html"></iframe>
       </div>
-      <div class="card">
+      <div>
         <h3>Andreza Clarine</h3>
-        <div class="frameWrap">
-          <iframe src="andreza-clarine.html" scrolling="no"></iframe>
-        </div>
+        <iframe src="andreza-clarine.html"></iframe>
       </div>
-      <div class="card">
+      <div>
         <h3>Gustavo Paiva</h3>
-        <div class="frameWrap">
-          <iframe src="gustavo-paiva.html" scrolling="no"></iframe>
-        </div>
+        <iframe src="gustavo-paiva.html"></iframe>
       </div>
-      <div class="card">
+      <div>
         <h3>Adriana Paiva</h3>
-        <div class="frameWrap">
-          <iframe src="adriana-paiva.html" scrolling="no"></iframe>
-        </div>
+        <iframe src="adriana-paiva.html"></iframe>
       </div>
     </div>
 
     <p class="note">
-      Each iframe is auto-sized to the exact table width and height inside the signature.
-      No scrollbars should appear in the preview.
+      To test in Gmail or Outlook, open each signature HTML directly from:
+      <code>https://ceuconstruction.com/email-signatures/[name].html</code>,
+      select all (Ctrl + A), copy (Ctrl + C), and paste into your signature
+      settings.
     </p>
-
-    <script>
-      function measureSignature(doc) {
-        // Remove default iframe body spacing
-        if (doc.body) {
-          doc.body.style.margin = "0";
-          doc.body.style.padding = "0";
-        }
-        // Prefer the first table (our signature); fall back to document element
-        const table = doc.body ? doc.body.querySelector("table") : null;
-        const rect = table
-          ? table.getBoundingClientRect()
-          : (doc.documentElement || doc.body).getBoundingClientRect();
-        // Add 1px guard to avoid fractional rounding causing scrollbars
-        return {
-          w: Math.ceil(rect.width) + 1,
-          h: Math.ceil(rect.height) + 1
-        };
-      }
-
-      function sizeIframe(iframe) {
-        try {
-          const doc = iframe.contentDocument || iframe.contentWindow.document;
-          if (!doc) return;
-
-          // First measurement
-          const first = measureSignature(doc);
-          iframe.style.width = first.w + "px";
-          iframe.style.height = first.h + "px";
-
-          // Re-measure after images/fonts settle
-          const bumps = [50, 150, 400];
-          bumps.forEach((ms) => {
-            setTimeout(() => {
-              const next = measureSignature(doc);
-              iframe.style.width = next.w + "px";
-              iframe.style.height = next.h + "px";
-            }, ms);
-          });
-
-          // Absolute last check on next frame
-          requestAnimationFrame(() => {
-            const last = measureSignature(doc);
-            iframe.style.width = last.w + "px";
-            iframe.style.height = last.h + "px";
-          });
-        } catch (_) {
-          // Cross-origin not expected here. Ignore if it ever occurs.
-        }
-      }
-
-      function init() {
-        const iframes = document.querySelectorAll("iframe");
-        iframes.forEach((f) => {
-          f.setAttribute("scrolling", "no");
-          f.addEventListener("load", () => sizeIframe(f));
-          // If already loaded from cache
-          if (f.contentDocument && f.contentDocument.readyState === "complete") {
-            sizeIframe(f);
-          }
-        });
-      }
-
-      window.addEventListener("DOMContentLoaded", init);
-    </script>
   </body>
 </html>
