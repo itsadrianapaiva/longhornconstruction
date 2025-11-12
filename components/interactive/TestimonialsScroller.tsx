@@ -1,3 +1,4 @@
+// components/interactive/TestimonialsScroller.tsx
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -72,7 +73,10 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
   // Hover/focus pause
   const onEnter = () => setPaused(true);
   const onLeave = () => setPaused(false);
-  const onFocus = () => { setPaused(true); setFocused(true); };
+  const onFocus = () => {
+    setPaused(true);
+    setFocused(true);
+  };
   const onBlur = (e: React.FocusEvent<HTMLDivElement>) => {
     if (!e.currentTarget.contains(e.relatedTarget as Node)) {
       setPaused(false);
@@ -83,11 +87,18 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
   // Controls
   const goNext = useCallback(() => setIndex((n) => (n + 1) % items.length), [items.length]);
   const goPrev = useCallback(() => setIndex((n) => (n - 1 + items.length) % items.length), [items.length]);
-  const toggle  = () => setPaused((p) => !p);
+  const toggle = () => setPaused((p) => !p);
   const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowRight") { e.preventDefault(); goNext(); }
-    else if (e.key === "ArrowLeft") { e.preventDefault(); goPrev(); }
-    else if (e.key === " " || e.key === "Enter") { e.preventDefault(); toggle(); }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goPrev();
+    } else if (e.key === " " || e.key === "Enter") {
+      e.preventDefault();
+      toggle();
+    }
   };
 
   // Avatars by index
@@ -113,7 +124,13 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
     return (
       <>
         {parts.map((p, i) =>
-          p.on ? <mark key={i} className="bg-transparent text-[color:var(--brand)]">{p.txt}</mark> : p.txt
+          p.on ? (
+            <mark key={i} className="bg-transparent text-[color:var(--brand)]">
+              {p.txt}
+            </mark>
+          ) : (
+            p.txt
+          )
         )}
       </>
     );
@@ -142,23 +159,19 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
           {items.map((item, i) => (
             <div key={i} className="shrink-0 w-full">
               <div className="relative">
-                {/* Absolute quotation top-left, low opacity, no layout impact */}
-                <div
-                  className="pointer-events-none absolute left-3 sm:left-5 md:left-7 top-3 sm:top-5 md:top-7 opacity-25"
-                  aria-hidden="true"
-                >
-                  <Image
-                    src="/media/testimonials/quotation1.svg"
-                    alt=""
-                    width={84}
-                    height={84}
-                    className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
-                    priority={i === 0}
-                  />
-                </div>
-
-                {/* Centered, responsive text */}
+                {/* Centered decorative quotation above the text */}
                 <blockquote className="mx-auto max-w-[92vw] sm:max-w-[44rem] md:max-w-[60rem] text-center text-balance leading-tight tracking-[-0.01em] px-3 sm:px-4 md:px-6">
+                  <div className="flex justify-center mb-4 opacity-25" aria-hidden="true">
+                    <Image
+                      src="/media/testimonials/quotation1.svg"
+                      alt=""
+                      width={84}
+                      height={84}
+                      className="w-10 h-10 xs:w-12 xs:h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                      priority={i === 0}
+                    />
+                  </div>
+
                   <p className="text-[clamp(20px,6.5vw,52px)] font-medium mb-6">
                     {highlightText(item.quote, item.highlights)}
                   </p>
@@ -180,13 +193,25 @@ export function TestimonialsScroller({ items, ariaLabels }: Props) {
       {/* Controls visible when PRM or focus */}
       {(reduced || focused) && (
         <div className="mt-6 flex items-center justify-center gap-2">
-          <button onClick={goPrev} aria-label={ariaLabels.prev} className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm">
+          <button
+            onClick={goPrev}
+            aria-label={ariaLabels.prev}
+            className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm"
+          >
             Prev
           </button>
-          <button onClick={toggle} aria-label={paused ? ariaLabels.play : ariaLabels.pause} className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm">
+          <button
+            onClick={toggle}
+            aria-label={paused ? ariaLabels.play : ariaLabels.pause}
+            className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm"
+          >
             {paused ? "Play" : "Pause"}
           </button>
-          <button onClick={goNext} aria-label={ariaLabels.next} className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm">
+          <button
+            onClick={goNext}
+            aria-label={ariaLabels.next}
+            className="px-3 py-1.5 rounded bg-ink/5 hover:bg-ink/10 text-sm"
+          >
             Next
           </button>
         </div>

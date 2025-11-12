@@ -1,32 +1,5 @@
+// components/sections/Projects.tsx
 "use client";
-
-/**
- * Projects Section – Downsized Thumbnail Workflow
- * ────────────────────────────────────────────────
- *
- * Grid cards now expect each project's first media item to reference a DOWNSIZED
- * asset ending in "-sm.jpg" (or WebP equivalent). These optimized thumbnails live
- * next to the originals in /public/media/projects/...
- *
- * Example:
- *   Original (full-res):   /public/media/projects/casa-no-alto/1.jpg
- *   Downsized (thumbnail): /public/media/projects/casa-no-alto/1-sm.jpg
- *
- * Target specs for downsized assets:
- *   - Max width: ~1600px
- *   - Quality: ~75% JPG or WebP
- *   - File size: under ~200KB each
- *
- * The i18n dictionary (projects.items[*].media) should be updated so that the
- * first media entry (the one displayed in the grid card) uses the "-sm" path.
- *
- * The modal (ProjectsModal) can still reference high-res entries later in the
- * same media array, because it loads on demand and shows one image at a time.
- *
- * After adding the "-sm" files and updating the i18n paths, test in:
- *   DevTools → Network → Img (with cache disabled)
- * to confirm that thumbnails are not multi-megabyte originals.
- */
 
 import Image from "next/image";
 import * as React from "react";
@@ -34,8 +7,8 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import ProjectsModal from "@/components/sections/ProjectsModal";
 import OptimizedImage from "@/components/OptimizedImage";
+import SectionHeader from "@/components/SectionHeader";
 
-/** Types aligned to i18n shape (minimal by design) */
 type GallerySource = { src: string; format: "jpg" | "webp" };
 type GalleryItem = {
   alt: string;
@@ -74,10 +47,13 @@ export default function Projects() {
     items: [],
   });
 
+  // Extract top-level fields for consistency
+  const { title, intro, viewGallery, empty, modal, items } = dict;
+
   const SHOW_ONLY_WITH_MEDIA = true;
 
   const visibleItems = React.useMemo(() => {
-    const base: ProjectItem[] = Array.isArray(dict.items) ? dict.items : [];
+    const base: ProjectItem[] = Array.isArray(items) ? items : [];
     const visible = SHOW_ONLY_WITH_MEDIA
       ? base.filter((p) =>
           Boolean(p.thumbnail?.src || (p.gallery && p.gallery.length > 0))
@@ -95,11 +71,9 @@ export default function Projects() {
       );
     }
     return visible;
-  }, [dict.items, SHOW_ONLY_WITH_MEDIA]);
+  }, [items, SHOW_ONLY_WITH_MEDIA]);
 
-  const [selectedProjectId, setSelectedProjectId] = React.useState<
-    string | null
-  >(null);
+  const [selectedProjectId, setSelectedProjectId] = React.useState<string | null>(null);
   const selectedProject = selectedProjectId
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
@@ -113,17 +87,12 @@ export default function Projects() {
       container
       maxWidth="7xl"
       innerPx
-      /* CHANGED: add isolate so our full-bleed bg can sit behind safely */
       className="relative isolate"
       innerClassName="relative pt-16 md:pt-28"
     >
-      {/* FULL-BLEED mesh background (no margins) */}
+      {/* FULL-BLEED mesh background */}
       <div
         aria-hidden="true"
-        /* FIXED: anchor to the viewport, not the container.
-           - left:[calc(50%-50svw)] puts the left edge at the viewport's left.
-           - w-[100svw] spans the small viewport width (respects mobile UI + scrollbars).
-           - No translate, no w-screen. This removes the subtle horizontal scroll. */
         className="
           pointer-events-none absolute inset-y-0 -z-10
           left-[calc(50%-50svw)] w-[100svw]
@@ -157,24 +126,23 @@ export default function Projects() {
         />
       </div>
 
-      {/* Header */}
-      <div className="mx-auto mb-16 max-w-2xl text-center">
-        <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
-          {dict.title}
-        </h2>
-        {dict.intro ? (
-          <p className="mx-auto mt-6 text-lg text-ink/85">{dict.intro}</p>
-        ) : null}
-      </div>
+      {/* Standardized header */}
+      <SectionHeader
+        title={title}
+        intro={intro}
+        className="mx-auto mb-16 max-w-2xl"
+        titleClassName="text-ink"
+        introClassName="text-ink/85"
+      />
 
       {/* GRID */}
       {!visibleItems.length ? (
-        <p className="text-neutral-600 dark:text-neutral-300">{dict.empty}</p>
+        <p className="text-neutral-600 dark:text-neutral-300">{empty}</p>
       ) : (
         <div
           className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
           role="list"
-          aria-label={dict.title}
+          aria-label={title}
         >
           {visibleItems.map((p) => {
             let imgSrc = p.thumbnail?.src;
@@ -184,9 +152,7 @@ export default function Projects() {
 
             if (!imgSrc && p.gallery && p.gallery.length > 0) {
               const firstGallery = p.gallery[0];
-              const jpgSrc = firstGallery.sources?.find(
-                (s) => s.format === "jpg"
-              )?.src;
+              const jpgSrc = firstGallery.sources?.find((s) => s.format === "jpg")?.src;
               imgSrc = jpgSrc || firstGallery.sources?.[0]?.src;
               imgAlt = firstGallery.alt || p.title;
               imgWidth = firstGallery.width || 1600;
@@ -199,11 +165,6 @@ export default function Projects() {
               <article
                 key={p.id}
                 role="listitem"
-                /* CHANGED:
-                   1) Removed backdrop-blur-md (can read as softness).
-                   2) Removed hover:translate to avoid subpixel resampling blur on hover.
-                   3) Keep lift via shadow only.
-                */
                 className="
                   group relative overflow-hidden rounded-2xl
                   border border-[color:var(--card-border,rgba(255,255,255,0.22))]
@@ -221,9 +182,7 @@ export default function Projects() {
                   type="button"
                   onClick={() => hasGallery && setSelectedProjectId(p.id)}
                   data-project-id={p.id}
-                  aria-label={
-                    (dict.viewGallery || "Open gallery") + " — " + p.title
-                  }
+                  aria-label={(viewGallery || "Open gallery") + " — " + p.title}
                   disabled={!hasGallery}
                   className="block w-full text-left focus:outline-none cursor-pointer disabled:cursor-default"
                 >
@@ -235,14 +194,13 @@ export default function Projects() {
                         width={imgWidth}
                         height={imgHeight}
                         priority={false}
-                        /* CHANGED: ensure crispness during any state change */
                         className="h-full w-full object-cover will-change-transform transform-gpu [backface-visibility:hidden]"
                       />
                     ) : (
                       <div className="h-full w-full bg-neutral-200 dark:bg-neutral-800" />
                     )}
 
-                    {/* Label bar (unchanged visual) */}
+                    {/* Label bar */}
                     <div className="pointer-events-none absolute inset-x-3 bottom-3">
                       <div
                         className="
@@ -255,9 +213,7 @@ export default function Projects() {
                           shadow-[0_2px_6px_rgba(0,0,0,0.25)]
                         "
                       >
-                        <h3 className="text-sm font-medium text-white">
-                          {p.title}
-                        </h3>
+                        <h3 className="text-sm font-medium text-white">{p.title}</h3>
                         <span
                           className="
                             shrink-0 rounded-2xl
@@ -267,7 +223,7 @@ export default function Projects() {
                             text-white/80
                           "
                         >
-                          {dict.viewGallery || "Open gallery"}
+                          {viewGallery || "Open gallery"}
                         </span>
                       </div>
                     </div>
@@ -283,7 +239,7 @@ export default function Projects() {
         open={Boolean(selectedProject)}
         onClose={() => setSelectedProjectId(null)}
         project={selectedProject}
-        labels={dict.modal}
+        labels={modal}
       />
     </SectionShell>
   );

@@ -3,6 +3,7 @@
 import { SectionShell } from "./SectionShell";
 import { TestimonialsScroller } from "@/components/interactive/TestimonialsScroller";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import SectionHeader from "@/components/SectionHeader";
 
 type Testimonial = {
   quote: string;
@@ -22,6 +23,7 @@ type AriaLabels = {
 export default function Testimonials() {
   const { t } = useI18n();
 
+  const title = t<string>("testimonials.title", "");
   const items = t<Testimonial[]>("testimonials.items", []);
   const aria = t<AriaLabels>("testimonials.aria", {
     regionLabel: "Client testimonials",
@@ -38,15 +40,14 @@ export default function Testimonials() {
       container
       maxWidth="6xl"
       innerPx
-      // Clip x at the section level, allow vertical effects
       className="relative isolate overflow-x-clip"
     >
-      {/* Header */}
-      <div className="text-center mb-16">
-        <h2 className="text-balance text-5xl font-semibold text-ink md:text-6xl">
-          Hear from our trusted clients
-        </h2>
-      </div>
+      <SectionHeader
+        title={title}
+        className="mb-16"
+        titleClassName="text-ink"
+        introClassName="text-ink/85"
+      />
 
       {/* Full-bleed, round glow anchored to the viewport, behind everything */}
       <div

@@ -11,6 +11,7 @@
     "contact": "Contacto"
   },
   "hero": {
+    "id": "hero",
     "eyebrow": "CÉU Construction",
     "title": "logo.",
     "subtitle": "Imagine além do céu",
@@ -20,7 +21,9 @@
     "scrollDown": "Ir para Sobre"
   },
   "about": {
+    "id": "about",
     "title": "Pense além do céu.",
+    "intro": "",
     "subheading": "Nascidas das normas americanas e refinadas pelos artesanais portugueses, construimos com velocidade, força e controle total.",
     "body": [
       "A CÉU Construction executa todas as fases internamente, das fundações e estrutura aos acabamentos. Assim, os prazos ficam mais curtos, os custos mais claros e os padrões mantêm-se consistentes.",
@@ -40,9 +43,8 @@
   },
   "stats": {
     "id": "stats",
-    "pretitle": "Em números",
     "title": "Nascemos para revolucionar o setor da construção",
-    "intro": "Veja o impacto que temos gerado ao longo dos anos.",
+    "intro": "Veja o impacto que temos gerado ao longo dos anos. Na CÉU Construction somos comprometidos com a qualidade e a satisfação dos nossos clientes.",
     "items": [
       {
         "id": "yearsOperating",
@@ -90,6 +92,7 @@
     }
   },
   "sismo": {
+    "id": "sismo",
     "title": "Trabalhamos com o sistema Sismo",
     "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
     "highlightWord": "Sismo",
@@ -123,6 +126,7 @@
     }
   },
   "projects": {
+    "id": "projects",
     "title": "Projetos em destaque",
     "intro": "Amamos construir e amamos compartilhar. Aqui alguns dos nossos projetos favoritos.",
     "filters": {
@@ -3633,6 +3637,7 @@
     }
   },
   "services": {
+    "id": "services",
     "title": "Nossos serviços",
     "intro": "Uma equipa de ponta a ponta. Executamos cada etapa para manter a qualidade alta e os prazos controlados.",
     "items": [
@@ -3739,7 +3744,9 @@
     "cta": "Discutir o seu projeto"
   },
   "faq": {
+    "id": "faq",
     "title": "Perguntas frequentes",
+    "intro": "Temos respostas para todas as suas perguntas.",
     "items": [
       {
         "q": "Trabalham apenas com Sismo?",
@@ -3776,8 +3783,9 @@
     ]
   },
   "contact": {
+    "id": "contact",
     "title": "Contacte-nos hoje",
-    "subtitle": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
+    "intro": "Gostaríamos de saber mais sobre o seu projeto e como podemos tornar a sua visão realidade.",
     "backgroundAlt": "Fotografia subtil de oficina por trás do cartão de contacto",
     "what": {
       "title": "O que esperar",
@@ -3842,6 +3850,7 @@
     }
   },
   "footer": {
+    "id": "footer",
     "company": {
       "legalName": "CÉU Construction",
       "nif": "NIF 517367777",
@@ -3959,6 +3968,9 @@
     }
   },
   "testimonials": {
+    "id": "testimonials",
+    "title": "Ouça de nossos clientes confiados",
+    "intro": "Não tome apenas nossas palavras.",
     "items": [
       {
         "quote": "They are very professional and made everything to exceed my expectations. The communication was clear and the team was very responsive.",

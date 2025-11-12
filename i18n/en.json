@@ -11,6 +11,7 @@
     "contact": "Contact"
   },
   "hero": {
+    "id": "hero",
     "eyebrow": "CÉU Construction",
     "title": "logo.",
     "subtitle": "Think beyond the sky",
@@ -20,7 +21,9 @@
     "scrollDown": "Scroll to About"
   },
   "about": {
+    "id": "about",
     "title": "Think beyond the sky",
+    "intro": "",
     "subheading": "Born from North American standards and refined by Portuguese artisans, we build with speed, strength, and complete control.",
     "body": [
       "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
@@ -40,9 +43,8 @@
   },
   "stats": {
     "id": "stats",
-    "pretitle": "By the numbers",
     "title": "We came to revolutionize the construction sector",
-    "intro": "See how we've made an impact over the years.",
+    "intro": "See how we've made an impact over the years. Here at CÉU Construction, we're committed to excellence and customer satisfaction.",
     "items": [
       {
         "id": "yearsOperating",
@@ -90,6 +92,7 @@
     }
   },
   "sismo": {
+    "id": "sismo",
     "title": "We work with Sismo",
     "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
     "highlightWord": "Sismo",
@@ -123,6 +126,7 @@
     }
   },
   "projects": {
+    "id": "projects",
     "title": "Featured projects",
     "intro": "We love to build and we love to share. Here are some of our favorite projects.",
     "filters": {
@@ -3633,6 +3637,7 @@
     }
   },
   "services": {
+    "id": "services",
     "title": "Our services",
     "intro": "One team, end to end. We self-perform each stage to keep quality high and schedules tight.",
     "items": [
@@ -3739,7 +3744,9 @@
     "cta": "Discuss your scope"
   },
   "faq": {
+    "id": "faq",
     "title": "Frequently asked questions",
+    "intro": "We have answers to all your questions.",
     "items": [
       {
         "q": "Do you work only with Sismo?",
@@ -3776,8 +3783,9 @@
     ]
   },
   "contact": {
+    "id": "contact",
     "title": "Contact us today",
-    "subtitle": "We would love to hear more about your project and how we can turn your vision into a reality.",
+    "intro": "We would love to hear more about your project and how we can turn your vision into a reality.",
     "backgroundAlt": "Subtle workshop photograph behind the contact card",
     "what": {
       "title": "What to expect",
@@ -3842,6 +3850,7 @@
     }
   },
   "footer": {
+    "id": "footer",
     "company": {
       "legalName": "CÉU Construction",
       "nif": "NIF 517367777",
@@ -3959,6 +3968,9 @@
     }
   },
   "testimonials": {
+    "id": "testimonials",
+    "title": "Hear from our trusted clients",
+    "intro": "Don't just take our word for it.",
     "items": [
       {
         "quote": "They are very professional and made everything to exceed my expectations. The communication was clear and the team was very responsive.",
