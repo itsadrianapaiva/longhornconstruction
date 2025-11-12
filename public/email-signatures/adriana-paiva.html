@@ -1,35 +1,35 @@
-<!-- CÉU Email Signature — Adriana Paiva v2.3 (iOS Mail fixed) -->
+<!-- CÉU Email Signature — Adriana Paiva v3.3 (hybrid: iOS full-width, Gmail/Outlook stable) -->
 <table role="presentation" cellpadding="0" cellspacing="0" border="0"
-       width="100%"
-       style="width:100%; min-width:100%;
-              font-family:Arial, sans-serif; color:#1e2129; background:#ffffff;
-              -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+       style="font-family:Arial, sans-serif; color:#1e2129; background:#ffffff; line-height:1.35; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
   <tr>
-    <td bgcolor="#ffffff" style="padding:0; background:#ffffff;">
-      <!-- Key: table-layout:fixed stops iOS Mail from shrink-to-fit -->
+    <td style="padding:0; background:#ffffff;">
+      <!-- Inner layout: no explicit width here to avoid iOS shrink-to-fit.
+           Two columns + thin divider; fixed-height logo anchors intrinsic width on iPhone. -->
       <table role="presentation" cellpadding="0" cellspacing="0" border="0"
-             width="100%"
-             style="width:100%; border-collapse:collapse; background:#ffffff; table-layout:fixed;">
+             style="border-collapse:collapse; background:#ffffff;">
         <tr>
-          <!-- Fixed logo column: 120px, image matches exactly 120px -->
-          <td width="120" valign="middle" align="left"
-              style="width:120px; padding:0 14px 0 0; background:#ffffff;">
+          <!-- Logo column: fixed HEIGHT to anchor iOS sizing; width left to auto for natural fill -->
+          <td valign="middle" style="padding:0 16px 0 0;">
             <img src="https://ceuconstruction.com/email-signatures/logo-art.png"
-                 alt="CÉU Construction" width="120"
-                 style="display:block; width:120px; height:auto; border:0; outline:0; text-decoration:none;">
+                 alt="CÉU Construction"
+                 height="120"
+                 style="display:block; height:120px; width:auto; border:0; outline:0; text-decoration:none;">
           </td>
 
-          <!-- Divider: full-height blue strip -->
-          <td width="3" valign="top"
-              style="width:3px; background-color:#1a539e; font-size:0; line-height:0;">&nbsp;</td>
+          <!-- Divider column: blue strip with intrinsic width -->
+          <td valign="top" style="width:4px; background-color:#1a539e; font-size:0; line-height:0;">
+            <span style="display:block; width:4px; height:100%;">&nbsp;</span>
+          </td>
 
-          <!-- Fluid content column claims the rest of the row -->
-          <td width="100%" valign="middle" align="left"
-              style="width:100%; padding:0 0 0 14px; background:#ffffff;">
+          <!-- Content column: clean alignment, white background, icon-only WhatsApp -->
+          <td valign="middle" style="padding:0 0 0 16px; background:#ffffff;">
+            <!-- Name -->
             <p style="margin:0; font-size:16px; font-weight:bold; color:#1a539e; line-height:1.3;">Adriana Paiva</p>
-            <p style="margin:2px 0 0 0; font-size:13px; line-height:1.3;">Software Engineer</p>
 
-            <!-- Phone + WhatsApp (icon-only to avoid wrapping) -->
+            <!-- Title -->
+            <p style="margin:2px 0 0 0; font-size:13px; line-height:1.35;">Software Engineer</p>
+
+            <!-- Phone + WhatsApp (icon only) -->
             <p style="margin:10px 0 0 0; font-size:13px; line-height:1.45;">
               <img src="https://ceuconstruction.com/email-signatures/icons/phone.png" alt="" width="16" height="16"
                    style="display:inline-block; vertical-align:middle; margin-right:6px;">
