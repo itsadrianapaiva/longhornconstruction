@@ -1,8 +1,8 @@
-<!-- CÉU Construction — Email Signatures Preview v3.2.2 -->
+<!-- CÉU Construction — Email Signatures Preview v3.2.3 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>CÉU Signatures Preview</title>
     <style>
       body {
@@ -20,33 +20,31 @@
       }
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+        gap: 32px;
       }
       .card {
-        background: #ffffff;
+        background: #fff;
         border: 1px solid #ccd2da;
         border-radius: 6px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        padding: 16px;
+      }
+      .frameWrap {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
-        height: 220px; /* tighter and consistent height */
       }
       iframe {
-        border: none;
-        width: 100%;
-        height: 100%;
+        border: 0;
         display: block;
-        transform: scale(1);
       }
       h3 {
         font-size: 15px;
         color: #1a539e;
         margin: 0 0 10px 4px;
       }
-      p.note {
+      .note {
         font-size: 13px;
         color: #6b7280;
         margin-top: 24px;
@@ -57,42 +55,75 @@
     <h1>CÉU Construction — Email Signatures Preview</h1>
 
     <div class="grid">
-      <div>
+      <div class="card">
         <h3>Justin Atta Rastegar</h3>
-        <div class="card">
-          <iframe src="justin-atta-rastegar.html" scrolling="no"></iframe>
+        <div class="frameWrap">
+          <iframe src="justin-atta-rastegar.html"></iframe>
         </div>
       </div>
-      <div>
+      <div class="card">
         <h3>Paula Filipe</h3>
-        <div class="card">
-          <iframe src="paula-filipe.html" scrolling="no"></iframe>
-        </div>
+        <div class="frameWrap"><iframe src="paula-filipe.html"></iframe></div>
       </div>
-      <div>
+      <div class="card">
         <h3>Andreza Clarine</h3>
-        <div class="card">
-          <iframe src="andreza-clarine.html" scrolling="no"></iframe>
+        <div class="frameWrap">
+          <iframe src="andreza-clarine.html"></iframe>
         </div>
       </div>
-      <div>
+      <div class="card">
         <h3>Gustavo Paiva</h3>
-        <div class="card">
-          <iframe src="gustavo-paiva.html" scrolling="no"></iframe>
-        </div>
+        <div class="frameWrap"><iframe src="gustavo-paiva.html"></iframe></div>
       </div>
-      <div>
+      <div class="card">
         <h3>Adriana Paiva</h3>
-        <div class="card">
-          <iframe src="adriana-paiva.html" scrolling="no"></iframe>
-        </div>
+        <div class="frameWrap"><iframe src="adriana-paiva.html"></iframe></div>
       </div>
     </div>
 
     <p class="note">
-      Each signature is centered and scaled 1:1 for accurate viewing. To test in Gmail or Outlook, open any HTML directly (e.g. 
-      <code>https://ceuconstruction.com/email-signatures/paula-filipe.html</code>), 
-      select all, copy, and paste into your signature editor.
+      The preview auto-sizes to the exact table height inside each iframe. Gmail
+      and Outlook will not show the padding seen earlier.
     </p>
+
+    <script>
+      function sizeIframe(iframe) {
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!doc) return;
+          // Remove the default 8px body margin inside the iframe
+          if (doc.body) {
+            doc.body.style.margin = "0";
+            doc.body.style.padding = "0";
+          }
+          // Measure the signature table
+          const table = doc.body ? doc.body.querySelector("table") : null;
+          const h = Math.ceil(
+            (table
+              ? table.getBoundingClientRect().height
+              : doc.body.scrollHeight) + 1
+          );
+          const w = Math.ceil(
+            (table
+              ? table.getBoundingClientRect().width
+              : doc.body.scrollWidth) + 1
+          );
+          iframe.style.height = h + "px";
+          iframe.style.width = w + "px";
+        } catch (_) {
+          // If cross-origin ever happens, silently ignore
+        }
+      }
+      function init() {
+        const iframes = document.querySelectorAll("iframe");
+        iframes.forEach((f) => {
+          f.addEventListener("load", () => sizeIframe(f));
+          // In case the iframe was cached and already loaded
+          if (f.contentDocument && f.contentDocument.readyState === "complete")
+            sizeIframe(f);
+        });
+      }
+      window.addEventListener("DOMContentLoaded", init);
+    </script>
   </body>
 </html>
