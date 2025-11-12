@@ -1,9 +1,9 @@
-<!-- CÉU Construction — Email Signatures Preview v3.2.1 -->
+<!-- CÉU Construction — Email Signatures Preview v3.2.2 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>CÉU Signatures Preview v3.2.1</title>
+    <title>CÉU Signatures Preview</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -23,13 +23,28 @@
         grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
         gap: 40px;
       }
-      iframe {
-        background: white;
-        width: 100%;
-        height: 240px;
+      .card {
+        background: #ffffff;
         border: 1px solid #ccd2da;
         border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: 220px; /* tighter and consistent height */
+      }
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+        display: block;
+        transform: scale(1);
+      }
+      h3 {
+        font-size: 15px;
+        color: #1a539e;
+        margin: 0 0 10px 4px;
       }
       p.note {
         font-size: 13px;
@@ -39,35 +54,45 @@
     </style>
   </head>
   <body>
-    <h1>CÉU Construction — Email Signatures Preview (v3.2.1)</h1>
+    <h1>CÉU Construction — Email Signatures Preview</h1>
 
     <div class="grid">
       <div>
         <h3>Justin Atta Rastegar</h3>
-        <iframe src="justin-atta-rastegar.html"></iframe>
+        <div class="card">
+          <iframe src="justin-atta-rastegar.html" scrolling="no"></iframe>
+        </div>
       </div>
       <div>
         <h3>Paula Filipe</h3>
-        <iframe src="paula-filipe.html"></iframe>
+        <div class="card">
+          <iframe src="paula-filipe.html" scrolling="no"></iframe>
+        </div>
       </div>
       <div>
         <h3>Andreza Clarine</h3>
-        <iframe src="andreza-clarine.html"></iframe>
+        <div class="card">
+          <iframe src="andreza-clarine.html" scrolling="no"></iframe>
+        </div>
       </div>
       <div>
         <h3>Gustavo Paiva</h3>
-        <iframe src="gustavo-paiva.html"></iframe>
+        <div class="card">
+          <iframe src="gustavo-paiva.html" scrolling="no"></iframe>
+        </div>
       </div>
       <div>
         <h3>Adriana Paiva</h3>
-        <iframe src="adriana-paiva.html"></iframe>
+        <div class="card">
+          <iframe src="adriana-paiva.html" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
 
     <p class="note">
-      To test in Gmail or Outlook, open each signature HTML directly from:
-      <code>https://ceuconstruction.com/email-signatures/[name].html</code>,
-      select all (Ctrl + A), copy (Ctrl + C), and paste into your signature settings.
+      Each signature is centered and scaled 1:1 for accurate viewing. To test in Gmail or Outlook, open any HTML directly (e.g. 
+      <code>https://ceuconstruction.com/email-signatures/paula-filipe.html</code>), 
+      select all, copy, and paste into your signature editor.
     </p>
   </body>
 </html>
