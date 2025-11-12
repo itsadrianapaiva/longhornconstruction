@@ -1,42 +1,65 @@
-<!-- CÉU Email Signature — Fluid Horizontal v3.4 -->
-<table role="presentation" cellpadding="0" cellspacing="0" style="width:100%; font-family: Arial, sans-serif; color:#1e2129;">
+<!-- CÉU Email Signature — Fluid Horizontal FINAL (template) -->
+<!-- Notes:
+- 100% width outer table ensures full-width on mobile without zooming.
+- Inner table uses percentage cells; no fixed total width that would trigger iOS Mail shrink-to-fit.
+- Logo scales with its cell (width:100%; height:auto) so it fills available space but never overflows.
+- Inline -webkit-text-size-adjust and -ms-text-size-adjust keep font sizes consistent across clients.
+- No media queries, no stacking, pure table layout.
+- Keep icons exactly 16x16.
+- Replace bracketed tokens with real data.
+-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"
+       width="100%"
+       style="width:100%; min-width:100%;
+              font-family:Arial, sans-serif; color:#1e2129;
+              -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
   <tr>
     <td style="padding:0;">
-      <!-- Outer centering wrapper so it doesn't get too wide on desktop -->
-      <table role="presentation" cellpadding="0" cellspacing="0" align="left" style="width:100%; max-width:560px;">
+      <!-- Main row: fluid, horizontal only -->
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%; border-collapse:collapse;">
         <tr>
-          <!-- Logo left with vertical divider that scales in height automatically -->
-          <td valign="top" style="width:42%; padding:0 16px 0 0; border-right:3px solid #1a539e;">
+          <!-- Left: Logo (fluid) -->
+          <td valign="top"
+              style="padding:0 16px 0 0; border-right:3px solid #1a539e; width:40%;">
             <img src="https://ceuconstruction.com/email-signatures/logo-art.png"
                  alt="CÉU Construction"
                  style="display:block; width:100%; height:auto; border:0; outline:0; text-decoration:none;">
           </td>
 
-          <!-- Content right; fills remaining width; aligns left; lines wrap naturally on small screens -->
-          <td valign="middle" style="width:58%; padding:0 0 0 16px;">
-            <p style="margin:0; font-size:18px; font-weight:bold; color:#1a539e;">[FULL_NAME]</p>
-            <p style="margin:2px 0 0 0; font-size:13px;">[JOB_TITLE]</p>
+          <!-- Right: Content (fluid) -->
+          <td valign="middle" style="padding:0 0 0 16px; width:60%;">
+            <!-- Name -->
+            <p style="margin:0; font-size:16px; font-weight:bold; color:#1a539e; line-height:1.3;">[FULL_NAME]</p>
+            <!-- Title -->
+            <p style="margin:2px 0 0 0; font-size:13px; line-height:1.3;">[JOB_TITLE]</p>
 
-            <p style="margin:10px 0 0 0; font-size:13px;">
-              <img src="https://ceuconstruction.com/email-signatures/icons/phone.png" alt="" width="16" height="16" style="display:inline-block; vertical-align:middle; margin-right:6px;">
+            <!-- Phone + WhatsApp -->
+            <p style="margin:10px 0 0 0; font-size:13px; line-height:1.4;">
+              <img src="https://ceuconstruction.com/email-signatures/icons/phone.png" alt="" width="16" height="16"
+                   style="display:inline-block; vertical-align:middle; margin-right:6px;">
               <a href="tel:[PHONE_E164]" style="color:#1e2129; text-decoration:none; vertical-align:middle;">[PHONE_DISPLAY]</a>
-              <span style="color:#8a8f98;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-              <img src="https://ceuconstruction.com/email-signatures/icons/whatsapp.png" alt="" width="16" height="16" style="display:inline-block; vertical-align:middle; margin-right:6px;">
+              <span style="color:#8a8f98;"> &nbsp;|&nbsp; </span>
+              <img src="https://ceuconstruction.com/email-signatures/icons/whatsapp.png" alt="" width="16" height="16"
+                   style="display:inline-block; vertical-align:middle; margin-right:6px;">
               <a href="https://wa.me/[WHATSAPP_E164_DIGITS]" style="color:#1e2129; text-decoration:none; vertical-align:middle;">WhatsApp</a>
             </p>
 
-            <p style="margin:6px 0 0 0; font-size:13px;">
-              <img src="https://ceuconstruction.com/email-signatures/icons/mail.png" alt="" width="16" height="16" style="display:inline-block; vertical-align:middle; margin-right:6px;">
+            <!-- Email -->
+            <p style="margin:6px 0 0 0; font-size:13px; line-height:1.4; word-break:break-word;">
+              <img src="https://ceuconstruction.com/email-signatures/icons/mail.png" alt="" width="16" height="16"
+                   style="display:inline-block; vertical-align:middle; margin-right:6px;">
               <a href="mailto:[EMAIL]" style="color:#1e2129; text-decoration:none; vertical-align:middle;">[EMAIL]</a>
             </p>
 
-            <p style="margin:6px 0 0 0; font-size:13px;">
-              <img src="https://ceuconstruction.com/email-signatures/icons/globe.png" alt="" width="16" height="16" style="display:inline-block; vertical-align:middle; margin-right:6px;">
+            <!-- Website -->
+            <p style="margin:6px 0 0 0; font-size:13px; line-height:1.4;">
+              <img src="https://ceuconstruction.com/email-signatures/icons/globe.png" alt="" width="16" height="16"
+                   style="display:inline-block; vertical-align:middle; margin-right:6px;">
               <a href="https://ceuconstruction.com" style="color:#1a539e; text-decoration:none; vertical-align:middle;">ceuconstruction.com</a>
             </p>
 
-            <!-- Motto at 14px as requested -->
-            <p style="margin:10px 0 0 0; font-size:14px; color:#1a539e; font-weight:bold; font-style:italic;">
+            <!-- Motto: 14px, bold, italic, brand blue -->
+            <p style="margin:10px 0 0 0; font-size:14px; color:#1a539e; font-weight:bold; font-style:italic; line-height:1.3;">
               Think beyond the sky...
             </p>
           </td>
