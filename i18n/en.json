@@ -24,16 +24,16 @@
     "id": "about",
     "title": "Think beyond the sky",
     "intro": "",
-    "subheading": "Born from North American standards and refined by Portuguese artisans, we build with speed, strength, and complete control.",
+    "subheading": "Born from North American standards and refined by Portuguese craftsmanship, we build with control at every stage.",
     "body": [
-      "CÉU Construction executes every stage in-house from groundworks and structure to finishes. Schedules are tighter, costs are clearer, and standards never slip.",
-      "Owning our equipment and coordinating a large, skilled team means you don’t wait on subcontractors. We’re accountable end to end, which is why clients across the Algarve keep coming back."
+      "CÉU Construction handles architecture, planning and full execution with an in house team covering groundworks, structure and finishes. Timelines stay predictable, costs stay transparent and quality remains consistent.",
+      "With owned machinery and coordinated crews, we remove delays caused by subcontractors. This end to end control is why homeowners and investors across the Algarve and Vicentine Coast trust us to deliver reliable, high quality work."
     ],
     "bullets": [
-      "Full in-house team from groundworks to finishes",
-      "Owned machinery for speed and control",
-      "Proven quality across the Algarve",
-      "Sismo technology for faster, robust builds"
+      "Full in house workflow from conception to completion",
+      "Owned machinery for speed, efficiency and site control",
+      "Consistent quality across the Algarve and Vicentine Coast",
+      "Expertise in traditional masonry, Light Steel Frame and ICF systems"
     ],
     "cta": {
       "label": "Explore our work",
@@ -4191,7 +4191,7 @@
       },
       {
         "key": "sismoShell",
-        "title": "Sismo structural shell",
+        "title": "ICF structural shell",
         "desc": "Panel supply and installation, concrete pours, and structural integration for fast, robust envelopes.",
         "image": {
           "src": "/media/services/sismo.webp",
@@ -4283,7 +4283,7 @@
         "a": "We primarily serve the Algarve. For larger projects we consider work across Portugal."
       },
       {
-        "q": "How fast is Sismo compared to traditional builds?",
+        "q": "How fast is ICF compared to traditional builds?",
         "a": "Sismo panels install rapidly and reduce coordination steps. Actual gains depend on design and site logistics, but schedules are typically shorter than traditional masonry."
       },
       {
@@ -4391,7 +4391,8 @@
       "services": {
         "title": "Services",
         "items": [
-          "Sismo construction",
+          "ICF construction",
+          "Light Steel Frame",
           "Structural concrete",
           "Masonry & finishes",
           "Foundations & slabs",
