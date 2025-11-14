@@ -2,11 +2,11 @@
   "nav": {
     "home": "Início",
     "about": "Sobre",
-    "sismo": "Método Sismo",
-    "projects": "Projetos",
     "stats": "Números",
-    "testimonials": "Testemunhos",
     "services": "Serviços",
+    "projects": "Projetos",
+    "sismo": "Método Sismo",
+    "testimonials": "Testemunhos",
     "faq": "Perguntas",
     "contact": "Contacto"
   },
@@ -145,6 +145,442 @@
     },
     "items": [
       {
+        "id": "barranco-da-vaca",
+        "title": "Barranco da Vaca",
+        "category": "residential",
+        "technology": [
+          "Traditional"
+        ],
+        "thumbnail": {
+          "src": "/media/projects/barranco-da-vaca/3-sm.jpg",
+          "alt": "barranco-da-vaca — 1",
+          "width": 1600,
+          "height": 1000
+        },
+        "gallery": [
+          {
+            "alt": "barranco-da-vaca — 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/9-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 10",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/10-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/10-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 11",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/11-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 12",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/12-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/12-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 13",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/13-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/13-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 14",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/14-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/14-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 15",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/15-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/15-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 16",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/16-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/16-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 17",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/17-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/17-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 18",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/18-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/18-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 19",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/19-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/19-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 20",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/20-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/20-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 21",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/21-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/21-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 22",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/22-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/22-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 23",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/23-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/23-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 24",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/24-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/24-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 25",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/25-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/25-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 26",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/26-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 27",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/27-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/27-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "barranco-da-vaca — 28",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/barranco-da-vaca/28-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/barranco-da-vaca/28-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "espartal-i",
         "title": "Espartal I",
         "category": "residential",
@@ -152,7 +588,7 @@
           "Sismo"
         ],
         "thumbnail": {
-          "src": "/media/projects/espartal-i/1-sm.jpg",
+          "src": "/media/projects/espartal-i/4-sm.jpg",
           "alt": "espartal-i — 1",
           "width": 1600,
           "height": 1000
@@ -262,6 +698,81 @@
                 "format": "webp"
               }
             ]
+          },
+          {
+            "alt": "espartal-i — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/9-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 10",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/10-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/10-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 11",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/11-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 12",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/12-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/12-lg.webp",
+                "format": "webp"
+              }
+            ]
           }
         ]
       },
@@ -273,7 +784,7 @@
           "Traditional"
         ],
         "thumbnail": {
-          "src": "/media/projects/loule/1-sm.jpg",
+          "src": "/media/projects/loule/9-sm.jpg",
           "alt": "loule — 1",
           "width": 1600,
           "height": 1000
@@ -398,6 +909,21 @@
                 "format": "webp"
               }
             ]
+          },
+          {
+            "alt": "loule — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/9-lg.webp",
+                "format": "webp"
+              }
+            ]
           }
         ]
       },
@@ -406,10 +932,10 @@
         "title": "Casa no Alto",
         "category": "residential",
         "technology": [
-          "Sismo"
+          "Tradicional"
         ],
         "thumbnail": {
-          "src": "/media/projects/casa-no-alto/1-sm.jpg",
+          "src": "/media/projects/casa-no-alto/8-sm.jpg",
           "alt": "casa-no-alto — 1",
           "width": 1600,
           "height": 1000
