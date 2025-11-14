@@ -16,8 +16,8 @@ export default function Page() {
       <About />
       <Stats />
       <Services />
-      <Sismo />
       <Projects />
+      <Sismo />
       <Testimonials />
       <Contact />
     </>

@@ -2,11 +2,11 @@
   "nav": {
     "home": "Início",
     "about": "Sobre",
-    "sismo": "Método Sismo",
-    "projects": "Projetos",
     "stats": "Números",
-    "testimonials": "Testemunhos",
     "services": "Serviços",
+    "projects": "Projetos",
+    "sismo": "Método Sismo",
+    "testimonials": "Testemunhos",
     "faq": "Perguntas",
     "contact": "Contacto"
   },

@@ -2,11 +2,11 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "sismo": "Sismo Method",
-    "projects": "Projects",
     "stats": "Stats",
-    "testimonials": "Testimonials",
     "services": "Services",
+    "projects": "Projects",
+    "sismo": "Sismo Method",
+    "testimonials": "Testimonials",
     "faq": "FAQ",
     "contact": "Contact"
   },
