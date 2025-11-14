@@ -263,7 +263,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 8",
             "width": 2560,
             "height": 1600,
@@ -277,8 +277,8 @@
                 "format": "webp"
               }
             ]
-          }
-          , {
+          },
+          {
             "alt": "barranco-da-vaca — 9",
             "width": 2560,
             "height": 1600,
@@ -293,7 +293,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 10",
             "width": 2560,
             "height": 1600,
@@ -308,7 +308,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 11",
             "width": 2560,
             "height": 1600,
@@ -323,7 +323,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 12",
             "width": 2560,
             "height": 1600,
@@ -338,7 +338,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 13",
             "width": 2560,
             "height": 1600,
@@ -353,7 +353,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 14",
             "width": 2560,
             "height": 1600,
@@ -368,7 +368,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 15",
             "width": 2560,
             "height": 1600,
@@ -488,7 +488,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 23",
             "width": 2560,
             "height": 1600,
@@ -502,8 +502,8 @@
                 "format": "webp"
               }
             ]
-          }
-          , {
+          },
+          {
             "alt": "barranco-da-vaca — 24",
             "width": 2560,
             "height": 1600,
@@ -518,7 +518,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 25",
             "width": 2560,
             "height": 1600,
@@ -533,7 +533,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 26",
             "width": 2560,
             "height": 1600,
@@ -548,7 +548,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 27",
             "width": 2560,
             "height": 1600,
@@ -563,7 +563,7 @@
               }
             ]
           },
-           {
+          {
             "alt": "barranco-da-vaca — 28",
             "width": 2560,
             "height": 1600,
@@ -698,6 +698,81 @@
                 "format": "webp"
               }
             ]
+          },
+          {
+            "alt": "espartal-i — 8",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/8-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/9-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 10",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/10-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/10-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 11",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/11-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/11-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "espartal-i — 12",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/espartal-i/12-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/espartal-i/12-lg.webp",
+                "format": "webp"
+              }
+            ]
           }
         ]
       },
@@ -709,7 +784,7 @@
           "Traditional"
         ],
         "thumbnail": {
-          "src": "/media/projects/loule/1-sm.jpg",
+          "src": "/media/projects/loule/9-sm.jpg",
           "alt": "loule — 1",
           "width": 1600,
           "height": 1000
@@ -831,6 +906,21 @@
               },
               {
                 "src": "/media/projects/loule/8-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "loule — 9",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/loule/9-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/loule/9-lg.webp",
                 "format": "webp"
               }
             ]

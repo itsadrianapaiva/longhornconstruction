@@ -1,6 +1,6 @@
 # ======================================================================
 # optimize-images.ps1
-# Creates -sm, -lg, and WebP versions of all JPGs in /public/media/projects
+# Creates -sm, -lg, and WebP versions of all JPG/JPEGs in /public/media/projects
 # Requires ffmpeg installed and reachable at $ffmpegPath
 #
 # Usage:
@@ -49,12 +49,17 @@ $folders | ForEach-Object {
     $projectName = $_.Name
     Write-Host "Processing folder: $projectName"
 
-    Get-ChildItem -Path $folder -Filter "*.jpg" |
-        Where-Object { $_.Name -notmatch "-(sm|lg)\.jpg$" } |
+    # Include both .jpg and .jpeg, skip already optimized -sm/-lg variants
+    Get-ChildItem -Path $folder -File |
+        Where-Object {
+            $_.Extension -match "^\.jpe?g$" -and
+            $_.Name -notmatch "-(sm|lg)\.jpe?g$"
+        } |
         ForEach-Object {
             $input = $_.FullName
             $basename = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
 
+            # Outputs are always .jpg and .webp, so jpeg inputs are normalized
             $smJpg = Join-Path $folder ($basename + "-sm.jpg")
             $lgJpg = Join-Path $folder ($basename + "-lg.jpg")
             $smWebp = Join-Path $folder ($basename + "-sm.webp")
