@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import * as React from "react";
 import { SectionShell } from "@/components/sections/SectionShell";
 import { useI18n } from "@/lib/i18n/I18nProvider";
@@ -27,6 +28,14 @@ type ProjectItem = {
   gallery?: GalleryItem[];
 };
 
+type RoughWorkCard = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  cta: string;
+  href: string;
+};
+
 type ProjectsDict = {
   title: string;
   intro: string;
@@ -34,6 +43,7 @@ type ProjectsDict = {
   empty: string;
   modal: { prev: string; next: string; close: string };
   items: ProjectItem[];
+  roughWorkCard?: RoughWorkCard;
 };
 
 export default function Projects() {
@@ -45,10 +55,18 @@ export default function Projects() {
     empty: "",
     modal: { prev: "", next: "", close: "" },
     items: [],
+    roughWorkCard: {
+      eyebrow: "",
+      title: "",
+      body: "",
+      cta: "",
+      href: "",
+    },
   });
 
   // Extract top-level fields for consistency
-  const { title, intro, viewGallery, empty, modal, items } = dict;
+  const { title, intro, viewGallery, empty, modal, items, roughWorkCard } = dict;
+  const hasRoughWorkCard = Boolean(roughWorkCard && roughWorkCard.href);
 
   const SHOW_ONLY_WITH_MEDIA = true;
 
@@ -232,6 +250,80 @@ export default function Projects() {
               </article>
             );
           })}
+
+          {/* Work in progress card */}
+          {hasRoughWorkCard && roughWorkCard && (
+            <article
+              role="listitem"
+              className="
+                group relative overflow-hidden rounded-2xl
+                border border-[color:var(--card-border,rgba(255,255,255,0.22))]
+                bg-[color:var(--card-bg,rgba(255,255,255,0.06))]
+                dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]
+                shadow-[0_8px_30px_rgba(0,0,0,0.08)]
+                transition-shadow duration-300
+                will-change-transform transform-gpu
+                hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
+                motion-reduce:transform-none motion-reduce:transition-none
+                focus-within:ring-2 focus-within:ring-[color:var(--brand)] focus-within:ring-offset-0
+              "
+            >
+              <Link
+                href={roughWorkCard.href}
+                aria-label={roughWorkCard.title}
+                className="block w-full focus:outline-none"
+              >
+                <div className="relative aspect-[4/3] w-full">
+                  {/* Background image */}
+                  <OptimizedImage
+                    src="/media/projects/in-progress/1-sm.jpg"
+                    alt=""
+                    width={800}
+                    height={600}
+                    priority={false}
+                    className="h-full w-full object-cover opacity-30 grayscale"
+                  />
+
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/40" />
+
+                  {/* Centered text content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <span className="mb-2 text-xs font-medium uppercase tracking-wider text-white/70">
+                      {roughWorkCard.eyebrow}
+                    </span>
+                    <h3 className="mb-3 text-lg font-semibold text-white sm:text-xl">
+                      {roughWorkCard.title}
+                    </h3>
+                    <p className="mb-4 max-w-xs text-sm leading-relaxed text-white/80">
+                      {roughWorkCard.body}
+                    </p>
+                    <span
+                      className="
+                        inline-flex items-center gap-2
+                        rounded-full
+                        border border-[color:var(--brand-border)]
+                        bg-black/40
+                        px-4 py-1.5
+                        text-sm font-medium text-white
+                      "
+                    >
+                      <span>{roughWorkCard.cta}</span>
+                      <span
+                        className="
+                          inline-block transition-transform duration-200
+                          group-hover:translate-x-1
+                          motion-reduce:transform-none motion-reduce:transition-none
+                        "
+                      >
+                        →
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          )}
         </div>
       )}
 
