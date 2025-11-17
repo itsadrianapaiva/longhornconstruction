@@ -110,7 +110,7 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
         </div>
 
         {/* Desktop: logo + nav + CTA */}
-        <div className="hidden md:flex items-center justify-between w-full">
+        <div className="hidden md:flex items-center justify-between w-full pt-12">
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
               src="/media/logo-white.png"

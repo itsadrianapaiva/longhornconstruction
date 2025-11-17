@@ -47,7 +47,8 @@ type ProjectsDict = {
 };
 
 export default function Projects() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+
   const dict = t<ProjectsDict>("projects", {
     title: "",
     intro: "",
@@ -91,7 +92,20 @@ export default function Projects() {
     return visible;
   }, [items, SHOW_ONLY_WITH_MEDIA]);
 
-  const [selectedProjectId, setSelectedProjectId] = React.useState<string | null>(null);
+  // Locale aware href for the rough work card
+  const localizedRoughHref =
+    roughWorkCard && roughWorkCard.href
+      ? `/${locale}${
+          roughWorkCard.href.startsWith("/")
+            ? roughWorkCard.href
+            : `/${roughWorkCard.href}`
+        }`
+      : undefined;
+
+  const [selectedProjectId, setSelectedProjectId] = React.useState<string | null>(
+    null
+  );
+
   const selectedProject = selectedProjectId
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
@@ -170,7 +184,9 @@ export default function Projects() {
 
             if (!imgSrc && p.gallery && p.gallery.length > 0) {
               const firstGallery = p.gallery[0];
-              const jpgSrc = firstGallery.sources?.find((s) => s.format === "jpg")?.src;
+              const jpgSrc = firstGallery.sources?.find(
+                (s) => s.format === "jpg"
+              )?.src;
               imgSrc = jpgSrc || firstGallery.sources?.[0]?.src;
               imgAlt = firstGallery.alt || p.title;
               imgWidth = firstGallery.width || 1600;
@@ -200,7 +216,11 @@ export default function Projects() {
                   type="button"
                   onClick={() => hasGallery && setSelectedProjectId(p.id)}
                   data-project-id={p.id}
-                  aria-label={(viewGallery || "Open gallery") + " — " + p.title}
+                  aria-label={
+                    viewGallery && viewGallery.trim().length > 0
+                      ? `${viewGallery} ${p.title}`
+                      : p.title
+                  }
                   disabled={!hasGallery}
                   className="block w-full text-left focus:outline-none cursor-pointer disabled:cursor-default"
                 >
@@ -231,7 +251,9 @@ export default function Projects() {
                           shadow-[0_2px_6px_rgba(0,0,0,0.25)]
                         "
                       >
-                        <h3 className="text-sm font-medium text-white">{p.title}</h3>
+                        <h3 className="text-sm font-medium text-white">
+                          {p.title}
+                        </h3>
                         <span
                           className="
                             shrink-0 rounded-2xl
@@ -241,7 +263,7 @@ export default function Projects() {
                             text-white/80
                           "
                         >
-                          {viewGallery || "Open gallery"}
+                          {viewGallery}
                         </span>
                       </div>
                     </div>
@@ -269,7 +291,7 @@ export default function Projects() {
               "
             >
               <Link
-                href={roughWorkCard.href}
+                href={localizedRoughHref ?? "/"}
                 aria-label={roughWorkCard.title}
                 className="block w-full focus:outline-none"
               >

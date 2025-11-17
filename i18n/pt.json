@@ -163,7 +163,7 @@
           "Traditional"
         ],
         "thumbnail": {
-          "src": "/media/projects/barranco-da-vaca/3-sm.jpg",
+          "src": "/media/projects/barranco-da-vaca/3-lg.jpg",
           "alt": "barranco-da-vaca — 1",
           "width": 1600,
           "height": 1000
@@ -599,7 +599,7 @@
           "Sismo"
         ],
         "thumbnail": {
-          "src": "/media/projects/espartal-i/4-sm.jpg",
+          "src": "/media/projects/espartal-i/4-lg.jpg",
           "alt": "espartal-i — 1",
           "width": 1600,
           "height": 1000
@@ -795,7 +795,7 @@
           "Traditional"
         ],
         "thumbnail": {
-          "src": "/media/projects/loule/9-sm.jpg",
+          "src": "/media/projects/loule/9-lg.jpg",
           "alt": "loule — 1",
           "width": 1600,
           "height": 1000
@@ -946,7 +946,7 @@
           "Tradicional"
         ],
         "thumbnail": {
-          "src": "/media/projects/casa-no-alto/8-sm.jpg",
+          "src": "/media/projects/casa-no-alto/8-lg.jpg",
           "alt": "casa-no-alto — 1",
           "width": 1600,
           "height": 1000
@@ -1397,7 +1397,7 @@
           "Traditional"
         ],
         "thumbnail": {
-          "src": "/media/projects/casa-ta-top/1-sm.jpg",
+          "src": "/media/projects/casa-ta-top/1-lg.jpg",
           "alt": "casa-ta-top — 1",
           "width": 1600,
           "height": 1000
@@ -1696,16 +1696,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/1-sm.jpg",
-          "alt": "aljezur-i image 1-sm.jpg",
+          "src": "/media/projects/aljezur-i/1-lg.jpg",
+          "alt": "aljezur-i image 1-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/1-sm.webp",
-          "alt": "aljezur-i image 1-sm.webp",
+          "src": "/media/projects/aljezur-i/1-lg.webp",
+          "alt": "aljezur-i image 1-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1736,16 +1736,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/2-sm.jpg",
-          "alt": "aljezur-i image 2-sm.jpg",
+          "src": "/media/projects/aljezur-i/2-lg.jpg",
+          "alt": "aljezur-i image 2-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/2-sm.webp",
-          "alt": "aljezur-i image 2-sm.webp",
+          "src": "/media/projects/aljezur-i/2-lg.webp",
+          "alt": "aljezur-i image 2-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1776,16 +1776,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/3-sm.jpg",
-          "alt": "aljezur-i image 3-sm.jpg",
+          "src": "/media/projects/aljezur-i/3-lg.jpg",
+          "alt": "aljezur-i image 3-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/3-sm.webp",
-          "alt": "aljezur-i image 3-sm.webp",
+          "src": "/media/projects/aljezur-i/3-lg.webp",
+          "alt": "aljezur-i image 3-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1816,16 +1816,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/4-sm.jpg",
-          "alt": "aljezur-i image 4-sm.jpg",
+          "src": "/media/projects/aljezur-i/4-lg.jpg",
+          "alt": "aljezur-i image 4-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/4-sm.webp",
-          "alt": "aljezur-i image 4-sm.webp",
+          "src": "/media/projects/aljezur-i/4-lg.webp",
+          "alt": "aljezur-i image 4-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1856,16 +1856,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/5-sm.jpg",
-          "alt": "aljezur-i image 5-sm.jpg",
+          "src": "/media/projects/aljezur-i/5-lg.jpg",
+          "alt": "aljezur-i image 5-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/5-sm.webp",
-          "alt": "aljezur-i image 5-sm.webp",
+          "src": "/media/projects/aljezur-i/5-lg.webp",
+          "alt": "aljezur-i image 5-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1896,16 +1896,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/6-sm.jpg",
-          "alt": "aljezur-i image 6-sm.jpg",
+          "src": "/media/projects/aljezur-i/6-lg.jpg",
+          "alt": "aljezur-i image 6-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/6-sm.webp",
-          "alt": "aljezur-i image 6-sm.webp",
+          "src": "/media/projects/aljezur-i/6-lg.webp",
+          "alt": "aljezur-i image 6-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1936,16 +1936,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/7-sm.jpg",
-          "alt": "aljezur-i image 7-sm.jpg",
+          "src": "/media/projects/aljezur-i/7-lg.jpg",
+          "alt": "aljezur-i image 7-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/aljezur-i/7-sm.webp",
-          "alt": "aljezur-i image 7-sm.webp",
+          "src": "/media/projects/aljezur-i/7-lg.webp",
+          "alt": "aljezur-i image 7-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -1980,16 +1980,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/1-sm.jpg",
-          "alt": "casa-no-alto image 1-sm.jpg",
+          "src": "/media/projects/casa-no-alto/1-lg.jpg",
+          "alt": "casa-no-alto image 1-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/1-sm.webp",
-          "alt": "casa-no-alto image 1-sm.webp",
+          "src": "/media/projects/casa-no-alto/1-lg.webp",
+          "alt": "casa-no-alto image 1-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2020,16 +2020,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/2-sm.jpg",
-          "alt": "casa-no-alto image 2-sm.jpg",
+          "src": "/media/projects/casa-no-alto/2-lg.jpg",
+          "alt": "casa-no-alto image 2-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/2-sm.webp",
-          "alt": "casa-no-alto image 2-sm.webp",
+          "src": "/media/projects/casa-no-alto/2-lg.webp",
+          "alt": "casa-no-alto image 2-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2060,16 +2060,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/3-sm.jpg",
-          "alt": "casa-no-alto image 3-sm.jpg",
+          "src": "/media/projects/casa-no-alto/3-lg.jpg",
+          "alt": "casa-no-alto image 3-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/3-sm.webp",
-          "alt": "casa-no-alto image 3-sm.webp",
+          "src": "/media/projects/casa-no-alto/3-lg.webp",
+          "alt": "casa-no-alto image 3-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2100,16 +2100,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/4-sm.jpg",
-          "alt": "casa-no-alto image 4-sm.jpg",
+          "src": "/media/projects/casa-no-alto/4-lg.jpg",
+          "alt": "casa-no-alto image 4-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/4-sm.webp",
-          "alt": "casa-no-alto image 4-sm.webp",
+          "src": "/media/projects/casa-no-alto/4-lg.webp",
+          "alt": "casa-no-alto image 4-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2140,16 +2140,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/5-sm.jpg",
-          "alt": "casa-no-alto image 5-sm.jpg",
+          "src": "/media/projects/casa-no-alto/5-lg.jpg",
+          "alt": "casa-no-alto image 5-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/5-sm.webp",
-          "alt": "casa-no-alto image 5-sm.webp",
+          "src": "/media/projects/casa-no-alto/5-lg.webp",
+          "alt": "casa-no-alto image 5-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2180,16 +2180,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/6-sm.jpg",
-          "alt": "casa-no-alto image 6-sm.jpg",
+          "src": "/media/projects/casa-no-alto/6-lg.jpg",
+          "alt": "casa-no-alto image 6-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/6-sm.webp",
-          "alt": "casa-no-alto image 6-sm.webp",
+          "src": "/media/projects/casa-no-alto/6-lg.webp",
+          "alt": "casa-no-alto image 6-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2220,16 +2220,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/7-sm.jpg",
-          "alt": "casa-no-alto image 7-sm.jpg",
+          "src": "/media/projects/casa-no-alto/7-lg.jpg",
+          "alt": "casa-no-alto image 7-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/7-sm.webp",
-          "alt": "casa-no-alto image 7-sm.webp",
+          "src": "/media/projects/casa-no-alto/7-lg.webp",
+          "alt": "casa-no-alto image 7-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2260,16 +2260,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/8-sm.jpg",
-          "alt": "casa-no-alto image 8-sm.jpg",
+          "src": "/media/projects/casa-no-alto/8-lg.jpg",
+          "alt": "casa-no-alto image 8-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/8-sm.webp",
-          "alt": "casa-no-alto image 8-sm.webp",
+          "src": "/media/projects/casa-no-alto/8-lg.webp",
+          "alt": "casa-no-alto image 8-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2300,16 +2300,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/9-sm.jpg",
-          "alt": "casa-no-alto image 9-sm.jpg",
+          "src": "/media/projects/casa-no-alto/9-lg.jpg",
+          "alt": "casa-no-alto image 9-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/9-sm.webp",
-          "alt": "casa-no-alto image 9-sm.webp",
+          "src": "/media/projects/casa-no-alto/9-lg.webp",
+          "alt": "casa-no-alto image 9-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2340,16 +2340,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/10-sm.jpg",
-          "alt": "casa-no-alto image 10-sm.jpg",
+          "src": "/media/projects/casa-no-alto/10-lg.jpg",
+          "alt": "casa-no-alto image 10-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/10-sm.webp",
-          "alt": "casa-no-alto image 10-sm.webp",
+          "src": "/media/projects/casa-no-alto/10-lg.webp",
+          "alt": "casa-no-alto image 10-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2380,16 +2380,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/11-sm.jpg",
-          "alt": "casa-no-alto image 11-sm.jpg",
+          "src": "/media/projects/casa-no-alto/11-lg.jpg",
+          "alt": "casa-no-alto image 11-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/11-sm.webp",
-          "alt": "casa-no-alto image 11-sm.webp",
+          "src": "/media/projects/casa-no-alto/11-lg.webp",
+          "alt": "casa-no-alto image 11-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2420,16 +2420,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/12-sm.jpg",
-          "alt": "casa-no-alto image 12-sm.jpg",
+          "src": "/media/projects/casa-no-alto/12-lg.jpg",
+          "alt": "casa-no-alto image 12-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/12-sm.webp",
-          "alt": "casa-no-alto image 12-sm.webp",
+          "src": "/media/projects/casa-no-alto/12-lg.webp",
+          "alt": "casa-no-alto image 12-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2460,16 +2460,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/13-sm.jpg",
-          "alt": "casa-no-alto image 13-sm.jpg",
+          "src": "/media/projects/casa-no-alto/13-lg.jpg",
+          "alt": "casa-no-alto image 13-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/13-sm.webp",
-          "alt": "casa-no-alto image 13-sm.webp",
+          "src": "/media/projects/casa-no-alto/13-lg.webp",
+          "alt": "casa-no-alto image 13-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2500,16 +2500,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/14-sm.jpg",
-          "alt": "casa-no-alto image 14-sm.jpg",
+          "src": "/media/projects/casa-no-alto/14-lg.jpg",
+          "alt": "casa-no-alto image 14-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/14-sm.webp",
-          "alt": "casa-no-alto image 14-sm.webp",
+          "src": "/media/projects/casa-no-alto/14-lg.webp",
+          "alt": "casa-no-alto image 14-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2540,16 +2540,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/15-sm.jpg",
-          "alt": "casa-no-alto image 15-sm.jpg",
+          "src": "/media/projects/casa-no-alto/15-lg.jpg",
+          "alt": "casa-no-alto image 15-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/15-sm.webp",
-          "alt": "casa-no-alto image 15-sm.webp",
+          "src": "/media/projects/casa-no-alto/15-lg.webp",
+          "alt": "casa-no-alto image 15-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2580,16 +2580,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/16-sm.jpg",
-          "alt": "casa-no-alto image 16-sm.jpg",
+          "src": "/media/projects/casa-no-alto/16-lg.jpg",
+          "alt": "casa-no-alto image 16-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/16-sm.webp",
-          "alt": "casa-no-alto image 16-sm.webp",
+          "src": "/media/projects/casa-no-alto/16-lg.webp",
+          "alt": "casa-no-alto image 16-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2620,16 +2620,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/17-sm.jpg",
-          "alt": "casa-no-alto image 17-sm.jpg",
+          "src": "/media/projects/casa-no-alto/17-lg.jpg",
+          "alt": "casa-no-alto image 17-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/17-sm.webp",
-          "alt": "casa-no-alto image 17-sm.webp",
+          "src": "/media/projects/casa-no-alto/17-lg.webp",
+          "alt": "casa-no-alto image 17-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2660,16 +2660,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/18-sm.jpg",
-          "alt": "casa-no-alto image 18-sm.jpg",
+          "src": "/media/projects/casa-no-alto/18-lg.jpg",
+          "alt": "casa-no-alto image 18-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/18-sm.webp",
-          "alt": "casa-no-alto image 18-sm.webp",
+          "src": "/media/projects/casa-no-alto/18-lg.webp",
+          "alt": "casa-no-alto image 18-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2700,16 +2700,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/19-sm.jpg",
-          "alt": "casa-no-alto image 19-sm.jpg",
+          "src": "/media/projects/casa-no-alto/19-lg.jpg",
+          "alt": "casa-no-alto image 19-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/19-sm.webp",
-          "alt": "casa-no-alto image 19-sm.webp",
+          "src": "/media/projects/casa-no-alto/19-lg.webp",
+          "alt": "casa-no-alto image 19-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2740,16 +2740,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/20-sm.jpg",
-          "alt": "casa-no-alto image 20-sm.jpg",
+          "src": "/media/projects/casa-no-alto/20-lg.jpg",
+          "alt": "casa-no-alto image 20-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/20-sm.webp",
-          "alt": "casa-no-alto image 20-sm.webp",
+          "src": "/media/projects/casa-no-alto/20-lg.webp",
+          "alt": "casa-no-alto image 20-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2780,16 +2780,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/21-sm.jpg",
-          "alt": "casa-no-alto image 21-sm.jpg",
+          "src": "/media/projects/casa-no-alto/21-lg.jpg",
+          "alt": "casa-no-alto image 21-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/21-sm.webp",
-          "alt": "casa-no-alto image 21-sm.webp",
+          "src": "/media/projects/casa-no-alto/21-lg.webp",
+          "alt": "casa-no-alto image 21-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2820,16 +2820,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/22-sm.jpg",
-          "alt": "casa-no-alto image 22-sm.jpg",
+          "src": "/media/projects/casa-no-alto/22-lg.jpg",
+          "alt": "casa-no-alto image 22-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/22-sm.webp",
-          "alt": "casa-no-alto image 22-sm.webp",
+          "src": "/media/projects/casa-no-alto/22-lg.webp",
+          "alt": "casa-no-alto image 22-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2860,16 +2860,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/23-sm.jpg",
-          "alt": "casa-no-alto image 23-sm.jpg",
+          "src": "/media/projects/casa-no-alto/23-lg.jpg",
+          "alt": "casa-no-alto image 23-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/23-sm.webp",
-          "alt": "casa-no-alto image 23-sm.webp",
+          "src": "/media/projects/casa-no-alto/23-lg.webp",
+          "alt": "casa-no-alto image 23-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2900,16 +2900,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/24-sm.jpg",
-          "alt": "casa-no-alto image 24-sm.jpg",
+          "src": "/media/projects/casa-no-alto/24-lg.jpg",
+          "alt": "casa-no-alto image 24-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/24-sm.webp",
-          "alt": "casa-no-alto image 24-sm.webp",
+          "src": "/media/projects/casa-no-alto/24-lg.webp",
+          "alt": "casa-no-alto image 24-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2940,16 +2940,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/25-sm.jpg",
-          "alt": "casa-no-alto image 25-sm.jpg",
+          "src": "/media/projects/casa-no-alto/25-lg.jpg",
+          "alt": "casa-no-alto image 25-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/25-sm.webp",
-          "alt": "casa-no-alto image 25-sm.webp",
+          "src": "/media/projects/casa-no-alto/25-lg.webp",
+          "alt": "casa-no-alto image 25-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -2980,16 +2980,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/26-sm.jpg",
-          "alt": "casa-no-alto image 26-sm.jpg",
+          "src": "/media/projects/casa-no-alto/26-lg.jpg",
+          "alt": "casa-no-alto image 26-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/26-sm.webp",
-          "alt": "casa-no-alto image 26-sm.webp",
+          "src": "/media/projects/casa-no-alto/26-lg.webp",
+          "alt": "casa-no-alto image 26-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3020,16 +3020,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/27-sm.jpg",
-          "alt": "casa-no-alto image 27-sm.jpg",
+          "src": "/media/projects/casa-no-alto/27-lg.jpg",
+          "alt": "casa-no-alto image 27-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/27-sm.webp",
-          "alt": "casa-no-alto image 27-sm.webp",
+          "src": "/media/projects/casa-no-alto/27-lg.webp",
+          "alt": "casa-no-alto image 27-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3060,16 +3060,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/28-sm.jpg",
-          "alt": "casa-no-alto image 28-sm.jpg",
+          "src": "/media/projects/casa-no-alto/28-lg.jpg",
+          "alt": "casa-no-alto image 28-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/28-sm.webp",
-          "alt": "casa-no-alto image 28-sm.webp",
+          "src": "/media/projects/casa-no-alto/28-lg.webp",
+          "alt": "casa-no-alto image 28-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3100,16 +3100,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/29-sm.jpg",
-          "alt": "casa-no-alto image 29-sm.jpg",
+          "src": "/media/projects/casa-no-alto/29-lg.jpg",
+          "alt": "casa-no-alto image 29-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-no-alto/29-sm.webp",
-          "alt": "casa-no-alto image 29-sm.webp",
+          "src": "/media/projects/casa-no-alto/29-lg.webp",
+          "alt": "casa-no-alto image 29-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3144,16 +3144,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/1-sm.jpg",
-          "alt": "casa-ta-top image 1-sm.jpg",
+          "src": "/media/projects/casa-ta-top/1-lg.jpg",
+          "alt": "casa-ta-top image 1-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/1-sm.webp",
-          "alt": "casa-ta-top image 1-sm.webp",
+          "src": "/media/projects/casa-ta-top/1-lg.webp",
+          "alt": "casa-ta-top image 1-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3184,16 +3184,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/2-sm.jpg",
-          "alt": "casa-ta-top image 2-sm.jpg",
+          "src": "/media/projects/casa-ta-top/2-lg.jpg",
+          "alt": "casa-ta-top image 2-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/2-sm.webp",
-          "alt": "casa-ta-top image 2-sm.webp",
+          "src": "/media/projects/casa-ta-top/2-lg.webp",
+          "alt": "casa-ta-top image 2-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3224,16 +3224,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/3-sm.jpg",
-          "alt": "casa-ta-top image 3-sm.jpg",
+          "src": "/media/projects/casa-ta-top/3-lg.jpg",
+          "alt": "casa-ta-top image 3-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/3-sm.webp",
-          "alt": "casa-ta-top image 3-sm.webp",
+          "src": "/media/projects/casa-ta-top/3-lg.webp",
+          "alt": "casa-ta-top image 3-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3264,16 +3264,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/4-sm.jpg",
-          "alt": "casa-ta-top image 4-sm.jpg",
+          "src": "/media/projects/casa-ta-top/4-lg.jpg",
+          "alt": "casa-ta-top image 4-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/4-sm.webp",
-          "alt": "casa-ta-top image 4-sm.webp",
+          "src": "/media/projects/casa-ta-top/4-lg.webp",
+          "alt": "casa-ta-top image 4-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3304,16 +3304,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/5-sm.jpg",
-          "alt": "casa-ta-top image 5-sm.jpg",
+          "src": "/media/projects/casa-ta-top/5-lg.jpg",
+          "alt": "casa-ta-top image 5-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/5-sm.webp",
-          "alt": "casa-ta-top image 5-sm.webp",
+          "src": "/media/projects/casa-ta-top/5-lg.webp",
+          "alt": "casa-ta-top image 5-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3344,16 +3344,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/6-sm.jpg",
-          "alt": "casa-ta-top image 6-sm.jpg",
+          "src": "/media/projects/casa-ta-top/6-lg.jpg",
+          "alt": "casa-ta-top image 6-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/6-sm.webp",
-          "alt": "casa-ta-top image 6-sm.webp",
+          "src": "/media/projects/casa-ta-top/6-lg.webp",
+          "alt": "casa-ta-top image 6-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3384,16 +3384,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/8-sm.jpg",
-          "alt": "casa-ta-top image 8-sm.jpg",
+          "src": "/media/projects/casa-ta-top/8-lg.jpg",
+          "alt": "casa-ta-top image 8-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/8-sm.webp",
-          "alt": "casa-ta-top image 8-sm.webp",
+          "src": "/media/projects/casa-ta-top/8-lg.webp",
+          "alt": "casa-ta-top image 8-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3424,16 +3424,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/9-sm.jpg",
-          "alt": "casa-ta-top image 9-sm.jpg",
+          "src": "/media/projects/casa-ta-top/9-lg.jpg",
+          "alt": "casa-ta-top image 9-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/9-sm.webp",
-          "alt": "casa-ta-top image 9-sm.webp",
+          "src": "/media/projects/casa-ta-top/9-lg.webp",
+          "alt": "casa-ta-top image 9-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3464,16 +3464,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/10-sm.jpg",
-          "alt": "casa-ta-top image 10-sm.jpg",
+          "src": "/media/projects/casa-ta-top/10-lg.jpg",
+          "alt": "casa-ta-top image 10-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/10-sm.webp",
-          "alt": "casa-ta-top image 10-sm.webp",
+          "src": "/media/projects/casa-ta-top/10-lg.webp",
+          "alt": "casa-ta-top image 10-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3504,16 +3504,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/11-sm.jpg",
-          "alt": "casa-ta-top image 11-sm.jpg",
+          "src": "/media/projects/casa-ta-top/11-lg.jpg",
+          "alt": "casa-ta-top image 11-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/11-sm.webp",
-          "alt": "casa-ta-top image 11-sm.webp",
+          "src": "/media/projects/casa-ta-top/11-lg.webp",
+          "alt": "casa-ta-top image 11-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3544,16 +3544,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/12-sm.jpg",
-          "alt": "casa-ta-top image 12-sm.jpg",
+          "src": "/media/projects/casa-ta-top/12-lg.jpg",
+          "alt": "casa-ta-top image 12-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/12-sm.webp",
-          "alt": "casa-ta-top image 12-sm.webp",
+          "src": "/media/projects/casa-ta-top/12-lg.webp",
+          "alt": "casa-ta-top image 12-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3584,16 +3584,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/13-sm.jpg",
-          "alt": "casa-ta-top image 13-sm.jpg",
+          "src": "/media/projects/casa-ta-top/13-lg.jpg",
+          "alt": "casa-ta-top image 13-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/13-sm.webp",
-          "alt": "casa-ta-top image 13-sm.webp",
+          "src": "/media/projects/casa-ta-top/13-lg.webp",
+          "alt": "casa-ta-top image 13-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3624,16 +3624,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/14-sm.jpg",
-          "alt": "casa-ta-top image 14-sm.jpg",
+          "src": "/media/projects/casa-ta-top/14-lg.jpg",
+          "alt": "casa-ta-top image 14-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/14-sm.webp",
-          "alt": "casa-ta-top image 14-sm.webp",
+          "src": "/media/projects/casa-ta-top/14-lg.webp",
+          "alt": "casa-ta-top image 14-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3664,16 +3664,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/15-sm.jpg",
-          "alt": "casa-ta-top image 15-sm.jpg",
+          "src": "/media/projects/casa-ta-top/15-lg.jpg",
+          "alt": "casa-ta-top image 15-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/15-sm.webp",
-          "alt": "casa-ta-top image 15-sm.webp",
+          "src": "/media/projects/casa-ta-top/15-lg.webp",
+          "alt": "casa-ta-top image 15-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3704,16 +3704,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/16-sm.jpg",
-          "alt": "casa-ta-top image 16-sm.jpg",
+          "src": "/media/projects/casa-ta-top/16-lg.jpg",
+          "alt": "casa-ta-top image 16-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/16-sm.webp",
-          "alt": "casa-ta-top image 16-sm.webp",
+          "src": "/media/projects/casa-ta-top/16-lg.webp",
+          "alt": "casa-ta-top image 16-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3744,16 +3744,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/17-sm.jpg",
-          "alt": "casa-ta-top image 17-sm.jpg",
+          "src": "/media/projects/casa-ta-top/17-lg.jpg",
+          "alt": "casa-ta-top image 17-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/17-sm.webp",
-          "alt": "casa-ta-top image 17-sm.webp",
+          "src": "/media/projects/casa-ta-top/17-lg.webp",
+          "alt": "casa-ta-top image 17-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3784,16 +3784,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/18-sm.jpg",
-          "alt": "casa-ta-top image 18-sm.jpg",
+          "src": "/media/projects/casa-ta-top/18-lg.jpg",
+          "alt": "casa-ta-top image 18-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/18-sm.webp",
-          "alt": "casa-ta-top image 18-sm.webp",
+          "src": "/media/projects/casa-ta-top/18-lg.webp",
+          "alt": "casa-ta-top image 18-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3824,16 +3824,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/21-sm.jpg",
-          "alt": "casa-ta-top image 21-sm.jpg",
+          "src": "/media/projects/casa-ta-top/21-lg.jpg",
+          "alt": "casa-ta-top image 21-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/casa-ta-top/21-sm.webp",
-          "alt": "casa-ta-top image 21-sm.webp",
+          "src": "/media/projects/casa-ta-top/21-lg.webp",
+          "alt": "casa-ta-top image 21-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3868,16 +3868,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/1-sm.jpg",
-          "alt": "loule image 1-sm.jpg",
+          "src": "/media/projects/loule/1-lg.jpg",
+          "alt": "loule image 1-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/1-sm.webp",
-          "alt": "loule image 1-sm.webp",
+          "src": "/media/projects/loule/1-lg.webp",
+          "alt": "loule image 1-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3908,16 +3908,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/2-sm.jpg",
-          "alt": "loule image 2-sm.jpg",
+          "src": "/media/projects/loule/2-lg.jpg",
+          "alt": "loule image 2-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/2-sm.webp",
-          "alt": "loule image 2-sm.webp",
+          "src": "/media/projects/loule/2-lg.webp",
+          "alt": "loule image 2-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3948,16 +3948,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/3-sm.jpg",
-          "alt": "loule image 3-sm.jpg",
+          "src": "/media/projects/loule/3-lg.jpg",
+          "alt": "loule image 3-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/3-sm.webp",
-          "alt": "loule image 3-sm.webp",
+          "src": "/media/projects/loule/3-lg.webp",
+          "alt": "loule image 3-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -3988,16 +3988,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/4-sm.jpg",
-          "alt": "loule image 4-sm.jpg",
+          "src": "/media/projects/loule/4-lg.jpg",
+          "alt": "loule image 4-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/4-sm.webp",
-          "alt": "loule image 4-sm.webp",
+          "src": "/media/projects/loule/4-lg.webp",
+          "alt": "loule image 4-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -4028,16 +4028,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/5-sm.jpg",
-          "alt": "loule image 5-sm.jpg",
+          "src": "/media/projects/loule/5-lg.jpg",
+          "alt": "loule image 5-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/5-sm.webp",
-          "alt": "loule image 5-sm.webp",
+          "src": "/media/projects/loule/5-lg.webp",
+          "alt": "loule image 5-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -4068,16 +4068,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/6-sm.jpg",
-          "alt": "loule image 6-sm.jpg",
+          "src": "/media/projects/loule/6-lg.jpg",
+          "alt": "loule image 6-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/6-sm.webp",
-          "alt": "loule image 6-sm.webp",
+          "src": "/media/projects/loule/6-lg.webp",
+          "alt": "loule image 6-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -4108,16 +4108,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/7-sm.jpg",
-          "alt": "loule image 7-sm.jpg",
+          "src": "/media/projects/loule/7-lg.jpg",
+          "alt": "loule image 7-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/7-sm.webp",
-          "alt": "loule image 7-sm.webp",
+          "src": "/media/projects/loule/7-lg.webp",
+          "alt": "loule image 7-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -4148,16 +4148,16 @@
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/8-sm.jpg",
-          "alt": "loule image 8-sm.jpg",
+          "src": "/media/projects/loule/8-lg.jpg",
+          "alt": "loule image 8-lg.jpg",
           "width": 1600,
           "height": 1000,
           "format": "jpg"
         },
         {
           "type": "image",
-          "src": "/media/projects/loule/8-sm.webp",
-          "alt": "loule image 8-sm.webp",
+          "src": "/media/projects/loule/8-lg.webp",
+          "alt": "loule image 8-lg.webp",
           "width": 1600,
           "height": 1000,
           "format": "webp"
@@ -4203,11 +4203,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/aljezur-i/1-lg.jpg",
+                "src": "/media/projects/in-progress/aljezur-i/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/aljezur-i/1-lg.webp",
+                "src": "/media/projects/in-progress/aljezur-i/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4218,11 +4218,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/aljezur-i/2-lg.jpg",
+                "src": "/media/projects/in-progress/aljezur-i/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/aljezur-i/2-lg.webp",
+                "src": "/media/projects/in-progress/aljezur-i/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4233,11 +4233,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/aljezur-i/3-lg.jpg",
+                "src": "/media/projects/in-progress/aljezur-i/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/aljezur-i/3-lg.webp",
+                "src": "/media/projects/in-progress/aljezur-i/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4257,11 +4257,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/arrifana/1-lg.jpg",
+                "src": "/media/projects/in-progress/arrifana/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/arrifana/1-lg.webp",
+                "src": "/media/projects/in-progress/arrifana/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4272,11 +4272,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/arrifana/2-lg.jpg",
+                "src": "/media/projects/in-progress/arrifana/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/arrifana/2-lg.webp",
+                "src": "/media/projects/in-progress/arrifana/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4287,11 +4287,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/arrifana/3-lg.jpg",
+                "src": "/media/projects/in-progress/arrifana/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/arrifana/3-lg.webp",
+                "src": "/media/projects/in-progress/arrifana/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4311,11 +4311,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/1-lg.jpg",
+                "src": "/media/projects/in-progress/budens/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/1-lg.webp",
+                "src": "/media/projects/in-progress/budens/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4326,11 +4326,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/2-lg.jpg",
+                "src": "/media/projects/in-progress/budens/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/2-lg.webp",
+                "src": "/media/projects/in-progress/budens/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4341,11 +4341,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/3-lg.jpg",
+                "src": "/media/projects/in-progress/budens/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/3-lg.webp",
+                "src": "/media/projects/in-progress/budens/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4356,11 +4356,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/4-lg.jpg",
+                "src": "/media/projects/in-progress/budens/4-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/4-lg.webp",
+                "src": "/media/projects/in-progress/budens/4-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4371,11 +4371,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/5-lg.jpg",
+                "src": "/media/projects/in-progress/budens/5-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/5-lg.webp",
+                "src": "/media/projects/in-progress/budens/5-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4386,11 +4386,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/6-lg.jpg",
+                "src": "/media/projects/in-progress/budens/6-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/6-lg.webp",
+                "src": "/media/projects/in-progress/budens/6-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4401,11 +4401,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/budens/7-lg.jpg",
+                "src": "/media/projects/in-progress/budens/7-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/budens/7-lg.webp",
+                "src": "/media/projects/in-progress/budens/7-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4425,11 +4425,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/carrascalinho/1-lg.jpg",
+                "src": "/media/projects/in-progress/carrascalinho/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/carrascalinho/1-lg.webp",
+                "src": "/media/projects/in-progress/carrascalinho/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4440,11 +4440,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/carrascalinho/2-lg.jpg",
+                "src": "/media/projects/in-progress/carrascalinho/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/carrascalinho/2-lg.webp",
+                "src": "/media/projects/in-progress/carrascalinho/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4455,11 +4455,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/carrascalinho/3-lg.jpg",
+                "src": "/media/projects/in-progress/carrascalinho/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/carrascalinho/3-lg.webp",
+                "src": "/media/projects/in-progress/carrascalinho/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4479,11 +4479,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/1-lg.jpg",
+                "src": "/media/projects/in-progress/martara/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/1-lg.webp",
+                "src": "/media/projects/in-progress/martara/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4494,11 +4494,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/2-lg.jpg",
+                "src": "/media/projects/in-progress/martara/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/2-lg.webp",
+                "src": "/media/projects/in-progress/martara/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4509,11 +4509,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/3-lg.jpg",
+                "src": "/media/projects/in-progress/martara/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/3-lg.webp",
+                "src": "/media/projects/in-progress/martara/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4524,11 +4524,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/4-lg.jpg",
+                "src": "/media/projects/in-progress/martara/4-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/4-lg.webp",
+                "src": "/media/projects/in-progress/martara/4-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4539,11 +4539,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/5-lg.jpg",
+                "src": "/media/projects/in-progress/martara/5-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/5-lg.webp",
+                "src": "/media/projects/in-progress/martara/5-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4554,11 +4554,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/6-lg.jpg",
+                "src": "/media/projects/in-progress/martara/6-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/6-lg.webp",
+                "src": "/media/projects/in-progress/martara/6-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4569,11 +4569,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/martara/7-lg.jpg",
+                "src": "/media/projects/in-progress/martara/7-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/martara/7-lg.webp",
+                "src": "/media/projects/in-progress/martara/7-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4593,11 +4593,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-1/1-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-1/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-1/1-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-1/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4608,11 +4608,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-1/2-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-1/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-1/2-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-1/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4623,11 +4623,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-1/3-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-1/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-1/3-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-1/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4638,11 +4638,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-1/4-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-1/4-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-1/4-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-1/4-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4653,11 +4653,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-1/5-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-1/5-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-1/5-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-1/5-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4677,11 +4677,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-2/1-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-2/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-2/1-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-2/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4692,11 +4692,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-2/2-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-2/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-2/2-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-2/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4707,11 +4707,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-2/3-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-2/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-2/3-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-2/3-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4722,11 +4722,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-2/4-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-2/4-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-2/4-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-2/4-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4737,11 +4737,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vale-da-telha-2/5-lg.jpg",
+                "src": "/media/projects/in-progress/vale-da-telha-2/5-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vale-da-telha-2/5-lg.webp",
+                "src": "/media/projects/in-progress/vale-da-telha-2/5-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4761,11 +4761,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vilamoura/1-lg.jpg",
+                "src": "/media/projects/in-progress/vilamoura/1-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vilamoura/1-lg.webp",
+                "src": "/media/projects/in-progress/vilamoura/1-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4776,11 +4776,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vilamoura/2-lg.jpg",
+                "src": "/media/projects/in-progress/vilamoura/2-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vilamoura/2-lg.webp",
+                "src": "/media/projects/in-progress/vilamoura/2-lg.webp",
                 "format": "webp"
               }
             ]
@@ -4791,11 +4791,11 @@
             "height": 1600,
             "sources": [
               {
-                "src": "/media/in-progress/vilamoura/3-lg.jpg",
+                "src": "/media/projects/in-progress/vilamoura/3-lg.jpg",
                 "format": "jpg"
               },
               {
-                "src": "/media/in-progress/vilamoura/3-lg.webp",
+                "src": "/media/projects/in-progress/vilamoura/3-lg.webp",
                 "format": "webp"
               }
             ]

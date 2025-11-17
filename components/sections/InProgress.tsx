@@ -46,7 +46,7 @@ type InProgressDict = {
 
 // --- Constants ---
 
-const MAX_STRIP_IMAGES = 4;
+const MAX_STRIP_IMAGES = 3;
 
 // --- Helper: Get JPG source from gallery item ---
 
