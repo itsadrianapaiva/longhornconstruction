@@ -10,6 +10,10 @@
     "faq": "Perguntas",
     "contact": "Contacto"
   },
+  "innerHeader": {
+    "mainNavLabel": "Navegação principal do site",
+    "home": "Início"
+  },
   "hero": {
     "id": "hero",
     "eyebrow": "CÉU Construction",
@@ -4168,6 +4172,637 @@
         }
       ]
     }
+  },
+  "inProgress": {
+    "id": "in-progress",
+    "title": "Obras em andamento",
+    "intro": "Um olhar sincero sobre os projetos em andamento, registado em fotos simples de obra.",
+    "body": [
+      "Estes são registos informais tirados diretamente na obra. Não são fotos tratadas, mas mostram o ritmo real e a qualidade do nosso trabalho.",
+      "Pó, andaimes e cantos por acabar fazem parte da história. Partilhamos para que possa ver como cada projeto ganha forma, passo a passo."
+    ],
+    "labels": {
+      "progress": "Progresso",
+      "viewMore": "Ver mais",
+      "modalPrev": "Anterior",
+      "modalNext": "Seguinte",
+      "modalClose": "Fechar"
+    },
+    "empty": "Ainda não existem fotos de obras em andamento.",
+    "items": [
+      {
+        "id": "aljezur-i",
+        "projectTitle": "Aljezur I",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Aljezur I — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/aljezur-i/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/aljezur-i/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Aljezur I — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/aljezur-i/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/aljezur-i/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Aljezur I — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/aljezur-i/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/aljezur-i/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "arrifana",
+        "projectTitle": "Arrifana",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Arrifana — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/arrifana/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/arrifana/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Arrifana — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/arrifana/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/arrifana/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Arrifana — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/arrifana/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/arrifana/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "budens",
+        "projectTitle": "Budens",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Budens — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Budens — foto de obra 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/budens/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/budens/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "carrascalinho",
+        "projectTitle": "Carrascalinho",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Carrascalinho — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/carrascalinho/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/carrascalinho/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Carrascalinho — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/carrascalinho/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/carrascalinho/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Carrascalinho — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/carrascalinho/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/carrascalinho/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "martara",
+        "projectTitle": "Martara",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Martara — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 6",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/6-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/6-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Martara — foto de obra 7",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/martara/7-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/martara/7-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vale-da-telha-1",
+        "projectTitle": "Vale da Telha I",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Vale da Telha I — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-1/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-1/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha I — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-1/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-1/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha I — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-1/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-1/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha I — foto de obra 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-1/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-1/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha I — foto de obra 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-1/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-1/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vale-da-telha-2",
+        "projectTitle": "Vale da Telha II",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Vale da Telha II — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-2/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-2/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha II — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-2/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-2/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha II — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-2/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-2/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha II — foto de obra 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-2/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-2/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vale da Telha II — foto de obra 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vale-da-telha-2/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vale-da-telha-2/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vilamoura",
+        "projectTitle": "Vilamoura",
+        "progressPercent": 0,
+        "progressLabel": "",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Vilamoura — foto de obra 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vilamoura/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vilamoura/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vilamoura — foto de obra 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vilamoura/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vilamoura/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vilamoura — foto de obra 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/in-progress/vilamoura/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/in-progress/vilamoura/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "services": {
     "id": "services",

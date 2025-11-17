@@ -64,7 +64,6 @@ export default function BackgroundVideo({
           - sky.webm (to be added to /public/media/hero/) will serve Firefox/Chrome (VP9/WebM).
           - sky.mp4 serves Safari / Apple hardware (HEVC/H.265 or H.264).
           We don't specify codec strings anymore because different browsers reject unknown codecs.
-          TODO: Make sure /public/media/hero/sky.webm exists in prod build before launch.
         */}
         <video
           autoPlay
