@@ -137,6 +137,13 @@
       "sismo": "Sismo"
     },
     "viewGallery": "Abrir galeria",
+    "roughWorkCard": {
+      "eyebrow": "Bastidores da obra",
+      "title": "Veja as obras em andamento",
+      "body": "Quer ver o lado mais bruto da construção? Explore fotos simples de obra e o trabalho do dia a dia em vários projetos.",
+      "cta": "Abrir galeria em andamento",
+      "href": "/in-progress"
+    },
     "empty": "Nenhum projeto disponível.",
     "modal": {
       "prev": "Anterior",

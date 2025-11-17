@@ -137,6 +137,13 @@
       "sismo": "Sismo"
     },
     "viewGallery": "Open gallery",
+    "roughWorkCard": {
+      "eyebrow": "Behind the scenes",
+      "title": "See our work in progress",
+      "body": "Curious about the raw side of construction? Explore simple site photos and real day to day work across our projects.",
+      "cta": "Open in progress gallery",
+      "href": "/in-progress"
+    },
     "empty": "No projects available.",
     "modal": {
       "prev": "Previous",
