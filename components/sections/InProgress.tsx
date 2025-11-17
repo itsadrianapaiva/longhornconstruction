@@ -218,7 +218,9 @@ function ProjectBlock({ item, labels, onOpenModal }: ProjectBlockProps) {
       <div className="grid gap-6 lg:grid-cols-[1fr_2fr] lg:items-start">
         {/* Text content */}
         <div className="space-y-3">
-          <h3 className="text-xl font-semibold text-ink">{item.projectTitle}</h3>
+          <h3 className="text-xl font-semibold text-ink">
+            {item.projectTitle}
+          </h3>
 
           {item.progressLabel && (
             <p className="text-sm text-ink/70">
@@ -321,7 +323,9 @@ export default function InProgress() {
   const goPrev = () => {
     if (!selectedProject) return;
     setSelectedIndex(
-      (i) => (i - 1 + selectedProject.gallery.length) % selectedProject.gallery.length
+      (i) =>
+        (i - 1 + selectedProject.gallery.length) %
+        selectedProject.gallery.length
     );
   };
 
@@ -337,7 +341,7 @@ export default function InProgress() {
       >
         {/* Body paragraphs */}
         {body.length > 0 && (
-          <div className="mx-auto mb-12 max-w-3xl space-y-4">
+          <div className="mx-auto mb-12 max-w-4xl space-y-4">
             {body.map((paragraph, idx) => (
               <p key={idx} className="text-base leading-relaxed text-ink/80">
                 {paragraph}
