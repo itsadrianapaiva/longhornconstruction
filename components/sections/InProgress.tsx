@@ -215,7 +215,7 @@ function ProjectBlock({ item, labels, onOpenModal }: ProjectBlockProps) {
 
   return (
     <div className="border-b border-ink/10 pb-10 last:border-b-0">
-      <div className="grid gap-6 lg:grid-cols-[1fr_2fr] lg:items-start">
+      <div className="grid gap-6 lg:grid-cols-[0.5fr_2fr] lg:items-start">
         {/* Text content */}
         <div className="space-y-3">
           <h3 className="text-xl font-semibold text-ink">
@@ -246,7 +246,7 @@ function ProjectBlock({ item, labels, onOpenModal }: ProjectBlockProps) {
         </div>
 
         {/* Horizontal image strip */}
-        <div className="flex gap-3 overflow-x-auto pb-2 lg:overflow-x-visible lg:flex-wrap">
+        <div className="flex gap-4 overflow-x-auto pb-2 lg:overflow-x-visible lg:flex-wrap">
           {stripImages.map((img, idx) => (
             <button
               key={idx}
@@ -335,7 +335,7 @@ export default function InProgress() {
         id={id}
         pad="lg"
         container
-        maxWidth="7xl"
+        maxWidth="5xl"
         innerPx
         className="relative"
       >
