@@ -18,7 +18,7 @@ import {
   type Locale,
 } from "@/lib/i18n/getDictionary";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
-import Header from "@/components/Header";
+import HeaderShell from "@/components/HeaderShell";
 import type { NavItem } from "@/components/NavMenu";
 import Footer from "@/components/sections/Footer";
 
@@ -100,11 +100,11 @@ export default async function LocaleLayout({
     // Guard: never allow children to widen the viewport
     <div className="relative min-h-dvh w-full overflow-x-clip">
       <I18nProvider locale={locale} dict={dict}>
-        <Header
+        <HeaderShell
+          locale={locale}
           items={items}
           className="top-3"
           ctaLabel={dict.hero.primaryCta}
-          ctaTargetId="contact"
           logoSrc="/media/logo-white.png"
           logoAlt="CÉU Construction"
         />

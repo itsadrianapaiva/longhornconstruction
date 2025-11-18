@@ -42,7 +42,7 @@ export default function Header({
         ].join(" ")}
       >
         {/* Left: Language Switcher (visible at all sizes) */}
-        <div className="mr-2">
+        <div className="mx-6 -mt-2">
           <LanguageSwitcher compact />
         </div>
 
