@@ -8,6 +8,7 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import ButtonLink from "@/components/ButtonLink";
 
 export type NavItem = { id: string; label: string };
+export type NavMode = "scroll" | "link";
 
 type NavMenuProps = {
   items: NavItem[];
@@ -16,6 +17,8 @@ type NavMenuProps = {
   logoAlt?: string; // defaults to "CÉU Construction"
   ctaLabel?: string; // e.g. dict.hero.primaryCta
   ctaTargetId?: string; // defaults to "contact"
+  mode?: NavMode; // "scroll" for homepage, "link" for inner pages
+  locale?: string; // required when mode="link"
 };
 
 function cx(...xs: Array<string | false | null | undefined>) {
@@ -31,6 +34,8 @@ function MobileDrawer({
   logoAlt = "CÉU Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
+  mode = "scroll",
+  locale,
 }: Required<Pick<NavMenuProps, "items">> & {
   open: boolean;
   onClose: () => void;
@@ -38,6 +43,8 @@ function MobileDrawer({
   logoAlt?: string;
   ctaLabel?: string;
   ctaTargetId?: string;
+  mode?: NavMode;
+  locale?: string;
 }) {
   const backdropRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -129,10 +136,12 @@ function MobileDrawer({
     if (e.target === backdropRef.current) onClose();
   };
 
-  // Smooth-scroll helper
-  const scrollToId = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  // Navigation helper: scroll on homepage, link on inner pages
+  const handleNavigate = (id: string) => {
+    if (mode === "scroll") {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     onClose();
   };
 
@@ -180,60 +189,105 @@ function MobileDrawer({
 
         {/* Top: logo */}
         <div className="pl-6 pt-12 pb-4">
-          <Link
-            href="#"
-            aria-label="Go to top"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToId("hero");
-            }}
-            className="inline-block"
-          >
-            <Image
-              src={logoSrc}
-              alt={logoAlt}
-              width={208}
-              height={56}
-              priority={false}
-              className="w-52 h-auto"
-            />
-          </Link>
+          {mode === "scroll" ? (
+            <Link
+              href="#"
+              aria-label="Go to top"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigate("hero");
+              }}
+              className="inline-block"
+            >
+              <Image
+                src={logoSrc}
+                alt={logoAlt}
+                width={208}
+                height={56}
+                priority={false}
+                className="w-52 h-auto"
+              />
+            </Link>
+          ) : (
+            <Link
+              href={`/${locale}`}
+              aria-label="Go to homepage"
+              onClick={onClose}
+              className="inline-block"
+            >
+              <Image
+                src={logoSrc}
+                alt={logoAlt}
+                width={208}
+                height={56}
+                priority={false}
+                className="w-52 h-auto"
+              />
+            </Link>
+          )}
         </div>
 
         {/* Middle: nav items */}
         <nav className="grid gap-4 pl-14">
-          {items.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => scrollToId(item.id)}
-              className={cx(
-                "text-left text-lg font-light uppercase tracking-wide cursor-pointer",
-                "text-white/90 hover:text-[color:var(--brand)]",
-                "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
-                "px-2 rounded-md",
-                "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
-              )}
-            >
-              {item.label}
-            </button>
-          ))}
+          {items.map((item) =>
+            mode === "scroll" ? (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleNavigate(item.id)}
+                className={cx(
+                  "text-left text-lg font-light uppercase tracking-wide cursor-pointer",
+                  "text-white/90 hover:text-[color:var(--brand)]",
+                  "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+                  "px-2 rounded-md",
+                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                )}
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                key={item.id}
+                href={`/${locale}#${item.id}`}
+                onClick={onClose}
+                className={cx(
+                  "text-left text-lg font-light uppercase tracking-wide cursor-pointer",
+                  "text-white/90 hover:text-[color:var(--brand)]",
+                  "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+                  "px-2 rounded-md",
+                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                )}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="flex-1" />
 
         {/* Bottom CTA */}
         <div className="px-6 pb-8 pt-6">
-          <ButtonLink
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToId(ctaTargetId);
-            }}
-            className="w-full justify-center"
-          >
-            {ctaLabel}
-          </ButtonLink>
+          {mode === "scroll" ? (
+            <ButtonLink
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavigate(ctaTargetId);
+              }}
+              className="w-full justify-center"
+            >
+              {ctaLabel}
+            </ButtonLink>
+          ) : (
+            <ButtonLink
+              href={`/${locale}#${ctaTargetId}`}
+              onClick={onClose}
+              className="w-full justify-center"
+            >
+              {ctaLabel}
+            </ButtonLink>
+          )}
         </div>
       </div>
     </div>,
@@ -246,6 +300,7 @@ function MobileDrawer({
  * - Bravera-like hamburger that opens a right-side drawer
  * - Now slides in/out with backdrop fade before unmounting
  * - Focus trap, ESC, backdrop click, and scroll lock preserved
+ * - Supports "scroll" mode (homepage) and "link" mode (inner pages)
  */
 export default function NavMenu({
   items,
@@ -254,6 +309,8 @@ export default function NavMenu({
   logoAlt = "CÉU Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
+  mode = "scroll",
+  locale,
 }: NavMenuProps) {
   const [open, setOpen] = useState(false);
 
@@ -267,7 +324,7 @@ export default function NavMenu({
         onClick={() => setOpen(true)}
         className={cx("inline-flex items-center justify-center lg:hidden", className)}
       >
-        <IoMenu className="h-8 w-8" />
+        <IoMenu className="h-10 w-10 text-white/60 mr-4 mb-2" />
       </button>
 
       {/* Drawer */}
@@ -279,6 +336,8 @@ export default function NavMenu({
         logoAlt={logoAlt}
         ctaLabel={ctaLabel}
         ctaTargetId={ctaTargetId}
+        mode={mode}
+        locale={locale}
       />
     </>
   );

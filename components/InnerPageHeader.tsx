@@ -89,7 +89,7 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
     >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 h-full flex items-center justify-between">
         {/* Mobile: logo + hamburger */}
-        <div className="flex items-center justify-between w-full md:hidden">
+        <div className="flex items-center justify-between w-full md:hidden pt-12">
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
               src="/media/logo-white.png"
@@ -106,6 +106,8 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
             ctaTargetId="contact"
             logoSrc="/media/logo-white.png"
             logoAlt="CÉU Construction"
+            mode="link"
+            locale={locale}
           />
         </div>
 
