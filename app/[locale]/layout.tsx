@@ -90,7 +90,7 @@ export default async function LocaleLayout({
     { id: "stats", label: dict.nav.stats },
     { id: "services", label: dict.nav.services },
     { id: "projects", label: dict.nav.projects },
-    { id: "sismo", label: dict.nav.sismo },
+    { id: "methods", label: dict.nav.sismo },
     { id: "testimonials", label: dict.nav.testimonials },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },

@@ -71,7 +71,7 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
     { id: "stats", label: nav.stats },
     { id: "services", label: nav.services },
     { id: "projects", label: nav.projects },
-    { id: "sismo", label: nav.sismo },
+    { id: "methods", label: nav.sismo },
     { id: "testimonials", label: nav.testimonials },
     { id: "contact", label: nav.contact },
   ];
