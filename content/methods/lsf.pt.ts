@@ -46,4 +46,11 @@ export const lsfPt: MethodArticle = {
     "Processo de construcao limpo e a seco com desperdicio minimo em obra",
   ],
   related: ["traditional", "icf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "Estrutura de aco leve durante a montagem" },
+      { index: 3, alt: "Estrutura de parede LSF com instalacao de isolamento" },
+    ],
+  },
 };

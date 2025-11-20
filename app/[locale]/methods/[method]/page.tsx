@@ -1,10 +1,13 @@
 import type { JSX } from "react";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
 import { validateLocale, getDictionary } from "@/lib/i18n/getDictionary";
 import InnerPageHeroShell from "@/components/InnerPageHeroShell";
 import SectionHeader from "@/components/SectionHeader";
+import MethodSocialLinks from "@/components/methods/MethodSocialLinks";
+import InlineMethodImagePair from "@/components/methods/InlineMethodImagePair";
+import RelatedMethodCard from "@/components/methods/RelatedMethodCard";
+import MethodBenefits from "@/components/methods/MethodBenefits";
 import type { MethodSlug } from "@/lib/methods/types";
 import { getMethodArticle } from "@/lib/methods/getMethodArticle";
 import { methodImagePath } from "@/lib/methods/images";
@@ -43,7 +46,8 @@ export default async function MethodPage({
   };
 
   // Sidebar title by locale
-  const relatedTitle = locale === "en" ? "Related methods" : "Sistemas relacionados";
+  const relatedTitle =
+    locale === "en" ? "Related methods" : "Sistemas relacionados";
 
   // Hero image path
   const heroImgSrc = methodImagePath(
@@ -74,6 +78,9 @@ export default async function MethodPage({
           <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             {/* Left column: Main content */}
             <div className="space-y-8">
+              {/* Inline follow us bar */}
+              <MethodSocialLinks locale={locale} variant="inline" />
+
               {/* Hero image */}
               <div className="overflow-hidden rounded-2xl">
                 <Image
@@ -93,62 +100,69 @@ export default async function MethodPage({
 
               {/* Article sections */}
               {article.sections.map((section) => (
-                <section key={section.id} className="space-y-4">
-                  <h2 className="text-2xl font-bold text-ink lg:text-3xl">
-                    {section.heading}
-                  </h2>
-                  {section.body.map((paragraph, i) => (
-                    <p key={i} className="leading-relaxed text-ink/85">
-                      {paragraph}
-                    </p>
-                  ))}
-                </section>
+                <div key={section.id}>
+                  <section className="space-y-4">
+                    <h2 className="text-2xl font-bold text-ink lg:text-3xl">
+                      {section.heading}
+                    </h2>
+                    {section.body.map((paragraph, i) => (
+                      <p key={i} className="leading-relaxed text-ink/85">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </section>
+
+                  {/* Inject inline image pair after target section */}
+                  {article.extraImageGroup &&
+                    article.extraImageGroup.afterSectionId === section.id && (
+                      <div className="mt-8">
+                        <InlineMethodImagePair
+                          slug={article.slug}
+                          images={article.extraImageGroup.images}
+                        />
+                      </div>
+                    )}
+                </div>
               ))}
 
-              {/* Benefits list (if present) */}
+              {/* Benefits list */}
               {article.benefits && article.benefits.length > 0 && (
-                <div className="rounded-2xl border border-[color:var(--card-border,rgba(255,255,255,0.22))] bg-[color:var(--card-bg,rgba(255,255,255,0.06))] p-6 backdrop-blur-sm dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]">
-                  <h3 className="mb-4 text-lg font-bold text-ink">
-                    {locale === "en" ? "Key Benefits" : "Benefícios Principais"}
-                  </h3>
-                  <ul className="space-y-2">
-                    {article.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[color:var(--brand)]" />
-                        <span className="text-ink/85">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MethodBenefits locale={locale} benefits={article.benefits} />
               )}
             </div>
 
             {/* Right column: Related methods sidebar */}
             <div>
-              <div className="sticky top-20 rounded-2xl border border-[color:var(--card-border,rgba(255,255,255,0.22))] bg-[color:var(--card-bg,rgba(255,255,255,0.06))] p-6 backdrop-blur-sm dark:bg-[color:var(--card-bg-dark,rgba(0,0,0,0.25))]">
-                <h3 className="mb-4 text-lg font-bold text-ink">
-                  {relatedTitle}
-                </h3>
-                <ul className="space-y-3">
+              <div className="sticky top-20 space-y-6">
+                {/* Related methods heading */}
+                <h3 className="text-lg font-bold text-ink">{relatedTitle}</h3>
+
+                {/* Related methods list with vertical cards */}
+                <ul className="space-y-6">
                   {article.related.map((relatedSlug) => {
                     const relatedCard = methodsDict.section.cards[relatedSlug];
+                    const thumbnailSrc = methodImagePath(
+                      relatedSlug,
+                      1,
+                      "lg",
+                      "jpg"
+                    );
                     return (
                       <li key={relatedSlug}>
-                        <Link
-                          href={`/${locale}/methods/${relatedSlug}`}
-                          className="group block rounded-lg border border-transparent p-3 transition-all duration-200 hover:border-[color:var(--brand)] hover:bg-[color:var(--brand)]/5"
-                        >
-                          <div className="font-medium text-ink group-hover:text-[color:var(--brand)]">
-                            {relatedCard.label}
-                          </div>
-                          <div className="mt-1 text-sm text-ink/70">
-                            {relatedCard.tag}
-                          </div>
-                        </Link>
+                        <RelatedMethodCard
+                          locale={locale}
+                          slug={relatedSlug}
+                          label={relatedCard.label}
+                          tag={relatedCard.tag}
+                          thumbnailSrc={thumbnailSrc}
+                        />
                       </li>
                     );
                   })}
                 </ul>
+
+                {/* Sidebar follow us block */}
+                <MethodSocialLinks locale={locale} variant="sidebar" />
               </div>
             </div>
           </div>

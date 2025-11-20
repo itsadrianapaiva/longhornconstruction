@@ -46,4 +46,11 @@ export const icfPt: MethodArticle = {
     "Resistencia excecional ao fogo, vento e forcas sismicas",
   ],
   related: ["traditional", "lsf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "Construcao de parede ICF com reforco de aco" },
+      { index: 3, alt: "Sistema de parede ICF isolada concluido" },
+    ],
+  },
 };

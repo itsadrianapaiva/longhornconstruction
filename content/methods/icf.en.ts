@@ -46,4 +46,11 @@ export const icfEn: MethodArticle = {
     "Exceptional resistance to fire, wind, and seismic forces",
   ],
   related: ["traditional", "lsf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "ICF wall construction with steel reinforcement" },
+      { index: 3, alt: "Completed ICF insulated concrete wall system" },
+    ],
+  },
 };

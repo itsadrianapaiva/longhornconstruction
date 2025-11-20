@@ -46,4 +46,11 @@ export const traditionalPt: MethodArticle = {
     "Universalmente aceite nos codigos e regulamentos de construcao",
   ],
   related: ["icf", "lsf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "Construcao de estrutura em betao armado" },
+      { index: 3, alt: "Processo de construcao de parede em alvenaria tradicional" },
+    ],
+  },
 };

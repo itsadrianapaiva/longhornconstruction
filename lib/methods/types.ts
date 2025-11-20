@@ -23,4 +23,12 @@ export type MethodArticle = {
   sections: MethodSection[];
   benefits?: string[];
   related: MethodSlug[];
+  /**
+   * Optional mid-article image group to inject inline after a specific section.
+   * Allows editors to insert a pair of related images without touching React code.
+   */
+  extraImageGroup?: {
+    afterSectionId: string; // ID of the section after which to insert images
+    images: { index: number; alt: string }[]; // Array of images to display
+  };
 };

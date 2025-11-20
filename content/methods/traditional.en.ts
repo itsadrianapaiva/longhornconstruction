@@ -46,4 +46,11 @@ export const traditionalEn: MethodArticle = {
     "Universally accepted in building codes and regulations",
   ],
   related: ["icf", "lsf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "Reinforced concrete framework construction" },
+      { index: 3, alt: "Traditional masonry wall construction process" },
+    ],
+  },
 };

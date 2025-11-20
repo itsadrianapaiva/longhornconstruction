@@ -46,4 +46,11 @@ export const lsfEn: MethodArticle = {
     "Clean, dry construction process with minimal site waste",
   ],
   related: ["traditional", "icf"],
+  extraImageGroup: {
+    afterSectionId: "best-for",
+    images: [
+      { index: 2, alt: "Light steel frame structure during assembly" },
+      { index: 3, alt: "LSF wall framing with insulation installation" },
+    ],
+  },
 };
