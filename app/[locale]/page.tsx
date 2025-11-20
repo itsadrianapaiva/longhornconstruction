@@ -15,9 +15,9 @@ export default function Page() {
       <Hero />
       <About />
       <Stats />
+      <Methods />
       <Services />
       <Projects />
-      <Methods />
       <Testimonials />
       <Contact />
     </>
