@@ -11,6 +11,7 @@ import MethodBenefits from "@/components/methods/MethodBenefits";
 import type { MethodSlug } from "@/lib/methods/types";
 import { getMethodArticle } from "@/lib/methods/getMethodArticle";
 import { methodImagePath } from "@/lib/methods/images";
+import Contact from "@/components/sections/Contact";
 
 type Params = Promise<{ locale?: string; method?: string }>;
 
@@ -168,6 +169,7 @@ export default async function MethodPage({
           </div>
         </div>
       </div>
+      <Contact />
     </>
   );
 }
