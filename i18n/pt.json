@@ -14,6 +14,16 @@
     "mainNavLabel": "Navegação principal do site",
     "home": "Início"
   },
+  "cta": {
+    "innerBanner": {
+      "eyebrow": "Pronto para construir?",
+      "title": "Comece o seu projeto com uma equipa que entrega resultados.",
+      "body": "Fale diretamente com a nossa equipa de construção, apresente as suas ideias e descubra o melhor método para a sua obra no Algarve.",
+      "primaryLabel": "Contactar a equipa",
+      "secondaryLabel": "Ver projetos em destaque",
+      "backgroundAlt": "Cliente a segurar o telemóvel e a ver detalhes de obra com a CÉU Construction."
+    }
+  },
   "hero": {
     "id": "hero",
     "eyebrow": "CÉU Construction",
