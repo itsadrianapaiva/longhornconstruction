@@ -11,7 +11,7 @@ import MethodBenefits from "@/components/methods/MethodBenefits";
 import type { MethodSlug } from "@/lib/methods/types";
 import { getMethodArticle } from "@/lib/methods/getMethodArticle";
 import { methodImagePath } from "@/lib/methods/images";
-import Contact from "@/components/sections/Contact";
+import { PageCtaBanner } from "@/components/sections/PageCtaBanner";
 
 type Params = Promise<{ locale?: string; method?: string }>;
 
@@ -38,13 +38,14 @@ export default async function MethodPage({
   // Get article content
   const article = getMethodArticle(locale, methodSlug);
 
-  // Get dictionary for sidebar labels
+  // Get dictionary for sidebar labels and CTA
   const dict = await getDictionary(locale);
   const methodsDict = dict.methods as {
     section: {
       cards: Record<MethodSlug, { label: string; tag: string }>;
     };
   };
+  const cta = dict.cta.innerBanner;
 
   // Sidebar title by locale
   const relatedTitle =
@@ -169,7 +170,19 @@ export default async function MethodPage({
           </div>
         </div>
       </div>
-      <Contact />
+
+      {/* CTA Banner */}
+      <PageCtaBanner
+        eyebrow={cta.eyebrow}
+        title={cta.title}
+        body={cta.body}
+        primaryHref={`/${locale}/#contact`}
+        primaryLabel={cta.primaryLabel}
+        secondaryHref={`/${locale}/#projects`}
+        secondaryLabel={cta.secondaryLabel}
+        backgroundImage="/media/cta/inner-cta.JPEG"
+        backgroundAlt={cta.backgroundAlt}
+      />
     </>
   );
 }
