@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { complaintBookUrl, cimaalUrl } from "@/lib/legalLinks";
@@ -40,6 +41,17 @@ function scrollToIdNoHash(id: string) {
   el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
 }
 
+// Helper: detect if we're on the homepage (not an inner page)
+function isHomepagePath(pathname: string | null, locale: string | undefined): boolean {
+  if (!pathname) return false;
+  if (!locale) {
+    // default locale homepage (if used)
+    return pathname === "/";
+  }
+  // localized homepage like "/en" or "/pt"
+  return pathname === `/${locale}` || pathname === `/${locale}/`;
+}
+
 /** Helper: replace {{year}} in i18n template safely */
 function withYear(template: string | undefined): string {
   const y = String(new Date().getFullYear());
@@ -71,6 +83,8 @@ function FooterList({
 
 export default function Footer() {
   const { t, locale } = useI18n();
+  const pathname = usePathname();
+  const isHomepage = isHomepagePath(pathname, locale);
 
   // Pull everything from the provider (SSR-stable)
   const company = t<{
@@ -126,11 +140,13 @@ export default function Footer() {
           {/* Logo column — spans 2 on lg, centered on small */}
           <div className="col-span-1 lg:col-span-2 mb-4 flex justify-center lg:items-center lg:justify-start">
             <Link
-              href="#"
+              href={isHomepage ? "#hero" : (locale ? `/${locale}` : "/")}
               aria-label="CÉU Construction Home"
               onClick={(e) => {
-                e.preventDefault();
-                scrollToIdNoHash("hero"); // keep consistent with NavMenu
+                if (isHomepage) {
+                  e.preventDefault();
+                  scrollToIdNoHash("hero");
+                }
               }}
             >
               <Image
@@ -150,15 +166,22 @@ export default function Footer() {
             <nav aria-label="Footer Navigation">
               <ul className="flex flex-col gap-1 text-left font-light">
                 {(nav.items ?? []).map((item, i) => {
-                  const href = item?.href ?? "#";
+                  const originalHref = item?.href ?? "#";
                   const label = item?.label ?? "";
+                  const targetId = getInternalTargetId(originalHref);
+
+                  // On homepage: use original href (e.g., "#stats")
+                  // On inner pages: use /${locale}#${targetId} to navigate back to homepage
+                  const href = isHomepage
+                    ? originalHref
+                    : (targetId ? `/${locale}#${targetId}` : originalHref);
+
                   return (
                     <li key={i}>
                       <Link
                         href={href}
                         onClick={(e) => {
-                          const targetId = getInternalTargetId(href);
-                          if (targetId) {
+                          if (targetId && isHomepage) {
                             e.preventDefault();
                             scrollToIdNoHash(targetId);
                           }
@@ -219,21 +242,32 @@ export default function Footer() {
 
             {/* CTA */}
             {cta?.label && cta?.href ? (
-              <div className="mt-4">
-                <ButtonLink
-                  href={cta.href}
-                  onClick={(e) => {
-                    const targetId = getInternalTargetId(cta.href);
-                    if (targetId) {
-                      e.preventDefault();
-                      scrollToIdNoHash(targetId);
-                    }
-                  }}
-                  className="justify-center"
-                >
-                  {cta.label}
-                </ButtonLink>
-              </div>
+              (() => {
+                const originalCtaHref = cta.href;
+                const ctaTargetId = getInternalTargetId(originalCtaHref);
+                // On homepage: use original href (e.g., "#contact")
+                // On inner pages: use /${locale}#${ctaTargetId} to navigate back to homepage
+                const ctaHref = isHomepage
+                  ? originalCtaHref
+                  : (ctaTargetId ? `/${locale}#${ctaTargetId}` : originalCtaHref);
+
+                return (
+                  <div className="mt-4">
+                    <ButtonLink
+                      href={ctaHref}
+                      onClick={(e) => {
+                        if (ctaTargetId && isHomepage) {
+                          e.preventDefault();
+                          scrollToIdNoHash(ctaTargetId);
+                        }
+                      }}
+                      className="justify-center"
+                    >
+                      {cta.label}
+                    </ButtonLink>
+                  </div>
+                );
+              })()
             ) : null}
           </div>
         </div>

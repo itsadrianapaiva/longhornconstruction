@@ -5,7 +5,7 @@
     "stats": "Stats",
     "services": "Services",
     "projects": "Projects",
-    "sismo": "Sismo Method",
+    "methods": "Our Methods",
     "testimonials": "Testimonials",
     "faq": "FAQ",
     "contact": "Contact"
@@ -4803,6 +4803,31 @@
       }
     ]
   },
+  "methods": {
+  "section": {
+    "id": "methods",
+    "title": "We are experts in...",
+    "intro": "Three structural systems that we know inside out. We help you pick the right one for your project.",
+    "seeAllLabel": "See all methods",
+    "cards": {
+      "traditional": {
+        "label": "Traditional",
+        "tag": "Concrete & masonry",
+        "excerpt": "Classic reinforced concrete and masonry structures, executed with strict control over quality, budget, and schedule."
+      },
+      "icf": {
+        "label": "ICF",
+        "tag": "Insulated Concrete Forms",
+        "excerpt": "Insulated concrete wall systems that combine speed of execution with excellent thermal and acoustic performance."
+      },
+      "lsf": {
+        "label": "LSF",
+        "tag": "Light Steel Frame",
+        "excerpt": "Light steel framing for precise, dry, and efficient construction with clean sites and predictable timelines."
+      }
+    }
+  }
+},
   "services": {
     "id": "services",
     "title": "Our services",
@@ -5057,8 +5082,8 @@
             "href": "#services"
           },
           {
-            "label": "Sismo",
-            "href": "#sismo"
+            "label": "Our Methods",
+            "href": "#methods"
           },
           {
             "label": "Projects",

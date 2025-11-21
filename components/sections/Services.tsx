@@ -27,7 +27,7 @@ export default function Services() {
       container
       maxWidth="7xl"
       innerPx
-      className="relative isolate overflow-x-hidden"
+      className="relative isolate overflow-x-hidden -mb-20"
     >
       <SectionHeader
         title={title}

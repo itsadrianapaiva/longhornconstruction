@@ -2,7 +2,8 @@
 # optimize-images.ps1
 # Creates -sm, -lg, and WebP versions of all JPG/JPEGs in:
 #   - /public/media/projects               (default)
-#   - /public/media/in-progress            (when -InProgress is used)
+#   - /public/media/projects/in-progress   (when -InProgress is used)
+#   - /public/media/methods                (when -Methods is used)
 #
 # Requires ffmpeg installed and reachable at $ffmpegPath
 #
@@ -15,17 +16,22 @@
 #   .\optimize-images.ps1 -InProgress                   # All in-progress folders
 #   .\optimize-images.ps1 -InProgress -ProjectId "aljezur-i"
 #
+#   .\optimize-images.ps1 -Methods                      # All method folders (traditional, icf, lsf, etc)
+#   .\optimize-images.ps1 -Methods -ProjectId "icf"     # One method folder
+#
 # Parameters:
 #   -ForceRebuild : Delete existing -sm/-lg .jpg/.webp before regenerating
 #   -ProjectId    : Process only one folder under the chosen root
-#   -InProgress   : Switch root to /public/media/in-progress instead of projects
+#   -InProgress   : Switch root to /public/media/projects/in-progress
+#   -Methods      : Switch root to /public/media/methods
 #
 # ======================================================================
 
 param(
     [switch]$ForceRebuild = $false,
     [string]$ProjectId = "",
-    [switch]$InProgress = $false
+    [switch]$InProgress = $false,
+    [switch]$Methods = $false
 )
 
 $ffmpegPath = "C:\Users\Adriana Paiva\Downloads\ffmpeg80fullbuild\bin\ffmpeg.exe"
@@ -33,12 +39,18 @@ $ffmpegPath = "C:\Users\Adriana Paiva\Downloads\ffmpeg80fullbuild\bin\ffmpeg.exe
 # Base roots
 $projectsRoot   = "C:\Users\Adriana Paiva\ceuconstruction\public\media\projects"
 $inProgressRoot = "C:\Users\Adriana Paiva\ceuconstruction\public\media\projects\in-progress"
+$methodsRoot    = "C:\Users\Adriana Paiva\ceuconstruction\public\media\methods"
 
 # Select root based on mode
-if ($InProgress) {
+if ($Methods) {
+    $root = $methodsRoot
+    $modeLabel = "methods"
+}
+elseif ($InProgress) {
     $root = $inProgressRoot
     $modeLabel = "in-progress"
-} else {
+}
+else {
     $root = $projectsRoot
     $modeLabel = "projects"
 }

@@ -5,7 +5,7 @@
     "stats": "Números",
     "services": "Serviços",
     "projects": "Projetos",
-    "sismo": "Método Sismo",
+    "methods": "Nossos Métodos",
     "testimonials": "Testemunhos",
     "faq": "Perguntas",
     "contact": "Contacto"
@@ -4803,6 +4803,31 @@
       }
     ]
   },
+  "methods": {
+    "section": {
+      "id": "methods",
+      "title": "Somos especialistas em...",
+      "intro": "Três sistemas construtivos que dominamos por completo. Ajudamos a escolher o mais indicado para o seu projeto.",
+      "seeAllLabel": "Ver todos os sistemas",
+      "cards": {
+        "traditional": {
+          "label": "Tradicional",
+          "tag": "Betão e alvenaria",
+          "excerpt": "Estruturas clássicas em betão armado e alvenaria, executadas com controlo rigoroso de qualidade, orçamento e prazo."
+        },
+        "icf": {
+          "label": "ICF",
+          "tag": "Insulated Concrete Forms",
+          "excerpt": "Sistema de paredes em betão isolado que junta rapidez de execução com excelente desempenho térmico e acústico."
+        },
+        "lsf": {
+          "label": "LSF",
+          "tag": "Light Steel Frame",
+          "excerpt": "Estruturas em aço leve para construção a seco, precisa e eficiente, com estaleiros limpos e prazos previsíveis."
+        }
+      }
+    }
+  },
   "services": {
     "id": "services",
     "title": "Nossos serviços",
@@ -5057,8 +5082,8 @@
             "href": "#services"
           },
           {
-            "label": "Sismo",
-            "href": "#sismo"
+            "label": "Nossos Métodos",
+            "href": "#methods"
           },
           {
             "label": "Projetos",

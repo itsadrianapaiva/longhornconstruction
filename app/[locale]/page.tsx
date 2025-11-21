@@ -2,8 +2,8 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Stats from "@/components/sections/Stats";
 import Services from "@/components/sections/Services";
-import Sismo from "@/components/sections/Sismo";
 import Projects from "@/components/sections/Projects";
+import Methods from "@/components/sections/Methods";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 
@@ -15,9 +15,9 @@ export default function Page() {
       <Hero />
       <About />
       <Stats />
+      <Methods />
       <Services />
       <Projects />
-      <Sismo />
       <Testimonials />
       <Contact />
     </>

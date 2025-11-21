@@ -88,9 +88,9 @@ export default async function LocaleLayout({
     { id: "hero", label: dict.nav.home },
     { id: "about", label: dict.nav.about },
     { id: "stats", label: dict.nav.stats },
+    { id: "methods", label: dict.nav.methods },
     { id: "services", label: dict.nav.services },
     { id: "projects", label: dict.nav.projects },
-    { id: "sismo", label: dict.nav.sismo },
     { id: "testimonials", label: dict.nav.testimonials },
     // faq is optional later; keep order consistent with IA
     { id: "contact", label: dict.nav.contact },
