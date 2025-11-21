@@ -18,7 +18,7 @@ type NavDict = {
   stats: string;
   services: string;
   projects: string;
-  sismo: string;
+  methods: string;
   testimonials: string;
   contact: string;
 };
@@ -32,7 +32,10 @@ type InnerPageHeaderProps = {
   className?: string;
 };
 
-export default function InnerPageHeader({ locale, className }: InnerPageHeaderProps) {
+export default function InnerPageHeader({
+  locale,
+  className,
+}: InnerPageHeaderProps) {
   const { t } = useI18n();
 
   const innerHeader = t<InnerHeaderDict>("innerHeader", {
@@ -46,7 +49,7 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
     stats: "",
     services: "",
     projects: "",
-    sismo: "",
+    methods: "",
     testimonials: "",
     contact: "",
   });
@@ -71,18 +74,14 @@ export default function InnerPageHeader({ locale, className }: InnerPageHeaderPr
     { id: "stats", label: nav.stats },
     { id: "services", label: nav.services },
     { id: "projects", label: nav.projects },
-    { id: "methods", label: nav.sismo },
+    { id: "methods", label: nav.methods },
     { id: "testimonials", label: nav.testimonials },
     { id: "contact", label: nav.contact },
   ];
 
   return (
     <header
-      className={[
-        "absolute inset-x-0 top-0 z-50",
-        "h-14",
-        className,
-      ]
+      className={["absolute inset-x-0 top-0 z-50", "h-14", className]
         .filter(Boolean)
         .join(" ")}
       role="banner"
