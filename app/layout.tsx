@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
 import { DM_Sans } from "next/font/google";
+import FacebookPixel from "@/components/analytics/MetaPixel";
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -11,7 +12,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "CÉU Construction",
   description:
-    "Reliable, self-performing construction in the Algarve using innovative methods like Sismo.",
+    "Reliable, self-performing construction in the Algarve using progressive methods.",
 };
 
 export default function RootLayout({
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${globalSurface}`}>
+        <FacebookPixel />
         {children}
       </body>
     </html>
