@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { complaintBookUrl, cimaalUrl } from "@/lib/legalLinks";
+import CeuSocialLinks from "@/components/CeuSocialLinks";
 
 // Helper: detect and normalize internal hash hrefs like "#id", "/#id", "/en/#id", or same-origin absolute URLs with hash.
 // Keeps functions tiny and testable.
@@ -205,7 +206,7 @@ export default function Footer() {
             <FooterList items={(services.items ?? []) as string[]} />
           </div>
 
-          {/* Get in touch — phone, email, ADDRESS LAST */}
+          {/* Get in touch — phone, email, address, social links, CTA */}
           <div className="mb-8 text-left">
             {contact.title ? (
               <SectionHeading>{contact.title}</SectionHeading>
@@ -239,6 +240,15 @@ export default function Footer() {
                 ) : undefined,
               ]}
             />
+
+            {/* Social Links */}
+            <div className="mt-4">
+              <CeuSocialLinks
+                label={locale === "pt" ? "Siga nos" : "Follow us"}
+                showLabel={true}
+                variant="footer"
+              />
+            </div>
 
             {/* CTA */}
             {cta?.label && cta?.href ? (

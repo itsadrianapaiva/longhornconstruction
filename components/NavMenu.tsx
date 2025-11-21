@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
 import ButtonLink from "@/components/ButtonLink";
+import CeuSocialLinks from "@/components/CeuSocialLinks";
 
 export type NavItem = { id: string; label: string };
 export type NavMode = "scroll" | "link";
@@ -19,6 +20,7 @@ type NavMenuProps = {
   ctaTargetId?: string; // defaults to "contact"
   mode?: NavMode; // "scroll" for homepage, "link" for inner pages
   locale?: string; // required when mode="link"
+  showSocial?: boolean; // defaults to true
 };
 
 function cx(...xs: Array<string | false | null | undefined>) {
@@ -36,6 +38,7 @@ function MobileDrawer({
   ctaTargetId = "contact",
   mode = "scroll",
   locale,
+  showSocial = true,
 }: Required<Pick<NavMenuProps, "items">> & {
   open: boolean;
   onClose: () => void;
@@ -45,6 +48,7 @@ function MobileDrawer({
   ctaTargetId?: string;
   mode?: NavMode;
   locale?: string;
+  showSocial?: boolean;
 }) {
   const backdropRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -266,8 +270,17 @@ function MobileDrawer({
 
         <div className="flex-1" />
 
-        {/* Bottom CTA */}
-        <div className="px-6 pb-8 pt-6">
+        {/* Bottom: Social links + CTA */}
+        <div className="px-6 pb-8 pt-6 space-y-4">
+          {showSocial && (
+            <div className="flex justify-center">
+              <CeuSocialLinks
+                label={locale === "pt" ? "Siga nos" : "Follow us"}
+                showLabel={true}
+                variant="inline"
+              />
+            </div>
+          )}
           {mode === "scroll" ? (
             <ButtonLink
               href="#"
@@ -311,6 +324,7 @@ export default function NavMenu({
   ctaTargetId = "contact",
   mode = "scroll",
   locale,
+  showSocial = true,
 }: NavMenuProps) {
   const [open, setOpen] = useState(false);
 
@@ -338,6 +352,7 @@ export default function NavMenu({
         ctaTargetId={ctaTargetId}
         mode={mode}
         locale={locale}
+        showSocial={showSocial}
       />
     </>
   );
