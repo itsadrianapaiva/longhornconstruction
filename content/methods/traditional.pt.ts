@@ -2,55 +2,58 @@ import type { MethodArticle } from "@/lib/methods/types";
 
 export const traditionalPt: MethodArticle = {
   slug: "traditional",
-  title: "Construcao Tradicional",
+  title: "Construção Tradicional",
   subtitle:
-    "Estruturas classicas em betao armado e alvenaria, executadas com controlo rigoroso de qualidade, orcamento e prazo.",
+    "Betão armado e alvenaria combinados com a autenticidade da arquitetura tradicional portuguesa.",
   heroImage: {
     index: 1,
-    alt: "Construcao tradicional em betao e alvenaria em execucao",
+    alt: "Arquitetura tradicional portuguesa em betão e alvenaria",
   },
   intro:
-    "A construcao tradicional em betao armado e alvenaria continua a ser um dos metodos mais fiaveis e testados para edificar estruturas duradouras. Na CEU Construction, combinamos tecnicas comprovadas com controlo de qualidade moderno e gestao de projeto para entregar resultados excecionais.",
+    "A construção tradicional em Portugal é mais do que betão e alvenaria. É uma forma de preservar a identidade arquitetónica da região, desde as paredes caiadas até à pedra natural, telha portuguesa, arcos e proporções clássicas. Na CÉU Construction unimos técnicas estruturais comprovadas com total respeito pela arquitetura portuguesa, criando casas sólidas, autênticas e intemporais.",
   sections: [
     {
       id: "how-it-works",
       heading: "Como Funciona",
       body: [
-        "A construcao tradicional comeca com fundacoes e estruturas em betao armado, seguidas de paredes em alvenaria de blocos de betao ou tijolo. Este metodo foi refinado ao longo de decadas e e bem compreendido por construtores, engenheiros e arquitetos em todo o mundo.",
-        "A nossa equipa interna gere todas as etapas: desde escavacao e fundacoes ate estrutura, paredes e acabamentos. Usamos maquinaria propria e equipas coordenadas para manter qualidade consistente e evitar atrasos causados por dependencias de subempreiteiros.",
-        "O resultado e uma estrutura robusta e duradoura com excelente resistencia ao fogo, isolamento acustico e propriedades de massa termica que ajudam a regular as temperaturas interiores naturalmente.",
+        "A construção tradicional começa com fundações e estrutura em betão armado. As paredes em alvenaria, com blocos de betão, tijolo ou pedra natural, definem a forma e a personalidade da casa. Estes métodos são utilizados em Portugal há décadas e são amplamente reconhecidos pela sua fiabilidade.",
+        "O diferencial da CÉU é a atenção aos detalhes da arquitetura tradicional portuguesa. Integramos elementos como paredes curvas, rebocos típicos, detalhes em madeira, cantarias, telha portuguesa e as proporções que caracterizam o Algarve e o sul do país.",
+        "A nossa equipa própria gere todas as etapas, desde a escavação até aos acabamentos finais. Com maquinaria própria e equipas coordenadas, garantimos qualidade, consistência e total alinhamento entre a estrutura moderna e a estética tradicional.",
       ],
     },
     {
       id: "advantages",
-      heading: "Vantagens Principais",
+      heading: "Principais Vantagens",
       body: [
-        "A construcao tradicional oferece durabilidade e longevidade inigualаveis. Estruturas em betao e alvenaria podem durar geracoes com manutencao minima, tornando-as num excelente investimento a longo prazo para proprietarios e promotores.",
-        "Este metodo tambem e altamente versatil. Acomoda designs arquitetonicos complexos, acabamentos personalizados e modificacoes durante a construcao. Os profissionais locais estao familiarizados com estas tecnicas, o que simplifica reparacoes ou renovacoes futuras.",
-        "Do ponto de vista regulamentar, a construcao tradicional e universalmente aceite e bem documentada nos codigos de construcao em Portugal e na Europa, garantindo licenciamentos e inspecoes diretas.",
+        "A construção tradicional oferece durabilidade e longevidade. Estruturas em betão e alvenaria envelhecem bem, exigem pouca manutenção e proporcionam conforto térmico graças à sua massa térmica natural.",
+        "É também o método mais flexível para alcançar detalhes genuinamente portugueses. Arcos, cantarias, tetos abobadados, fachadas clássicas e outros elementos tradicionais são facilmente executados.",
+        "Como este método faz parte da cultura construtiva portuguesa, enquadra-se perfeitamente nas normas locais, nos métodos de obra e nas necessidades futuras de manutenção ou ampliação.",
       ],
     },
     {
       id: "best-for",
       heading: "Ideal Para",
       body: [
-        "A construcao tradicional e ideal para projetos que priorizam durabilidade, flexibilidade de design personalizado e alinhamento com praticas de construcao locais. Funciona bem tanto para moradias residenciais como edificios comerciais no Algarve e Costa Vicentina.",
-        "Se o seu projeto requer formas complexas, tetos abobadados ou integracao com estruturas de alvenaria existentes, os metodos tradicionais fornecem as ferramentas e tecnicas comprovadas para alcancar a sua visao com confianca.",
+        "Construção tradicional é ideal para quem procura uma casa que respeite a identidade arquitetónica de Portugal, aliando-a a engenharia moderna e controlo de qualidade.",
+        "É uma escolha forte para moradias, quintas, segundas residências ou qualquer projeto que exija estética intemporal, formas complexas ou detalhes típicos do Algarve.",
       ],
     },
   ],
   benefits: [
-    "Durabilidade comprovada com decadas de historico",
-    "Excelente resistencia ao fogo e isolamento acustico",
-    "Opcoes de design versateis e modificacoes futuras faceis",
-    "Universalmente aceite nos codigos e regulamentos de construcao",
+    "Estrutura durável com longa vida útil",
+    "Acabamentos e detalhes genuinamente portugueses",
+    "Excelente resistência ao fogo e conforto térmico",
+    "Flexibilidade total de design e fácil adaptação futura",
   ],
   related: ["icf", "lsf"],
   extraImageGroup: {
     afterSectionId: "best-for",
     images: [
-      { index: 2, alt: "Construcao de estrutura em betao armado" },
-      { index: 3, alt: "Processo de construcao de parede em alvenaria tradicional" },
+      { index: 2, alt: "Estrutura em betão armado na construção tradicional" },
+      {
+        index: 3,
+        alt: "Alvenaria tradicional portuguesa com acabamentos regionais",
+      },
     ],
   },
 };
