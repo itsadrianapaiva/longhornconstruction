@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { getJpgSrc } from "./galleryUtils";
+import InProgressProgressBar from "./InProgressProgressBar";
 
 type GallerySource = { src: string; format: "jpg" | "webp" };
 type GalleryItem = {
@@ -14,10 +15,13 @@ type GalleryItem = {
 type InProgressItem = {
   id: string;
   projectTitle: string;
+  progressPercent?: number;
+  progressLabel?: string;
   gallery: GalleryItem[];
 };
 
 type ModalLabels = {
+  progress: string;
   modalPrev: string;
   modalNext: string;
   modalClose: string;
@@ -43,6 +47,20 @@ export default function InProgressModal({
   const dialogRef = React.useRef<HTMLDivElement | null>(null);
   const gallery = project.gallery;
   const current = gallery[currentIndex];
+
+  // Progress bar logic
+  const { progressPercent, progressLabel } = project;
+  const hasProgress =
+    typeof progressPercent === "number" && Number.isFinite(progressPercent);
+
+  const clampedPercent = hasProgress
+    ? Math.max(0, Math.min(100, progressPercent as number))
+    : null;
+
+  const progressValueText =
+    hasProgress && clampedPercent !== null
+      ? progressLabel ?? `${clampedPercent}%`
+      : null;
 
   // Focus management
   React.useEffect(() => {
@@ -95,17 +113,32 @@ export default function InProgressModal({
         tabIndex={-1}
         className="relative z-[101] mx-4 w-full max-w-5xl outline-none"
       >
-        <div className="mb-3 flex items-center justify-between">
-          <h3 className="text-lg font-medium text-white">
-            {project.projectTitle}
-          </h3>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-md bg-white/10 px-3 py-1 text-sm text-white backdrop-blur hover:bg-white/20 focus:outline-none focus-visible:ring"
-          >
-            {labels.modalClose}
-          </button>
+        <div className="mb-3">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-medium text-white">
+              {project.projectTitle}
+            </h3>
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-md bg-white/10 px-3 py-1 text-sm text-white backdrop-blur hover:bg-white/20 focus:outline-none focus-visible:ring"
+            >
+              {labels.modalClose}
+            </button>
+          </div>
+
+          {hasProgress &&
+            clampedPercent !== null &&
+            progressValueText && (
+              <div className="mt-3 max-w-xs">
+                <InProgressProgressBar
+                  label={labels.progress}
+                  valueText={progressValueText}
+                  percent={clampedPercent}
+                  variant="dark"
+                />
+              </div>
+            )}
         </div>
 
         {/* Image stage */}

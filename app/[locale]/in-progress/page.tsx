@@ -3,7 +3,6 @@ import { validateLocale, getDictionary } from "@/lib/i18n/getDictionary";
 import InnerPageHeroShell from "@/components/InnerPageHeroShell";
 import InProgressHero from "@/components/sections/InProgressHero";
 import InProgress from "@/components/sections/InProgress";
-import Contact from "@/components/sections/Contact";
 import { PageCtaBanner } from "@/components/sections/PageCtaBanner";
 
 type Params = Promise<{ locale?: string }>;
@@ -42,8 +41,6 @@ export default async function InProgressPage({
         backgroundImage="/media/cta/inner-cta.JPEG"
         backgroundAlt={cta.backgroundAlt}
       />
-
-      <Contact />
     </>
   );
 }

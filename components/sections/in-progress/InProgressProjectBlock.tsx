@@ -2,6 +2,7 @@
 
 import OptimizedImage from "@/components/OptimizedImage";
 import { MAX_STRIP_IMAGES, getJpgSrc } from "./galleryUtils";
+import InProgressProgressBar from "./InProgressProgressBar";
 
 type GallerySource = { src: string; format: "jpg" | "webp" };
 type GalleryItem = {
@@ -14,13 +15,14 @@ type GalleryItem = {
 type InProgressItem = {
   id: string;
   projectTitle: string;
-  progressLabel?: string;
+  progressPercent?: number;
+  progressLabel?: string; // can hold custom text like "70%" or "Structure complete"
   description?: string;
   gallery: GalleryItem[];
 };
 
 type ProjectLabels = {
-  progress: string;
+  progress: string; // localized "Progress"
   viewMore: string;
 };
 
@@ -37,6 +39,21 @@ export default function InProgressProjectBlock({
 }: InProgressProjectBlockProps) {
   const stripImages = item.gallery.slice(0, MAX_STRIP_IMAGES);
 
+  // Progress bar logic
+  const { progressPercent, progressLabel } = item;
+  const hasProgress =
+    typeof progressPercent === "number" && Number.isFinite(progressPercent);
+
+  const clampedPercent = hasProgress
+    ? Math.max(0, Math.min(100, progressPercent as number))
+    : null;
+
+  // Value text on the right: prefer progressLabel, fall back to numeric percent
+  const progressValueText =
+    hasProgress && clampedPercent !== null
+      ? progressLabel ?? `${clampedPercent}%`
+      : null;
+
   return (
     <div className="border-b border-ink/10 pb-10 last:border-b-0">
       <div className="grid gap-6 lg:grid-cols-[0.5fr_2fr] lg:items-start">
@@ -46,11 +63,16 @@ export default function InProgressProjectBlock({
             {item.projectTitle}
           </h3>
 
-          {item.progressLabel && (
-            <p className="text-sm text-ink/70">
-              {labels.progress}: {item.progressLabel}
-            </p>
-          )}
+          {hasProgress &&
+            clampedPercent !== null &&
+            progressValueText && (
+              <InProgressProgressBar
+                label={labels.progress}         // always "Progress"
+                valueText={progressValueText}   // e.g. "70%"
+                percent={clampedPercent}
+                className="mt-2"
+              />
+            )}
 
           {item.description && (
             <p className="text-sm leading-relaxed text-ink/80">
