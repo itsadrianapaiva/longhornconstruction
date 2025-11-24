@@ -105,40 +105,6 @@
       "sectionLabel": "Company statistics and achievements"
     }
   },
-  "sismo": {
-    "id": "sismo",
-    "title": "We work with Sismo",
-    "intro": "Sismo structural panels enable rapid, robust builds with excellent thermal and acoustic performance. The system combines engineering precision with on-site efficiency, delivering walls and slabs that are strong, fast to install, and environmentally responsible.",
-    "highlightWord": "Sismo",
-    "items": [
-      {
-        "subtitle": "Speed without shortcuts",
-        "body": "Each Sismo panel is factory-produced to exact dimensions, arriving on-site ready to assemble like a modular shell. This prefabrication drastically reduces construction time while maintaining accuracy and quality. Once panels are positioned, concrete is poured to form a continuous structure, allowing CÉU teams to build complete homes and structures in a fraction of the usual schedule.",
-        "image": "/media/sismo/system.jpg",
-        "alt": "Sismo panel installation showing rapid progress"
-      },
-      {
-        "subtitle": "Monolithic strength",
-        "body": "After concrete is poured, the panels become a single monolithic wall system, a reinforced, continuous structure that resists cracking, deformation, and moisture. This solid concrete core ensures long-term stability, low maintenance, and excellent seismic and wind performance. Every Sismo build by CÉU is designed to meet or exceed European structural standards.",
-        "image": "/media/sismo/layers.jpg",
-        "alt": "Reinforced concrete core detail of a Sismo wall"
-      },
-      {
-        "subtitle": "Comfort & efficiency",
-        "body": "Sismo’s insulated design naturally improves thermal comfort and reduces energy use. The panels integrate insulation materials directly into the structure, minimizing thermal bridges and ensuring a constant indoor temperature. The airtight system also improves acoustic insulation, making interiors quieter and more comfortable, ideal for both residential and commercial buildings in the Algarve’s demanding climate.",
-        "image": "/media/sismo/project.jpg",
-        "alt": "Interior view highlighting thermal and acoustic comfort benefits"
-      }
-    ],
-    "cta": {
-      "label": "See a CÉU Sismo project",
-      "href": "/#projects"
-    },
-    "external": {
-      "label": "Learn more at Sismo Portugal",
-      "href": "https://sismo-technology.com/pt-pt/"
-    }
-  },
   "projects": {
     "id": "projects",
     "title": "Featured projects",
@@ -4817,7 +4783,7 @@
     "section": {
       "id": "methods",
       "title": "We are experts in...",
-      "intro": "Three structural systems that we know inside out. We help you pick the right one for your project.",
+      "intro": "Three structural progressive systems that we know inside out. We help you pick the right one for your project.",
       "seeAllLabel": "See all methods",
       "cards": {
         "traditional": {

@@ -105,40 +105,6 @@
       "sectionLabel": "Estatísticas e conquistas da empresa"
     }
   },
-  "sismo": {
-    "id": "sismo",
-    "title": "Trabalhamos com o sistema Sismo",
-    "intro": "Os painéis estruturais Sismo permitem construções rápidas, robustas e com excelente desempenho térmico e acústico. O sistema combina precisão de engenharia com eficiência em obra, criando paredes e lajes resistentes, rápidas de montar e ambientalmente responsáveis.",
-    "highlightWord": "Sismo",
-    "items": [
-      {
-        "subtitle": "Velocidade sem atalhos",
-        "body": "Cada painel Sismo é fabricado em ambiente controlado, com medidas exatas, chegando à obra pronto para montagem. Esta pré-fabricação reduz drasticamente o tempo de construção sem comprometer a qualidade. Depois de posicionados, os painéis são betonados, formando uma estrutura contínua que permite às equipas da CÉU concluir edifícios completos em muito menos tempo que o método tradicional.",
-        "image": "/media/sismo/system.jpg",
-        "alt": "Instalação de painéis Sismo a mostrar o avanço rápido da obra"
-      },
-      {
-        "subtitle": "Resistência monolítica",
-        "body": "Após a betonagem, os painéis transformam-se numa única parede monolítica — uma estrutura contínua e reforçada que resiste a fissuras, deformações e humidade. O núcleo de betão garante estabilidade a longo prazo, baixa manutenção e excelente desempenho sísmico e ao vento. Cada construção Sismo da CÉU é projetada para cumprir ou superar as normas estruturais europeias.",
-        "image": "/media/sismo/layers.jpg",
-        "alt": "Detalhe do núcleo de betão armado numa parede Sismo"
-      },
-      {
-        "subtitle": "Conforto e eficiência",
-        "body": "O design isolado do sistema Sismo melhora naturalmente o conforto térmico e reduz o consumo energético. Os painéis integram o isolamento diretamente na estrutura, eliminando pontes térmicas e mantendo a temperatura interior constante. O sistema estanque também melhora o isolamento acústico, tornando os interiores mais silenciosos e confortáveis — ideal para edifícios residenciais e comerciais no clima exigente do Algarve.",
-        "image": "/media/sismo/project.jpg",
-        "alt": "Interior a evidenciar benefícios de conforto térmico e acústico"
-      }
-    ],
-    "cta": {
-      "label": "Ver um projeto CÉU com Sismo",
-      "href": "/#projects"
-    },
-    "external": {
-      "label": "Saiba mais no Sismo Portugal",
-      "href": "https://sismo-technology.com/pt-pt/"
-    }
-  },
   "projects": {
     "id": "projects",
     "title": "Projetos em destaque",
