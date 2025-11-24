@@ -2,55 +2,56 @@ import type { MethodArticle } from "@/lib/methods/types";
 
 export const icfPt: MethodArticle = {
   slug: "icf",
-  title: "Construcao ICF",
+  title: "Construção em ICF",
   subtitle:
-    "Sistema de paredes em betao isolado que junta rapidez de execucao com excelente desempenho termico e acustico.",
+    "Sistemas de paredes em betão isolado que combinam rapidez de execução com excelente desempenho térmico e acústico.",
   heroImage: {
     index: 1,
-    alt: "Instalacao de cofragem ICF em obra",
+    alt: "Sistema ICF a ser instalado numa obra",
   },
   intro:
-    "As Cofragens Isolantes de Betao (ICF) representam uma evolucao moderna na construcao em betao. Ao combinar betao estrutural com isolamento integrado, os sistemas ICF oferecem eficiencia energetica superior, rapidez de construcao e durabilidade a longo prazo numa unica envolvente de edificio.",
+    "ICF, ou Insulated Concrete Forms, é uma evolução moderna da construção em betão. O sistema junta betão estrutural e isolamento contínuo num único elemento. Na CÉU utilizamos o sistema Sismo, uma solução industrial avançada da família ICF. Pode saber mais sobre a tecnologia em sismo-technology.com/pt-pt.",
   sections: [
     {
       id: "how-it-works",
       heading: "Como Funciona",
       body: [
-        "A construcao ICF usa cofragens modulares em espuma que permanecem no lugar apos o betao ser vazado, criando uma parede em sanduiche isolada permanente. Os paineis de espuma encaixam como blocos de construcao, formando a forma exata das suas paredes. O reforco de aco e colocado no interior, depois o betao e vazado para criar uma estrutura monolitica.",
-        "Este sistema combina a resistencia estrutural do betao armado com isolamento continuo em ambos os lados da parede. O resultado e uma envolvente de edificio que elimina pontes termicas, reduz a infiltracao de ar e proporciona isolamento acustico excecional.",
-        "A nossa equipa tem vasta experiencia com instalacao ICF. Gerimos a montagem de cofragem, colocacao de betao e integracao com fundacoes e sistemas de cobertura para garantir uma casca de edificio perfeita e de alto desempenho.",
+        "A construção em ICF utiliza elementos isolantes que permanecem no local após o enchimento de betão. No sistema Sismo, estes elementos são painéis industriais produzidos com quadros de alta precisão. Os painéis definem a forma das paredes, suportam a armadura e criam a camada de isolamento.",
+        "Depois de instalados, os painéis são preenchidos com betão armado, formando uma estrutura monolítica. O resultado é uma parede com resistência, isolamento e estabilidade num único elemento contínuo.",
+        "A nossa equipa executa todas as etapas. Montamos os painéis, instalamos a armadura, coordenamos o enchimento do betão e integramos o sistema com as fundações e estrutura da cobertura para garantir um edifício de alto desempenho.",
       ],
     },
     {
       id: "advantages",
-      heading: "Vantagens Principais",
+      heading: "Principais Vantagens",
       body: [
-        "A construcao ICF reduz drasticamente os custos de energia. O isolamento continuo e a massa termica do betao trabalham juntos para manter temperaturas interiores estaveis durante todo o ano, reduzindo as necessidades de aquecimento e arrefecimento ate 50% em comparacao com metodos tradicionais.",
-        "A velocidade de construcao e outro grande beneficio. As paredes ICF podem ser erguidas e vazadas mais rapidamente que a alvenaria tradicional, e o isolamento integrado elimina uma etapa separada de instalacao de isolamento. Este calendario comprimido significa conclusao mais rapida do projeto e retorno mais rapido do investimento.",
-        "As estruturas ICF tambem se destacam em condicoes extremas. Oferecem resistencia superior ao fogo, terramotos, furacoes e transmissao de som—tornando-as ideais para localizacoes costeiras como o Algarve onde vento, ar salgado e variacoes de temperatura sao desafios comuns.",
+        "A eficiência energética é um dos maiores benefícios. O isolamento contínuo combinado com a massa térmica do betão ajuda a manter temperaturas interiores estáveis durante todo o ano.",
+        "A rapidez de construção é outra vantagem importante. Os painéis Sismo são leves, rápidos de posicionar e dispensam uma etapa separada de isolamento. Isto reduz o tempo total de obra.",
+        "As estruturas em ICF e Sismo têm ótimo desempenho em condições exigentes. São resistentes ao fogo, vento, sismos e transmissão de som. São ideais para o Algarve, onde o clima costeiro e as variações térmicas são constantes.",
       ],
     },
     {
       id: "best-for",
       heading: "Ideal Para",
       body: [
-        "O ICF e perfeito para proprietarios e promotores conscientes da energia que procuram edificios sustentaveis e de baixa manutencao. E especialmente valioso no clima de Portugal, onde veroes quentes e invernos frescos tornam o desempenho termico uma prioridade maxima.",
-        "Se o seu projeto enfatiza conforto, eficiencia energetica e rapidez de construcao, o ICF entrega em todas as frentes. E tambem uma excelente escolha para edificios perto de estradas movimentadas ou areas costeiras onde o isolamento acustico e a resistencia ao clima sao essenciais.",
+        "ICF é ideal para proprietários e investidores que procuram conforto, eficiência energética e durabilidade a longo prazo. Funciona muito bem no clima português, onde o desempenho térmico é fundamental.",
+        "Também é excelente para casas perto de estradas movimentadas ou zonas costeiras onde isolamento acústico, durabilidade e resistência às condições ambientais são essenciais.",
       ],
     },
   ],
   benefits: [
-    "Desempenho termico e acustico superior",
-    "Construcao mais rapida comparada com metodos tradicionais",
-    "Custos de energia reduzidos (ate 50% de poupanca em aquecimento/arrefecimento)",
-    "Resistencia excecional ao fogo, vento e forcas sismicas",
+    "Alto desempenho térmico e acústico",
+    "Construção mais rápida que a alvenaria tradicional",
+    "Redução dos custos de energia",
+    "Grande resistência a fogo, vento e sismos",
   ],
   related: ["traditional", "lsf"],
   extraImageGroup: {
     afterSectionId: "best-for",
     images: [
-      { index: 2, alt: "Construcao de parede ICF com reforco de aco" },
-      { index: 3, alt: "Sistema de parede ICF isolada concluido" },
+      { index: 2, alt: "Parede ICF com armadura em preparação" },
+      { index: 3, alt: "Parede ICF concluída com isolamento integrado" },
     ],
   },
 };
+
