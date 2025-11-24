@@ -4,46 +4,46 @@ export const lsfEn: MethodArticle = {
   slug: "lsf",
   title: "LSF Construction",
   subtitle:
-    "Light steel framing for precise, dry, and efficient construction with clean sites and predictable timelines.",
+    "Light steel framing for precise, fast and efficient construction with clean sites and predictable timelines.",
   heroImage: {
     index: 1,
     alt: "Light steel frame structure being assembled on site",
   },
   intro:
-    "Light Steel Frame (LSF) construction brings industrial precision and efficiency to residential and commercial building. Using cold-formed steel profiles, LSF creates a lightweight yet strong structural skeleton that enables faster construction, tighter tolerances, and exceptional design flexibility.",
+    "Light Steel Frame (LSF) construction brings industrial precision to residential and commercial buildings. Using cold formed steel profiles, the system creates a lightweight but strong structural skeleton that allows fast assembly, clean work and consistent results. At CÉU Construction we follow North American LSF standards and adapt them to Portuguese conditions and the Algarve climate.",
   sections: [
     {
       id: "how-it-works",
       heading: "How It Works",
       body: [
-        "LSF construction uses galvanized steel profiles that are cut, shaped, and assembled to form the building's structural frame. These profiles are manufactured to exact specifications in controlled factory conditions, then delivered to site ready for rapid assembly.",
-        "The steel frame is erected on a foundation system (typically concrete or steel piers), creating the structural skeleton for walls, floors, and roof. Insulation, cladding, and interior finishes are then installed to complete the building envelope. The entire process is dry—no concrete curing time, no wet trades delays.",
-        "Our team follows North American LSF best practices, ensuring proper detailing for thermal bridges, moisture control, and structural performance. The result is a building that's lighter, faster to construct, and easier to modify than traditional masonry.",
+        "LSF construction uses galvanized steel profiles that are manufactured to exact measurements in controlled factory environments. These profiles arrive on site ready for rapid assembly with minimal cutting or adjustments.",
+        "Once placed on the foundation, the steel structure forms the shape of walls, floors and roof. Insulation, cladding and interior finishes are installed around the frame to complete the building envelope. The entire process is dry and clean, with no concrete curing time and fewer weather related delays.",
+        "Our in house team applies best practices for thermal bridges, moisture control and structural detailing. This results in a building that is accurate, stable and efficient, with tight tolerances that make finishing stages easier and more consistent.",
       ],
     },
     {
       id: "advantages",
       heading: "Key Advantages",
       body: [
-        "LSF construction offers unmatched speed and predictability. Because components are prefabricated and assembly is straightforward, construction timelines are significantly shorter than traditional methods. Weather delays are minimized since there's no concrete to cure or masonry to lay.",
-        "The lightweight nature of LSF reduces foundation requirements and seismic loads, often resulting in cost savings on groundwork. Steel is also dimensionally stable—it won't warp, twist, or shrink like timber, ensuring long-term structural integrity and easier finishes installation.",
-        "From a sustainability perspective, steel is 100% recyclable and LSF construction generates minimal waste. The precision of factory fabrication means less material is wasted on site, and the entire structure can be disassembled and recycled at end of life.",
+        "LSF is one of the fastest building methods available. Prefabricated components and simple assembly reduce construction time and keep timelines predictable. The dry process also minimizes disruptions during winter or rainy periods.",
+        "Its lightweight structure reduces pressure on foundations, often lowering groundwork costs. Steel does not warp, twist or shrink, which ensures long term stability and cleaner finishing.",
+        "From a sustainability perspective, steel is fully recyclable and LSF generates very little waste. The precision of factory fabrication means less material loss on site and a cleaner overall construction process.",
       ],
     },
     {
       id: "best-for",
       heading: "Best For",
       body: [
-        "LSF is ideal for projects with tight timelines, complex geometries, or challenging site conditions. It's especially valuable when you need a clean, organized construction site with minimal noise and disruption—perfect for urban infill projects or additions to occupied buildings.",
-        "If your design includes large spans, cantilevers, or repetitive modular layouts, LSF provides the structural efficiency and construction speed to make those features cost-effective. It's also an excellent choice for coastal environments where steel's corrosion resistance (when properly protected) outperforms untreated materials.",
+        "LSF is ideal for projects that need fast execution, clean sites and clear scheduling. It works very well for modern designs, complex geometries or projects located in tight urban areas.",
+        "It is also an excellent option for coastal regions like the Algarve where controlled installation, corrosion protected materials and lightweight structures help achieve long lasting performance.",
       ],
     },
   ],
   benefits: [
-    "Fastest construction timeline of all methods",
-    "Precision factory fabrication ensures tight tolerances",
+    "Fast construction with predictable timelines",
+    "Factory precision for accurate and clean results",
     "Lightweight structure reduces foundation costs",
-    "Clean, dry construction process with minimal site waste",
+    "Dry construction with minimal waste on site",
   ],
   related: ["traditional", "icf"],
   extraImageGroup: {
@@ -54,3 +54,4 @@ export const lsfEn: MethodArticle = {
     ],
   },
 };
+
