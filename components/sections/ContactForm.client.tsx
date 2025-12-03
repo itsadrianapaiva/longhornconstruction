@@ -16,64 +16,65 @@ function placeholderOf(v: FieldDef | undefined, fallback: string) {
   return typeof v === "string" ? fallback : v.placeholder ?? fallback;
 }
 
-/** Soft validation (message has **no** validation per your request) */
-function validate(fields: {
+/** Client-side validation matching server logic */
+function validateClient(fields: {
   name: string;
   email: string;
   phone: string;
   message: string;
 }) {
-  const errs: Partial<Record<keyof typeof fields, boolean>> = {};
-  if (fields.name.trim().length < 2) errs.name = true;
-  if (!/^\S+@\S+\.\S+$/.test(fields.email.trim())) errs.email = true;
-  if (fields.phone.trim() && fields.phone.replace(/\D/g, "").length < 6)
-    errs.phone = true;
-  // no message validation
+  const errs: Partial<Record<keyof typeof fields, string>> = {};
+
+  // Name: 2-80 characters
+  const name = fields.name.trim();
+  if (name.length < 2 || name.length > 80) {
+    errs.name = "name_invalid";
+  }
+
+  // Email: basic check
+  const email = fields.email.trim();
+  if (
+    email.length < 5 ||
+    email.length > 100 ||
+    !email.includes("@") ||
+    !email.includes(".")
+  ) {
+    errs.email = "email_invalid";
+  }
+
+  // Phone: optional, if provided check format
+  const phone = fields.phone.trim();
+  if (phone) {
+    if (!/^[\d\s()\-+]+$/.test(phone)) {
+      errs.phone = "phone_invalid";
+    } else {
+      const digitsOnly = phone.replace(/\s/g, "");
+      if (digitsOnly.length < 7) {
+        errs.phone = "phone_invalid";
+      }
+    }
+  }
+
+  // Message: min 20 characters
+  if (fields.message.trim().length < 20) {
+    errs.message = "message_invalid";
+  }
+
   return errs;
 }
 
-/** Mailto composer */
-function buildMailto({
-  to,
-  name,
-  email,
-  phone,
-  message,
-  locale,
-}: {
-  to: string;
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  locale: "en" | "pt";
-}) {
-  const subject = `[CEU] Contact — ${name || "Prospect"}`;
-  const lines = [
-    `Name: ${name}`,
-    `Email: ${email}`,
-    `Phone: ${phone || "(not provided)"}`,
-    "",
-    "Message:",
-    message || "(empty)",
-    "",
-    `Locale: ${locale}`,
-    `Source URL: ${typeof window !== "undefined" ? window.location.href : ""}`,
-  ].join("\n");
-
-  return (
-    `mailto:${encodeURIComponent(to)}` +
-    `?subject=${encodeURIComponent(subject)}` +
-    `&body=${encodeURIComponent(lines)}`
-  );
+/** Map error codes to i18n keys */
+function getFieldErrorMessage(
+  code: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  t: any
+): string {
+  const key = `contact.validate.${code.replace("_invalid", "")}`;
+  return t(key, code);
 }
 
 /** Contact form */
-export default function ContactFormClient({
-  to = "info@ceuconstruction.com",
-}: {
-  to?: string;
-}) {
+export default function ContactFormClient() {
   const { locale, t } = useI18n();
 
   // Read i18n once (supports string or {label, placeholder})
@@ -86,6 +87,7 @@ export default function ContactFormClient({
     submit?: string;
     success?: string;
     error?: string;
+    serverError?: string;
   }>("contact.form", {});
 
   const copy = {
@@ -107,23 +109,26 @@ export default function ContactFormClient({
     },
     honeypotLabel: labelOf(f.honeypot, "Leave this field empty"),
     submit: f.submit ?? "Send message",
-    success:
-      f.success ?? "Thanks. Your email client will open with a draft to send.",
+    success: f.success ?? "Thank you. Your message has been sent.",
     error: f.error ?? "Please fix the fields highlighted.",
+    serverError: f.serverError ?? "Something went wrong. Please try again.",
   };
 
+  // Form state
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
-  const [honey, setHoney] = React.useState(""); // hidden
-  const [submitting, setSubmitting] = React.useState(false);
-  const [status, setStatus] = React.useState<"idle" | "ok" | "err">("idle");
-  const [errors, setErrors] = React.useState<{
-    name?: boolean;
-    email?: boolean;
-    phone?: boolean;
-  }>({});
+  const [honeypot, setHoneypot] = React.useState("");
+
+  // UI state
+  const [status, setStatus] = React.useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [fieldErrors, setFieldErrors] = React.useState<
+    Partial<Record<"name" | "email" | "phone" | "message", string>>
+  >({});
+  const [genericError, setGenericError] = React.useState(false);
 
   // One-place field styling (darker base, darker-on-focus via CEU tokens)
   const fieldClass = (hasError?: boolean) =>
@@ -137,31 +142,66 @@ export default function ContactFormClient({
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (honey.trim()) return; // honeypot
 
-    const errs = validate({ name, email, phone, message });
-    setErrors(errs);
-    if (Object.keys(errs).length) {
-      setStatus("err");
+    // Clear previous errors
+    setFieldErrors({});
+    setGenericError(false);
+
+    // Client-side validation
+    const errs = validateClient({ name, email, phone, message });
+    if (Object.keys(errs).length > 0) {
+      setFieldErrors(errs);
+      setStatus("error");
       return;
     }
 
+    // Submit to API
+    setStatus("submitting");
+
     try {
-      setSubmitting(true);
-      const href = buildMailto({
-        to,
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        message: message.trim(),
-        locale,
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          phone: phone.trim() || undefined,
+          message: message.trim(),
+          locale,
+          honeypot: honeypot.trim() || undefined,
+        }),
       });
-      window.location.href = href;
-      setStatus("ok");
-    } catch {
-      setStatus("err");
+
+      const data = await res.json();
+
+      if (res.status === 200 && data.ok === true) {
+        // Success
+        setStatus("success");
+        setGenericError(false);
+        // Clear form fields
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+        setHoneypot("");
+      } else if (res.status === 400 && data.fieldErrors) {
+        // Validation errors from server
+        setFieldErrors(data.fieldErrors);
+        setStatus("error");
+      } else {
+        // Server error or unknown error
+        setGenericError(true);
+        setStatus("error");
+      }
+    } catch (error) {
+      // Network error
+      console.error("Contact form submission error:", error);
+      setGenericError(true);
+      setStatus("error");
     } finally {
-      setSubmitting(false);
+      if (status === "submitting") {
+        setStatus("idle");
+      }
     }
   }
 
@@ -176,8 +216,8 @@ export default function ContactFormClient({
           autoComplete="off"
           aria-hidden="true"
           className="hidden"
-          value={honey}
-          onChange={(e) => setHoney(e.target.value)}
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
         />
       </label>
 
@@ -189,8 +229,13 @@ export default function ContactFormClient({
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder={copy.name.placeholder}
-          className={fieldClass(errors.name)}
+          className={fieldClass(!!fieldErrors.name)}
         />
+        {fieldErrors.name && (
+          <p className="mt-1 text-sm text-red-600">
+            {getFieldErrorMessage(fieldErrors.name, t)}
+          </p>
+        )}
       </div>
 
       {/* Email */}
@@ -202,8 +247,13 @@ export default function ContactFormClient({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={copy.email.placeholder}
-          className={fieldClass(errors.email)}
+          className={fieldClass(!!fieldErrors.email)}
         />
+        {fieldErrors.email && (
+          <p className="mt-1 text-sm text-red-600">
+            {getFieldErrorMessage(fieldErrors.email, t)}
+          </p>
+        )}
       </div>
 
       {/* Phone */}
@@ -215,11 +265,16 @@ export default function ContactFormClient({
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder={copy.phone.placeholder}
-          className={fieldClass(errors.phone)}
+          className={fieldClass(!!fieldErrors.phone)}
         />
+        {fieldErrors.phone && (
+          <p className="mt-1 text-sm text-red-600">
+            {getFieldErrorMessage(fieldErrors.phone, t)}
+          </p>
+        )}
       </div>
 
-      {/* Message (no validation) */}
+      {/* Message */}
       <div>
         <label className="block text-sm text-ink/80">
           {copy.message.label}
@@ -229,27 +284,38 @@ export default function ContactFormClient({
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={copy.message.placeholder}
-          className={fieldClass()}
+          className={fieldClass(!!fieldErrors.message)}
         />
+        {fieldErrors.message && (
+          <p className="mt-1 text-sm text-red-600">
+            {getFieldErrorMessage(fieldErrors.message, t)}
+          </p>
+        )}
       </div>
 
       {/* Submit + status */}
-      <div className="mt-2 flex items-center gap-3">
+      <div className="mt-2 flex flex-col gap-2">
         <button
           type="submit"
-          disabled={submitting}
-          className="inline-flex items-center rounded-full px-4 py-2 text-white transition
+          disabled={status === "submitting"}
+          className="inline-flex items-center justify-center rounded-full px-4 py-2 text-white transition
                      focus:outline-none focus:ring-2 focus:ring-[var(--brand)]/40 disabled:opacity-60
                      bg-[var(--brand)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.25)]"
         >
-          {copy.submit}
+          {status === "submitting" ? "Sending..." : copy.submit}
         </button>
 
-        {status === "ok" ? (
-          <span className="text-sm text-emerald-600">{copy.success}</span>
-        ) : status === "err" ? (
-          <span className="text-sm text-red-600">{copy.error}</span>
-        ) : null}
+        {status === "success" && (
+          <div className="rounded-md bg-emerald-50 p-3 text-sm text-emerald-800">
+            {copy.success}
+          </div>
+        )}
+
+        {genericError && (
+          <div className="rounded-md bg-red-50 p-3 text-sm text-red-800">
+            {copy.serverError}
+          </div>
+        )}
       </div>
     </form>
   );
