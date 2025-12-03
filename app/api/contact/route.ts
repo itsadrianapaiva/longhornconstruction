@@ -1,9 +1,21 @@
 import { NextResponse } from "next/server";
 import { validateContactPayload } from "@/lib/contact/contactValidation";
 import { sendContactMessage } from "@/lib/contact/contactService";
+import { checkContactRateLimit } from "@/lib/contact/rateLimit";
 
 export async function POST(request: Request): Promise<Response | NextResponse> {
   try {
+    // Check rate limit first
+    const ip = request.headers.get("x-forwarded-for") ?? null;
+    const rateLimitResult = checkContactRateLimit(ip);
+
+    if (!rateLimitResult.allowed) {
+      return NextResponse.json(
+        { ok: false, error: "rateLimited" },
+        { status: 429 }
+      );
+    }
+
     // Parse request body
     const body = await request.json();
 
@@ -34,7 +46,6 @@ export async function POST(request: Request): Promise<Response | NextResponse> {
     }
 
     // Extract context
-    const ip = request.headers.get("x-forwarded-for") ?? null;
     const userAgent = request.headers.get("user-agent") ?? null;
 
     // Send email

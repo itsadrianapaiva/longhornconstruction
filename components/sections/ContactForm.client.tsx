@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { useContactForm } from "@/components/hooks/useContactForm";
 
 /** i18n field types */
 type FieldDef = string | { label?: string; placeholder?: string };
@@ -14,53 +15,6 @@ function labelOf(v: FieldDef | undefined, fallback: string) {
 function placeholderOf(v: FieldDef | undefined, fallback: string) {
   if (!v) return fallback;
   return typeof v === "string" ? fallback : v.placeholder ?? fallback;
-}
-
-/** Client-side validation matching server logic */
-function validateClient(fields: {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}) {
-  const errs: Partial<Record<keyof typeof fields, string>> = {};
-
-  // Name: 2-80 characters
-  const name = fields.name.trim();
-  if (name.length < 2 || name.length > 80) {
-    errs.name = "name_invalid";
-  }
-
-  // Email: basic check
-  const email = fields.email.trim();
-  if (
-    email.length < 5 ||
-    email.length > 100 ||
-    !email.includes("@") ||
-    !email.includes(".")
-  ) {
-    errs.email = "email_invalid";
-  }
-
-  // Phone: optional, if provided check format
-  const phone = fields.phone.trim();
-  if (phone) {
-    if (!/^[\d\s()\-+]+$/.test(phone)) {
-      errs.phone = "phone_invalid";
-    } else {
-      const digitsOnly = phone.replace(/\s/g, "");
-      if (digitsOnly.length < 7) {
-        errs.phone = "phone_invalid";
-      }
-    }
-  }
-
-  // Message: min 20 characters
-  if (fields.message.trim().length < 20) {
-    errs.message = "message_invalid";
-  }
-
-  return errs;
 }
 
 /** Map error codes to i18n keys */
@@ -114,21 +68,19 @@ export default function ContactFormClient() {
     serverError: f.serverError ?? "Something went wrong. Please try again.",
   };
 
-  // Form state
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [message, setMessage] = React.useState("");
-  const [honeypot, setHoneypot] = React.useState("");
-
-  // UI state
-  const [status, setStatus] = React.useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
-  const [fieldErrors, setFieldErrors] = React.useState<
-    Partial<Record<"name" | "email" | "phone" | "message", string>>
-  >({});
-  const [genericError, setGenericError] = React.useState(false);
+  // Use the contact form hook
+  const {
+    values,
+    setName,
+    setEmail,
+    setPhone,
+    setMessage,
+    setHoneypot,
+    status,
+    fieldErrors,
+    genericError,
+    handleSubmit,
+  } = useContactForm({ locale });
 
   // One-place field styling (darker base, darker-on-focus via CEU tokens)
   const fieldClass = (hasError?: boolean) =>
@@ -140,73 +92,8 @@ export default function ContactFormClient() {
       hasError ? "!border-red-500" : "",
     ].join(" ");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    // Clear previous errors
-    setFieldErrors({});
-    setGenericError(false);
-
-    // Client-side validation
-    const errs = validateClient({ name, email, phone, message });
-    if (Object.keys(errs).length > 0) {
-      setFieldErrors(errs);
-      setStatus("error");
-      return;
-    }
-
-    // Submit to API
-    setStatus("submitting");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          phone: phone.trim() || undefined,
-          message: message.trim(),
-          locale,
-          honeypot: honeypot.trim() || undefined,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (res.status === 200 && data.ok === true) {
-        // Success
-        setStatus("success");
-        setGenericError(false);
-        // Clear form fields
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
-        setHoneypot("");
-      } else if (res.status === 400 && data.fieldErrors) {
-        // Validation errors from server
-        setFieldErrors(data.fieldErrors);
-        setStatus("error");
-      } else {
-        // Server error or unknown error
-        setGenericError(true);
-        setStatus("error");
-      }
-    } catch (error) {
-      // Network error
-      console.error("Contact form submission error:", error);
-      setGenericError(true);
-      setStatus("error");
-    } finally {
-      if (status === "submitting") {
-        setStatus("idle");
-      }
-    }
-  }
-
   return (
-    <form onSubmit={onSubmit} className="mt-4 grid gap-4">
+    <form onSubmit={handleSubmit} className="mt-4 grid gap-4">
       {/* Honeypot (hidden) */}
       <label className="sr-only" aria-hidden="true">
         {copy.honeypotLabel}
@@ -216,7 +103,7 @@ export default function ContactFormClient() {
           autoComplete="off"
           aria-hidden="true"
           className="hidden"
-          value={honeypot}
+          value={values.honeypot}
           onChange={(e) => setHoneypot(e.target.value)}
         />
       </label>
@@ -226,7 +113,7 @@ export default function ContactFormClient() {
         <label className="block text-sm text-ink/80">{copy.name.label}</label>
         <input
           type="text"
-          value={name}
+          value={values.name}
           onChange={(e) => setName(e.target.value)}
           placeholder={copy.name.placeholder}
           className={fieldClass(!!fieldErrors.name)}
@@ -244,7 +131,7 @@ export default function ContactFormClient() {
         <input
           type="email"
           inputMode="email"
-          value={email}
+          value={values.email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={copy.email.placeholder}
           className={fieldClass(!!fieldErrors.email)}
@@ -262,7 +149,7 @@ export default function ContactFormClient() {
         <input
           type="tel"
           inputMode="tel"
-          value={phone}
+          value={values.phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder={copy.phone.placeholder}
           className={fieldClass(!!fieldErrors.phone)}
@@ -281,7 +168,7 @@ export default function ContactFormClient() {
         </label>
         <textarea
           rows={5}
-          value={message}
+          value={values.message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder={copy.message.placeholder}
           className={fieldClass(!!fieldErrors.message)}
