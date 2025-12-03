@@ -233,8 +233,28 @@ function MobileDrawer({
 
         {/* Middle: nav items */}
         <nav className="grid gap-4 pl-14">
-          {items.map((item) =>
-            mode === "scroll" ? (
+          {items.map((item) => {
+            // Special case: contact goes to dedicated page
+            if (item.id === "contact") {
+              return (
+                <Link
+                  key={item.id}
+                  href={`/${locale}/contact`}
+                  onClick={onClose}
+                  className={cx(
+                    "text-left text-lg font-light uppercase tracking-wide cursor-pointer",
+                    "text-white/90 hover:text-[color:var(--brand)]",
+                    "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+                    "px-2 rounded-md",
+                    "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
+            return mode === "scroll" ? (
               <button
                 key={item.id}
                 type="button"
@@ -264,8 +284,8 @@ function MobileDrawer({
               >
                 {item.label}
               </Link>
-            )
-          )}
+            );
+          })}
         </nav>
 
         <div className="flex-1" />
@@ -281,7 +301,16 @@ function MobileDrawer({
               />
             </div>
           )}
-          {mode === "scroll" ? (
+          {/* Special case: contact CTA goes to dedicated page */}
+          {ctaTargetId === "contact" ? (
+            <ButtonLink
+              href={`/${locale}/contact`}
+              onClick={onClose}
+              className="w-full justify-center"
+            >
+              {ctaLabel}
+            </ButtonLink>
+          ) : mode === "scroll" ? (
             <ButtonLink
               href="#"
               onClick={(e) => {

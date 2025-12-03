@@ -64,7 +64,7 @@ export default function InnerPageHeader({
     { label: nav.about, href: `/${locale}#about` },
     { label: nav.services, href: `/${locale}#services` },
     { label: nav.projects, href: `/${locale}#projects` },
-    { label: nav.contact, href: `/${locale}#contact` },
+    { label: nav.contact, href: `/${locale}/contact` },
   ];
 
   // Mobile drawer items (section IDs for scrolling)
@@ -136,7 +136,7 @@ export default function InnerPageHeader({
                 </li>
               ))}
               <li>
-                <ButtonLink href={`/${locale}#contact`} className="text-white">
+                <ButtonLink href={`/${locale}/contact`} className="text-white">
                   {hero.primaryCta}
                 </ButtonLink>
               </li>

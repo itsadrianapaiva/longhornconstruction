@@ -34,7 +34,7 @@ export default async function InProgressPage({
         eyebrow={cta.eyebrow}
         title={cta.title}
         body={cta.body}
-        primaryHref={`/${locale}/#contact`}
+        primaryHref={`/${locale}/contact`}
         primaryLabel={cta.primaryLabel}
         secondaryHref={`/${locale}/#projects`}
         secondaryLabel={cta.secondaryLabel}
