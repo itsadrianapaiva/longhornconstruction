@@ -172,7 +172,7 @@ export type { PageCtaBannerProps };
           eyebrow={cta.eyebrow}
           title={cta.title}
           body={cta.body}
-          primaryHref={`/${params.locale}/#contact`}
+          primaryHref={`/${params.locale}/contact`}
           primaryLabel={cta.primaryLabel}
           secondaryHref={`/${params.locale}/#projects`}
           secondaryLabel={cta.secondaryLabel}
@@ -184,14 +184,11 @@ export type { PageCtaBannerProps };
   }
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  FUTURE USAGE NOTES
+  USAGE NOTES
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  When the contact form moves to its own dedicated page, simply update the href:
-
-    const contactHref = `/${params.locale}/contact`;
-
-  The component itself remains unchanged, as it only receives hrefs as props.
+  Contact form now has its own dedicated page at /${locale}/contact.
+  Always use primaryHref={`/${locale}/contact`} to link to the contact page.
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 */
