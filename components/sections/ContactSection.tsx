@@ -5,12 +5,38 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import ContactFormClient from "@/components/sections/ContactForm.client";
 import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
-import { useI18n } from "@/lib/i18n/I18nProvider";
-import SectionHeader from "@/components/SectionHeader";
 import CeuSocialLinks from "@/components/CeuSocialLinks";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
+
+type ContactSectionProps = {
+  title: string;
+  intro: string;
+  backgroundAlt: string;
+  what: {
+    title: string;
+    intro: string;
+    items: string[];
+  };
+  direct: {
+    title: string;
+    labels: {
+      phone: string;
+      email: string;
+      hours: string;
+      location: string;
+    };
+    hours: string;
+    location: string;
+    people: Person[];
+  };
+  map: {
+    title: string;
+    serviceArea: string;
+  };
+  locale: string;
+};
 
 function WhatToExpect({
   title,
@@ -125,7 +151,7 @@ function DirectContact({
       </div>
 
       {/* Follow us section */}
-      <div className="mt-6 border-t border-ink/10 pt-4">
+      <div className="mt-6 pt-4">
         <CeuSocialLinks
           label={locale === "pt" ? "Siga nos" : "Follow us"}
           showLabel={true}
@@ -136,33 +162,12 @@ function DirectContact({
   );
 }
 
-export default function Contact() {
-  const { t, locale } = useI18n();
-
-  // Strict reads to surface missing keys during dev
-  const title = t<string>("contact.title");
-  const intro = t<string>("contact.intro", ""); // standardized key
-
-  const backgroundAlt = t<string>("contact.backgroundAlt");
-
-  const whatTitle = t<string>("contact.what.title");
-  const whatIntro = t<string>("contact.what.intro");
-  const whatItems = t<string[]>("contact.what.items", []);
-
-  const directTitle = t<string>("contact.direct.title");
-  const labels = t<{
-    phone: string;
-    email: string;
-    hours: string;
-    location: string;
-  }>("contact.direct.labels");
-  const hours = t<string>("contact.direct.hours");
-  const location = t<string>("contact.direct.location");
-  const people = t<Person[]>("contact.direct.people", []);
-
-  const mapTitle = t<string>("contact.map.title");
-  const serviceArea = t<string>("contact.map.serviceArea");
-
+export default function ContactSection({
+  what,
+  direct,
+  map,
+  locale,
+}: ContactSectionProps) {
   return (
     <SectionShell
       id="contact"
@@ -173,90 +178,52 @@ export default function Contact() {
       className="relative"
       innerClassName="relative"
     >
-      {/* Standardized section header */}
-      <SectionHeader
-        title={title}
-        intro={intro}
-        className="relative -mb-6 overflow-visible"
-      />
 
-      {/* Glass card with subtle contact background */}
-      <div
-        className="relative z-10 mt-16 grid items-stretch gap-8 rounded-2xl bg-clip-padding px-6 py-8 backdrop-blur-[12px]
-                   shadow-[0_8px_30px_rgba(0,0,0,0.35)] md:grid-cols-2 lg:px-10 lg:py-12"
-      >
-        {/* Background image behind the glass */}
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl">
-          <Image
-            src="/media/contact/contact2.JPEG"
-            alt={backgroundAlt}
-            fill
-            sizes="100vw"
-            priority={false}
-            className="object-cover opacity-10"
-          />
-          {/* brand-tinted gradient mask (image → gradients → content) */}
-          <div className="absolute inset-0">
-            {/* soft brand diagonal tint */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--brand) 20%, transparent 60%)",
-                opacity: 0.28,
-              }}
-            />
-            {/* subtle vertical sky fade using CEU sky tokens */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to top, var(--sky-700) 0%, var(--sky-500) 35%, transparent 75%)",
-              }}
-            />
-          </div>
-        </div>
+      {/* Two-column layout: What to expect + Form card */}
+      {/* On mobile: form on top (flex-col-reverse), on desktop: side-by-side grid */}
+      <div className="relative z-10 mt-8 flex flex-col-reverse gap-10 md:grid md:grid-cols-[minmax(0,0.65fr)_minmax(0,1fr)] md:items-start">
+        {/* Left on desktop / Bottom on mobile: What to expect (clean, no background) */}
+        <WhatToExpect title={what.title} intro={what.intro} items={what.items} />
 
-        {/* Left: What to expect */}
-        <WhatToExpect title={whatTitle} intro={whatIntro} items={whatItems} />
-
-        {/* Right: the real form with mailto handoff */}
-        <div className="relative flex flex-col">
+        {/* Right on desktop / Top on mobile: Contact form in subtle CEU card */}
+        <div className="rounded-2xl border border-ink/10 bg-surface/95 px-6 py-6 shadow-[0_8px_18px_rgba(0,0,0,0.16)] md:px-8 md:py-8">
           <ContactFormClient />
         </div>
       </div>
 
       {/* Lower grid: Map left, Direct contact right */}
-      <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-2">
+      <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-[2fr_1fr]">
         {/* Map with solid chat bubble */}
         <div
           className="relative h-[16rem] overflow-hidden rounded-2xl border border-ink/10 md:h-[22rem]"
-          aria-label={mapTitle}
+          aria-label={map.title}
         >
           <Image
             src="/media/contact/algarve.jpg"
-            alt={mapTitle}
+            alt={map.title}
             fill
             sizes="100vw"
             priority={false}
             className="object-cover"
           />
           <MapChatBubble
-            message={serviceArea}
+            message={map.serviceArea}
             className="top-4 left-4 md:top-8 md:left-12"
           />
         </div>
 
         {/* Direct contact card with icons + hours/location */}
         <DirectContact
-          title={directTitle}
-          labels={labels}
-          hours={hours}
-          location={location}
-          people={people}
+          title={direct.title}
+          labels={direct.labels}
+          hours={direct.hours}
+          location={direct.location}
+          people={direct.people}
           locale={locale}
         />
       </div>
     </SectionShell>
   );
 }
+
+export type { ContactSectionProps };

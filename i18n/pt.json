@@ -4985,8 +4985,9 @@
       },
       "honeypot": "Deixe este campo vazio",
       "submit": "Enviar mensagem",
-      "success": "Obrigado. O seu cliente de email será aberto com um rascunho para enviar.",
-      "error": "Corrija os campos assinalados abaixo."
+      "success": "Obrigado. A sua mensagem foi enviada. Responderemos em breve.",
+      "error": "Corrija os campos assinalados abaixo.",
+      "serverError": "Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente dentro de alguns minutos."
     },
     "validate": {
       "name": "Introduza o seu nome (2–80 caracteres).",

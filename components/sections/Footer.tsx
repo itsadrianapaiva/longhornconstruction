@@ -171,6 +171,20 @@ export default function Footer() {
                   const label = item?.label ?? "";
                   const targetId = getInternalTargetId(originalHref);
 
+                  // Special case: contact links go to dedicated page
+                  if (targetId === "contact") {
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/${locale}/contact`}
+                          className="inline-flex min-h-8 items-center text-white/70 transition-colors duration-200 ease-[var(--ease-gentle)] hover:text-[color:var(--brand)]"
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    );
+                  }
+
                   // On homepage: use original href (e.g., "#stats")
                   // On inner pages: use /${locale}#${targetId} to navigate back to homepage
                   const href = isHomepage
@@ -255,7 +269,22 @@ export default function Footer() {
               (() => {
                 const originalCtaHref = cta.href;
                 const ctaTargetId = getInternalTargetId(originalCtaHref);
-                // On homepage: use original href (e.g., "#contact")
+
+                // Special case: contact links go to dedicated page
+                if (ctaTargetId === "contact") {
+                  return (
+                    <div className="mt-4">
+                      <ButtonLink
+                        href={`/${locale}/contact`}
+                        className="justify-center"
+                      >
+                        {cta.label}
+                      </ButtonLink>
+                    </div>
+                  );
+                }
+
+                // On homepage: use original href (e.g., "#projects")
                 // On inner pages: use /${locale}#${ctaTargetId} to navigate back to homepage
                 const ctaHref = isHomepage
                   ? originalCtaHref

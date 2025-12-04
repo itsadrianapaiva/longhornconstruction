@@ -4985,8 +4985,9 @@
       },
       "honeypot": "Leave this field empty",
       "submit": "Send message",
-      "success": "Thanks. Your email client will open with a draft to send.",
-      "error": "Please fix the fields highlighted below."
+      "success": "Thank you. Your message has been sent. We will get back to you soon.",
+      "error": "Please fix the fields highlighted below.",
+      "serverError": "Something went wrong while sending your message. Please try again in a few minutes."
     },
     "validate": {
       "name": "Please enter your name (2–80 characters).",
