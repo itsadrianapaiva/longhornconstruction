@@ -53,6 +53,7 @@ export default async function ContactPage({
           title: dict.contact.map.title,
           serviceArea: dict.contact.map.serviceArea,
         }}
+        locale={locale}
       />
     </>
   );
