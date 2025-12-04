@@ -5,6 +5,7 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import ContactFormClient from "@/components/sections/ContactForm.client";
 import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import CeuSocialLinks from "@/components/CeuSocialLinks";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
@@ -34,6 +35,7 @@ type ContactSectionProps = {
     title: string;
     serviceArea: string;
   };
+  locale: string;
 };
 
 function WhatToExpect({
@@ -84,12 +86,14 @@ function DirectContact({
   hours,
   location,
   people,
+  locale,
 }: {
   title: string;
   labels: { phone: string; email: string; hours: string; location: string };
   hours: string;
   location: string;
   people: Person[];
+  locale: string;
 }) {
   return (
     <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
@@ -145,15 +149,24 @@ function DirectContact({
           </div>
         ))}
       </div>
+
+      {/* Follow us section */}
+      <div className="mt-6 pt-4">
+        <CeuSocialLinks
+          label={locale === "pt" ? "Siga nos" : "Follow us"}
+          showLabel={true}
+          variant="inline"
+        />
+      </div>
     </div>
   );
 }
 
 export default function ContactSection({
-  backgroundAlt,
   what,
   direct,
   map,
+  locale,
 }: ContactSectionProps) {
   return (
     <SectionShell
@@ -166,54 +179,20 @@ export default function ContactSection({
       innerClassName="relative"
     >
 
-      {/* Glass card with subtle contact background */}
-      <div
-        className="relative z-10 mt-16 grid items-stretch gap-8 rounded-2xl bg-clip-padding px-6 py-8 backdrop-blur-[12px]
-                   shadow-[0_8px_30px_rgba(0,0,0,0.35)] md:grid-cols-2 lg:px-10 lg:py-12"
-      >
-        {/* Background image behind the glass */}
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-2xl">
-          <Image
-            src="/media/contact/contact2.JPEG"
-            alt={backgroundAlt}
-            fill
-            sizes="100vw"
-            priority={false}
-            className="object-cover opacity-10"
-          />
-          {/* brand-tinted gradient mask (image → gradients → content) */}
-          <div className="absolute inset-0">
-            {/* soft brand diagonal tint */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--brand) 20%, transparent 60%)",
-                opacity: 0.28,
-              }}
-            />
-            {/* subtle vertical sky fade using CEU sky tokens */}
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to top, var(--sky-700) 0%, var(--sky-500) 35%, transparent 75%)",
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Left: What to expect */}
+      {/* Two-column layout: What to expect + Form card */}
+      {/* On mobile: form on top (flex-col-reverse), on desktop: side-by-side grid */}
+      <div className="relative z-10 mt-8 flex flex-col-reverse gap-10 md:grid md:grid-cols-[minmax(0,0.65fr)_minmax(0,1fr)] md:items-start">
+        {/* Left on desktop / Bottom on mobile: What to expect (clean, no background) */}
         <WhatToExpect title={what.title} intro={what.intro} items={what.items} />
 
-        {/* Right: the real form with mailto handoff */}
-        <div className="relative flex flex-col">
+        {/* Right on desktop / Top on mobile: Contact form in subtle CEU card */}
+        <div className="rounded-2xl border border-ink/10 bg-surface/95 px-6 py-6 shadow-[0_8px_18px_rgba(0,0,0,0.16)] md:px-8 md:py-8">
           <ContactFormClient />
         </div>
       </div>
 
       {/* Lower grid: Map left, Direct contact right */}
-      <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-2">
+      <div className="relative z-10 mt-6 grid gap-6 lg:grid-cols-[2fr_1fr]">
         {/* Map with solid chat bubble */}
         <div
           className="relative h-[16rem] overflow-hidden rounded-2xl border border-ink/10 md:h-[22rem]"
@@ -240,6 +219,7 @@ export default function ContactSection({
           hours={direct.hours}
           location={direct.location}
           people={direct.people}
+          locale={locale}
         />
       </div>
     </SectionShell>

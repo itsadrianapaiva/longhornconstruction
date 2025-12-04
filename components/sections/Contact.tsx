@@ -7,6 +7,7 @@ import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import SectionHeader from "@/components/SectionHeader";
+import CeuSocialLinks from "@/components/CeuSocialLinks";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
@@ -59,12 +60,14 @@ function DirectContact({
   hours,
   location,
   people,
+  locale,
 }: {
   title: string;
   labels: { phone: string; email: string; hours: string; location: string };
   hours: string;
   location: string;
   people: Person[];
+  locale: string;
 }) {
   return (
     <div className="rounded-2xl border border-ink/10 bg-surface/80 p-6">
@@ -120,12 +123,21 @@ function DirectContact({
           </div>
         ))}
       </div>
+
+      {/* Follow us section */}
+      <div className="mt-6 border-t border-ink/10 pt-4">
+        <CeuSocialLinks
+          label={locale === "pt" ? "Siga nos" : "Follow us"}
+          showLabel={true}
+          variant="inline"
+        />
+      </div>
     </div>
   );
 }
 
 export default function Contact() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   // Strict reads to surface missing keys during dev
   const title = t<string>("contact.title");
@@ -242,6 +254,7 @@ export default function Contact() {
           hours={hours}
           location={location}
           people={people}
+          locale={locale}
         />
       </div>
     </SectionShell>
