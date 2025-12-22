@@ -94,7 +94,7 @@ $folders | ForEach-Object {
             $_.Name -notmatch "-(sm|lg)\.jpe?g$"
         } |
         ForEach-Object {
-            $input = $_.FullName
+            $sourceFile = $_.FullName
             $basename = [System.IO.Path]::GetFileNameWithoutExtension($_.Name)
 
             # Outputs are always .jpg and .webp, so jpeg inputs are normalized
@@ -124,7 +124,7 @@ $folders | ForEach-Object {
 
                 # JPG - small (approx 1600px)
                 if (-not (Test-Path $smJpg)) {
-                    & $ffmpegPath -hide_banner -loglevel error -i $input -vf "scale=1600:-1" -q:v 5 $smJpg
+                    & $ffmpegPath -hide_banner -loglevel error -i $sourceFile -vf "scale=1600:-1" -q:v 5 $smJpg
                     if ($LASTEXITCODE -ne 0) {
                         Write-Host "    [X] Failed to create $($basename)-sm.jpg" -ForegroundColor Red
                         $totalFailures++
@@ -135,7 +135,7 @@ $folders | ForEach-Object {
 
                 # JPG - large (approx 2560px)
                 if (-not (Test-Path $lgJpg)) {
-                    & $ffmpegPath -hide_banner -loglevel error -i $input -vf "scale=2560:-1" -q:v 4 $lgJpg
+                    & $ffmpegPath -hide_banner -loglevel error -i $sourceFile -vf "scale=2560:-1" -q:v 4 $lgJpg
                     if ($LASTEXITCODE -ne 0) {
                         Write-Host "    [X] Failed to create $($basename)-lg.jpg" -ForegroundColor Red
                         $totalFailures++
@@ -146,7 +146,7 @@ $folders | ForEach-Object {
 
                 # WebP - small
                 if (-not (Test-Path $smWebp)) {
-                    & $ffmpegPath -hide_banner -loglevel error -i $input -vf "scale=1600:-1" -q:v 40 -c:v libwebp $smWebp
+                    & $ffmpegPath -hide_banner -loglevel error -i $sourceFile -vf "scale=1600:-1" -q:v 40 -c:v libwebp $smWebp
                     if ($LASTEXITCODE -ne 0) {
                         Write-Host "    [X] Failed to create $($basename)-sm.webp" -ForegroundColor Red
                         $totalFailures++
@@ -157,7 +157,7 @@ $folders | ForEach-Object {
 
                 # WebP - large
                 if (-not (Test-Path $lgWebp)) {
-                    & $ffmpegPath -hide_banner -loglevel error -i $input -vf "scale=2560:-1" -q:v 40 -c:v libwebp $lgWebp
+                    & $ffmpegPath -hide_banner -loglevel error -i $sourceFile -vf "scale=2560:-1" -q:v 40 -c:v libwebp $lgWebp
                     if ($LASTEXITCODE -ne 0) {
                         Write-Host "    [X] Failed to create $($basename)-lg.webp" -ForegroundColor Red
                         $totalFailures++
