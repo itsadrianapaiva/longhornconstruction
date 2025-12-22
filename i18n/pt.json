@@ -4723,6 +4723,90 @@
           }
         ]
       },
+       {
+        "id": "vila-do-bispo",
+        "projectTitle": "Vila do Bispo",
+        "progressPercent": 70,
+        "progressLabel": "70%",
+        "description": "",
+        "gallery": [
+          {
+            "alt": "Vila do Bispo — in progress photo 1",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/1-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/1-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vila do Bispo — in progress photo 2",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/2-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/2-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vila do Bispo — in progress photo 3",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/3-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/3-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vila do Bispo — in progress photo 4",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/4-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/4-lg.webp",
+                "format": "webp"
+              }
+            ]
+          },
+          {
+            "alt": "Vila do Bispo — in progress photo 5",
+            "width": 2560,
+            "height": 1600,
+            "sources": [
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/5-lg.jpg",
+                "format": "jpg"
+              },
+              {
+                "src": "/media/projects/in-progress/vila-do-bispo/5-lg.webp",
+                "format": "webp"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "vilamoura",
         "projectTitle": "Vilamoura",
