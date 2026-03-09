@@ -1,9 +1,7 @@
 # Política de Privacidade
 Última atualização: {{TODAY}}
 
-**CÉU Construction** (NIF 517367777)  
-Aljezur, 8670-116, Algarve, Portugal  
-info@ceuconstruction.com • +351 930 462 893
+**CÉU Construction** 
 
 ## Dados que tratamos e finalidades
 - **Dados de contacto** (nome, email, telefone, mensagem) quando nos contacta.  
@@ -32,7 +30,7 @@ Recurso a prestadores para alojamento, email e fiabilidade que tratam dados por 
 Acesso, retificação, apagamento, limitação, oposição e portabilidade. Quando o tratamento se baseia em consentimento, pode retirá-lo a qualquer momento. Pode reclamar junto da autoridade de controlo (**CNPD**).
 
 ## Contacto
-Email **info@ceuconstruction.com**. Procuramos responder no prazo de um mês nos termos do RGPD.
+Email **email@ceuconstruction.com**. Procuramos responder no prazo de um mês nos termos do RGPD.
 
 ## Reclamações e RAL
 - **Livro de Reclamações Eletrónico**: https://www.livroreclamacoes.pt/inicio/  

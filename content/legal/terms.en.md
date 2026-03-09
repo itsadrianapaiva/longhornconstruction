@@ -27,4 +27,4 @@ The site is provided “as is”. To the fullest extent allowed by law, we exclu
 Portuguese law applies, with the competent courts defined under mandatory consumer protection rules.
 
 ## Contact
-info@ceuconstruction.com • +351 930 462 893
+

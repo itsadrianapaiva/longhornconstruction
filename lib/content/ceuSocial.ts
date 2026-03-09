@@ -9,6 +9,6 @@ export type CeuSocialLinks = {
 };
 
 export const CEU_SOCIAL_LINKS: CeuSocialLinks = {
-  facebook: "https://www.facebook.com/ceu.construction",
-  instagram: "https://www.instagram.com/ceu.construction",
+  facebook: "https://www.facebook.com/cconstruction",
+  instagram: "https://www.instagram.com/cconstruction",
 };

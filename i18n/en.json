@@ -5092,8 +5092,8 @@
       "people": [
         {
           "name": "CÉU Construction",
-          "phone": "+351 930 462 893",
-          "email": "info@ceuconstruction.com"
+          "phone": "+351 000 000 000",
+          "email": "email@ceuconstruction.com"
         }
       ]
     },
@@ -5106,12 +5106,12 @@
     "id": "footer",
     "company": {
       "legalName": "CÉU Construction",
-      "nif": "NIF 517367777",
+      "nif": "NIF 00000000000",
       "address": [
-        "8670-116 Aljezur, Algarve"
+        "8670-116 Algarve"
       ],
-      "email": "info@ceuconstruction.com",
-      "phone": "+351 930 462 893",
+      "email": "email@ceuconstruction.com",
+      "phone": "+351 000 000 000",
       "logoAlt": "CÉU Construction"
     },
     "columns": {
@@ -5255,7 +5255,7 @@
           "solid"
         ],
         "author": {
-          "name": "Melissa B."
+          "name": "M. B."
         },
         "avatarHint": "person-3"
       }

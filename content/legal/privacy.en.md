@@ -2,9 +2,7 @@
 
 Last updated: {{TODAY}}
 
-**CÉU Construction** (NIF 517367777)  
-Aljezur, 8670-116, Algarve, Portugal  
-info@ceuconstruction.com • +351 930 462 893
+**CÉU Construction** 
 
 ## What we collect and why
 
@@ -38,7 +36,7 @@ You can request access, rectification, erasure, restriction, objection, and port
 
 ## How to contact us
 
-Email **info@ceuconstruction.com**. We aim to reply within one month under GDPR.
+Email **email@ceuconstruction.com**. We aim to reply within one month under GDPR.
 
 ## Complaint and ADR links
 
