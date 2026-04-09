@@ -10,7 +10,7 @@ export const icfPt: MethodArticle = {
     alt: "Sistema ICF a ser instalado numa obra",
   },
   intro:
-    "ICF, ou Insulated Concrete Forms, é uma evolução moderna da construção em betão. O sistema junta betão estrutural e isolamento contínuo num único elemento. Na CÉU utilizamos o sistema Sismo, uma solução industrial avançada da família ICF. Pode saber mais sobre a tecnologia em sismo-technology.com/pt-pt.",
+    "ICF, ou Insulated Concrete Forms, é uma evolução moderna da construção em betão. O sistema junta betão estrutural e isolamento contínuo num único elemento. Na Longhorn utilizamos o sistema Sismo, uma solução industrial avançada da família ICF. Pode saber mais sobre a tecnologia em sismo-technology.com/pt-pt.",
   sections: [
     {
       id: "how-it-works",

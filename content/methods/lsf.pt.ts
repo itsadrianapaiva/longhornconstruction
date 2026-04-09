@@ -10,7 +10,7 @@ export const lsfPt: MethodArticle = {
     alt: "Estrutura LSF a ser montada em obra",
   },
   intro:
-    "O Light Steel Frame (LSF) traz precisão industrial para projetos residenciais e comerciais. Utiliza perfis de aço leve moldados a frio que criam uma estrutura resistente, leve e rápida de montar. Na CÉU Construction seguimos as melhores práticas norte americanas e adaptamos o sistema às condições de Portugal e ao clima do Algarve.",
+    "O Light Steel Frame (LSF) traz precisão industrial para projetos residenciais e comerciais. Utiliza perfis de aço leve moldados a frio que criam uma estrutura resistente, leve e rápida de montar. Na Longhorn Construction seguimos as melhores práticas norte americanas e adaptamos o sistema às condições de Portugal e ao clima do Algarve.",
   sections: [
     {
       id: "how-it-works",

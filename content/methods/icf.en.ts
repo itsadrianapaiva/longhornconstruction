@@ -10,7 +10,7 @@ export const icfEn: MethodArticle = {
     alt: "ICF insulated concrete forms being installed on construction site",
   },
   intro:
-    "Insulated Concrete Forms (ICF) are an evolution of modern concrete construction. They unite structural concrete and continuous insulation in one system, creating a building envelope that is durable, energy efficient and fast to assemble. At CÉU, we work with the Sismo system, an advanced industrial panel solution within the ICF family. Learn more about the technology at sismo-technology.com.",
+    "Insulated Concrete Forms (ICF) are an evolution of modern concrete construction. They unite structural concrete and continuous insulation in one system, creating a building envelope that is durable, energy efficient and fast to assemble. At Longhorn, we work with the Sismo system, an advanced industrial panel solution within the ICF family. Learn more about the technology at sismo-technology.com.",
   sections: [
     {
       id: "how-it-works",

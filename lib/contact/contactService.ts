@@ -12,7 +12,7 @@ export type ContactContext = {
  */
 function buildEmailBody(payload: ContactFormPayload, context: ContactContext): string {
   const lines = [
-    "New Contact Request – CÉU Construction",
+    "New Contact Request – Longhorn Construction",
     "=" .repeat(50),
     "",
     `Name: ${payload.name}`,
@@ -41,23 +41,23 @@ function buildEmailBody(payload: ContactFormPayload, context: ContactContext): s
 }
 
 /**
- * Sends contact message via CEU SMTP server
+ * Sends contact message via LGH SMTP server
  */
 export async function sendContactMessage(
   payload: ContactFormPayload,
   context: ContactContext = {}
 ): Promise<void> {
   // Read environment variables
-  const host = process.env.CEU_SMTP_HOST;
-  const portRaw = process.env.CEU_SMTP_PORT;
-  const user = process.env.CEU_SMTP_USER;
-  const pass = process.env.CEU_SMTP_PASS;
-  const to = process.env.CEU_CONTACT_TO ?? user;
+  const host = process.env.SMTP_HOST;
+  const portRaw = process.env.SMTP_PORT;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
+  const to = process.env.CONTACT_TO ?? user;
 
   // Validate configuration
   const port = Number(portRaw ?? "0");
   if (!host || port === 0 || !user || !pass || !to) {
-    throw new Error("CEU contact email environment variables are not correctly configured.");
+    throw new Error("Longhorn contact email environment variables are not correctly configured.");
   }
 
   // Create transporter
@@ -69,9 +69,9 @@ export async function sendContactMessage(
   });
 
   // Build email content
-  const subject = `New contact request from ${payload.name} – CÉU Construction`;
+  const subject = `New contact request from ${payload.name} – Longhorn Construction`;
   const textBody = buildEmailBody(payload, context);
-  const from = `"CÉU Construction" <${user}>`;
+  const from = `"Longhorn Construction" <${user}>`;
 
   // Send email
   try {
@@ -83,7 +83,7 @@ export async function sendContactMessage(
       text: textBody,
     });
   } catch (error) {
-    console.error("Failed to send CEU contact email", error);
+    console.error("Failed to send Longhorn contact email", error);
     throw error;
   }
 }

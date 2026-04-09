@@ -20,12 +20,22 @@ function getInternalTargetId(href?: string): string | null {
     }
 
     // Normalize "/#id" or "/locale/#id"
-    const hashFromPath = href.match(/\/#([\w\-\:]+)/)?.[1] || href.match(/\/[a-zA-Z\-]+\/#([\w\-\:]+)/)?.[1];
+    const hashFromPath =
+      href.match(/\/#([\w\-\:]+)/)?.[1] ||
+      href.match(/\/[a-zA-Z\-]+\/#([\w\-\:]+)/)?.[1];
     if (hashFromPath) return hashFromPath;
 
     // Same-origin absolute URLs with a hash
-    const url = new URL(href, typeof window !== "undefined" ? window.location.href : "http://localhost");
-    if (typeof window !== "undefined" && url.origin === window.location.origin && url.pathname === window.location.pathname && url.hash) {
+    const url = new URL(
+      href,
+      typeof window !== "undefined" ? window.location.href : "http://localhost",
+    );
+    if (
+      typeof window !== "undefined" &&
+      url.origin === window.location.origin &&
+      url.pathname === window.location.pathname &&
+      url.hash
+    ) {
       return url.hash.replace(/^#/, "");
     }
   } catch {
@@ -36,14 +46,24 @@ function getInternalTargetId(href?: string): string | null {
 
 // Helper: smooth scroll with reduced-motion fallback.
 function scrollToIdNoHash(id: string) {
-  const el = typeof document !== "undefined" ? document.getElementById(id) : null;
+  const el =
+    typeof document !== "undefined" ? document.getElementById(id) : null;
   if (!el) return;
-  const prefersReduced = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+  const prefersReduced =
+    typeof window !== "undefined" &&
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({
+    behavior: prefersReduced ? "auto" : "smooth",
+    block: "start",
+  });
 }
 
 // Helper: detect if we're on the homepage (not an inner page)
-function isHomepagePath(pathname: string | null, locale: string | undefined): boolean {
+function isHomepagePath(
+  pathname: string | null,
+  locale: string | undefined,
+): boolean {
   if (!pathname) return false;
   if (!locale) {
     // default locale homepage (if used)
@@ -99,7 +119,7 @@ export default function Footer() {
 
   const services = t<{ title?: string; items?: string[] }>(
     "footer.columns.services",
-    {}
+    {},
   );
   const nav = t<{
     title?: string;
@@ -124,7 +144,7 @@ export default function Footer() {
   const copyright = withYear(t<string>("footer.copyright", ""));
 
   const logoSrc = "/media/logo-white.png"; // same as NavMenu
-  const logoAlt = company.logoAlt ?? "CÉU Construction";
+  const logoAlt = company.logoAlt ?? "Longhorn Construction";
 
   return (
     <footer
@@ -141,8 +161,8 @@ export default function Footer() {
           {/* Logo column — spans 2 on lg, centered on small */}
           <div className="col-span-1 lg:col-span-2 mb-4 flex justify-center lg:items-center lg:justify-start">
             <Link
-              href={isHomepage ? "#hero" : (locale ? `/${locale}` : "/")}
-              aria-label="CÉU Construction Home"
+              href={isHomepage ? "#hero" : locale ? `/${locale}` : "/"}
+              aria-label="Longhorn Construction Home"
               onClick={(e) => {
                 if (isHomepage) {
                   e.preventDefault();
@@ -189,7 +209,9 @@ export default function Footer() {
                   // On inner pages: use /${locale}#${targetId} to navigate back to homepage
                   const href = isHomepage
                     ? originalHref
-                    : (targetId ? `/${locale}#${targetId}` : originalHref);
+                    : targetId
+                      ? `/${locale}#${targetId}`
+                      : originalHref;
 
                   return (
                     <li key={i}>
@@ -265,49 +287,51 @@ export default function Footer() {
             </div>
 
             {/* CTA */}
-            {cta?.label && cta?.href ? (
-              (() => {
-                const originalCtaHref = cta.href;
-                const ctaTargetId = getInternalTargetId(originalCtaHref);
+            {cta?.label && cta?.href
+              ? (() => {
+                  const originalCtaHref = cta.href;
+                  const ctaTargetId = getInternalTargetId(originalCtaHref);
 
-                // Special case: contact links go to dedicated page
-                if (ctaTargetId === "contact") {
+                  // Special case: contact links go to dedicated page
+                  if (ctaTargetId === "contact") {
+                    return (
+                      <div className="mt-4">
+                        <ButtonLink
+                          href={`/${locale}/contact`}
+                          className="justify-center"
+                        >
+                          {cta.label}
+                        </ButtonLink>
+                      </div>
+                    );
+                  }
+
+                  // On homepage: use original href (e.g., "#projects")
+                  // On inner pages: use /${locale}#${ctaTargetId} to navigate back to homepage
+                  const ctaHref = isHomepage
+                    ? originalCtaHref
+                    : ctaTargetId
+                      ? `/${locale}#${ctaTargetId}`
+                      : originalCtaHref;
+
                   return (
                     <div className="mt-4">
                       <ButtonLink
-                        href={`/${locale}/contact`}
+                        href={ctaHref}
+                        onClick={(e) => {
+                          if (ctaTargetId && isHomepage) {
+                            e.preventDefault();
+                            scrollToIdNoHash(ctaTargetId);
+                          }
+                        }}
                         className="justify-center"
                       >
                         {cta.label}
                       </ButtonLink>
                     </div>
                   );
-                }
-
-                // On homepage: use original href (e.g., "#projects")
-                // On inner pages: use /${locale}#${ctaTargetId} to navigate back to homepage
-                const ctaHref = isHomepage
-                  ? originalCtaHref
-                  : (ctaTargetId ? `/${locale}#${ctaTargetId}` : originalCtaHref);
-
-                return (
-                  <div className="mt-4">
-                    <ButtonLink
-                      href={ctaHref}
-                      onClick={(e) => {
-                        if (ctaTargetId && isHomepage) {
-                          e.preventDefault();
-                          scrollToIdNoHash(ctaTargetId);
-                        }
-                      }}
-                      className="justify-center"
-                    >
-                      {cta.label}
-                    </ButtonLink>
-                  </div>
-                );
-              })()
-            ) : null}
+                })()
+              : null}
           </div>
         </div>
 
@@ -353,7 +377,17 @@ export default function Footer() {
             <button
               type="button"
               className="text-white/30 hover:text-[color:var(--brand)] focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              onClick={() => {
+                const prefersReduced =
+                  typeof window !== "undefined" &&
+                  window.matchMedia &&
+                  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: prefersReduced ? "auto" : "smooth",
+                });
+              }}
             >
               {legal.backToTop}
             </button>

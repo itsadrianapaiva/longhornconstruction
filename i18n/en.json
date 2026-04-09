@@ -21,26 +21,26 @@
       "body": "Speak directly with our construction team, share your ideas, and understand the best method for your site in the Algarve.",
       "primaryLabel": "Contact our team",
       "secondaryLabel": "View featured projects",
-      "backgroundAlt": "Client holding a phone and reviewing project details with CÉU Construction."
+      "backgroundAlt": "Client holding a phone and reviewing project details with Longhorn Construction."
     }
   },
   "hero": {
     "id": "hero",
-    "eyebrow": "CÉU Construction",
+    "eyebrow": "Longhorn Construction",
     "title": "logo.",
-    "subtitle": "Think beyond the sky",
+    "subtitle": "From Texas to the world",
     "primaryCta": "Get in touch",
     "secondaryCta": "Explore our work",
-    "videoAriaLabel": "CÉU construction hero",
+    "videoAriaLabel": "Longhorn construction hero",
     "scrollDown": "Scroll to About"
   },
   "about": {
     "id": "about",
-    "title": "Think beyond the sky",
+    "title": "From Teas to the world",
     "intro": "",
     "subheading": "Born from North American standards and refined by Portuguese craftsmanship, we build with control at every stage.",
     "body": [
-      "CÉU Construction handles architecture, planning and full execution with an in house team covering groundworks, structure and finishes. Timelines stay predictable, costs stay transparent and quality remains consistent.",
+      "Longhorn Construction handles architecture, planning and full execution with an in house team covering groundworks, structure and finishes. Timelines stay predictable, costs stay transparent and quality remains consistent.",
       "With owned machinery and coordinated crews, we remove delays caused by subcontractors. This end to end control is why homeowners and investors across the Algarve and Vicentine Coast trust us to deliver reliable, high quality work."
     ],
     "bullets": [
@@ -53,12 +53,12 @@
       "label": "Explore our work",
       "href": "/#projects"
     },
-    "imageAlt": "CÉU Construction built house"
+    "imageAlt": "Longhorn Construction built house"
   },
   "stats": {
     "id": "stats",
     "title": "We came to revolutionize the construction sector",
-    "intro": "See how we've made an impact over the years. Here at CÉU Construction, we're committed to excellence and customer satisfaction.",
+    "intro": "See how we've made an impact over the years. Here at Longhorn Construction, we're committed to excellence and customer satisfaction.",
     "items": [
       {
         "id": "yearsOperating",
@@ -5091,9 +5091,9 @@
       "location": "Algarve, Portugal",
       "people": [
         {
-          "name": "CÉU Construction",
-          "phone": "+351 000 000 000",
-          "email": "email@ceuconstruction.com"
+          "name": "Longhorn Construction",
+          "phone": "+351 933 498 101",
+          "email": "info@longhornconstruction.com"
         }
       ]
     },
@@ -5108,11 +5108,11 @@
       "legalName": "Construction",
       "nif": "NIF 00000000000",
       "address": [
-        "8670-116 Algarve"
+        "8500-116 Algarve"
       ],
-      "email": "email@ceuconstruction.com",
-      "phone": "+351 000 000 000",
-      "logoAlt": "CÉU Construction"
+      "email": "info@longhornconstruction.com",
+      "phone": "+351 933 498 101",
+      "logoAlt": "Longhorn Construction"
     },
     "columns": {
       "services": {
@@ -5214,7 +5214,7 @@
       "ral": "CIMAAL (ADR/Consumer Disputes)",
       "backToTop": "Back to top"
     },
-    "copyright": "© {{year}} CÉU Construction. All rights reserved.",
+    "copyright": "© {{year}} Longhorn Construction. All rights reserved.",
     "langToggle": {
       "label": "Language",
       "en": "English",
@@ -5233,7 +5233,7 @@
           "communication was clear"
         ],
         "author": {
-          "name": "Erik B."
+          "name": "M. B."
         },
         "avatarHint": "person-1"
       },
@@ -5244,18 +5244,18 @@
           "happy"
         ],
         "author": {
-          "name": "C. B."
+          "name": "C. L."
         },
         "avatarHint": "person-2"
       },
       {
-        "quote": "CÉU delivered faster than expected and the finishes were incredibly well done. We had the pleasure to work with them twice and we will definitely work with them again.",
+        "quote": "Longhorn delivered faster than expected and the finishes were incredibly well done. We had the pleasure to work with them twice and we will definitely work with them again.",
         "highlights": [
           "faster than expected",
           "solid"
         ],
         "author": {
-          "name": "M. B."
+          "name": "K. T."
         },
         "avatarHint": "person-3"
       }

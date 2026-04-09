@@ -33,7 +33,7 @@ export default function Sismo() {
 
   // CTAs
   const cta = t<{ label?: string; href?: string }>("sismo.cta", {
-    label: "See a CÉU Sismo project",
+    label: "See a Longhorn Sismo project",
     href: "/projects#sismo",
   });
   const external = t<{ label?: string; href?: string }>("sismo.external", {

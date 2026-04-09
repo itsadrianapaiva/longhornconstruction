@@ -15,7 +15,7 @@ type NavMenuProps = {
   items: NavItem[];
   className?: string;
   logoSrc?: string; // defaults to /media/logo-white.png
-  logoAlt?: string; // defaults to "CÉU Construction"
+  logoAlt?: string; // defaults to "Longhorn Construction"
   ctaLabel?: string; // e.g. dict.hero.primaryCta
   ctaTargetId?: string; // defaults to "contact"
   mode?: NavMode; // "scroll" for homepage, "link" for inner pages
@@ -33,7 +33,7 @@ function MobileDrawer({
   onClose,
   items,
   logoSrc = "/media/logo-white.png",
-  logoAlt = "CÉU Construction",
+  logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
   mode = "scroll",
@@ -348,7 +348,7 @@ export default function NavMenu({
   items,
   className,
   logoSrc = "/media/logo-white.png",
-  logoAlt = "CÉU Construction",
+  logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
   mode = "scroll",

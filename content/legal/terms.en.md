@@ -2,7 +2,7 @@
 Last updated: {{TODAY}}
 
 ## Who we are
-**CÉU Construction** provides construction services in Portugal. By using this website you accept these Terms.
+**Longhorn Construction** provides construction services in Portugal and Spain. By using this website you accept these Terms.
 
 ## Website content
 The content is informational. It is not a binding offer or commitment. Photos and videos are illustrative. We may change content without notice.

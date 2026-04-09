@@ -94,7 +94,7 @@ export default function HeroAnimatedContent({
       <Image
         ref={logoRef}
         src={logoSrc}
-        alt="CÉU Construction"
+        alt="Longhorn Construction"
         width={256}
         height={64}
         priority

@@ -4,7 +4,7 @@
 
 ## Quem somos
 
-A **CÉU Construction** presta serviços de construção em Portugal. Ao utilizar este website, aceita estes Termos.
+A **Longhorn Construction** presta serviços de construção em Portugal e Espanha. Ao utilizar este website, aceita estes Termos.
 
 ## Conteúdos do site
 
@@ -16,7 +16,7 @@ O conteúdo tem carácter informativo. Não constitui proposta contratual. As im
 
 ## Propriedade intelectual
 
-Salvo indicação, textos, imagens, logótipos e vídeos pertencem à CÉU Construction ou são usados com autorização. Não é permitida a cópia, reprodução ou redistribuição sem consentimento escrito.
+Salvo indicação, textos, imagens, logótipos e vídeos pertencem à Longhorn Construction ou são usados com autorização. Não é permitida a cópia, reprodução ou redistribuição sem consentimento escrito.
 
 ## Ligações a terceiros
 

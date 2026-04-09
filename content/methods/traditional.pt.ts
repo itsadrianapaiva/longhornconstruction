@@ -10,14 +10,14 @@ export const traditionalPt: MethodArticle = {
     alt: "Arquitetura tradicional portuguesa em betão e alvenaria",
   },
   intro:
-    "A construção tradicional em Portugal é mais do que betão e alvenaria. É uma forma de preservar a identidade arquitetónica da região, desde as paredes caiadas até à pedra natural, telha portuguesa, arcos e proporções clássicas. Na CÉU Construction unimos técnicas estruturais comprovadas com total respeito pela arquitetura portuguesa, criando casas sólidas, autênticas e intemporais.",
+    "A construção tradicional em Portugal é mais do que betão e alvenaria. É uma forma de preservar a identidade arquitetónica da região, desde as paredes caiadas até à pedra natural, telha portuguesa, arcos e proporções clássicas. Na Longhorn Construction unimos técnicas estruturais comprovadas com total respeito pela arquitetura portuguesa, criando casas sólidas, autênticas e intemporais.",
   sections: [
     {
       id: "how-it-works",
       heading: "Como Funciona",
       body: [
         "A construção tradicional começa com fundações e estrutura em betão armado. As paredes em alvenaria, com blocos de betão, tijolo ou pedra natural, definem a forma e a personalidade da casa. Estes métodos são utilizados em Portugal há décadas e são amplamente reconhecidos pela sua fiabilidade.",
-        "O diferencial da CÉU é a atenção aos detalhes da arquitetura tradicional portuguesa. Integramos elementos como paredes curvas, rebocos típicos, detalhes em madeira, cantarias, telha portuguesa e as proporções que caracterizam o Algarve e o sul do país.",
+        "O diferencial da Longhorn é a atenção aos detalhes da arquitetura tradicional portuguesa. Integramos elementos como paredes curvas, rebocos típicos, detalhes em madeira, cantarias, telha portuguesa e as proporções que caracterizam o Algarve e o sul do país.",
         "A nossa equipa própria gere todas as etapas, desde a escavação até aos acabamentos finais. Com maquinaria própria e equipas coordenadas, garantimos qualidade, consistência e total alinhamento entre a estrutura moderna e a estética tradicional.",
       ],
     },

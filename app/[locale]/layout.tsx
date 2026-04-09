@@ -62,7 +62,7 @@ export async function generateMetadata({
     },
     openGraph: {
       url: `${base}${localePath(locale)}`,
-      siteName: "CÉU Construction",
+      siteName: "Longhorn Construction",
       type: "website",
       locale,
     },
@@ -106,7 +106,7 @@ export default async function LocaleLayout({
           className="top-3"
           ctaLabel={dict.hero.primaryCta}
           logoSrc="/media/logo-white.png"
-          logoAlt="CÉU Construction"
+          logoAlt="Longhorn Construction"
         />
         <main id="content" className="w-full overflow-x-clip">
           {children}

@@ -92,7 +92,7 @@ export default function InnerPageHeader({
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
               src="/media/logo-white.png"
-              alt="CÉU Construction"
+              alt="Longhorn Construction"
               width={160}
               height={43}
               priority={false}
@@ -104,7 +104,7 @@ export default function InnerPageHeader({
             ctaLabel={hero.primaryCta}
             ctaTargetId="contact"
             logoSrc="/media/logo-white.png"
-            logoAlt="CÉU Construction"
+            logoAlt="Longhorn Construction"
             mode="link"
             locale={locale}
           />
@@ -115,7 +115,7 @@ export default function InnerPageHeader({
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
               src="/media/logo-white.png"
-              alt="CÉU Construction"
+              alt="Longhorn Construction"
               width={180}
               height={49}
               priority={false}

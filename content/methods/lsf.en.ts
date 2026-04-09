@@ -10,7 +10,7 @@ export const lsfEn: MethodArticle = {
     alt: "Light steel frame structure being assembled on site",
   },
   intro:
-    "Light Steel Frame (LSF) construction brings industrial precision to residential and commercial buildings. Using cold formed steel profiles, the system creates a lightweight but strong structural skeleton that allows fast assembly, clean work and consistent results. At CÉU Construction we follow North American LSF standards and adapt them to Portuguese conditions and the Algarve climate.",
+    "Light Steel Frame (LSF) construction brings industrial precision to residential and commercial buildings. Using cold formed steel profiles, the system creates a lightweight but strong structural skeleton that allows fast assembly, clean work and consistent results. At Longhorn Construction we follow North American LSF standards and adapt them to Portuguese conditions and the Algarve climate.",
   sections: [
     {
       id: "how-it-works",

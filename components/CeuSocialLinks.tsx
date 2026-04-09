@@ -43,7 +43,7 @@ export default function CeuSocialLinks({
           target="_blank"
           rel="noopener noreferrer"
           className={iconLinkClass}
-          aria-label="CÉU Construction on Facebook"
+          aria-label="Longhorn Construction on Facebook"
         >
           <svg
             className={iconSize}
@@ -59,7 +59,7 @@ export default function CeuSocialLinks({
           target="_blank"
           rel="noopener noreferrer"
           className={iconLinkClass}
-          aria-label="CÉU Construction on Instagram"
+          aria-label="Longhorn Construction on Instagram"
         >
           <svg
             className={iconSize}

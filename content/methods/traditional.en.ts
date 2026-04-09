@@ -10,14 +10,14 @@ export const traditionalEn: MethodArticle = {
     alt: "Traditional Portuguese architecture with concrete and masonry",
   },
   intro:
-    "Traditional construction in Portugal is more than concrete and masonry. It is a method that preserves the architectural identity of the region, from whitewashed walls and natural stone details to roof tiles, arches and classic proportions. At CÉU Construction, we combine proven structural techniques with a deep respect for Portuguese style to build homes that feel authentic, solid and timeless.",
+    "Traditional construction in Portugal is more than concrete and masonry. It is a method that preserves the architectural identity of the region, from whitewashed walls and natural stone details to roof tiles, arches and classic proportions. At Longhorn Construction, we combine proven structural techniques with a deep respect for Portuguese style to build homes that feel authentic, solid and timeless.",
   sections: [
     {
       id: "how-it-works",
       heading: "How It Works",
       body: [
         "Traditional construction begins with reinforced concrete foundations and structural frames. Masonry walls using concrete blocks, brick or natural stone are introduced to define the shape and character of the building. These methods have been used and refined in Portugal for decades, creating a reliable and familiar construction process.",
-        "What sets CÉU apart is our attention to traditional Portuguese architecture. We integrate elements such as curved walls, exterior plaster textures, wooden details, terracotta roof tiles and the proportions that define the Algarve and southern Portugal.",
+        "What sets Longhorn apart is our attention to traditional Portuguese architecture. We integrate elements such as curved walls, exterior plaster textures, wooden details, terracotta roof tiles and the proportions that define the Algarve and southern Portugal.",
         "Our in-house team manages every stage, from excavation to finishing. By using our own machinery and coordinated crews, we ensure quality, consistency and full alignment with both structural standards and architectural authenticity.",
       ],
     },

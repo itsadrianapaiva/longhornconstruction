@@ -24,7 +24,7 @@ export default function About() {
     label: t<string>("common.learnMore", "Learn more"),
     href: "/#projects",
   });
-  const imageAlt = t<string>("about.imageAlt", "About CÉU Construction");
+  const imageAlt = t<string>("about.imageAlt", "About Longhorn Construction");
 
   // Mesh asset (decorative, not a UI string)
   const MESH_SRC = "/media/gradients/mesh6.png";

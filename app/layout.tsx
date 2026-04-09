@@ -10,9 +10,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "CÉU Construction",
+  title: "Longhorn Construction",
   description:
-    "Reliable, self-performing construction in the Algarve using progressive methods.",
+    "Reliable, self-performing construction in Europe, using progressive methods.",
 };
 
 export default function RootLayout({

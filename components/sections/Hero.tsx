@@ -17,7 +17,7 @@ export default function Hero() {
   const arrowTargetId = "about";
 
   // Localized aria for the video/section
-  const videoAria = t<string>("hero.videoAriaLabel", "CÉU Construction hero");
+  const videoAria = t<string>("hero.videoAriaLabel", "Longhorn Construction hero");
 
   return (
     <section
