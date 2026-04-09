@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import Link from "next/link";
-import { CEU_SOCIAL_LINKS } from "@/lib/content/ceuSocial";
+import { SOCIAL_LINKS } from "@/lib/content/longhornSocial";
 
 /**
  * Reusable social media links component for CÉU Construction
@@ -8,19 +8,19 @@ import { CEU_SOCIAL_LINKS } from "@/lib/content/ceuSocial";
  * Displays Facebook and Instagram icons with optional label
  */
 
-type CeuSocialLinksProps = {
+type SocialLinksProps = {
   label?: string; // e.g., "Follow us" / "Siga nos"
   showLabel?: boolean; // default true
   variant?: "inline" | "footer"; // controls spacing and typography
   className?: string; // optional extra wrapper class
 };
 
-export default function CeuSocialLinks({
+export default function SocialLinks({
   label,
   showLabel = true,
   variant = "inline",
   className = "",
-}: CeuSocialLinksProps): JSX.Element {
+}: SocialLinksProps): JSX.Element {
   const labelClass =
     "text-xs font-semibold tracking-[0.18em] text-ink/60 uppercase";
 
@@ -39,7 +39,7 @@ export default function CeuSocialLinks({
       {showLabel && label ? <p className={labelClass}>{label}</p> : null}
       <div className="flex items-center gap-3">
         <Link
-          href={CEU_SOCIAL_LINKS.facebook}
+          href={SOCIAL_LINKS.facebook}
           target="_blank"
           rel="noopener noreferrer"
           className={iconLinkClass}
@@ -55,7 +55,7 @@ export default function CeuSocialLinks({
           </svg>
         </Link>
         <Link
-          href={CEU_SOCIAL_LINKS.instagram}
+          href={SOCIAL_LINKS.instagram}
           target="_blank"
           rel="noopener noreferrer"
           className={iconLinkClass}

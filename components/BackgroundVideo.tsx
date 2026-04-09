@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 type BackgroundVideoProps = {
   src?: string;
   height?: string;
@@ -18,17 +16,17 @@ type BackgroundVideoProps = {
 };
 
 export default function BackgroundVideo({
-  src = "/media/hero/sky.mp4",
+  src = "/media/hero/hero.mp4",
   height = "h-1/3",
   opacity = "opacity-30",
   className = "",
   zoom = 1,
   focal = "50% 50%",
   // Make the fade much more visible by default: bottom 45% fades
-  fadeHeightPct = 45,
+  fadeHeightPct = 15,
   fadeStartPct,
   // Default poster file that lives in /public
-  posterSrc = "/media/hero/sky-poster.png",
+  posterSrc = "/media/hero/hero-poster.png",
 }: BackgroundVideoProps) {
   // where the fade starts (opaque -> transparent)
   const start = Math.max(0, Math.min(100, fadeStartPct ?? 100 - fadeHeightPct));
@@ -84,7 +82,7 @@ export default function BackgroundVideo({
             objectPosition: focal,
           }}
         >
-          <source src="/media/hero/sky.webm" type="video/webm" />
+          <source src="/media/hero/hero.webm" type="video/webm" />
           <source src={src} type="video/mp4" />
           {/* If video tag fails completely, users still see the CSS background image */}
           Your browser does not support the video tag.

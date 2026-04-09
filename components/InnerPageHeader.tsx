@@ -91,7 +91,7 @@ export default function InnerPageHeader({
         <div className="flex items-center justify-between w-full md:hidden pt-12">
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
-              src="/media/logo-white.png"
+              src="/media/logo-black.jpg"
               alt="Longhorn Construction"
               width={160}
               height={43}
@@ -103,7 +103,7 @@ export default function InnerPageHeader({
             items={mobileNavItems}
             ctaLabel={hero.primaryCta}
             ctaTargetId="contact"
-            logoSrc="/media/logo-white.png"
+            logoSrc="/media/logo-black.jpg"
             logoAlt="Longhorn Construction"
             mode="link"
             locale={locale}
@@ -114,7 +114,7 @@ export default function InnerPageHeader({
         <div className="hidden md:flex items-center justify-between w-full pt-12">
           <Link href={`/${locale}`} aria-label="Go to homepage">
             <Image
-              src="/media/logo-white.png"
+              src="/media/logo-black.jpg"
               alt="Longhorn Construction"
               width={180}
               height={49}

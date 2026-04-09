@@ -27,12 +27,14 @@
   "hero": {
     "id": "hero",
     "eyebrow": "Longhorn Construction",
-    "title": "logo.",
-    "subtitle": "From Texas to the world",
-    "primaryCta": "Get in touch",
-    "secondaryCta": "Explore our work",
-    "videoAriaLabel": "Longhorn construction hero",
-    "scrollDown": "Scroll to About"
+    "title": "Built to Higher Standards",
+    "subtitle": "High-end residential construction in Portugal and Southern Spain, combining traditional craftsmanship with North American precision, communication, and execution.",
+    "supportLine": "Owner-led projects across the Algarve and Costa del Sol.",
+    "primaryCta": "Request a Consultation",
+    "secondaryCta": "Explore Our Work",
+    "videoAriaLabel": "Longhorn Construction hero section",
+    "scrollDown": "Scroll to About",
+    "imageAlt": "High-end residential construction project by Longhorn Construction in Southern Europe."
   },
   "about": {
     "id": "about",
@@ -5166,7 +5168,7 @@
           {
             "id": "instagram",
             "label": "Instagram",
-            "href": ""
+            "href": "https://www.instagram.com/longhornconstructionpt"
           },
           {
             "id": "linkedin",

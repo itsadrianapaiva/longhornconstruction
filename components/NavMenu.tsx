@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoMenu, IoClose } from "react-icons/io5";
 import ButtonLink from "@/components/ButtonLink";
-import CeuSocialLinks from "@/components/CeuSocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 
 export type NavItem = { id: string; label: string };
 export type NavMode = "scroll" | "link";
@@ -14,7 +14,7 @@ export type NavMode = "scroll" | "link";
 type NavMenuProps = {
   items: NavItem[];
   className?: string;
-  logoSrc?: string; // defaults to /media/logo-white.png
+  logoSrc?: string; // defaults to /media/logo
   logoAlt?: string; // defaults to "Longhorn Construction"
   ctaLabel?: string; // e.g. dict.hero.primaryCta
   ctaTargetId?: string; // defaults to "contact"
@@ -32,7 +32,7 @@ function MobileDrawer({
   open,
   onClose,
   items,
-  logoSrc = "/media/logo-white.png",
+  logoSrc = "/media/logo-black.jpg",
   logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
@@ -102,7 +102,7 @@ function MobileDrawer({
   useEffect(() => {
     if (!visible) return;
     const first = panelRef.current?.querySelector<HTMLElement>(
-      'button,[href],[tabindex]:not([tabindex="-1"])'
+      'button,[href],[tabindex]:not([tabindex="-1"])',
     );
     first?.focus();
   }, [visible]);
@@ -117,7 +117,7 @@ function MobileDrawer({
     if (e.key !== "Tab") return;
 
     const nodes = panelRef.current?.querySelectorAll<HTMLElement>(
-      'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'
+      'button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])',
     );
     if (!nodes || nodes.length === 0) return;
 
@@ -163,7 +163,7 @@ function MobileDrawer({
         "fixed inset-0 z-[60] flex justify-end",
         // Fade the backdrop
         "bg-black/60 backdrop-blur-sm transition-opacity duration-300 ease-out motion-reduce:transition-none",
-        visible ? "opacity-100" : "opacity-0"
+        visible ? "opacity-100" : "opacity-0",
       )}
     >
       <div
@@ -176,7 +176,7 @@ function MobileDrawer({
           "transition-transform duration-300 ease-out motion-reduce:transition-none",
           visible ? "translate-x-0" : "translate-x-full",
           // Layout
-          "flex flex-col"
+          "flex flex-col",
         )}
       >
         {/* Close button */}
@@ -189,7 +189,9 @@ function MobileDrawer({
           <IoClose className="h-8 w-8" />
         </button>
 
-        <h2 id="mobile-nav-title" className="sr-only">Main menu</h2>
+        <h2 id="mobile-nav-title" className="sr-only">
+          Main menu
+        </h2>
 
         {/* Top: logo */}
         <div className="pl-6 pt-12 pb-4">
@@ -246,7 +248,7 @@ function MobileDrawer({
                     "text-white/90 hover:text-[color:var(--brand)]",
                     "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
                     "px-2 rounded-md",
-                    "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                    "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]",
                   )}
                 >
                   {item.label}
@@ -264,7 +266,7 @@ function MobileDrawer({
                   "text-white/90 hover:text-[color:var(--brand)]",
                   "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
                   "px-2 rounded-md",
-                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]",
                 )}
               >
                 {item.label}
@@ -279,7 +281,7 @@ function MobileDrawer({
                   "text-white/90 hover:text-[color:var(--brand)]",
                   "focus:outline-none focus-visible:shadow-[0_0_0_3px_var(--ring)]",
                   "px-2 rounded-md",
-                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]"
+                  "transition-[color,transform] duration-200 ease-[var(--ease-gentle)] hover:-translate-y-[1px)]",
                 )}
               >
                 {item.label}
@@ -294,7 +296,7 @@ function MobileDrawer({
         <div className="px-6 pb-8 pt-6 space-y-4">
           {showSocial && (
             <div className="flex justify-center">
-              <CeuSocialLinks
+              <SocialLinks
                 label={locale === "pt" ? "Siga nos" : "Follow us"}
                 showLabel={true}
                 variant="inline"
@@ -333,7 +335,7 @@ function MobileDrawer({
         </div>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }
 
@@ -347,7 +349,7 @@ function MobileDrawer({
 export default function NavMenu({
   items,
   className,
-  logoSrc = "/media/logo-white.png",
+  logoSrc = "/media/logo-black.jpg",
   logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
@@ -365,7 +367,10 @@ export default function NavMenu({
         aria-label="Open navigation"
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className={cx("inline-flex items-center justify-center lg:hidden", className)}
+        className={cx(
+          "inline-flex items-center justify-center lg:hidden",
+          className,
+        )}
       >
         <IoMenu className="h-10 w-10 text-white/60 mr-4 mb-2" />
       </button>

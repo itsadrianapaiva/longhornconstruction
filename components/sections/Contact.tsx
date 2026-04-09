@@ -7,7 +7,7 @@ import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import SectionHeader from "@/components/SectionHeader";
-import CeuSocialLinks from "@/components/CeuSocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
@@ -126,7 +126,7 @@ function DirectContact({
 
       {/* Follow us section */}
       <div className="mt-6 border-t border-ink/10 pt-4">
-        <CeuSocialLinks
+        <SocialLinks
           label={locale === "pt" ? "Siga nos" : "Follow us"}
           showLabel={true}
           variant="inline"

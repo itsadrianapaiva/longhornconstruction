@@ -1,10 +1,10 @@
 import type { JSX } from "react";
 import type { Locale } from "@/lib/i18n/getDictionary";
-import CeuSocialLinks from "@/components/CeuSocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 
 /**
  * Social media links component for method articles
- * Now a thin wrapper around CeuSocialLinks to maintain API compatibility
+ * Now a thin wrapper around SocialLinks to maintain API compatibility
  */
 export default function MethodSocialLinks({
   locale,
@@ -22,7 +22,7 @@ export default function MethodSocialLinks({
   const outerClassName = variant === "inline" ? "mb-6" : "";
 
   return (
-    <CeuSocialLinks
+    <SocialLinks
       label={label}
       showLabel={true}
       variant={ceuVariant}

@@ -5,7 +5,7 @@ import { SectionShell } from "@/components/sections/SectionShell";
 import ContactFormClient from "@/components/sections/ContactForm.client";
 import { MapChatBubble } from "@/components/sections/ContactChatBubble";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
-import CeuSocialLinks from "@/components/CeuSocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 
 /** Local shapes to keep props tidy */
 type Person = { name: string; phone?: string; email?: string };
@@ -152,7 +152,7 @@ function DirectContact({
 
       {/* Follow us section */}
       <div className="mt-6 pt-4">
-        <CeuSocialLinks
+        <SocialLinks
           label={locale === "pt" ? "Siga nos" : "Follow us"}
           showLabel={true}
           variant="inline"

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import ButtonLink from "@/components/ButtonLink";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { complaintBookUrl, cimaalUrl } from "@/lib/legalLinks";
-import CeuSocialLinks from "@/components/CeuSocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 
 // Helper: detect and normalize internal hash hrefs like "#id", "/#id", "/en/#id", or same-origin absolute URLs with hash.
 // Keeps functions tiny and testable.
@@ -143,7 +143,7 @@ export default function Footer() {
   }>("footer.legalBar", {});
   const copyright = withYear(t<string>("footer.copyright", ""));
 
-  const logoSrc = "/media/logo-white.png"; // same as NavMenu
+  const logoSrc = "/media/logo-black.jpg"; // same as NavMenu
   const logoAlt = company.logoAlt ?? "Longhorn Construction";
 
   return (
@@ -279,7 +279,7 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="mt-4">
-              <CeuSocialLinks
+              <SocialLinks
                 label={locale === "pt" ? "Siga nos" : "Follow us"}
                 showLabel={true}
                 variant="footer"

@@ -24,7 +24,7 @@ export default function InnerPageHeroShell({
           muted
           loop
           playsInline
-          poster="/media/hero/sky-header-poster.png"
+          poster="/media/hero/hero-header-poster.png"
           className="h-full w-full object-cover"
         >
           <source src="/media/hero/sky.webm" type="video/webm" />
@@ -36,7 +36,7 @@ export default function InnerPageHeroShell({
       {/* Fallback poster image (for browsers that don't support video) */}
       <div className="absolute inset-0 -z-30">
         <Image
-          src="/media/hero/sky-header-poster.png"
+          src="/media/hero/hero-header-poster.png"
           alt=""
           fill
           priority={false}

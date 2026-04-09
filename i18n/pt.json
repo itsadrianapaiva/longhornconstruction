@@ -27,12 +27,14 @@
   "hero": {
     "id": "hero",
     "eyebrow": "Longhorn Construction",
-    "title": "logo.",
-    "subtitle": "Do Texas para o mundo",
-    "primaryCta": "Fale conosco",
-    "secondaryCta": "Ver trabalhos",
-    "videoAriaLabel": "Longhorn construction hero",
-    "scrollDown": "Ir para Sobre"
+    "title": "Construído com Padrões Mais Elevados",
+    "subtitle": "Construção residencial de alto padrão em Portugal e no sul de Espanha, combinando o saber tradicional com a precisão, comunicação e execução de padrão norte-americano.",
+    "supportLine": "Projetos com acompanhamento direto no Algarve e na Costa del Sol.",
+    "primaryCta": "Pedir uma Consulta",
+    "secondaryCta": "Ver Projetos",
+    "videoAriaLabel": "Secção principal da Longhorn Construction",
+    "scrollDown": "Ir para Sobre",
+    "imageAlt": "Projeto residencial de alto padrão da Longhorn Construction no sul da Europa."
   },
   "about": {
     "id": "about",
@@ -5166,7 +5168,7 @@
           {
             "id": "instagram",
             "label": "Instagram",
-            "href": ""
+            "href": "https://www.instagram.com/longhornconstructionpt"
           },
           {
             "id": "linkedin",
