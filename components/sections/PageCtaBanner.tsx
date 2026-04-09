@@ -33,7 +33,7 @@ export const PageCtaBanner: FC<PageCtaBannerProps> = ({
   backgroundImage,
   backgroundAlt,
 }) => {
-  const MESH_SRC = "/media/gradients/mesh6.png";
+  const MESH_SRC = "/media/gradients/mesh1.png";
 
   return (
     <SectionShell

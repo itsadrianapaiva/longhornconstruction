@@ -27,7 +27,7 @@ export default function About() {
   const imageAlt = t<string>("about.imageAlt", "About Longhorn Construction");
 
   // Mesh asset (decorative, not a UI string)
-  const MESH_SRC = "/media/gradients/mesh6.png";
+  const MESH_SRC = "/media/gradients/mesh1.png";
 
   return (
     <SectionShell

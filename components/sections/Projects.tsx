@@ -110,7 +110,7 @@ export default function Projects() {
     ? visibleItems.find((p) => p.id === selectedProjectId) ?? null
     : null;
 
-  const MESH_SRC = "/media/gradients/mesh3.png";
+  const MESH_SRC = "/media/gradients/mesh1.png";
 
   return (
     <SectionShell
