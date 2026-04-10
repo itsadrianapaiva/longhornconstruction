@@ -17,22 +17,19 @@ type Props = {
   locale: string;
 };
 
-const CHEVRON_REST_OPACITY = 0.18;
-
 gsap.registerPlugin(useGSAP);
 
 export default function HeroAnimatedContent({
-  logoSrc = "/media/logo-black.jpg",
+  logoSrc = "/media/logo-black.png",
   primaryCtaLabel,
   locale,
 }: Props) {
   const { t } = useI18n();
 
   const scopeRef = useRef<HTMLDivElement | null>(null);
-  const contentRef = useRef<HTMLDivElement | null>(null);
   const logoWrapRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
-  const chevronRef = useRef<HTMLButtonElement | null>(null);
 
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -47,47 +44,56 @@ export default function HeroAnimatedContent({
 
   useGSAP(
     () => {
-      const content = contentRef.current;
       const logoWrap = logoWrapRef.current;
+      const content = contentRef.current;
       const panel = panelRef.current;
-      const chevron = chevronRef.current;
 
-      if (!content || !logoWrap || !panel || !chevron) return;
+      if (!logoWrap || !content || !panel) return;
 
       if (prefersReducedMotion) {
-        gsap.set(content, { clearProps: "all", opacity: 1, y: 0 });
-        gsap.set(logoWrap, { clearProps: "all", opacity: 1, y: 0 });
-        gsap.set(panel, { clearProps: "all", opacity: 1, x: 0, scale: 1 });
-        gsap.set(chevron, {
+        gsap.set([logoWrap, content, panel], {
           clearProps: "all",
-          opacity: CHEVRON_REST_OPACITY,
+          opacity: 1,
+          x: 0,
           y: 0,
+          scale: 1,
         });
         return;
       }
 
       gsap.fromTo(
-        content,
-        { opacity: 0, y: 24 },
-        { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" },
+        logoWrap,
+        { opacity: 0, y: -14 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          ease: "power2.out",
+        },
       );
 
       gsap.fromTo(
-        logoWrap,
-        { opacity: 0, y: -12 },
-        { opacity: 1, y: 0, duration: 0.7, ease: "power2.out", delay: 0.2 },
+        content,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: "power2.out",
+          delay: 0.12,
+        },
       );
 
       gsap.fromTo(
         panel,
-        { opacity: 0, x: 24, scale: 0.98 },
+        { opacity: 0, x: 24, scale: 0.985 },
         {
           opacity: 1,
           x: 0,
           scale: 1,
           duration: 0.9,
           ease: "power2.out",
-          delay: 0.3,
+          delay: 0.24,
         },
       );
     },
@@ -133,83 +139,65 @@ export default function HeroAnimatedContent({
   return (
     <div
       ref={scopeRef}
-      className="relative z-10 mx-auto flex min-h-svh w-full max-w-7xl items-center px-6 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-32 lg:px-12 lg:py-24"
+      className="relative z-10 mx-auto flex min-h-svh w-full max-w-7xl items-start px-6 pb-28 pt-16 sm:px-8 sm:pb-20 sm:pt-24 lg:px-12 lg:pb-0 lg:pt-8"
     >
-      <div className="grid w-full items-start gap-12 sm:gap-14 lg:items-center lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:gap-14">
-        <div ref={contentRef} className="relative max-w-[38rem]">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-4 -inset-y-6 rounded-[2rem] sm:-inset-x-8 sm:-inset-y-10 lg:-inset-x-10"
+      <div className="flex w-full flex-col">
+        <div
+          ref={logoWrapRef}
+          className="mb-4 flex justify-center sm:mb-10 lg:mb-4"
+        >
+          <Image
+            src={logoSrc}
+            alt={logoAlt}
+            width={760}
+            height={210}
+            priority
+            className="h-auto w-[420px] sm:w-[280px] lg:w-[420px] xl:w-[580px]"
           />
+        </div>
 
-          <div className="relative z-10">
-            <div ref={logoWrapRef} className="mb-6 sm:mb-8">
-              <Image
-                src={logoSrc}
-                alt={logoAlt}
-                width={220}
-                height={55}
-                priority
-                className="h-auto w-[112px] sm:w-[160px] lg:w-[220px]"
-              />
-            </div>
-
-            <h1
-              className="max-w-[12ch] text-balance text-[2.35rem] font-semibold leading-[0.98] text-white sm:max-w-4xl sm:text-5xl lg:text-6xl"
-              style={{ textShadow: "0 8px 28px rgba(0,0,0,0.32)" }}
-            >
+        <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)] lg:gap-14 xl:gap-16">
+          <div
+            ref={contentRef}
+            className="relative max-w-[44rem] text-left lg:max-w-none lg:pr-6"
+          >
+            <h1 className="max-w-3xl text-balance text-2xl font-semibold leading-[0.96] text-white sm:text-3xl lg:max-w-6xl lg:text-4xl xl:text-5xl">
               {title}
             </h1>
 
-            <p
-              className="mt-4 max-w-[34rem] text-pretty text-[1.02rem] leading-7 text-white/90 sm:mt-5 sm:text-lg sm:leading-8"
-              style={{ textShadow: "0 4px 18px rgba(0,0,0,0.24)" }}
-            >
+            <p className="mt-4 max-w-[38rem] text-pretty text-[1.02rem] leading-7 text-white/90 sm:mt-5 sm:text-lg sm:leading-8">
               {subtitle}
             </p>
 
-            <p
-              className="mt-4 max-w-[30rem] text-sm leading-6 text-white/74 sm:text-base"
-              style={{ textShadow: "0 4px 16px rgba(0,0,0,0.22)" }}
-            >
+            <p className="mt-4 max-w-[32rem] text-sm leading-6 text-white/74 sm:text-base">
               {supportLine}
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Link
                 href={`/${locale}/contact`}
                 data-testid="hero-cta-primary"
                 className="
                   relative inline-flex min-h-[3.5rem] w-full items-center justify-center
-                  rounded-full px-6 py-3 text-sm font-semibold
-                  text-white/88
+                  overflow-hidden rounded-full border border-[color:var(--brand-border)]
+                  bg-cover bg-center px-6 py-3 text-sm font-semibold text-white/90
                   shadow-[0_6px_20px_rgba(0,0,0,0.18)]
-                  border border-[color:var(--brand-border)]
-                  focus:outline-none focus-visible:ring-2
-                  focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-0
                   transition-transform duration-200
                   hover:-translate-y-0.5 hover:text-white
+                  focus:outline-none focus-visible:ring-2
+                  focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-0
                   motion-reduce:transform-none motion-reduce:transition-none
-                  overflow-hidden
-                  bg-center bg-cover
-                  sm:w-auto sm:min-w-[240px]
+                  sm:min-w-[240px] sm:w-auto
                 "
                 style={{ backgroundImage: `url(${MESH_SRC})` }}
               >
                 <span
                   aria-hidden="true"
-                  className="
-                    pointer-events-none absolute inset-0 rounded-full
-                    bg-white/14 dark:bg-black/18
-                    mix-blend-normal
-                  "
+                  className="pointer-events-none absolute inset-0 rounded-full bg-white/14 dark:bg-black/18"
                 />
                 <span
                   aria-hidden="true"
-                  className="
-                    pointer-events-none absolute inset-0 rounded-full
-                    shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]
-                  "
+                  className="pointer-events-none absolute inset-0 rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]"
                 />
                 <span className="relative">{primaryLabel}</span>
               </Link>
@@ -221,38 +209,38 @@ export default function HeroAnimatedContent({
                   scrollTo("projects");
                 }}
                 data-testid="hero-cta-projects"
-                className="min-h-[3.5rem] w-full justify-center rounded-full px-6 py-3 sm:w-auto sm:min-w-[220px]"
+                className="min-h-[3.5rem] w-full justify-center rounded-full px-6 py-3 sm:min-w-[220px] sm:w-auto"
               >
                 {secondaryLabel}
               </ButtonLink>
             </div>
           </div>
-        </div>
 
-        <div ref={panelRef} className="lg:justify-self-end" aria-hidden="true">
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/14 bg-black/26 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:rounded-[2rem] sm:p-7 lg:max-w-[420px]">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(210,138,0,0.14),rgba(255,255,255,0.04)_42%,rgba(0,0,0,0.12))]" />
+          <div ref={panelRef} className="lg:justify-self-end" aria-hidden="true">
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/14 bg-black/24 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:rounded-[2rem] sm:p-7 lg:max-w-[440px]">
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(210,138,0,0.14),rgba(255,255,255,0.04)_42%,rgba(0,0,0,0.12))]" />
 
-            <div className="relative">
-              <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-white/70 sm:text-xs">
-                {panelEyebrow}
-              </p>
+              <div className="relative">
+                <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-white/70 sm:text-xs">
+                  {panelEyebrow}
+                </p>
 
-              <p className="mt-3 text-[1.85rem] font-semibold leading-[1.22] text-white sm:text-xl sm:leading-8">
-                {panelTitle}
-              </p>
+                <p className="mt-3 text-[1.85rem] font-semibold leading-[1.22] text-white sm:text-xl sm:leading-8">
+                  {panelTitle}
+                </p>
 
-              <ul className="mt-5 space-y-3 text-sm leading-6 text-white/82 sm:mt-6 sm:space-y-4 sm:text-[0.95rem]">
-                <li className="border-l-2 border-[var(--brand)] pl-4">
-                  {panelItemOne}
-                </li>
-                <li className="border-l-2 border-[var(--brand)] pl-4">
-                  {panelItemTwo}
-                </li>
-                <li className="border-l-2 border-[var(--brand)] pl-4">
-                  {panelItemThree}
-                </li>
-              </ul>
+                <ul className="mt-5 space-y-3 text-sm leading-6 text-white/82 sm:mt-6 sm:space-y-4 sm:text-[0.95rem]">
+                  <li className="border-l-2 border-[var(--brand)] pl-4">
+                    {panelItemOne}
+                  </li>
+                  <li className="border-l-2 border-[var(--brand)] pl-4">
+                    {panelItemTwo}
+                  </li>
+                  <li className="border-l-2 border-[var(--brand)] pl-4">
+                    {panelItemThree}
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

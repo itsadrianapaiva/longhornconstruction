@@ -32,7 +32,7 @@ function MobileDrawer({
   open,
   onClose,
   items,
-  logoSrc = "/media/logo-black.jpg",
+  logoSrc = "/media/logo-black.png",
   logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",
@@ -349,7 +349,7 @@ function MobileDrawer({
 export default function NavMenu({
   items,
   className,
-  logoSrc = "/media/logo-black.jpg",
+  logoSrc = "/media/logo-black.png",
   logoAlt = "Longhorn Construction",
   ctaLabel = "Request a consultation",
   ctaTargetId = "contact",

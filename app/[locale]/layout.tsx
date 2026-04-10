@@ -105,7 +105,7 @@ export default async function LocaleLayout({
           items={items}
           className="top-3"
           ctaLabel={dict.hero.primaryCta}
-          logoSrc="/media/logo-black.jpg"
+          logoSrc="/media/logo-black.png"
           logoAlt="Longhorn Construction"
         />
         <main id="content" className="w-full overflow-x-clip">
