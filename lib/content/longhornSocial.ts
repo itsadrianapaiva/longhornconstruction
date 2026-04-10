@@ -9,5 +9,5 @@ export type SocialLinks = {
 
 export const SOCIAL_LINKS: SocialLinks = {
   facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/longhornconstructionpt",
+  instagram: "https://www.instagram.com/longhornconstructionlda",
 };
