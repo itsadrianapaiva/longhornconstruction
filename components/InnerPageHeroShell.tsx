@@ -27,8 +27,8 @@ export default function InnerPageHeroShell({
           poster="/media/hero/hero-header-poster.png"
           className="h-full w-full object-cover"
         >
-          <source src="/media/hero/sky.webm" type="video/webm" />
-          <source src="/media/hero/sky.mp4" type="video/mp4" />
+          <source src="/media/hero/hero.webm" type="video/webm" />
+          <source src="/media/hero/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

@@ -30,7 +30,7 @@ function ChatBubbleWing({
 export function MapChatBubble({
   message,
   className = "",
-  bubbleColor = "#0E0F12", // uses CEU dark surface by default; pass a tokenized color if desired
+  bubbleColor = "#0E0F12", // uses dark surface by default; pass a tokenized color if desired
 }: {
   message: string;
   className?: string;

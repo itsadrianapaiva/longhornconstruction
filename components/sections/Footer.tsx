@@ -143,7 +143,7 @@ export default function Footer() {
   }>("footer.legalBar", {});
   const copyright = withYear(t<string>("footer.copyright", ""));
 
-  const logoSrc = "/media/logo-black.jpg"; // same as NavMenu
+  const logoSrc = "/media/logo-footer.jpg"; // same as NavMenu
   const logoAlt = company.logoAlt ?? "Longhorn Construction";
 
   return (

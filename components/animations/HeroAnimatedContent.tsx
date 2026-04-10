@@ -2,6 +2,7 @@
 
 import { useRef, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ButtonLink from "@/components/ButtonLink";
@@ -13,6 +14,7 @@ type Props = {
   logoSrc?: string;
   chevronAriaLabel?: string;
   primaryCtaLabel?: string;
+  locale: string;
 };
 
 const CHEVRON_REST_OPACITY = 0.18;
@@ -22,6 +24,7 @@ gsap.registerPlugin(useGSAP);
 export default function HeroAnimatedContent({
   logoSrc = "/media/logo-black.jpg",
   primaryCtaLabel,
+  locale,
 }: Props) {
   const { t } = useI18n();
 
@@ -87,8 +90,6 @@ export default function HeroAnimatedContent({
           delay: 0.3,
         },
       );
-
-
     },
     { scope: scopeRef, dependencies: [prefersReducedMotion] },
   );
@@ -127,62 +128,91 @@ export default function HeroAnimatedContent({
 
   const secondaryLabel = t<string>("hero.secondaryCta", "Explore Our Work");
 
+  const MESH_SRC = "/media/gradients/mesh1.png";
+
   return (
     <div
       ref={scopeRef}
-      className="relative z-10 mx-auto flex min-h-svh w-full max-w-7xl items-center px-6 py-24 sm:px-8 lg:px-12"
+      className="relative z-10 mx-auto flex min-h-svh w-full max-w-7xl items-center px-6 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-32 lg:px-12 lg:py-24"
     >
-      <div className="grid w-full items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:gap-14">
-        <div ref={contentRef} className="relative max-w-2xl">
+      <div className="grid w-full items-start gap-12 sm:gap-14 lg:items-center lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)] lg:gap-14">
+        <div ref={contentRef} className="relative max-w-[38rem]">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-6 -inset-y-8 rounded-[2rem] sm:-inset-x-8 sm:-inset-y-10 lg:-inset-x-10"
+            className="pointer-events-none absolute -inset-x-4 -inset-y-6 rounded-[2rem] sm:-inset-x-8 sm:-inset-y-10 lg:-inset-x-10"
           />
 
           <div className="relative z-10">
-            <div ref={logoWrapRef} className="mb-8">
+            <div ref={logoWrapRef} className="mb-6 sm:mb-8">
               <Image
                 src={logoSrc}
                 alt={logoAlt}
                 width={220}
                 height={55}
                 priority
-                className="h-auto w-[150px] sm:w-[180px] lg:w-[220px]"
+                className="h-auto w-[112px] sm:w-[160px] lg:w-[220px]"
               />
             </div>
 
             <h1
-              className="max-w-4xl text-balance text-4xl font-semibold leading-[1.02] text-white sm:text-5xl lg:text-6xl"
+              className="max-w-[12ch] text-balance text-[2.35rem] font-semibold leading-[0.98] text-white sm:max-w-4xl sm:text-5xl lg:text-6xl"
               style={{ textShadow: "0 8px 28px rgba(0,0,0,0.32)" }}
             >
               {title}
             </h1>
 
             <p
-              className="mt-5 max-w-2xl text-pretty text-base leading-7 text-white/90 sm:text-lg sm:leading-8"
+              className="mt-4 max-w-[34rem] text-pretty text-[1.02rem] leading-7 text-white/90 sm:mt-5 sm:text-lg sm:leading-8"
               style={{ textShadow: "0 4px 18px rgba(0,0,0,0.24)" }}
             >
               {subtitle}
             </p>
 
             <p
-              className="mt-4 text-sm leading-6 text-white/74 sm:text-base"
+              className="mt-4 max-w-[30rem] text-sm leading-6 text-white/74 sm:text-base"
               style={{ textShadow: "0 4px 16px rgba(0,0,0,0.22)" }}
             >
               {supportLine}
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <ButtonLink
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo("contact");
-                }}
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center sm:gap-4">
+              <Link
+                href={`/${locale}/contact`}
                 data-testid="hero-cta-primary"
+                className="
+                  relative inline-flex min-h-[3.5rem] w-full items-center justify-center
+                  rounded-full px-6 py-3 text-sm font-semibold
+                  text-white/88
+                  shadow-[0_6px_20px_rgba(0,0,0,0.18)]
+                  border border-[color:var(--brand-border)]
+                  focus:outline-none focus-visible:ring-2
+                  focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-0
+                  transition-transform duration-200
+                  hover:-translate-y-0.5 hover:text-white
+                  motion-reduce:transform-none motion-reduce:transition-none
+                  overflow-hidden
+                  bg-center bg-cover
+                  sm:w-auto sm:min-w-[240px]
+                "
+                style={{ backgroundImage: `url(${MESH_SRC})` }}
               >
-                {primaryLabel}
-              </ButtonLink>
+                <span
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none absolute inset-0 rounded-full
+                    bg-white/14 dark:bg-black/18
+                    mix-blend-normal
+                  "
+                />
+                <span
+                  aria-hidden="true"
+                  className="
+                    pointer-events-none absolute inset-0 rounded-full
+                    shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]
+                  "
+                />
+                <span className="relative">{primaryLabel}</span>
+              </Link>
 
               <ButtonLink
                 href="#"
@@ -191,6 +221,7 @@ export default function HeroAnimatedContent({
                   scrollTo("projects");
                 }}
                 data-testid="hero-cta-projects"
+                className="min-h-[3.5rem] w-full justify-center rounded-full px-6 py-3 sm:w-auto sm:min-w-[220px]"
               >
                 {secondaryLabel}
               </ButtonLink>
@@ -199,19 +230,19 @@ export default function HeroAnimatedContent({
         </div>
 
         <div ref={panelRef} className="lg:justify-self-end" aria-hidden="true">
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/14 bg-black/26 p-6 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:p-7 lg:max-w-[420px]">
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/14 bg-black/26 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:rounded-[2rem] sm:p-7 lg:max-w-[420px]">
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(210,138,0,0.14),rgba(255,255,255,0.04)_42%,rgba(0,0,0,0.12))]" />
 
             <div className="relative">
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/70">
+              <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-white/70 sm:text-xs">
                 {panelEyebrow}
               </p>
 
-              <p className="mt-3 text-xl font-semibold leading-8 text-white">
+              <p className="mt-3 text-[1.85rem] font-semibold leading-[1.22] text-white sm:text-xl sm:leading-8">
                 {panelTitle}
               </p>
 
-              <ul className="mt-6 space-y-4 text-sm leading-6 text-white/82 sm:text-[0.95rem]">
+              <ul className="mt-5 space-y-3 text-sm leading-6 text-white/82 sm:mt-6 sm:space-y-4 sm:text-[0.95rem]">
                 <li className="border-l-2 border-[var(--brand)] pl-4">
                   {panelItemOne}
                 </li>

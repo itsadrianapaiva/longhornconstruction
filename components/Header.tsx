@@ -5,9 +5,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import NavMenu, { NavItem } from "@/components/NavMenu";
 
 type HeaderProps = {
-  /** Drawer items -> section ids + localized labels */
   items: NavItem[];
-  /** Localized CTA label and optional target id/logo for the drawer */
   ctaLabel?: string;
   ctaTargetId?: string;
   logoSrc?: string;
@@ -41,12 +39,10 @@ export default function Header({
           "flex items-center justify-between",
         ].join(" ")}
       >
-        {/* Left: Language Switcher (visible at all sizes) */}
-        <div className="mx-6 -mt-2">
+        <div className="mx-4 -mt-1 sm:mx-6">
           <LanguageSwitcher compact />
         </div>
 
-        {/* Right: Hamburger (mobile only). Desktop hides it via internal lg:hidden. */}
         <NavMenu
           items={items}
           ctaLabel={ctaLabel}

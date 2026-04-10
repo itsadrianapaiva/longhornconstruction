@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-type Locale = "en" | "pt";
+type Locale = "en" | "pt" | "es";
 
 type Props = {
   locales?: readonly Locale[];
@@ -18,32 +18,42 @@ function merge(...parts: Array<string | undefined | false | null>) {
   return parts.filter(Boolean).join(" ").replace(/\s+/g, " ").trim();
 }
 
-/** LanguageSwitcher pill with subtle inner white glow on hover */
-const pillBaseInner =
-  [
-    // Structure
-    "relative inline-flex items-center justify-center rounded-full outline-none",
-    // Size + type (compact by default for header)
-    "px-3 py-1 text-sm font-semibold",
-    // Rest state (unchanged)
-    "bg-transparent border border-glass text-white/40 backdrop-blur",
-    // Motion without color changes
-    "transition-[transform,filter] duration-200 ease-gentle hover:-translate-y-[1px]",
-    // Accessible focus ring
-    "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
-    // ::before inner glow layer (stays inside the pill)
-    "before:content-[''] before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
-    // Use a white-leaning mix for soft, neutral light; keep it subtle
-    "before:shadow-[inset_0_0_10px_6px_color-mix(in_srgb,white_20%,var(--brand)_30%)]",
-    // Animate only opacity; do not change border or text
-    "before:opacity-0 before:transition-opacity before:duration-700",
-    "hover:before:opacity-25 focus-visible:before:opacity-20",
-  ].join(" ");
+const pillBase = [
+  "relative inline-flex items-center justify-center gap-2 rounded-full outline-none",
+  "border border-glass backdrop-blur",
+  "transition-[transform,filter] duration-200 ease-gentle hover:-translate-y-[1px]",
+  "focus-visible:shadow-[0_0_0_3px_var(--ring)]",
+  "before:content-[''] before:absolute before:inset-0 before:rounded-full before:pointer-events-none",
+  "before:shadow-[inset_0_0_10px_6px_color-mix(in_srgb,white_20%,var(--brand)_30%)]",
+  "before:opacity-0 before:transition-opacity before:duration-700",
+  "hover:before:opacity-25 focus-visible:before:opacity-20",
+].join(" ");
+
+const activeClasses = [
+  "cursor-default",
+  "text-white/90 bg-white/12",
+  "hover:-translate-y-0 before:opacity-0 hover:before:opacity-0 focus-visible:before:opacity-0",
+].join(" ");
+
+const inactiveClasses = ["text-white/72 bg-black/18", "hover:text-white"].join(
+  " ",
+);
+
+function getLocaleMeta(locale: Locale) {
+  switch (locale) {
+    case "en":
+      return { label: "EN", flag: "🇬🇧", aria: "English" };
+    case "pt":
+      return { label: "PT", flag: "🇵🇹", aria: "Português" };
+    case "es":
+      return { label: "ES", flag: "🇪🇸", aria: "Español" };
+  }
+}
 
 export default function LanguageSwitcher({
-  locales = ["en", "pt"],
+  locales = ["en", "pt"] as const,
   className,
-  compact,
+  compact = false,
   stripHashOnMount = true,
 }: Props) {
   const pathname = usePathname();
@@ -54,19 +64,28 @@ export default function LanguageSwitcher({
     if (!stripHashOnMount) return;
     if (typeof window === "undefined") return;
     if (!window.location.hash) return;
+
     const clean = window.location.pathname + window.location.search;
     window.history.replaceState(null, "", clean);
   }, [stripHashOnMount]);
 
+  function isLocale(value: string | undefined): value is Locale {
+    return (
+      value !== undefined && (locales as readonly string[]).includes(value)
+    );
+  }
+
   const currentLocale: Locale = (() => {
     const segs = (pathname || "/").split("/");
-    const first = segs.find(Boolean) as Locale | undefined;
-    return locales.includes(first as Locale) ? (first as Locale) : (locales[0] as Locale);
+    const first = segs.find(Boolean);
+
+    return isLocale(first) ? first : (locales[0] as Locale);
   })();
 
   function swapLocaleInPath(target: Locale): string {
     const segs = (pathname || "/").split("/");
     let replaced = false;
+
     const out = segs.map((s) => {
       if (!replaced && s.length > 0) {
         replaced = true;
@@ -74,9 +93,12 @@ export default function LanguageSwitcher({
       }
       return s;
     });
-    const base = "/" + out.filter((_, i) => !(i === 0 && out[i] === "")).join("/");
+
+    const base =
+      "/" + out.filter((_, i) => !(i === 0 && out[i] === "")).join("/");
     const qs = searchParams?.toString();
     const query = qs ? `?${qs}` : "";
+
     return `${base}${query}`;
   }
 
@@ -84,51 +106,49 @@ export default function LanguageSwitcher({
     router.push(swapLocaleInPath(target), { scroll: false });
   }
 
-  const others = locales.filter((l) => l !== currentLocale) as Locale[];
-
-  if (compact) {
-    const target = others[0] ?? currentLocale;
-    return (
-      <button
-        type="button"
-        onClick={() => navigate(target)}
-        className={merge(pillBaseInner, className)}
-        aria-label={`Switch language to ${target.toUpperCase()}`}
-      >
-        {target.toUpperCase()}
-      </button>
-    );
-  }
+  const sizeClasses = compact
+    ? "px-3 py-1.5 text-sm font-semibold min-w-[78px]"
+    : "px-4 py-2 text-sm font-semibold min-w-[90px]";
 
   return (
-    <nav aria-label="Language" className={merge("inline-flex items-center gap-1", className)}>
+    <nav
+      aria-label="Language"
+      className={merge("inline-flex items-center gap-2", className)}
+    >
       {locales.map((loc) => {
         const active = loc === currentLocale;
         const href = swapLocaleInPath(loc);
+        const meta = getLocaleMeta(loc);
 
-        // Active: same rest style, no glow, non-interactive
-        const activeClasses = merge(
-          pillBaseInner,
-          "cursor-pointer",
-          "hover:-translate-y-0 before:opacity-0 hover:before:opacity-0 focus-visible:before:opacity-0",
-          "text-page-ink/80"
+        const content = (
+          <>
+            <span aria-hidden="true" className="text-base leading-none">
+              {meta.flag}
+            </span>
+            <span className="relative">{meta.label}</span>
+          </>
         );
 
-        const inactiveClasses = pillBaseInner;
-
         return active ? (
-          <span key={loc} aria-current="page" className={activeClasses}>
-            {loc.toUpperCase()}
-          </span>
+          <button
+            key={loc}
+            type="button"
+            onClick={() => navigate(loc)}
+            aria-current="page"
+            aria-label={`${meta.aria} selected`}
+            className={merge(pillBase, sizeClasses, activeClasses)}
+          >
+            {content}
+          </button>
         ) : (
           <Link
             key={loc}
             href={href}
             scroll={false}
-            className={inactiveClasses}
-            aria-label={`Switch language to ${loc.toUpperCase()}`}
+            aria-label={`Switch language to ${meta.aria}`}
+            className={merge(pillBase, sizeClasses, inactiveClasses)}
           >
-            {loc.toUpperCase()}
+            {content}
           </Link>
         );
       })}
