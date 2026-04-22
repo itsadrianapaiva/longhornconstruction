@@ -36,7 +36,7 @@ You can request access, rectification, erasure, restriction, objection, and port
 
 ## How to contact us
 
-Email **info@longhornconstruction.com**. We aim to reply within one month under GDPR.
+Email **info@longhorn.construction**. We aim to reply within one month under GDPR.
 
 ## Complaint and ADR links
 

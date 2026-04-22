@@ -30,7 +30,7 @@ Recurso a prestadores para alojamento, email e fiabilidade que tratam dados por 
 Acesso, retificação, apagamento, limitação, oposição e portabilidade. Quando o tratamento se baseia em consentimento, pode retirá-lo a qualquer momento. Pode reclamar junto da autoridade de controlo (**CNPD**).
 
 ## Contacto
-Email **info@longhornconstruction.com**. Procuramos responder no prazo de um mês nos termos do RGPD.
+Email **info@longhorn.construction**. Procuramos responder no prazo de um mês nos termos do RGPD.
 
 ## Reclamações e RAL
 - **Livro de Reclamações Eletrónico**: https://www.livroreclamacoes.pt/inicio/  
