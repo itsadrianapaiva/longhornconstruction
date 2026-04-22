@@ -4901,7 +4901,7 @@
         "title": "Apoio design-build",
         "desc": "Análise de construtibilidade, orientação orçamental e articulação com o seu arquiteto e engenheiro.",
         "image": {
-          "src": "/media/services/design.webp",
+          "src": "/media/services/design.jpg",
           "alt": "Apoio design-build em progresso",
           "width": 1920,
           "height": 1280
@@ -4934,7 +4934,7 @@
         "title": "Alvenaria e betão",
         "desc": "Alvenaria, elementos de betão armado, muros de suporte e acabamentos arquitetónicos.",
         "image": {
-          "src": "/media/services/exterior.webp",
+          "src": "/media/services/exterior.jpg",
           "alt": "Trabalhos de alvenaria e betão",
           "width": 1920,
           "height": 1280
@@ -4945,7 +4945,7 @@
         "title": "Coberturas e invólucro",
         "desc": "Estruturas, impermeabilizações, isolamento e revestimentos exteriores para desempenho duradouro.",
         "image": {
-          "src": "/media/services/roof.webp",
+          "src": "/media/services/roof.jpg",
           "alt": "Construção de coberturas e invólucro",
           "width": 1920,
           "height": 1280
@@ -4956,7 +4956,7 @@
         "title": "Coordenação MEP",
         "desc": "Coordenação de AVAC, eletricidade e hidráulica, com passagens claras e limpas.",
         "image": {
-          "src": "/media/services/plumbing.webp",
+          "src": "/media/services/plumbing.jpg",
           "alt": "Coordenação de sistemas MEP",
           "width": 1920,
           "height": 1280
@@ -4967,7 +4967,7 @@
         "title": "Acabamentos interiores",
         "desc": "Estuque, azulejo, pavimentos, carpintaria e pintura com supervisão consistente.",
         "image": {
-          "src": "/media/services/interior.webp",
+          "src": "/media/services/interior.jgg",
           "alt": "Trabalhos de acabamento interior",
           "width": 1920,
           "height": 1280
@@ -4978,7 +4978,7 @@
         "title": "Reabilitações e ampliações",
         "desc": "Intervenções cuidadas que respeitam a estrutura, o prazo e o orçamento.",
         "image": {
-          "src": "/media/services/renovation.webp",
+          "src": "/media/services/renovation.jpg",
           "alt": "Trabalhos de reabilitação e ampliação",
           "width": 1920,
           "height": 1280
