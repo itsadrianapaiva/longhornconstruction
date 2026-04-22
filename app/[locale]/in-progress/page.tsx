@@ -38,7 +38,7 @@ export default async function InProgressPage({
         primaryLabel={cta.primaryLabel}
         secondaryHref={`/${locale}/#projects`}
         secondaryLabel={cta.secondaryLabel}
-        backgroundImage="/media/cta/inner-cta.JPEG"
+        backgroundImage="/media/cta/inner-cta.JPG"
         backgroundAlt={cta.backgroundAlt}
       />
     </>

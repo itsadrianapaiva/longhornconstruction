@@ -20,7 +20,7 @@ type PageCtaBannerProps = {
  * - Full-bleed CTA banner with background image and dark overlay
  * - Left-aligned text (eyebrow, title, body) with two action buttons
  * - Reusable on any page, receives all content as props
- * - Default usage: inner pages with static image at /public/media/cta/inner-cta.jpeg
+ * - Default usage: inner pages with static image at /public/media/cta/inner-cta.jpg
  */
 export const PageCtaBanner: FC<PageCtaBannerProps> = ({
   eyebrow,
@@ -176,7 +176,7 @@ export type { PageCtaBannerProps };
           primaryLabel={cta.primaryLabel}
           secondaryHref={`/${params.locale}/#projects`}
           secondaryLabel={cta.secondaryLabel}
-          backgroundImage="/media/cta/inner-cta.JPEG"
+          backgroundImage="/media/cta/inner-cta.JPG"
           backgroundAlt={cta.backgroundAlt}
         />
       </>

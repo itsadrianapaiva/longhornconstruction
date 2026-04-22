@@ -6,7 +6,7 @@ import Stats from "@/components/sections/Stats";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
 import Methods from "@/components/sections/Methods";
-import Testimonials from "@/components/sections/Testimonials";
+// import Testimonials from "@/components/sections/Testimonials";
 import { PageCtaBanner } from "@/components/sections/PageCtaBanner";
 
 type Params = Promise<{ locale?: string }>;
@@ -32,7 +32,7 @@ export default async function Page({
       <Methods />
       <Services />
       <Projects />
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* CTA Banner - primary button links to new contact page */}
       <PageCtaBanner
@@ -43,7 +43,7 @@ export default async function Page({
         primaryLabel={cta.primaryLabel}
         secondaryHref={`/${locale}/#projects`}
         secondaryLabel={cta.secondaryLabel}
-        backgroundImage="/media/cta/inner-cta.JPEG"
+        backgroundImage="/media/cta/inner-cta.JPG"
         backgroundAlt={cta.backgroundAlt}
       />
     </>

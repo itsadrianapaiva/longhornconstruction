@@ -54,7 +54,7 @@ export default function About() {
         <div className="relative order-2 md:order-2 lg:order-1 lg:col-span-1 lg:overflow-visible">
           <div className="relative mx-auto max-w-[1100px] lg:max-w-none">
             <Image
-              src="/media/about/about.jpg"
+              src="/media/about/about-interior.jpg"
               alt={imageAlt}
               width={1920}
               height={1280}

@@ -38,9 +38,9 @@
   },
   "about": {
     "id": "about",
-    "title": "From Texas to the world",
+    "title": "From Texas to the World",
     "intro": "",
-    "subheading": "Born from North American standards and refined by Portuguese craftsmanship, we build with control at every stage.",
+    "subheading": "Born from Texan standards and refined by Portuguese craftsmanship, we build with control at every stage.",
     "body": [
       "Longhorn Construction handles architecture, planning and full execution with an in house team covering groundworks, structure and finishes. Timelines stay predictable, costs stay transparent and quality remains consistent.",
       "With owned machinery and coordinated crews, we remove delays caused by subcontractors. This end to end control is why homeowners and investors across the Algarve and Vicentine Coast trust us to deliver reliable, high quality work."
@@ -59,20 +59,20 @@
   },
   "stats": {
     "id": "stats",
-    "title": "We came to revolutionize the construction sector",
+    "title": "We came to revolutionize the Portuguese construction sector",
     "intro": "See how we've made an impact over the years. Here at Longhorn Construction, we're committed to excellence and customer satisfaction.",
     "items": [
       {
         "id": "yearsOperating",
         "label": "Years operating",
-        "value": 5,
+        "value": 9,
         "suffix": "+",
         "decimals": 0
       },
       {
         "id": "projectsDelivered",
         "label": "Custom homes delivered",
-        "value": 10,
+        "value": 20,
         "suffix": "+",
         "decimals": 0
       },
@@ -85,13 +85,14 @@
       {
         "id": "teamSize",
         "label": "Team size",
-        "value": 48,
+        "value": 8,
+        "suffix": "+",
         "decimals": 0
       },
       {
         "id": "ownedMachines",
         "label": "Owned heavy equipment",
-        "value": 9,
+        "value": 1,
         "decimals": 0
       },
       {

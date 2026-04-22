@@ -38,9 +38,9 @@
   },
   "about": {
     "id": "about",
-    "title": "Do Texas para o mundo.",
+    "title": "Do Texas para o Mundo.",
     "intro": "",
-    "subheading": "Nascidos da disciplina norte americana e aperfeiçoados pelo saber fazer português, construímos com controlo em todas as fases.",
+    "subheading": "Nascidos da disciplina texana e aperfeiçoados pelo saber fazer português, construímos com controlo em todas as fases.",
     "body": [
       "A Longhorn Construction gere arquitetura, planeamento e execução com uma equipa interna que cobre todo o processo. Do movimento de terras à estrutura e acabamentos, mantemos prazos previsíveis, custos transparentes e qualidade consistente.",
       "Com maquinaria própria e equipas coordenadas, eliminamos atrasos de subempreiteiros. Este controlo total é o que leva proprietários e investidores de todo o Algarve e Costa Vicentina a confiar no nosso trabalho sólido e confiável."
@@ -59,20 +59,20 @@
   },
   "stats": {
     "id": "stats",
-    "title": "Nascemos para revolucionar o setor da construção",
+    "title": "Nascemos para revolucionar o setor Português da construção",
     "intro": "Veja o impacto que temos gerado ao longo dos anos. Na Longhorn Construction somos comprometidos com a qualidade e a satisfação dos nossos clientes.",
     "items": [
       {
         "id": "yearsOperating",
         "label": "Anos de atividade",
-        "value": 5,
+        "value": 9,
         "suffix": "+",
         "decimals": 0
       },
       {
         "id": "projectsDelivered",
         "label": "Casas entregues",
-        "value": 10,
+        "value": 20,
         "suffix": "+",
         "decimals": 0
       },
@@ -85,13 +85,14 @@
       {
         "id": "teamSize",
         "label": "Tamanho da equipa",
-        "value": 48,
+        "value": 8,
+        "suffix": "+",
         "decimals": 0
       },
       {
         "id": "ownedMachines",
         "label": "Equipamentos próprios",
-        "value": 9,
+        "value": 1,
         "decimals": 0
       },
       {
