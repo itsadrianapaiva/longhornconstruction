@@ -156,7 +156,7 @@ export default function HeroAnimatedContent({
           />
         </div>
 
-        <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)] lg:gap-14 xl:gap-16">
+        <div className="grid w-full items-start gap-10 sm:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)] lg:gap-14 xl:gap-16 md:mb-28">
           <div
             ref={contentRef}
             className="relative max-w-[44rem] text-left lg:max-w-none lg:pr-6"
@@ -216,7 +216,11 @@ export default function HeroAnimatedContent({
             </div>
           </div>
 
-          <div ref={panelRef} className="lg:justify-self-end" aria-hidden="true">
+          <div
+            ref={panelRef}
+            className="lg:justify-self-end"
+            aria-hidden="true"
+          >
             <div className="relative overflow-hidden rounded-[1.75rem] border border-white/14 bg-black/24 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.28)] backdrop-blur-[8px] sm:rounded-[2rem] sm:p-7 lg:max-w-[440px]">
               <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(210,138,0,0.14),rgba(255,255,255,0.04)_42%,rgba(0,0,0,0.12))]" />
 
