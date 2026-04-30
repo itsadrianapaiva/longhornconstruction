@@ -1,0 +1,2174 @@
+﻿[
+    {
+        "id":  "cowboy",
+        "title":  "Cowboy",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/cowboy/1-lg.jpg",
+                          "alt":  "Cowboy - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Cowboy - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 11",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/11-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/11-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 12",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/12-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/12-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cowboy - photo 13",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cowboy/13-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cowboy/13-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "cox",
+        "title":  "Cox",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/cox/1-lg.jpg",
+                          "alt":  "Cox - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Cox - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 11",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/11-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/11-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 12",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/12-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/12-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 13",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/13-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/13-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 14",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/14-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/14-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 15",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/15-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/15-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 16",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/16-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/16-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 17",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/17-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/17-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 18",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/18-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/18-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 19",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/19-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/19-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 20",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/20-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/20-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 21",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/21-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/21-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 22",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/22-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/22-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cox - photo 23",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cox/23-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cox/23-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "paris",
+        "title":  "Paris",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/paris/1-lg.jpg",
+                          "alt":  "Paris - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Paris - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 11",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/11-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/11-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 12",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/12-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/12-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 13",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/13-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/13-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Paris - photo 14",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/paris/14-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/paris/14-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "toulon",
+        "title":  "Toulon",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/toulon/1-lg.jpg",
+                          "alt":  "Toulon - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Toulon - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 11",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/11-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/11-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 12",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/12-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/12-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 13",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/13-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/13-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 14",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/14-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/14-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 15",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/15-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/15-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 16",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/16-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/16-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 17",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/17-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/17-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Toulon - photo 18",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/toulon/18-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/toulon/18-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "arbuckle",
+        "title":  "Arbuckle",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/arbuckle/1-lg.jpg",
+                          "alt":  "Arbuckle - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Arbuckle - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 11",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/11-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/11-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 12",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/12-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/12-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 13",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/13-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/13-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Arbuckle - photo 14",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/arbuckle/14-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/arbuckle/14-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "cape-cod",
+        "title":  "Cape Cod",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/cape-cod/1-lg.jpg",
+                          "alt":  "Cape Cod - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Cape Cod - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cape Cod - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cape Cod - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cape Cod - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cape Cod - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Cape Cod - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/cape-cod/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/cape-cod/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "denton",
+        "title":  "Denton",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/denton/1-lg.jpg",
+                          "alt":  "Denton - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Denton - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Denton - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/denton/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/denton/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "hightower",
+        "title":  "Hightower",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/hightower/1-lg.jpg",
+                          "alt":  "Hightower - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Hightower - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 9",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/9-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/9-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Hightower - photo 10",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/hightower/10-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/hightower/10-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "kevin",
+        "title":  "Kevin",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/kevin/1-lg.jpg",
+                          "alt":  "Kevin - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Kevin - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 7",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/7-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/7-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Kevin - photo 8",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/kevin/8-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/kevin/8-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "knox",
+        "title":  "Knox",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/knox/1-lg.jpg",
+                          "alt":  "Knox - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Knox - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/knox/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/knox/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Knox - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/knox/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/knox/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Knox - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/knox/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/knox/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Knox - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/knox/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/knox/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Knox - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/knox/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/knox/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "princeton",
+        "title":  "Princeton",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/princeton/1-lg.jpg",
+                          "alt":  "Princeton - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Princeton - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/princeton/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/princeton/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Princeton - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/princeton/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/princeton/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Princeton - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/princeton/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/princeton/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Princeton - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/princeton/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/princeton/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Princeton - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/princeton/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/princeton/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    },
+    {
+        "id":  "shiplap",
+        "title":  "Shiplap",
+        "category":  "residential",
+        "technology":  [
+                           "Traditional"
+                       ],
+        "thumbnail":  {
+                          "src":  "/media/projects/shiplap/1-lg.jpg",
+                          "alt":  "Shiplap - featured project",
+                          "width":  1600,
+                          "height":  1000
+                      },
+        "gallery":  [
+                        {
+                            "alt":  "Shiplap - photo 1",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/1-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/1-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Shiplap - photo 2",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/2-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/2-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Shiplap - photo 3",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/3-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/3-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Shiplap - photo 4",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/4-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/4-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Shiplap - photo 5",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/5-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/5-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        },
+                        {
+                            "alt":  "Shiplap - photo 6",
+                            "width":  2560,
+                            "height":  1600,
+                            "sources":  [
+                                            {
+                                                "src":  "/media/projects/shiplap/6-lg.jpg",
+                                                "format":  "jpg"
+                                            },
+                                            {
+                                                "src":  "/media/projects/shiplap/6-lg.webp",
+                                                "format":  "webp"
+                                            }
+                                        ]
+                        }
+                    ]
+    }
+]
