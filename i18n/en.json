@@ -72,7 +72,7 @@
       {
         "id": "projectsDelivered",
         "label": "Custom homes delivered",
-        "value": 20,
+        "value": 50,
         "suffix": "+",
         "decimals": 0
       },
