@@ -37,9 +37,11 @@ param(
 $ffmpegPath = "C:\Users\Adriana Paiva\Downloads\ffmpeg80fullbuild\bin\ffmpeg.exe"
 
 # Base roots
-$projectsRoot   = "C:\Users\Adriana Paiva\ceuconstruction\public\media\projects"
-$inProgressRoot = "C:\Users\Adriana Paiva\ceuconstruction\public\media\projects\in-progress"
-$methodsRoot    = "C:\Users\Adriana Paiva\ceuconstruction\public\media\methods"
+$projectRoot = Get-Location
+
+$projectsRoot   = Join-Path $projectRoot "public\media\projects"
+$inProgressRoot = Join-Path $projectRoot "public\media\projects\in-progress"
+$methodsRoot    = Join-Path $projectRoot "public\media\methods"
 
 # Select root based on mode
 if ($Methods) {
@@ -74,6 +76,11 @@ if (-not (Test-Path $root)) {
 
 # Get folders to process
 $folders = Get-ChildItem -Path $root -Directory
+
+if (-not $InProgress -and -not $Methods) {
+    $folders = $folders | Where-Object { $_.Name -ne "in-progress" }
+}
+
 if ($ProjectId) {
     $folders = $folders | Where-Object { $_.Name -eq $ProjectId }
     if ($folders.Count -eq 0) {
