@@ -65,7 +65,7 @@
       {
         "id": "yearsOperating",
         "label": "Anos de atividade",
-        "value": 9,
+        "value": 10,
         "suffix": "+",
         "decimals": 0
       },
@@ -79,13 +79,13 @@
       {
         "id": "projectsInProgress",
         "label": "Projetos em execução",
-        "value": 5,
+        "value": 7,
         "decimals": 0
       },
       {
         "id": "teamSize",
         "label": "Tamanho da equipa",
-        "value": 8,
+        "value": 17,
         "suffix": "+",
         "decimals": 0
       },
